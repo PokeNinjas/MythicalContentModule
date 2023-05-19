@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/prismarine_pillar_top",
+    "side": "mythicalmod:block/prismarine_pillar_side"
+  }
+}

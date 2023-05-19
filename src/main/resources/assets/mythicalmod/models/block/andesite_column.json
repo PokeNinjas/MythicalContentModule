@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/andesite_column_top",
+    "side": "mythicalmod:block/andesite_column_side"
+  }
+}

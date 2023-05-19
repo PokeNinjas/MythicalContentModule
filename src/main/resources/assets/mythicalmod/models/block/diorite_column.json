@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/diorite_engraved_top",
+    "side": "mythicalmod:block/diorite_engraved_side"
+  }
+}

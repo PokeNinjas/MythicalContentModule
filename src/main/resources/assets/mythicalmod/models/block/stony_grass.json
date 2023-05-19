@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "side": "mythicalmod:block/stony_grass",
+    "top": "mythicalmod:block/grass_top",
+    "bottom": "mythicalmod:block/cool_stone"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/ghost_pillar_top",
+    "side": "mythicalmod:block/ghost_pillar_side"
+  }
+}

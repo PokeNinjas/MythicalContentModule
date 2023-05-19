@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/prismarine_carved_bottom",
+    "side": "mythicalmod:block/prismarine_carved_wither"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "mythicalmod:block/dark_prismarine_rough_cut_top",
+    "side": "mythicalmod:block/dark_prismarine_rough_cut_side",
+    "bottom": "mythicalmod:block/dark_prismarine_rough_cut_bottom"
+  }
+}

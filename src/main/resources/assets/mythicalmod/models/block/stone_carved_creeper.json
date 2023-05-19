@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/stone_carved_bottom",
+    "side": "mythicalmod:block/stone_carved_creeper"
+  }
+}

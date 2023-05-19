@@ -3,7 +3,7 @@
   "schema_version": 1,
   "quilt_loader": {
     "group": "com.mythicalnetwork",
-    "id": "mythicalcontent",
+    "id": "mythicalmod",
     "version": "${version}",
     "metadata": {
       "name": "Mythical Content",
@@ -20,7 +20,7 @@
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
-      "init": "com.mythicalnetwork.mythicalcontent.MythicalContent"
+      "init": "com.mythicalnetwork.mythicalmod.MythicalContent"
     },
     "depends": [
       {

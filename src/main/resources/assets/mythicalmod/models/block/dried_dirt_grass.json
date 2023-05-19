@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "mythicalmod:block/dried_dirt_grass_top",
+    "side": "mythicalmod:block/dried_dirt_grass",
+    "bottom": "mythicalmod:block/dried_dirt"
+  }
+}

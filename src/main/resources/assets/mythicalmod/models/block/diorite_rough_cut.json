@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "mythicalmod:block/diorite_rough_cut_top",
+    "side": "mythicalmod:block/diorite_rough_cut_side",
+    "bottom": "mythicalmod:block/diorite_rough_cut_bottom"
+  }
+}

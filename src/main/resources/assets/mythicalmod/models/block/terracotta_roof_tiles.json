@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_top",
+  "textures": {
+    "top": "mythicalmod:block/terracotta_roof_tiles_top",
+    "side": "mythicalmod:block/terracotta_roof_tiles"
+  }
+}

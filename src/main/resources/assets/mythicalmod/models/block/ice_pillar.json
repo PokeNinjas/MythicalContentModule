@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/ice_pillar_top",
+    "side": "mythicalmod:block/ice_pillar_side"
+  }
+}

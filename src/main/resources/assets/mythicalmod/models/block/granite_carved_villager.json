@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalmod:block/granite_carved_bottom",
+    "side": "mythicalmod:block/granite_carved_villager"
+  }
+}
