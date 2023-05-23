@@ -20,7 +20,11 @@
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
-      "init": "com.mythicalnetwork.mythicalmod.MythicalContent"
+      "init": "com.mythicalnetwork.mythicalmod.MythicalContent",
+      "client_init": {
+        "adapter": "kotlin",
+        "value": "com.mythicalnetwork.mythicalmod.MythicalModClient"
+      }
     },
     "depends": [
       {

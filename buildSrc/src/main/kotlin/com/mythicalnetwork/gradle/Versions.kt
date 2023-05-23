@@ -16,4 +16,5 @@ object Versions{
     const val QUILT_KOTLIN_CORE = "+"
     const val OWOLIB = "0.9.3+1.19"
     const val MODMENU = "4.2.0-beta.2"
+    const val GECKOLIB = "3.1.41"
 }

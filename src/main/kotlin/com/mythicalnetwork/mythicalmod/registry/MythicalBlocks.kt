@@ -1,5 +1,6 @@
 package com.mythicalnetwork.mythicalmod.registry
 
+import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticBlock
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
@@ -1002,10 +1003,12 @@ object MythicalBlocks {
     var WARPED_SUPPORTED_PLANKS: Block =
         Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "warped_supported_planks")
 
+    var CRAMOMATIC: CramomaticBlock = CramomaticBlock(QuiltBlockSettings.of(Material.METAL).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!! } as CramomaticBlock
     fun registerBlocks() {
         for(block in BLOCKS) {
             registerBlock(block.value, block.key)
         }
+        registerBlock(CRAMOMATIC, ResourceLocation("mythicalmod", "cramomatic"))
     }
 
     private fun registerBlock(block: Block, rl: ResourceLocation) {

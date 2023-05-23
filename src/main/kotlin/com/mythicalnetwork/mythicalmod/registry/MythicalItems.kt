@@ -26,6 +26,11 @@ object MythicalItems {
         return blockItem
     }
 
+    var CRAMOMATIC: BlockItem = BlockItem(
+        MythicalBlocks.CRAMOMATIC,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "cramomatic"
+    )
     var DARK_MUD: BlockItem = BlockItem(
         MythicalBlocks.DARK_MUD,
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),

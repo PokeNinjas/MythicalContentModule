@@ -6,7 +6,7 @@ import com.mythicalnetwork.gradle.Repos
 plugins {
     id("java")
     id("io.github.juuxel.loom-quiltflower") version ("1.8.+")
-    id("org.quiltmc.loom") version("1.0.+")
+    id("org.quiltmc.loom") version("1.1.+")
     kotlin("jvm") version ("1.8.0")
     kotlin("kapt") version("1.8.20")
 }

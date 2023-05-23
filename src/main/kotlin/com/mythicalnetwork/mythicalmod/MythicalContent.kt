@@ -1,5 +1,8 @@
 package com.mythicalnetwork.mythicalmod
 
+import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticInstance
+import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticPlayerHandler
+import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
 import eu.pb4.placeholders.api.PlaceholderContext
@@ -8,8 +11,11 @@ import eu.pb4.placeholders.api.Placeholders
 import net.minecraft.Util
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.level.Level
 import org.quiltmc.loader.api.ModContainer
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
+import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents
+import org.quiltmc.qsl.lifecycle.api.event.ServerTickEvents
 import java.util.function.BiFunction
 
 
@@ -21,11 +27,27 @@ class MythicalContent : ModInitializer {
     companion object {
         const val MODID = "mythicalmod"
         var PLACEHOLDER_LIST = mutableMapOf<ResourceLocation, BiFunction<PlaceholderContext, String?, PlaceholderResult>>()
+        var CRAMOMATIC_HANDLER: CramomaticPlayerHandler? = null
     }
     override fun onInitialize(mod: ModContainer?) {
         setupPlaceholders()
         MythicalBlocks.registerBlocks()
         MythicalItems.registerItems()
+        MythicalBlockEntities.init()
+        ServerLifecycleEvents.READY.register {
+            CRAMOMATIC_HANDLER = it.getLevel(Level.OVERWORLD)?.let { it1 -> CramomaticPlayerHandler(it1) }
+        }
+
+        ServerTickEvents.END.register {
+            if(CRAMOMATIC_HANDLER == null) {
+                if (it.getLevel(Level.OVERWORLD) != null) {
+                    CRAMOMATIC_HANDLER = CramomaticPlayerHandler(it.getLevel(Level.OVERWORLD)!!)
+                }
+            }
+            if(!it.getLevel(Level.OVERWORLD)!!.isClientSide){
+                CRAMOMATIC_HANDLER?.tick()
+            }
+        }
     }
 
 
