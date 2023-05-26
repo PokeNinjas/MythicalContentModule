@@ -14,6 +14,8 @@ object Repos {
         "https://maven.terraformersmc.com/releases/",
         "https://maven.nucleoid.xyz/",
         "https://repo.lightdream.dev/",
-        "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+        "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/",
+        "https://maven.blamejared.com",
+        "https://jitpack.io"
     )
 }

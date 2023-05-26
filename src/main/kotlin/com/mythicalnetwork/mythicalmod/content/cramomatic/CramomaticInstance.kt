@@ -1,5 +1,6 @@
 package com.mythicalnetwork.mythicalmod.content.cramomatic
 
+import com.mythicalnetwork.mythicalmod.MythicalContent
 import net.minecraft.client.Minecraft
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.chat.Component
@@ -9,6 +10,7 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
     private var currentItems: MutableList<ItemStack> = mutableListOf()
     var output: ItemStack? = null
     var isComplete: Boolean = false
+    private var toComplete: Boolean = false
     private var ticks: Int = 0
     private var maxTicks: Int = 200
     private var wasTicked: Boolean = false
@@ -20,6 +22,9 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
                 testRecipe()
             }
         } else {
+            isComplete = true
+        }
+        if(toComplete){
             isComplete = true
         }
         if(ticks % 20 == 0){
@@ -55,8 +60,9 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
     private fun testRecipe(){
         val recipe = CramomaticRecipeHandler.getRecipe(currentItems)
         if (recipe != null) {
-            output = recipe.getOutput()
+            output = recipe.output
             currentItems.clear()
+            toComplete = true
         }
     }
 
@@ -73,8 +79,24 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
     }
 
     fun addItem(item: ItemStack) {
-        currentItems.add(item)
-        println("Added item: ${item.displayName.string}")
+        if(containsItemType(item)){
+            for (itemStack in currentItems) {
+                if (itemStack.item == item.item) {
+                    itemStack.count += item.count
+                }
+            }
+        } else {
+            currentItems.add(item.copy())
+        }
+    }
+
+    fun containsItemType(item: ItemStack): Boolean {
+        for (itemStack in currentItems) {
+            if (itemStack.item == item.item) {
+                return true
+            }
+        }
+        return false
     }
 
     fun getTime(): Int {
@@ -106,6 +128,7 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
     }
 
     fun save(): CompoundTag {
+        MythicalContent.LOGGER.info("Saving cramomatic instance")
         val tag = CompoundTag()
         tag.putInt("ticks", ticks)
         tag.putInt("maxTicks", maxTicks)
@@ -113,8 +136,8 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
         tag.putBoolean("wasTicked", wasTicked)
         output?.save(CompoundTag())?.let { tag.put("output", it) }
         val items = CompoundTag()
-        for (i in currentItems.indices) {
-            items.put("item$i", currentItems[i].save(CompoundTag()))
+        for(item in currentItems){
+            items.put(item.displayName.string, item.save(CompoundTag()))
         }
         tag.put("items", items)
         return tag
@@ -122,6 +145,7 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
 
     companion object {
         fun load(tag: CompoundTag): CramomaticInstance {
+            MythicalContent.LOGGER.info("Loading cramomatic instance")
             val instance = CramomaticInstance()
             instance.ticks = tag.getInt("ticks")
             instance.maxTicks = tag.getInt("maxTicks")

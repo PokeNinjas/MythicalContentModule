@@ -17,6 +17,7 @@ object Dependencies {
     const val MODMENU = "com.terraformersmc:modmenu:${Versions.MODMENU}"
     const val PLACEHOLDERAPI = "eu.pb4:placeholder-api:${Versions.PLACEHOLDERAPI}"
     const val GECKOLIB = "software.bernie.geckolib:geckolib-quilt-1.19:${Versions.GECKOLIB}"
+    const val VEIL = "foundry.veil:Veil-quilt-1.19.2:${Versions.VEIL}"
 
     val CORE_DEPS = listOf<String>(
         QUILT_KOTLIN_CORE,
@@ -31,6 +32,7 @@ object Dependencies {
         FABRIC_PERMS_API,
         MODMENU,
         PLACEHOLDERAPI,
-        GECKOLIB
+        GECKOLIB,
+        VEIL
     )
 }

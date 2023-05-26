@@ -5,6 +5,13 @@ import com.mythicalnetwork.mythicalmod.MythicalContent
 import com.mythicalnetwork.mythicalmod.content.base.MythicalBlockEntity
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalPackets
+import com.mythicalnetwork.mythicalmod.util.TooltipHelper
+import foundry.veil.color.Color
+import foundry.veil.color.ColorTheme
+import foundry.veil.ui.Tooltippable
+import foundry.veil.ui.VeilUIItemTooltipDataHolder
+import foundry.veil.ui.anim.TooltipTimeline
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents
 import net.minecraft.core.BlockPos
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.FriendlyByteBuf
@@ -31,35 +38,55 @@ import software.bernie.geckolib3.core.manager.AnimationFactory
 import software.bernie.geckolib3.util.GeckoLibUtil
 
 // TODO: Fix animation. Figure out why adding items makes the first item always air.
-class CramomaticBlockEntity(pos: BlockPos, state: BlockState) : MythicalBlockEntity(MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!!, pos, state), IAnimatable {
+class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
+    MythicalBlockEntity(MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!!, pos, state), IAnimatable, Tooltippable {
     private var state = STATE.CONSUMING
     private var animationFactory: AnimationFactory = GeckoLibUtil.createFactory(this)
     private var ticksSinceItemAdded: Int = -1
     private var instance: CramomaticInstance? = null
+    private var tooltip: MutableList<Component> = mutableListOf()
+    private var progress: Int = 0
+    private var theme: ColorTheme = ColorTheme().also {
+        it.addColor("background", Color(53,141,222).multiply(1.0f, 1.0f, 1.0f, 0.75f))
+        it.addColor("topBorder", Color(249,224,29))
+        it.addColor("bottomBorder", Color(255,122,83))
+    }
+
+    init {
+        tooltip.add(Component.translatable("block.mythicalmod.cramomatic"))
+        tooltip.add(Component.translatable("block.mythicalmod.cramomatic.progress_tooltip", progress / 20))
+    }
 
     override fun registerControllers(animationData: AnimationData) {
         animationData.addAnimationController(AnimationController(this, "controller", 0.0F, this::predicate))
     }
 
     private fun <E> predicate(animationEvent: AnimationEvent<E>): PlayState
-    where E : IAnimatable, E : BlockEntity {
+            where E : IAnimatable, E : BlockEntity {
         val controller = animationEvent.controller
         controller.transitionLengthTicks = 10.0
         controller.easingType = EasingType.EaseInCubic
         when (state) {
             STATE.IDLE -> {
-                controller.setAnimation(AnimationBuilder().addAnimation("idle", ILoopType.EDefaultLoopTypes.HOLD_ON_LAST_FRAME))
+                controller.setAnimation(
+                    AnimationBuilder().addAnimation(
+                        "idle",
+                        ILoopType.EDefaultLoopTypes.HOLD_ON_LAST_FRAME
+                    )
+                )
             }
+
             STATE.CONSUMING -> {
                 controller.setAnimation(AnimationBuilder().addAnimation("take", ILoopType.EDefaultLoopTypes.PLAY_ONCE))
             }
+
             STATE.EJECTING -> {
                 controller.setAnimation(AnimationBuilder().addAnimation("give", ILoopType.EDefaultLoopTypes.PLAY_ONCE))
             }
         }
+        ServerLivingEntityEvents.ALLOW_DAMAGE
         return PlayState.CONTINUE
     }
-
 
 
     override fun saveAdditional(nbt: CompoundTag) {
@@ -71,34 +98,45 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) : MythicalBlockEnt
     }
 
     fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
-        if(ticksSinceItemAdded < 20 && ticksSinceItemAdded != -1) {
+        if (ticksSinceItemAdded < 20 && ticksSinceItemAdded != -1) {
             ticksSinceItemAdded++
+        }
+        if (level.isClientSide) {
+            tooltip[1] = TooltipHelper.makeProgressBar(
+                ((instance?.getTime() ?: 0) / (instance?.getMaxTime() ?: 1)).toFloat(),
+                theme.getColor("bottomBorder").rgb,
+                theme.getColor("bottomBorder").rgb
+            )
         }
     }
 
-    override fun onUse(player: Player, hand: InteractionHand): InteractionResult{
-        if(!player.level.isClientSide){
+    override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
+        if (!player.level.isClientSide) {
             MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
                 player.sendSystemMessage(Component.literal("CramomaticHandler is not null"))
                 handler.getPlayer(player)?.let { playerHandler ->
                     player.sendSystemMessage(Component.literal("PlayerHandler is not null"))
-                    if(playerHandler.output == null){
+                    if (playerHandler.output == null) {
                         player.sendSystemMessage(Component.literal("PlayerHandler output is null"))
                         addItem(player.getItemInHand(hand), player)
-                        player.getItemInHand(hand).shrink(1)
+                        player.getItemInHand(hand).shrink(player.getItemInHand(hand).count)
                     } else {
                         player.sendSystemMessage(Component.literal("PlayerHandler output is not null"))
                         playerHandler.output?.let { ejectItem(it, player) }
+                        playerHandler.output = null
+                        playerHandler.isComplete = true
                     }
                     update(player, playerHandler)
                 } ?: run {
                     handler.addPlayer(player, CramomaticInstance(this)).let { playerHandler ->
                         player.sendSystemMessage(Component.literal("PlayerHandler is null"))
-                        if(playerHandler.output == null){
+                        if (playerHandler.output == null) {
                             addItem(player.getItemInHand(hand), player)
-                            player.getItemInHand(hand).shrink(1)
+                            player.getItemInHand(hand).shrink(player.getItemInHand(hand).count)
                         } else {
                             playerHandler.output?.let { ejectItem(it, player) }
+                            playerHandler.output = null
+                            playerHandler.isComplete = true
                         }
                         update(player, playerHandler)
                     }
@@ -108,22 +146,23 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) : MythicalBlockEnt
         return InteractionResult.SUCCESS
     }
 
-    private fun update(player: Player, instance: CramomaticInstance?){
+     fun update(player: Player, instance: CramomaticInstance?) {
         instance?.let {
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeBlockPos(worldPosition)
-            buf.writeNbt(it.save())
+            buf.writeNbt(null)
             ServerPlayNetworking.send(player as ServerPlayer, MythicalPackets.CRAMOMATIC_S2C_SYNC.identifier, buf)
         }
 
     }
 
     private fun addItem(stack: ItemStack, player: Player) {
-        if(stack.isEmpty) return
-        if(!player.level.isClientSide){
-            MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player)?.let{
+        if (stack.isEmpty) return
+        if (!player.level.isClientSide) {
+            MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player)?.let {
                 it.addItem(stack)
                 player.sendSystemMessage(Component.literal("Added item ${stack.displayName.string} to Cramomatic"))
+                update(player, it)
             }
         }
         ticksSinceItemAdded = 0
@@ -131,7 +170,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) : MythicalBlockEnt
     }
 
     private fun ejectItem(stack: ItemStack, player: Player) {
-        if(!player.level.isClientSide){
+        if (!player.level.isClientSide) {
             player.giveOrDropItemStack(stack, true)
         }
         state = STATE.EJECTING
@@ -145,5 +184,97 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) : MythicalBlockEnt
         IDLE,
         CONSUMING,
         EJECTING
+    }
+
+    override fun getTooltip(): MutableList<Component> {
+        return tooltip
+    }
+
+    override fun isTooltipEnabled(): Boolean {
+        return true
+    }
+
+    override fun saveTooltipData(): CompoundTag {
+        return CompoundTag()
+    }
+
+    override fun loadTooltipData(p0: CompoundTag?) {
+    }
+
+    override fun setTooltip(p0: MutableList<Component>?) {
+        tooltip = p0!!
+    }
+
+    override fun addTooltip(p0: Component?) {
+        tooltip.add(p0!!)
+    }
+
+    override fun addTooltip(p0: MutableList<Component>?) {
+        tooltip.addAll(p0!!)
+    }
+
+    override fun addTooltip(p0: String?) {
+        tooltip.add(Component.literal(p0!!))
+    }
+
+    override fun getTheme(): ColorTheme {
+        return theme
+    }
+
+    override fun setTheme(p0: ColorTheme?) {
+        theme = p0!!
+    }
+
+    override fun setBackgroundColor(p0: Int) {
+        theme.colors.add(0, Color.of(p0))
+    }
+
+    override fun setTopBorderColor(p0: Int) {
+        theme.colors.add(1, Color.of(p0))
+    }
+
+    override fun setBottomBorderColor(p0: Int) {
+        theme.colors.add(2, Color.of(p0))
+    }
+
+    override fun getWorldspace(): Boolean {
+        return true
+    }
+
+    override fun getTimeline(): TooltipTimeline {
+        return TooltipTimeline(arrayOf(), 1.0f)
+    }
+
+    override fun getStack(): ItemStack {
+        return ItemStack.EMPTY
+    }
+
+    override fun getTooltipWidth(): Int {
+        return 0
+    }
+
+    override fun getTooltipHeight(): Int {
+        return 16
+    }
+
+    override fun getTooltipXOffset(): Int {
+        return -10
+    }
+
+    override fun getTooltipYOffset(): Int {
+        return 15
+    }
+
+    override fun getItems(): MutableList<VeilUIItemTooltipDataHolder> {
+        val itemList: MutableList<VeilUIItemTooltipDataHolder> = mutableListOf()
+        instance?.getCurrentItems()?.size?.let {
+            for (i in 0 until it) {
+                itemList.add(VeilUIItemTooltipDataHolder(instance!!.getCurrentItems()[i], { i * 16f }, { 0f }))
+            }
+        }
+        instance?.output?.let {
+            itemList.add(VeilUIItemTooltipDataHolder(it, { 0f }, { 0f }))
+        }
+        return itemList
     }
 }
