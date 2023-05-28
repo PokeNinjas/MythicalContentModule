@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack
 
 class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = null) {
     private var currentItems: MutableList<ItemStack> = mutableListOf()
-    var output: ItemStack? = null
+    var output: MutableList<ItemStack>? = null
     var isComplete: Boolean = false
     private var toComplete: Boolean = false
     private var ticks: Int = 0
@@ -34,7 +34,7 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
                 builder.append(", ")
             }
             println("Current items: ${builder.toString()}")
-            println("Output: ${output?.displayName?.string}")
+            println("Output: ${output?.get(0)?.displayName?.string}")
             println("Current item size: ${currentItems.size}")
             println(currentItems.toString())
         }
@@ -134,11 +134,17 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
         tag.putInt("maxTicks", maxTicks)
         tag.putBoolean("isComplete", isComplete)
         tag.putBoolean("wasTicked", wasTicked)
-        output?.save(CompoundTag())?.let { tag.put("output", it) }
         val items = CompoundTag()
         for(item in currentItems){
             items.put(item.displayName.string, item.save(CompoundTag()))
         }
+        val outputItems = CompoundTag()
+        output?.let {
+            for (item in this.output!!) {
+                outputItems.put(item.displayName.string, item.save(CompoundTag()))
+            }
+        }
+        tag.put("output", outputItems)
         tag.put("items", items)
         return tag
     }
@@ -151,7 +157,13 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
             instance.maxTicks = tag.getInt("maxTicks")
             instance.isComplete = tag.getBoolean("isComplete")
             instance.wasTicked = tag.getBoolean("wasTicked")
-            instance.output = ItemStack.of(tag.getCompound("output"))
+            val outputItems = tag.getCompound("output")
+            if(outputItems.size() > 0){
+                instance.output = mutableListOf()
+                for (i in outputItems.allKeys) {
+                    instance.output?.add(ItemStack.of(outputItems.getCompound(i)))
+                }
+            }
             val items = tag.getCompound("items")
             for (i in items.allKeys) {
                 instance.currentItems.add(ItemStack.of(items.getCompound(i)))
