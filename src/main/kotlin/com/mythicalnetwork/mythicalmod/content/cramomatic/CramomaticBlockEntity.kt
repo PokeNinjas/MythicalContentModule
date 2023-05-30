@@ -71,20 +71,19 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                 controller.setAnimation(
                     AnimationBuilder().addAnimation(
                         "idle",
-                        ILoopType.EDefaultLoopTypes.HOLD_ON_LAST_FRAME
+                        ILoopType.EDefaultLoopTypes.LOOP
                     )
                 )
             }
 
             STATE.CONSUMING -> {
-                controller.setAnimation(AnimationBuilder().addAnimation("take", ILoopType.EDefaultLoopTypes.PLAY_ONCE))
+                controller.setAnimation(AnimationBuilder().addAnimation("take", ILoopType.EDefaultLoopTypes.LOOP))
             }
 
             STATE.EJECTING -> {
-                controller.setAnimation(AnimationBuilder().addAnimation("give", ILoopType.EDefaultLoopTypes.PLAY_ONCE))
+                controller.setAnimation(AnimationBuilder().addAnimation("give", ILoopType.EDefaultLoopTypes.LOOP))
             }
         }
-        ServerLivingEntityEvents.ALLOW_DAMAGE
         return PlayState.CONTINUE
     }
 
@@ -103,7 +102,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         }
         if (level.isClientSide) {
             tooltip[1] = TooltipHelper.makeProgressBar(
-                ((instance?.getTime() ?: 0) / (instance?.getMaxTime() ?: 1)).toFloat(),
+                ((instance?.getTime() ?: 0) / (instance?.getMaxTime() ?: 200)).toFloat(),
                 theme.getColor("bottomBorder").rgb,
                 theme.getColor("bottomBorder").rgb
             )
@@ -113,30 +112,31 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
         if (!player.level.isClientSide) {
             MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
-                player.sendSystemMessage(Component.literal("CramomaticHandler is not null"))
                 handler.getPlayer(player)?.let { playerHandler ->
-                    player.sendSystemMessage(Component.literal("PlayerHandler is not null"))
-                    if (playerHandler.output == null) {
-                        player.sendSystemMessage(Component.literal("PlayerHandler output is null"))
+                    if (!playerHandler.isComplete) {
                         addItem(player.getItemInHand(hand), player)
                         player.getItemInHand(hand).shrink(player.getItemInHand(hand).count)
+                        state = STATE.CONSUMING
                     } else {
-                        player.sendSystemMessage(Component.literal("PlayerHandler output is not null"))
-                        playerHandler.output?.let { ejectItem(it, player) }
-                        playerHandler.output = null
-                        playerHandler.isComplete = true
+                        playerHandler.onComplete {
+                            MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
+                        }
+                        MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                        state = STATE.EJECTING
                     }
                     update(player, playerHandler)
                 } ?: run {
                     handler.addPlayer(player, CramomaticInstance(this)).let { playerHandler ->
-                        player.sendSystemMessage(Component.literal("PlayerHandler is null"))
-                        if (playerHandler.output == null) {
+                        if (!playerHandler.isComplete) {
                             addItem(player.getItemInHand(hand), player)
                             player.getItemInHand(hand).shrink(player.getItemInHand(hand).count)
+                            state = STATE.CONSUMING
                         } else {
-                            playerHandler.output?.let { ejectItem(it, player) }
-                            playerHandler.output = null
-                            playerHandler.isComplete = true
+                            playerHandler.onComplete {
+                                MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
+                            }
+                            MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                            state = STATE.EJECTING
                         }
                         update(player, playerHandler)
                     }
@@ -150,7 +150,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         instance?.let {
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeBlockPos(worldPosition)
-            buf.writeNbt(null)
+            buf.writeNbt(it.save())
             ServerPlayNetworking.send(player as ServerPlayer, MythicalPackets.CRAMOMATIC_S2C_SYNC.identifier, buf)
         }
 
@@ -169,9 +169,11 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         state = STATE.CONSUMING
     }
 
-    private fun ejectItem(stack: ItemStack, player: Player) {
+    fun ejectItems(stack: MutableList<ItemStack>, player: Player) {
         if (!player.level.isClientSide) {
-            player.giveOrDropItemStack(stack, true)
+            for(item in stack) {
+                player.giveOrDropItemStack(item, true)
+            }
         }
         state = STATE.EJECTING
     }
@@ -272,8 +274,10 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                 itemList.add(VeilUIItemTooltipDataHolder(instance!!.getCurrentItems()[i], { i * 16f }, { 0f }))
             }
         }
-        instance?.output?.let {
-            itemList.add(VeilUIItemTooltipDataHolder(it, { 0f }, { 0f }))
+        instance?.output?.size?.let {
+            for (i in 0 until it) {
+                itemList.add(VeilUIItemTooltipDataHolder(instance!!.output!![i], { i * 16f }, { 0f }))
+            }
         }
         return itemList
     }

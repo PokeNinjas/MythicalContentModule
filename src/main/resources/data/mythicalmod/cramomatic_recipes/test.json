@@ -13,8 +13,10 @@
       "Count": 3
     }
   ],
-  "output": {
+  "output": [
+    {
     "id": "minecraft:beacon",
     "Count": 1
-  }
+    }
+  ]
 }

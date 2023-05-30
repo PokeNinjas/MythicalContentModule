@@ -17,5 +17,5 @@ object Versions{
     const val OWOLIB = "0.9.3+1.19"
     const val MODMENU = "4.2.0-beta.2"
     const val GECKOLIB = "3.1.41"
-    const val VEIL = "1.0.0.119"
+    const val VEIL = "1.0.0.120"
 }

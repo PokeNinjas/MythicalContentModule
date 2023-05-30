@@ -23,20 +23,15 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
             }
         } else {
             isComplete = true
+            MythicalContent.CRAMOMATIC_HANDLER!!.players.filterValues { it == this }.keys.first().let {
+                cramomaticBlock?.update(it, this)
+            }
         }
         if(toComplete){
             isComplete = true
-        }
-        if(ticks % 20 == 0){
-            val builder: StringBuilder = StringBuilder()
-            for(itemStack in currentItems){
-                builder.append(itemStack.displayName.string)
-                builder.append(", ")
+            MythicalContent.CRAMOMATIC_HANDLER!!.players.filterValues { it == this }.keys.first().let {
+                cramomaticBlock?.update(it, this)
             }
-            println("Current items: ${builder.toString()}")
-            println("Output: ${output?.get(0)?.displayName?.string}")
-            println("Current item size: ${currentItems.size}")
-            println(currentItems.toString())
         }
         wasTicked = true
     }
@@ -120,7 +115,6 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
         output = null
         isComplete = false
         ticks = 0
-        maxTicks = 0
     }
 
     fun size(): Int {

@@ -5,7 +5,7 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.Level
 
 class CramomaticPlayerHandler(private var level: Level) {
-    private var players: MutableMap<Player, CramomaticInstance> = mutableMapOf()
+    var players: MutableMap<Player, CramomaticInstance> = mutableMapOf()
 
     fun tick() {
         val playersToTick = (size()/20).coerceAtLeast(1)
@@ -23,12 +23,6 @@ class CramomaticPlayerHandler(private var level: Level) {
         } else {
             for (player in playersToTickList) {
                 players[player]!!.tick()
-                if (players[player]!!.isComplete) {
-                    players[player]!!.onComplete {
-                        onComplete(it)
-                        removePlayer(player)
-                    }
-                }
             }
         }
     }
@@ -40,7 +34,9 @@ class CramomaticPlayerHandler(private var level: Level) {
     fun onComplete(cramomaticInstance: CramomaticInstance){
         val player = players.filterValues { it == cramomaticInstance }.keys.first()
         cramomaticInstance.output?.let {
-            player.giveOrDropItemStack(it, true)
+            for (itemStack in it) {
+                player.giveOrDropItemStack(itemStack, true)
+            }
         }
         cramomaticInstance.getCurrentItems().let {
             if(it.isNotEmpty()){
@@ -49,6 +45,8 @@ class CramomaticPlayerHandler(private var level: Level) {
                 }
             }
         }
+        cramomaticInstance.clear()
+        cramomaticInstance.getBlock()?.update(player, cramomaticInstance)
     }
 
     fun addPlayer(player: Player, instance: CramomaticInstance): CramomaticInstance {
@@ -66,14 +64,6 @@ class CramomaticPlayerHandler(private var level: Level) {
 
     fun hasPlayer(player: Player): Boolean {
         return players.containsKey(player)
-    }
-
-    fun getPlayers(): MutableMap<Player, CramomaticInstance> {
-        return players
-    }
-
-    fun setPlayers(players: MutableMap<Player, CramomaticInstance>) {
-        this.players = players
     }
 
     fun clearPlayers() {
