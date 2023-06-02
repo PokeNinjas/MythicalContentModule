@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:marowak",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0105_marowak/marowak_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0105_marowak/marowak_shiny_radiant.png"
+    }
+  ]
+}

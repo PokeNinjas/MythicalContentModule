@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:cetoddle",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:cetoddle",
+      "model": "cobblemon:cetoddle.geo",
+      "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle_shiny_radiant.png"
+    }
+  ]
+}

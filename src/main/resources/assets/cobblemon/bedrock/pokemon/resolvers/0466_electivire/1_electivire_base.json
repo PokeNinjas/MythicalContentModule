@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:electivire",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0466_electivire/electivire_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0466_electivire/electivire_shiny_radiant.png"
+    }
+  ]
+}

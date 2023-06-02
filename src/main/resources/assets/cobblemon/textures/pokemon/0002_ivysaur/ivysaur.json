@@ -1,0 +1,11 @@
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_radiant.png"
+    }
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_radiant.png"
+    }

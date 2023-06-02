@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:farfetchd",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0083_farfetchd/farfetchd_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0083_farfetchd/farfetchd_shiny_radiant.png"
+    }
+  ]
+}

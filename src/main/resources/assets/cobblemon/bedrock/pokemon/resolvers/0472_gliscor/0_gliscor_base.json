@@ -1,0 +1,63 @@
+{
+  "species": "cobblemon:gliscor",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gliscor",
+      "model": "cobblemon:gliscor.geo",
+      "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0472_gliscor/gliscor_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

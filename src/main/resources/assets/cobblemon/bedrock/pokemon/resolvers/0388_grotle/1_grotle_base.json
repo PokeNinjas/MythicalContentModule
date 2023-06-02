@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:grotle",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0388_grotle/grotle_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0388_grotle/grotle_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "species": "cobblemon:eiscue",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_easter"],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_easter.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_shiny_easter.png"
+    },
+    {
+      "aspects": [
+        "no_ice",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_easter.png"
+    },
+    {
+      "aspects": [
+        "no_ice",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_easter.png"
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "no_ice",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_radiant.png"
+    },
+    {
+      "aspects": [
+        "no_ice",
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_shiny_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "no_ice",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "no_ice",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_easter_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:charcadet",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:charcadet",
+      "model": "cobblemon:charcadet.geo",
+      "texture": "cobblemon:textures/pokemon/0935_charcadet/charcadet.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0935_charcadet/charcadet_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0935_charcadet/charcadet_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0935_charcadet/charcadet_shiny_radiant.png"
+    }
+  ]
+}

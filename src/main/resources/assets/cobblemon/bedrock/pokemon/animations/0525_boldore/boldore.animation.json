@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.boldore.ground_idle": {
+			"loop": true,
+			"bones": {
+				"leg_left": {
+					"rotation": [15, 0, 0]
+				},
+				"feet_left": {
+					"rotation": [-60, 0, 0]
+				},
+				"toe_left": {
+					"rotation": [-45, 0, 0]
+				},
+				"leg_right": {
+					"rotation": [15, 0, 0]
+				},
+				"feet_right": {
+					"rotation": [-60, 0, 0]
+				},
+				"toe_right": {
+					"rotation": [-45, 0, 0]
+				}
+			}
+		}
+	}
+}

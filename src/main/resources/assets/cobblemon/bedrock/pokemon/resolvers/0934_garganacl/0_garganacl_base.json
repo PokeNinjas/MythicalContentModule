@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:garganacl",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:garganacl",
+      "model": "cobblemon:garganacl.geo",
+      "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl_shiny_radiant.png"
+    }
+  ]
+}

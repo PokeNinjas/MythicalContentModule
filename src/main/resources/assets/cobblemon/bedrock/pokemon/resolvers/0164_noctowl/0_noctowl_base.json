@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:noctowl",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:noctowl",
+      "model": "cobblemon:noctowl.geo",
+      "texture": "cobblemon:textures/pokemon/0164_noctowl/noctowl.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0164_noctowl/noctowl_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0164_noctowl/noctowl_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0164_noctowl/noctowl_shiny_radiant.png"
+    }
+  ]
+}

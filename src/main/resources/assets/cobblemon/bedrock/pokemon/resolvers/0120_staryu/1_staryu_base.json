@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:staryu",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_radiant.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_gem_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_gem_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

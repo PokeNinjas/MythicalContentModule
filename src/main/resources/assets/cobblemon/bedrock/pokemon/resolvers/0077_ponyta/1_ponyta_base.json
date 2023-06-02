@@ -1,0 +1,89 @@
+{
+  "species": "cobblemon:ponyta",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_radiant.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_emissive_radiant.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_emissive_radiant.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_blazing.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_emissive_blazing.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_blazing.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_emissive_blazing.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_emissive_blazing_radiant.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_emissive_blazing_radiant.png",
+          "emissive": "true"
+        }
+      ]
+    }
+  ]
+}

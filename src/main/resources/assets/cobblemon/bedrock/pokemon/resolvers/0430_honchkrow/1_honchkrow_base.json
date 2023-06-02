@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:honchkrow",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0430_honchkrow/honchkrow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0430_honchkrow/honchkrow_shiny_radiant.png"
+    }
+  ]
+}

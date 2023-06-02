@@ -1,0 +1,64 @@
+{
+  "species": "cobblemon:sawsbuck",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "autumn"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "summer"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "winter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "autumn",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "summer",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "winter",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_shiny_radiant.png"
+    }
+  ]
+}

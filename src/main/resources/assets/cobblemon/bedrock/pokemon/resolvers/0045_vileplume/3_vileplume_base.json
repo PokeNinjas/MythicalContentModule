@@ -1,0 +1,49 @@
+{
+  "species": "cobblemon:vileplume",
+  "order": 3,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_male_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_male_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "female"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_female_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "female"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_female_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:cleffa",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0173_cleffa/cleffa_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0173_cleffa/cleffa_shiny_radiant.png"
+    }
+  ]
+}

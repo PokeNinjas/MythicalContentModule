@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cherubi.test": {
+			"loop": true,
+			"bones": {
+				"left_leg": {
+					"rotation": [-2.5, 0, 0]
+				},
+				"main_stem": {
+					"rotation": [-45, 22.5, 0]
+				},
+				"main_stem2": {
+					"rotation": [14.87739, -1.93597, 7.24721]
+				},
+				"second_stem": {
+					"rotation": [-22.5, 0, 0]
+				},
+				"second_stem2": {
+					"rotation": [14.78217, 2.57594, -9.6658]
+				},
+				"lil_cherry": {
+					"rotation": [15, 70, 0]
+				},
+				"main_leaf": {
+					"rotation": [18.92715, 2.97886, 15.69176]
+				},
+				"main_leaf2": {
+					"rotation": [35, 0, 0]
+				},
+				"second_leaf": {
+					"rotation": [-6.4271, 5.04349, -13.66203]
+				},
+				"second_leaf2": {
+					"rotation": [-45, 0, 0]
+				},
+				"closed": {
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.cherubi.blink": {
+			"animation_length": 0.25,
+			"bones": {
+				"closed": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.2083": [0, 0, -0.1],
+						"0.25": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

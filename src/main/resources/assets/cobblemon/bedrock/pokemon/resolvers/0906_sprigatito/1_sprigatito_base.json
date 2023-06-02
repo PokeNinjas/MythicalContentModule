@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:sprigatito",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:sprigatito",
+      "model": "cobblemon:sprigatito.geo",
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_radiant.png"
+    }
+  ]
+}

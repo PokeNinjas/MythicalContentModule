@@ -1,0 +1,70 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.grafaiai.idle": {
+			"loop": true,
+			"bones": {
+				"chest": {
+					"rotation": [12.5, 0, 0]
+				},
+				"arm_left": {
+					"rotation": [0, -15, 40]
+				},
+				"arm_left2": {
+					"rotation": [0, 90, 0]
+				},
+				"finger_index_left": {
+					"rotation": [6.46066, 13.56626, 25.76926]
+				},
+				"finger_index_left2": {
+					"rotation": [0, 0, 27.5]
+				},
+				"finger_middle_left": {
+					"rotation": [0, 0, 20]
+				},
+				"finger_middle_left2": {
+					"rotation": [0, 0, 32.5]
+				},
+				"finger_pinky_left": {
+					"rotation": [-7.63074, -12.95254, 30.86748]
+				},
+				"finger_pinky_left2": {
+					"rotation": [0, 0, 27.5]
+				},
+				"arm_right": {
+					"rotation": [0, 15, -40]
+				},
+				"arm_right2": {
+					"rotation": [0, -90, 0]
+				},
+				"finger_index_right": {
+					"rotation": [6.46066, -13.56626, -25.76926]
+				},
+				"finger_index_right2": {
+					"rotation": [0, 0, -27.5]
+				},
+				"finger_middle_right": {
+					"rotation": [0, 0, -20]
+				},
+				"finger_middle_right2": {
+					"rotation": [0, 0, -32.5]
+				},
+				"finger_pinky_right": {
+					"rotation": [-7.63074, 12.95254, -30.86748]
+				},
+				"finger_pinky_right2": {
+					"rotation": [0, 0, -27.5]
+				},
+				"tail": {
+					"rotation": [20, 0, 0]
+				},
+				"tail1": {
+					"rotation": [20, 0, 0]
+				},
+				"tail2": {
+					"rotation": [22.5, 0, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:poliwag",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0060_poliwag/poliwag_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0060_poliwag/poliwag_shiny_radiant.png"
+    }
+  ]
+}

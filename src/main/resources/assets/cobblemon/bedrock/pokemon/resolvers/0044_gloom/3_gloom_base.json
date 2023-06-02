@@ -1,0 +1,34 @@
+{
+  "species": "cobblemon:gloom",
+  "order": 3,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_radiant.png"
+    }
+  ]
+}

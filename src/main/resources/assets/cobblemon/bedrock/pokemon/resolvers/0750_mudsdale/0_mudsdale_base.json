@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:mudsdale",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:mudsdale",
+      "model": "cobblemon:mudsdale.geo",
+      "texture": "cobblemon:textures/pokemon/0750_mudsdale/mudsdale.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0750_mudsdale/mudsdale_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0750_mudsdale/mudsdale_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0750_mudsdale/mudsdale_shiny_radiant.png"
+    }
+  ]
+}

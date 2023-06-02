@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:plusle",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0311_plusle/plusle_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0311_plusle/plusle_shiny_radiant.png"
+    }
+  ]
+}

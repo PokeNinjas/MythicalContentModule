@@ -1,0 +1,37 @@
+{
+  "species": "cobblemon:cherubi",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:cherubi",
+      "model": "cobblemon:cherubi.geo",
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_shiny_radiant.png",
+      "layers": [
+      ]
+    }
+  ]
+}

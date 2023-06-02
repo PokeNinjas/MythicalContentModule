@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:chikorita",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:chikorita",
+      "model": "cobblemon:chikorita.geo",
+      "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_radiant.png"
+    }
+  ]
+}

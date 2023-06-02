@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:zapdos",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_blazing_radiant.png"
+    }
+  ]
+}

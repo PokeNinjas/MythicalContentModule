@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:machamp",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0068_machamp/machamp_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0068_machamp/machamp_shiny_radiant.png"
+    }
+  ]
+}

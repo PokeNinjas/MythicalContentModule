@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nickit.ground_idle": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": [35, 0, 0]
+				},
+				"tail2": {
+					"rotation": [-25, 0, 0]
+				},
+				"tail3": {
+					"rotation": [-22.5, 0, 0]
+				},
+				"tail4": {
+					"rotation": [-45, 0, 0]
+				},
+				"tail5": {
+					"rotation": [-32.5, 0, 0]
+				},
+				"head": {
+					"rotation": [0, 0, 0]
+				},
+				"jaw": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.nickit.blink": {
+			"animation_length": 0.16667,
+			"bones": {
+				"eyelid_right": {
+					"position": {
+						"0.0": [-0.1, 0, -0.1],
+						"0.125": [-0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_left": {
+					"position": {
+						"0.0": [0.1, 0, -0.1],
+						"0.125": [0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

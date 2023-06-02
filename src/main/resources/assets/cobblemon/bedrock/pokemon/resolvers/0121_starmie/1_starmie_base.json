@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:starmie",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_radiant.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

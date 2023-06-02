@@ -36,6 +36,8 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent
 import software.bernie.geckolib3.core.manager.AnimationData
 import software.bernie.geckolib3.core.manager.AnimationFactory
 import software.bernie.geckolib3.util.GeckoLibUtil
+import kotlin.math.cos
+import kotlin.math.sin
 
 // TODO: Fix animation. Figure out why adding items makes the first item always air.
 class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
@@ -47,9 +49,9 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     private var tooltip: MutableList<Component> = mutableListOf()
     private var progress: Int = 0
     private var theme: ColorTheme = ColorTheme().also {
-        it.addColor("background", Color(53,141,222).multiply(1.0f, 1.0f, 1.0f, 0.75f))
-        it.addColor("topBorder", Color(249,224,29))
-        it.addColor("bottomBorder", Color(255,122,83))
+        it.addColor("background", Color(53, 141, 222).multiply(1.0f, 1.0f, 1.0f, 0.75f))
+        it.addColor("topBorder", Color(249, 224, 29))
+        it.addColor("bottomBorder", Color(255, 122, 83))
     }
 
     init {
@@ -111,11 +113,24 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
 
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
         if (!player.level.isClientSide) {
+            if (player.isCrouching) {
+                MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
+                    handler.getPlayer(player)?.let { playerHandler ->
+                        playerHandler.onComplete {
+                            MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
+                        }
+                        MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                        state = STATE.EJECTING
+                        update(player, playerHandler)
+                    }
+                }
+            }
             MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
                 handler.getPlayer(player)?.let { playerHandler ->
+                    MythicalContent.LOGGER.info("Got player handler for player $player")
                     if (!playerHandler.isComplete) {
                         addItem(player.getItemInHand(hand), player)
-                        player.getItemInHand(hand).shrink(player.getItemInHand(hand).count)
+                        player.getItemInHand(hand).shrink(1)
                         state = STATE.CONSUMING
                     } else {
                         playerHandler.onComplete {
@@ -127,9 +142,10 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                     update(player, playerHandler)
                 } ?: run {
                     handler.addPlayer(player, CramomaticInstance(this)).let { playerHandler ->
+                        MythicalContent.LOGGER.info("Created player handler for player $player")
                         if (!playerHandler.isComplete) {
                             addItem(player.getItemInHand(hand), player)
-                            player.getItemInHand(hand).shrink(player.getItemInHand(hand).count)
+                            player.getItemInHand(hand).shrink(1)
                             state = STATE.CONSUMING
                         } else {
                             playerHandler.onComplete {
@@ -146,20 +162,21 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         return InteractionResult.SUCCESS
     }
 
-     fun update(player: Player, instance: CramomaticInstance?) {
+    fun update(player: Player, instance: CramomaticInstance?) {
         instance?.let {
+            MythicalContent.LOGGER.info("Updating Cramomatic for player $player")
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeBlockPos(worldPosition)
             buf.writeNbt(it.save())
             ServerPlayNetworking.send(player as ServerPlayer, MythicalPackets.CRAMOMATIC_S2C_SYNC.identifier, buf)
         }
-
     }
 
     private fun addItem(stack: ItemStack, player: Player) {
         if (stack.isEmpty) return
         if (!player.level.isClientSide) {
             MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player)?.let {
+                MythicalContent.LOGGER.info("Adding item ${stack.displayName.string} to Cramomatic, added by player $player")
                 it.addItem(stack)
                 player.sendSystemMessage(Component.literal("Added item ${stack.displayName.string} to Cramomatic"))
                 update(player, it)
@@ -171,7 +188,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
 
     fun ejectItems(stack: MutableList<ItemStack>, player: Player) {
         if (!player.level.isClientSide) {
-            for(item in stack) {
+            for (item in stack) {
                 player.giveOrDropItemStack(item, true)
             }
         }
@@ -256,7 +273,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     override fun getTooltipHeight(): Int {
-        return 16
+        return 32
     }
 
     override fun getTooltipXOffset(): Int {
@@ -274,10 +291,16 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                 itemList.add(VeilUIItemTooltipDataHolder(instance!!.getCurrentItems()[i], { i * 16f }, { 0f }))
             }
         }
-        instance?.output?.size?.let {
-            for (i in 0 until it) {
-                itemList.add(VeilUIItemTooltipDataHolder(instance!!.output!![i], { i * 16f }, { 0f }))
-            }
+        instance?.getRecipeGuess()?.let { recipe ->
+            itemList.add(
+                VeilUIItemTooltipDataHolder(
+                    recipe.output!![((level?.gameTime ?: 0) / 40 % recipe.output!!.size).toInt()].getItemStack(), {
+                        (level?.gameTime?.plus(it)
+                            ?.div(10)).let { it1 -> it1?.let { it2 -> sin(it2.toDouble()).toFloat() } }
+                    }, {
+                        16f + cos((level?.gameTime?.plus(it)?.div(10))?.toDouble() ?: 0.0).toFloat()
+                    })
+            )
         }
         return itemList
     }

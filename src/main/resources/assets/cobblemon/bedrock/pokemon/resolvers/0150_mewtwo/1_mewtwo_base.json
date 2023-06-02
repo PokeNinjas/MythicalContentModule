@@ -1,0 +1,75 @@
+{
+  "species": "cobblemon:mewtwo",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_shiny_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_shiny_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0150_mewtwo/mewtwo_shiny_rainbow_radiant.png"
+    }
+  ]
+}

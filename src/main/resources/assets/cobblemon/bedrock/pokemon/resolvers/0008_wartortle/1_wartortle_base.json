@@ -1,0 +1,69 @@
+{
+  "species": "cobblemon:wartortle",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_rainbow"],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_rainbow.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+		"mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_shiny_rainbow.png"
+    },
+	{
+      "aspects": ["mythical_gilded"],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_gilded.png"
+    },
+    {
+      "aspects": [
+		"shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_shiny_gilded.png"
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0008_wartortle/wartortle_shiny_gilded_radiant.png"
+    }
+  ]
+}

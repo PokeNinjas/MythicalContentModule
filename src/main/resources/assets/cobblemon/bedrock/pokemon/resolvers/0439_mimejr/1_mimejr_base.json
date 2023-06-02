@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:mimejr",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0439_mimejr/mimejr_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0439_mimejr/mimejr_shiny_radiant.png"
+    }
+  ]
+}

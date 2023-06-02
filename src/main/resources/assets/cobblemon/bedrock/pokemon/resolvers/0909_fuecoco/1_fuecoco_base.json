@@ -1,0 +1,12 @@
+{
+  "species": "cobblemon:fuecoco",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_radiant.png"
+    }
+  ]
+}

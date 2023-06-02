@@ -1,0 +1,92 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.chikorita.ground_idle": {
+			"loop": true,
+			"bones": {
+				"leaf": {
+					"rotation": [-30, 0, 0]
+				},
+				"leaf2": {
+					"rotation": [-15, 0, 0]
+				},
+				"leaf3": {
+					"rotation": [-30, 0, 0]
+				},
+				"leaf4": {
+					"rotation": [-30, 0, 0]
+				},
+				"leaf5": {
+					"rotation": [-30, 0, 0]
+				},
+				"vine_right": {
+					"position": [4, 0, 0]
+				},
+				"vine_right2": {
+					"position": [4, 0, 0]
+				},
+				"vine_right3": {
+					"position": [4, 0, 0]
+				},
+				"vine_right4": {
+					"position": [4, 0, 0]
+				},
+				"vine_right5": {
+					"position": [4, 0, 0]
+				},
+				"vine_right6": {
+					"position": [4, 0, 0]
+				},
+				"vine_right7": {
+					"position": [4, 0, 0]
+				},
+				"vine_right_end": {
+					"position": [3, 0, 0]
+				},
+				"vine_left": {
+					"position": [-5, 0, 0]
+				},
+				"vine_left2": {
+					"position": [-3, 0, 0]
+				},
+				"vine_left3": {
+					"position": [-4, 0, 0]
+				},
+				"vine_left4": {
+					"position": [-4, 0, 0]
+				},
+				"vine_left5": {
+					"position": [-4, 0, 0]
+				},
+				"vine_left6": {
+					"position": [-4, 0, 0]
+				},
+				"vine_left7": {
+					"position": [-4, 0, 0]
+				},
+				"vine_left_end": {
+					"position": [-3, 0, 0]
+				}
+			}
+		},
+		"animation.chikorita.blink": {
+			"animation_length": 0.1667,
+			"bones": {
+				"eyelid_right": {
+					"position": {
+						"0.0": [-0.1, 0, -0.1],
+						"0.125": [-0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_left": {
+					"position": {
+						"0.0": [0.1, 0, -0.1],
+						"0.125": [0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:seel",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0086_seel/seel_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0086_seel/seel_shiny_radiant.png"
+    }
+  ]
+}

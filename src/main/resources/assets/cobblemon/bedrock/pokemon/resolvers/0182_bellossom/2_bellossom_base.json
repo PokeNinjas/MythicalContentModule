@@ -1,0 +1,34 @@
+{
+  "species": "cobblemon:bellossom",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0182_bellossom/bellossom_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0182_bellossom/bellossom_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0182_bellossom/bellossom_valencian_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0182_bellossom/bellossom_valencian_shiny_radiant.png"
+    }
+  ]
+}

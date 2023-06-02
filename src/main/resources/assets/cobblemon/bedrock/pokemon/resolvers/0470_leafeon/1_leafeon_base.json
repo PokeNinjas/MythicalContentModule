@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:leafeon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0470_leafeon/leafeon_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0470_leafeon/leafeon_shiny_radiant.png"
+    }
+  ]
+}

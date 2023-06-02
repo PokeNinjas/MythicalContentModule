@@ -1,10 +1,6 @@
 {
   "inputs": [
     {
-      "id": "minecraft:purple_dye",
-      "Count": 1
-    },
-    {
       "id": "minecraft:iron_ingot",
       "Count": 3
     },
@@ -13,14 +9,38 @@
       "Count": 1
     },
     {
-      "id": "minecraft:nether_star",
+      "id": "minecraft:redstone",
       "Count": 1
     }
   ],
-  "output":[
+  "output": [
     {
-    "id": "cobblemon:master_ball",
-    "Count": 1
+      "item": {
+        "id": "cobblemon:master_ball",
+        "Count": 1
+      },
+      "weight": 1
+    },
+    {
+      "item": {
+        "id": "cobblemon:poke_ball",
+        "Count": 1
+      },
+      "weight": 10
+    },
+    {
+      "item": {
+        "id": "cobblemon:great_ball",
+        "Count": 1
+      },
+      "weight": 7
+    },
+    {
+      "item": {
+        "id": "cobblemon:ultra_ball",
+        "Count": 1
+      },
+      "weight": 4
     }
   ]
 }

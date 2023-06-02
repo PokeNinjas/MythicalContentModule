@@ -1,0 +1,95 @@
+{
+  "species": "cobblemon:golduck",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_easter.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_easter.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_easter.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_shiny_easter.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_easter_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_easter_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_shiny_easter_radiant.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:lickitung",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0108_lickitung/lickitung_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0108_lickitung/lickitung_shiny_radiant.png"
+    }
+  ]
+}

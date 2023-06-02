@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:morelull",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0755_morelull/morelull_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0755_morelull/morelull_shiny_radiant.png"
+    }
+  ]
+}

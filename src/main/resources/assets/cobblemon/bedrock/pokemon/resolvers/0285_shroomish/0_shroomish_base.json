@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:shroomish",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:shroomish",
+      "model": "cobblemon:shroomish.geo",
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_shiny_radiant.png"
+    }
+  ]
+}

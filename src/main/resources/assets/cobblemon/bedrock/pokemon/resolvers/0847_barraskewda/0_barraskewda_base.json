@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:barraskewda",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:barraskewda",
+      "model": "cobblemon:barraskewda.geo",
+      "texture": "cobblemon:textures/pokemon/0847_barraskewda/barraskewda.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0847_barraskewda/barraskewda_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0847_barraskewda/barraskewda_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0847_barraskewda/barraskewda_shiny_radiant.png"
+    }
+  ]
+}

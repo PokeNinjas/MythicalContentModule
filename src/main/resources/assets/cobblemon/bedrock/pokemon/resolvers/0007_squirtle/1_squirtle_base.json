@@ -1,0 +1,69 @@
+{
+  "species": "cobblemon:squirtle",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_rainbow"],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_rainbow.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+		"mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_shiny_rainbow.png"
+    },
+	{
+      "aspects": ["mythical_gilded"],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_gilded.png"
+    },
+    {
+      "aspects": [
+		"shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_shiny_gilded.png"
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_shiny_gilded_radiant.png"
+    }
+  ]
+}

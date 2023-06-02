@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:boldore",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:boldore",
+      "model": "cobblemon:boldore.geo",
+      "texture": "cobblemon:textures/pokemon/0525_boldore/boldore.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0525_boldore/boldore_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0525_boldore/boldore_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0525_boldore/boldore_shiny_radiant.png"
+    }
+  ]
+}

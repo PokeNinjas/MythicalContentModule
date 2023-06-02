@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:nuzleaf",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0274_nuzleaf/nuzleaf_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0274_nuzleaf/nuzleaf_shiny_radiant.png"
+    }
+  ]
+}

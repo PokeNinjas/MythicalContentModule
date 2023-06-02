@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:sizzlipede",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0850_sizzlipede/sizzlipede_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0850_sizzlipede/sizzlipede_shiny_radiant.png"
+    }
+  ]
+}

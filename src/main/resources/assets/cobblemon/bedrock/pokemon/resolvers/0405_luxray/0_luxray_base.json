@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:luxray",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:luxray",
+      "model": "cobblemon:luxray_male.geo",
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_radiant.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "female"
+      ],
+      "model": "cobblemon:luxray_female.geo"
+    }
+  ]
+}

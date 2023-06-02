@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:litten",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0725_litten/litten_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0725_litten/litten_shiny_radiant.png"
+    }
+  ]
+}

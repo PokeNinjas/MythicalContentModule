@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:cetitan",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:cetitan",
+      "model": "cobblemon:cetitan.geo",
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:carnivine",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:carnivine",
+      "model": "cobblemon:carnivine.geo",
+      "texture": "cobblemon:textures/pokemon/0455_carnivine/carnivine.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0455_carnivine/carnivine_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0455_carnivine/carnivine_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0455_carnivine/carnivine_shiny_radiant.png"
+    }
+  ]
+}

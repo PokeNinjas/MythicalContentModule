@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:torkoal",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0324_torkoal/torkoal_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0324_torkoal/torkoal_shiny_radiant.png"
+    }
+  ]
+}

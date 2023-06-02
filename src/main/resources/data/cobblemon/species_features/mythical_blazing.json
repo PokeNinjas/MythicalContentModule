@@ -1,0 +1,6 @@
+{
+  "type": "flag",
+  "keys": ["mythical_blazing"],
+  "default": "false",
+  "isAspect": true
+}

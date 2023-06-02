@@ -1,0 +1,139 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mudsdale.ground_idle": {
+			"loop": true,
+			"bones": {
+				"back_neck_braid_left": {
+					"rotation": [0, 0, 5]
+				},
+				"back_neck_braid_left2": {
+					"rotation": [0, 0, 10]
+				},
+				"back_neck_braid_left3": {
+					"rotation": [0, 0, 12.5]
+				},
+				"back_neck_braid_right": {
+					"rotation": [0, 0, -5]
+				},
+				"back_neck_braid_right2": {
+					"rotation": [0, 0, -10]
+				},
+				"back_neck_braid_right3": {
+					"rotation": [0, 0, -12.5]
+				},
+				"front_neck_braid_left2": {
+					"rotation": [0, 0, 10]
+				},
+				"front_neck_braid_left3": {
+					"rotation": [0, 0, 7.5]
+				},
+				"front_neck_braid_right2": {
+					"rotation": [0, 0, -10]
+				},
+				"front_neck_braid_right3": {
+					"rotation": [0, 0, -7.5]
+				},
+				"head_braid_left": {
+					"rotation": [0, 0, 7.5]
+				},
+				"head_braid_left2": {
+					"rotation": [2.5, 0, 2.5]
+				},
+				"head_braid_left3": {
+					"rotation": [0, 0, 10]
+				},
+				"head_braid_right": {
+					"rotation": [0, 0, -7.5]
+				},
+				"head_braid_right2": {
+					"rotation": [2.5, 0, -2.5]
+				},
+				"head_braid_right3": {
+					"rotation": [0, 0, -10]
+				},
+				"ear_left2": {
+					"rotation": [-5, 0, 0]
+				},
+				"ear_right2": {
+					"rotation": [-5, 0, 0]
+				},
+				"tail": {
+					"rotation": [-25, 0, 0]
+				},
+				"tail2": {
+					"rotation": [-10, 0, 0]
+				},
+				"tail3": {
+					"rotation": [-7.5, 0, 0]
+				},
+				"tail4": {
+					"rotation": [-12.5, 0, 0]
+				},
+				"leg_front_left": {
+					"rotation": [-2.5, -5, 0.00001]
+				},
+				"leg_front_left2": {
+					"rotation": [2.5, 0, 0]
+				},
+				"leg_front_right": {
+					"rotation": [-2.5, 5, -0.00001]
+				},
+				"leg_front_right2": {
+					"rotation": [2.5, 0, 0]
+				},
+				"leg_back_left": {
+					"rotation": [0, 5, 0]
+				},
+				"leg_back_left2": {
+					"rotation": [0, -5, 0]
+				},
+				"leg_back_right": {
+					"rotation": [0, -7.5, 0]
+				},
+				"leg_back_right2": {
+					"rotation": [0, 5, 0]
+				},
+				"mane_neck": {
+					"rotation": [0, 0, 0]
+				},
+				"neck2": {
+					"rotation": [5, 0, 0]
+				}
+			}
+		},
+		"animation.mudsdale.blink": {
+			"animation_length": 0.16667,
+			"bones": {
+				"eyelid_half_left": {
+					"position": {
+						"0.0": [-0.1, 0, 0.2],
+						"0.125": [-0.1, 0, 0.2],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_full_left": {
+					"position": {
+						"0.0": [0.1, 0, -0.1],
+						"0.125": [0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_half_right": {
+					"position": {
+						"0.0": [0.1, 0, 0.1],
+						"0.125": [0.1, 0, 0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_full_right": {
+					"position": {
+						"0.0": [-0.1, 0, -0.1],
+						"0.125": [-0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

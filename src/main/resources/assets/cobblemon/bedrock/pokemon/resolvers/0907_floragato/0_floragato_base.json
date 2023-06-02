@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:floragato",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:floragato",
+      "model": "cobblemon:floragato.geo",
+      "texture": "cobblemon:textures/pokemon/0907_floragato/floragato.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0907_floragato/floragato_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0907_floragato/floragato_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0907_floragato/floragato_shiny_radiant.png"
+    }
+  ]
+}

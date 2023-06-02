@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:shinx",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:shinx",
+      "model": "cobblemon:shinx_male.geo",
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_radiant.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "female"
+      ],
+      "model": "cobblemon:shinx_female.geo"
+    }
+  ]
+}

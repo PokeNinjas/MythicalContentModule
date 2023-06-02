@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:lucario",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing_radiant.png"
+    }
+  ]
+}

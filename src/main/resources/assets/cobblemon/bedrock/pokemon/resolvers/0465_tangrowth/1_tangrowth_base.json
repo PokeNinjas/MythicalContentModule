@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:tangrowth",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth_shiny_radiant.png"
+    }
+  ]
+}

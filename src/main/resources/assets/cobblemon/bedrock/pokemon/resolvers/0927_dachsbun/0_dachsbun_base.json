@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:dachsbun",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:dachsbun",
+      "model": "cobblemon:dachsbun.geo",
+      "texture": "cobblemon:textures/pokemon/0927_dachsbun/dachsbun.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0927_dachsbun/dachsbun_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0927_dachsbun/dachsbun_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0927_dachsbun/dachsbun_shiny_radiant.png"
+    }
+  ]
+}

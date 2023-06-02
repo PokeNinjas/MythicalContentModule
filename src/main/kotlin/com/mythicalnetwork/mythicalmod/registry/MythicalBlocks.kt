@@ -1002,6 +1002,14 @@ object MythicalBlocks {
         Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "warped_braced_planks")
     var WARPED_SUPPORTED_PLANKS: Block =
         Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "warped_supported_planks")
+    var GLOW_ORE: Block =
+        Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "glow_ore")
+    var MEW_1: Block =
+        Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "mew_1")
+    var MEW_2: Block =
+        Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "mew_2")
+    var MEW_3: Block =
+        Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "mew_3")
 
     var CRAMOMATIC: CramomaticBlock = CramomaticBlock(QuiltBlockSettings.of(Material.METAL).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!! } as CramomaticBlock
     fun registerBlocks() {

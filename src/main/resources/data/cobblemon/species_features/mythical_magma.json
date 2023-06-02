@@ -1,0 +1,6 @@
+{
+  "type": "flag",
+  "keys": ["mythical_magma"],
+  "default": "false",
+  "isAspect": true
+}

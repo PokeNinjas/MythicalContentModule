@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:espathra",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:espathra",
+      "model": "cobblemon:espathra.geo",
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_shiny_radiant.png"
+    }
+  ]
+}

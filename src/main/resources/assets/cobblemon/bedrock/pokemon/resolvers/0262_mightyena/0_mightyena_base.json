@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:mightyena",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:mightyena",
+      "model": "cobblemon:mightyena.geo",
+      "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena_shiny_radiant.png"
+    }
+  ]
+}

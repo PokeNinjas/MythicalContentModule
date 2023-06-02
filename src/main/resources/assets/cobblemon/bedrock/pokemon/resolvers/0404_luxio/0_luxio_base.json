@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:luxio",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:luxio",
+      "model": "cobblemon:luxio_male.geo",
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_radiant.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "female"
+      ],
+      "model": "cobblemon:luxio_female.geo"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:comfey",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:comfey",
+      "model": "cobblemon:comfey.geo",
+      "texture": "cobblemon:textures/pokemon/0764_comfey/comfey.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0764_comfey/comfey_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0764_comfey/comfey_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0764_comfey/comfey_shiny_radiant.png"
+    }
+  ]
+}

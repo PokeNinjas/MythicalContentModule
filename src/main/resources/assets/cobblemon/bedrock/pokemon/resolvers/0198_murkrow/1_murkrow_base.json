@@ -1,0 +1,25 @@
+{
+  "species": "cobblemon:murkrow",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "female"
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_radiant.png"
+    }
+  ]
+}

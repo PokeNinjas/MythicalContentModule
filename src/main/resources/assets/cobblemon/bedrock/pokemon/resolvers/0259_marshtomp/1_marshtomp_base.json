@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:marshtomp",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0259_marshtomp/marshtomp_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0259_marshtomp/marshtomp_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "species": "cobblemon:basculin",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "bluestriped"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "bluestriped",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_radiant.png"
+    }
+  ]
+}

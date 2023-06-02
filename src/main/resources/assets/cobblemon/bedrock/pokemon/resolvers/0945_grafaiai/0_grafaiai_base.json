@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:grafaiai",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:grafaiai",
+      "model": "cobblemon:grafaiai.geo",
+      "texture": "cobblemon:textures/pokemon/0945_grafaiai/grafaiai.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0945_grafaiai/grafaiai_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0945_grafaiai/grafaiai_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0945_grafaiai/grafaiai_shiny_radiant.png"
+    }
+  ]
+}

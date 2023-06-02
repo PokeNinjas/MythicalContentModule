@@ -1,0 +1,127 @@
+{
+  "species": "cobblemon:rayquaza",
+  "order": 1,
+  "variations": [
+	{
+      "aspects": ["mythical_gilded"],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_gilded.png"
+    },
+    {
+      "aspects": [
+		"shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_gilded.png"
+    },
+    {
+      "aspects": [
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_rainbow.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shadow.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_shadow.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_blazing.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing.png"
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shadow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_shadow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_radiant.png"
+    }
+  ]
+}

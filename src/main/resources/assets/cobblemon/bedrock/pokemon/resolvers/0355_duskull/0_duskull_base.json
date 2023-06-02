@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:duskull",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:duskull",
+      "model": "cobblemon:duskull.geo",
+      "texture": "cobblemon:textures/pokemon/0355_duskull/duskull.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0355_duskull/duskull_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0355_duskull/duskull_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0355_duskull/duskull_shiny_radiant.png"
+    }
+  ]
+}

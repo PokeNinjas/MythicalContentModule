@@ -1,0 +1,15 @@
+{
+	"head": "head",
+	"portraitScale": 0.9,
+	"portraitTranslation": [0.1, 0.1, 0],
+	"profileScale": 0.9,
+	"profileTranslation": [0.1, 0.5, 0],
+	"poses": {
+		"walking": {
+			"poseName": "walking",
+			"transformTicks": 10,
+			"poseTypes": [ "WALK" ],
+			"animations": [ "bedrock(tandemaus, ground_walk)" ]
+		}
+	}
+}

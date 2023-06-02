@@ -20,6 +20,7 @@ import org.quiltmc.loader.api.ModContainer
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
 import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerTickEvents
+import org.quiltmc.qsl.networking.api.ServerPlayConnectionEvents
 import org.slf4j.Logger
 import java.util.function.BiFunction
 
@@ -53,6 +54,13 @@ class MythicalContent : ModInitializer {
             if(!it.getLevel(Level.OVERWORLD)!!.isClientSide){
                 CRAMOMATIC_HANDLER?.tick()
             }
+        }
+
+        ServerPlayConnectionEvents.DISCONNECT.register { handler, server ->
+            CRAMOMATIC_HANDLER?.pausePlayer(handler.player)
+        }
+        ServerPlayConnectionEvents.JOIN.register { handler, sender, server ->
+            CRAMOMATIC_HANDLER?.resumePlayer(handler.player)
         }
         ReloadListenerRegistry.register(PackType.SERVER_DATA, CramomaticRecipeJsonListener.INSTANCE)
     }

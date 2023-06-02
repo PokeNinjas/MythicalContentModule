@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:pumpkaboo",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_radiant.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

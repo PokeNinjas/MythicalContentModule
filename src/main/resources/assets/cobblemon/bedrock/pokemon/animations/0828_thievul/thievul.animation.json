@@ -1,0 +1,47 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.thievul.ground_idle": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": [45, 0, 0]
+				},
+				"tail2": {
+					"rotation": [-37.5, 0, 0]
+				},
+				"tail3": {
+					"rotation": [-26.5, 0, 0]
+				},
+				"tail4": {
+					"rotation": [-22, 0, 0]
+				},
+				"tail5": {
+					"rotation": [20, 0, 0]
+				},
+				"tail6": {
+					"rotation": [15, 0, 0]
+				}
+			}
+		},
+		"animation.thievul.blink": {
+			"animation_length": 0.16667,
+			"bones": {
+				"eyelid_right": {
+					"position": {
+						"0.0": [-0.1, 0, -0.1],
+						"0.125": [-0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_left": {
+					"position": {
+						"0.0": [0.1, 0, -0.1],
+						"0.125": [0.1, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

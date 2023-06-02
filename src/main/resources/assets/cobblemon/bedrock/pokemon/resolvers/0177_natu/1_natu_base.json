@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:natu",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0177_natu/natu_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0177_natu/natu_shiny_radiant.png"
+    }
+  ]
+}

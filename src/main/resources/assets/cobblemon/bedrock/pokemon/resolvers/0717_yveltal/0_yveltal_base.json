@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:yveltal",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:yveltal",
+      "model": "cobblemon:yveltal.geo",
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_radiant.png"
+    }
+  ]
+}

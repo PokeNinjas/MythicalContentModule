@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:braixen",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0654_braixen/braixen_hidden_stick_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0654_braixen/braixen_hidden_stick_shiny_radiant.png"
+    }
+  ]
+}

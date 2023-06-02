@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:buzzwole",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:buzzwole",
+      "model": "cobblemon:buzzwole.geo",
+      "texture": "cobblemon:textures/pokemon/0794_buzzwole/buzzwole.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0794_buzzwole/buzzwole_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0794_buzzwole/buzzwole_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0794_buzzwole/buzzwole_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:elekid",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0239_elekid/elekid_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0239_elekid/elekid_shiny_radiant.png"
+    }
+  ]
+}

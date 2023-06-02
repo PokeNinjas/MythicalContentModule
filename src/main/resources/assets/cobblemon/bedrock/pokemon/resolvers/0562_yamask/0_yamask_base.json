@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:yamask",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:yamask",
+      "model": "cobblemon:yamask.geo",
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny_radiant.png"
+    }
+  ]
+}

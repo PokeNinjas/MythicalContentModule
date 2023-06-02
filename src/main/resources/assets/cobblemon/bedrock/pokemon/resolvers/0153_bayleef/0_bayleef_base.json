@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:bayleef",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bayleef",
+      "model": "cobblemon:bayleef.geo",
+      "texture": "cobblemon:textures/pokemon/0153_bayleef/bayleef.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0153_bayleef/bayleef_radiant.png"
+    }
+  ]
+}

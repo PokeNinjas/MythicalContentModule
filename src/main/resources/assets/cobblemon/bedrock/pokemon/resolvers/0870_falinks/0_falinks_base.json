@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:falinks",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:falinks",
+      "model": "cobblemon:falinks.geo",
+      "texture": "cobblemon:textures/pokemon/0870_falinks/falinks.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0870_falinks/falinks_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0870_falinks/falinks_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0870_falinks/falinks_shiny_radiant.png"
+    }
+  ]
+}

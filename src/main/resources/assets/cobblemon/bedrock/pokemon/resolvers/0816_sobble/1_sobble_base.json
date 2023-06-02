@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:sobble",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0816_sobble/sobble_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0816_sobble/sobble_shiny_radiant.png"
+    }
+  ]
+}

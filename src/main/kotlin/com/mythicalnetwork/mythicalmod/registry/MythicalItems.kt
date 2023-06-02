@@ -2239,6 +2239,26 @@ object MythicalItems {
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
         "warped_supported_planks"
     )
+    var GLOW_ORE: BlockItem = BlockItem(
+        MythicalBlocks.GLOW_ORE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "glow_ore"
+    )
+    var MEW_1: BlockItem = BlockItem(
+        MythicalBlocks.MEW_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "mew_1"
+    )
+    var MEW_2: BlockItem = BlockItem(
+        MythicalBlocks.MEW_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "mew_2"
+    )
+    var MEW_3: BlockItem = BlockItem(
+        MythicalBlocks.MEW_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "mew_3"
+    )
 
     fun registerItems() {
         for(item in ITEMS){

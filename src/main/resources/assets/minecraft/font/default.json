@@ -1,0 +1,1219 @@
+{
+  "providers": [
+    {
+      "chars": [
+        "ꐑ"
+      ],
+      "file": "misc/logo.png",
+      "ascent": 20,
+      "height": 36,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丠"
+      ],
+      "file": "rank_icons/misc/rank_player.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "両"
+      ],
+      "file": "rank_icons/donator/rank_hero.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丢"
+      ],
+      "file": "rank_icons/donator/rank_elite.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丣"
+      ],
+      "file": "rank_icons/donator/rank_ultimate.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "两"
+      ],
+      "file": "rank_icons/donator/rank_emperor.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "严"
+      ],
+      "file": "rank_icons/donator/rank_legend.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "並"
+      ],
+      "file": "rank_icons/staff/rank_builder.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丧"
+      ],
+      "file": "rank_icons/staff/rank_developer.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丨"
+      ],
+      "file": "rank_icons/staff/rank_helper.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丩"
+      ],
+      "file": "rank_icons/staff/rank_mod.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "个"
+      ],
+      "file": "rank_icons/staff/rank_admin.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丫"
+      ],
+      "file": "rank_icons/staff/rank_manager.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "丬"
+      ],
+      "file": "rank_icons/staff/rank_owner.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "别"
+      ],
+      "file": "tags/piano.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "券"
+      ],
+      "file": "tags/soccer_ball.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刟"
+      ],
+      "file": "tags/fire_flower.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✮"
+      ],
+      "file": "emojis/tongue_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刬"
+      ],
+      "file": "tags/pikachu.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✥"
+      ],
+      "file": "emojis/sleeping_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刨"
+      ],
+      "file": "tags/musical_note.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✒"
+      ],
+      "file": "emojis/angel_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✣"
+      ],
+      "file": "emojis/shhh_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❁"
+      ],
+      "file": "emojis/know.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✠"
+      ],
+      "file": "emojis/rage_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✾"
+      ],
+      "file": "emojis/gg.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✑"
+      ],
+      "file": "emojis/broken_heart_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "列"
+      ],
+      "file": "tags/club.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✤"
+      ],
+      "file": "emojis/skull_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✓"
+      ],
+      "file": "emojis/barf_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "删"
+      ],
+      "file": "tags/gamepad.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✩"
+      ],
+      "file": "emojis/star_struck_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刐"
+      ],
+      "file": "tags/batman.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❂"
+      ],
+      "file": "emojis/knuckles.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✹"
+      ],
+      "file": "emojis/cursed.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✼"
+      ],
+      "file": "emojis/evil_patrick.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刡"
+      ],
+      "file": "tags/heart.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❈"
+      ],
+      "file": "emojis/sus_dead.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "初"
+      ],
+      "file": "tags/earth.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✽"
+      ],
+      "file": "emojis/f.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✿"
+      ],
+      "file": "emojis/kekw.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✶"
+      ],
+      "file": "emojis/sad_devil_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✗"
+      ],
+      "file": "emojis/embarrassed_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "剃"
+      ],
+      "file": "tags/gift.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✰"
+      ],
+      "file": "emojis/dizzy_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刹"
+      ],
+      "file": "tags/spade.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✡"
+      ],
+      "file": "emojis/scream_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刮"
+      ],
+      "file": "tags/pokeball.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✞"
+      ],
+      "file": "emojis/nerdy_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✢"
+      ],
+      "file": "emojis/sherlock_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "划"
+      ],
+      "file": "tags/brick.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "剀"
+      ],
+      "file": "tags/water.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "剂"
+      ],
+      "file": "tags/wizard.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✯"
+      ],
+      "file": "emojis/wink_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "则"
+      ],
+      "file": "tags/creeper.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✫"
+      ],
+      "file": "emojis/thinking_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✔"
+      ],
+      "file": "emojis/blush_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刜"
+      ],
+      "file": "tags/dragon_ball.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刾"
+      ],
+      "file": "tags/transformer.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✨"
+      ],
+      "file": "emojis/sob_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刪"
+      ],
+      "file": "tags/palette.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✲"
+      ],
+      "file": "emojis/happy_devil_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✐"
+      ],
+      "file": "emojis/heart_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✭"
+      ],
+      "file": "emojis/thumbsup_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✚"
+      ],
+      "file": "emojis/gross_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✬"
+      ],
+      "file": "emojis/thumbsdown_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✖"
+      ],
+      "file": "emojis/dead_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❆"
+      ],
+      "file": "emojis/reverse.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✜"
+      ],
+      "file": "emojis/laugh_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✙"
+      ],
+      "file": "emojis/frustrated_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刻"
+      ],
+      "file": "tags/star.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❊"
+      ],
+      "file": "emojis/wall-e.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "別"
+      ],
+      "file": "tags/lightning.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刞"
+      ],
+      "file": "tags/fire.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刳"
+      ],
+      "file": "tags/ring.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刘"
+      ],
+      "file": "tags/cookie.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✳"
+      ],
+      "file": "emojis/mamma_mia_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刌"
+      ],
+      "file": "tags/apple.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刍"
+      ],
+      "file": "tags/ball.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "创"
+      ],
+      "file": "tags/donut.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刺"
+      ],
+      "file": "tags/spider.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刴"
+      ],
+      "file": "tags/rocket.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刽"
+      ],
+      "file": "tags/toast_bread.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✵"
+      ],
+      "file": "emojis/praying_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刑"
+      ],
+      "file": "tags/book.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刊"
+      ],
+      "file": "tags/among_us.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❅"
+      ],
+      "file": "emojis/pepe.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✸"
+      ],
+      "file": "emojis/bonk.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✝"
+      ],
+      "file": "emojis/mask_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刲"
+      ],
+      "file": "tags/retro_invader.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✱"
+      ],
+      "file": "emojis/eyes_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✕"
+      ],
+      "file": "emojis/cool_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "到"
+      ],
+      "file": "tags/r2_d2.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刉"
+      ],
+      "file": "tags/alien.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "判"
+      ],
+      "file": "tags/leaf.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刋"
+      ],
+      "file": "tags/anya_forger.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❄"
+      ],
+      "file": "emojis/not_stonks.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✴"
+      ],
+      "file": "emojis/ok_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刈"
+      ],
+      "file": "tags/3d_glasses.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刓"
+      ],
+      "file": "tags/burger.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刏"
+      ],
+      "file": "tags/banana.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❇"
+      ],
+      "file": "emojis/stonks.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刕"
+      ],
+      "file": "tags/cherry.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✟"
+      ],
+      "file": "emojis/pensive_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刷"
+      ],
+      "file": "tags/skull.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "剁"
+      ],
+      "file": "tags/watermelon.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刖"
+      ],
+      "file": "tags/cloud.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刧"
+      ],
+      "file": "tags/mushroom.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✪"
+      ],
+      "file": "emojis/straight_face_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刣"
+      ],
+      "file": "tags/jigsaw_piece.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刼"
+      ],
+      "file": "tags/television.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✻"
+      ],
+      "file": "emojis/dont_know.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❉"
+      ],
+      "file": "emojis/sus.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "利"
+      ],
+      "file": "tags/pacman.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✘"
+      ],
+      "file": "emojis/freezing_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✧"
+      ],
+      "file": "emojis/smile_with_tear_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刱"
+      ],
+      "file": "tags/rainbow.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刦"
+      ],
+      "file": "tags/mouse.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✦"
+      ],
+      "file": "emojis/smile_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刔"
+      ],
+      "file": "tags/candy_cane.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❃"
+      ],
+      "file": "emojis/mike.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "❀"
+      ],
+      "file": "emojis/knife_chick.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "制"
+      ],
+      "file": "tags/shark.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✺"
+      ],
+      "file": "emojis/doge.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刚"
+      ],
+      "file": "tags/diamond.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✛"
+      ],
+      "file": "emojis/heart_eyes_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刭"
+      ],
+      "file": "tags/pizza.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刎"
+      ],
+      "file": "tags/balloon.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刵"
+      ],
+      "file": "tags/saxophone.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刯"
+      ],
+      "file": "tags/poop.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "✷"
+      ],
+      "file": "emojis/sparkle_emoji.png",
+      "ascent": 9,
+      "height": 12,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刿"
+      ],
+      "file": "tags/umbrella.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "刢"
+      ],
+      "file": "tags/iron_man.png",
+      "ascent": 8,
+      "height": 9,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ए"
+      ],
+      "file": "misc/exclamation_green.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ऎ"
+      ],
+      "file": "misc/exclamation_red.png",
+      "ascent": 7,
+      "height": 7,
+      "type": "bitmap"
+    }
+  ]
+}

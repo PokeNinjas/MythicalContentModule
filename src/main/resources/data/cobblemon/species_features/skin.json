@@ -1,0 +1,12 @@
+{
+  "type": "choice",
+  "keys": ["skin"],
+  "default": "false",
+  "choices": [
+	"rainbow", 
+	"gilded",
+    "shadow"
+	],
+  "isAspect": true,
+  "aspectForm": "skin-{{choice}}"
+}

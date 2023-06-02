@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:bewear",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bewear",
+      "model": "cobblemon:bewear.geo",
+      "texture": "cobblemon:textures/pokemon/0760_bewear/bewear.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0760_bewear/bewear_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0760_bewear/bewear_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0760_bewear/bewear_shiny_radiant.png"
+    }
+  ]
+}

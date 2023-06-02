@@ -1,0 +1,10 @@
+{
+  "species": "cobblemon:maushold",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": ["maushold-family-three"],
+      "model": "cobblemon:maushold_three.geo"
+    }
+  ]
+}

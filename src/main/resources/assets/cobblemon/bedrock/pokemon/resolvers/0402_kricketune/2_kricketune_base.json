@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:kricketune",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune_shiny_radiant.png"
+    }
+  ]
+}

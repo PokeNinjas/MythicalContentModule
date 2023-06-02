@@ -1,0 +1,75 @@
+{
+  "species": "cobblemon:kakuna",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_blazing_radiant.png"
+    }
+  ]
+}

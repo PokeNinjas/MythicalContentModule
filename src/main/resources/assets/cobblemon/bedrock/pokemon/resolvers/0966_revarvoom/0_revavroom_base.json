@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:revavroom",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:revavroom",
+      "model": "cobblemon:revavroom.geo",
+      "texture": "cobblemon:textures/pokemon/0966_revavroom/revavroom.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0966_revavroom/revavroom_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0966_revavroom/revavroom_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0966_revavroom/revavroom_shiny_radiant.png"
+    }
+  ]
+}

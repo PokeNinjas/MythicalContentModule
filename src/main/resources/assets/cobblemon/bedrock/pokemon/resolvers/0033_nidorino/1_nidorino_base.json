@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:nidorino",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0033_nidorino/nidorino_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0033_nidorino/nidorino_shiny_radiant.png"
+    }
+  ]
+}

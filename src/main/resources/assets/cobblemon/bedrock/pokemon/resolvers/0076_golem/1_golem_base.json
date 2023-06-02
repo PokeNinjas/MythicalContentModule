@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:golem",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0076_golem/golem_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0076_golem/golem_shiny_radiant.png"
+    }
+  ]
+}

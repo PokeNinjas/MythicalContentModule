@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:pichu",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_shiny_radiant.png"
+    }
+  ]
+}

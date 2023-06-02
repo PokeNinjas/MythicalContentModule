@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:spewpa",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:spewpa",
+      "model": "cobblemon:spewpa.geo",
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny_radiant.png"
+    }
+  ]
+}

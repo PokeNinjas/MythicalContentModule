@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:chingling",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:chingling",
+      "model": "cobblemon:chingling.geo",
+      "texture": "cobblemon:textures/pokemon/0433_chingling/chingling.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0433_chingling/chingling_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0433_chingling/chingling_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0433_chingling/chingling_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:poochyena",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:poochyena",
+      "model": "cobblemon:poochyena.geo",
+      "texture": "cobblemon:textures/pokemon/0261_poochyena/poochyena.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0261_poochyena/poochyena_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0261_poochyena/poochyena_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0261_poochyena/poochyena_shiny_radiant.png"
+    }
+  ]
+}

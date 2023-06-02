@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cherrim_overcast.test": {
+			"loop": true,
+			"bones": {
+				"flower_bell_right": {
+					"rotation": [0, 0, 10]
+				},
+				"flower_bell_right_lower": {
+					"rotation": [0, 0, 10]
+				},
+				"flower_bell_right_tip": {
+					"rotation": [0, 0, -12.5]
+				},
+				"stem": {
+					"rotation": [5, 0, 0]
+				},
+				"flower_bell_left_lower": {
+					"rotation": [0, 0, -10]
+				},
+				"flower_bell_left_tip": {
+					"rotation": [0, 0, 12.5]
+				},
+				"flower_bell_left": {
+					"rotation": [0, 0, -10]
+				},
+				"leaves": {
+					"rotation": [2.5, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"front_leaf": {
+					"rotation": [-7.5, 0, 0]
+				},
+				"front_leaf_tip": {
+					"rotation": [5, 0, 0]
+				},
+				"front_left_leaf": {
+					"rotation": [-7.5, 0, 0]
+				},
+				"front_left_leaf_tip": {
+					"rotation": [5, 0, 0]
+				},
+				"front_right_leaf": {
+					"rotation": [-7.5, 0, 0]
+				},
+				"front_right_leaf_tip": {
+					"rotation": [5, 0, 0]
+				},
+				"back_left_leaf": {
+					"rotation": [-7.5, 0, 0]
+				},
+				"back_left_leaf_tip": {
+					"rotation": [5, 0, 0]
+				},
+				"back_right_leaf": {
+					"rotation": [-7.5, 0, 0]
+				},
+				"back_right_leaf_tip": {
+					"rotation": [5, 0, 0]
+				},
+				"stem2": {
+					"rotation": [0, 0, 0]
+				},
+				"stem3": {
+					"rotation": [-2.5, 0, 0]
+				}
+			}
+		}
+	}
+}

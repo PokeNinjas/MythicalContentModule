@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:taillow",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:taillow",
+      "model": "cobblemon:taillow.geo",
+      "texture": "cobblemon:textures/pokemon/0276_taillow/taillow.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0276_taillow/taillow_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0276_taillow/taillow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0276_taillow/taillow_shiny_radiant.png"
+    }
+  ]
+}

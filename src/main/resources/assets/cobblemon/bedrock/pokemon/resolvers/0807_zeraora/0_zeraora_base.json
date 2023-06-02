@@ -1,0 +1,89 @@
+
+{
+  "species": "cobblemon:zeraora",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:zeraora",
+      "model": "cobblemon:zeraora.geo",
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_rainbow.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_gilded.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "species": "cobblemon:raichu",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_shiny_radiant.png"
+    }
+  ]
+}

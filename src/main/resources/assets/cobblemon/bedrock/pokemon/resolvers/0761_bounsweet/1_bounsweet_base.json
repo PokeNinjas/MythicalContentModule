@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:bounsweet",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_easter"],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_easter.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_shiny_easter.png"
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_shiny_easter_radiant.png"
+    }
+  ]
+}

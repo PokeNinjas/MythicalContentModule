@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:lombre",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0271_lombre/lombre_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0271_lombre/lombre_shiny_radiant.png"
+    }
+  ]
+}

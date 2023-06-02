@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:weezing",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0110_weezing/weezing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0110_weezing/weezing_shiny_radiant.png"
+    }
+  ]
+}

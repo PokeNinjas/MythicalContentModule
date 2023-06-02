@@ -1,0 +1,101 @@
+{
+  "species": "cobblemon:walkingwake",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_rainbow"],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_rainbow.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_rainbow.png"
+    },
+    {
+      "aspects": ["mythical_blazing"],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_emissive_blazing.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_emissive_blazing.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_radiant.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_emissive_blazing_radiant.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_emissive_blazing_radiant.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    }
+  ]
+}

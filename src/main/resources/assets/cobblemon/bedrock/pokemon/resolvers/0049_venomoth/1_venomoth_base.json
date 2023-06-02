@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:venomoth",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0049_venomoth/venomoth_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0049_venomoth/venomoth_shiny_radiant.png"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "species": "cobblemon:charizard",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_rainbow"],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_rainbow.png",
+      "layers": [
+        {
+          "name": "rainbow_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_rainbow.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny", "mythical_rainbow"],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_rainbow.png",
+      "layers": [
+	    {
+          "name": "rainbow_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["mythical_gilded"],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_gilded.png",
+      "layers": [
+        {
+          "name": "gilded_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_gilded.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny", "mythical_gilded"],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_gilded.png",
+      "layers": [
+	    {
+          "name": "rainbow_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_radiant.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_radiant.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny", "mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/radiant_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive_radiant.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_rainbow_radiant.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_rainbow_radiant.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_rainbow_radiant.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_radiant_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive_radiant.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_gilded_radiant.png",
+      "layers": [
+        {
+          "name": "gilded_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_gilded_radiant.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_gilded_radiant.png",
+      "layers": [
+        {
+          "name": "gilded_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_radiant_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive_radiant.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

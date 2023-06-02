@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:nidoking",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0034_nidoking/nidoking_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0034_nidoking/nidoking_shiny_radiant.png"
+    }
+  ]
+}

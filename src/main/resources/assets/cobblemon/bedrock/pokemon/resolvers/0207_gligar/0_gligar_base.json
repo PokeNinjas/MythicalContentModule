@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:gligar",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gligar",
+      "model": "cobblemon:gligar.geo",
+      "texture": "cobblemon:textures/pokemon/0207_gligar/gligar.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0207_gligar/gligar_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0207_gligar/gligar_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0207_gligar/gligar_shiny_radiant.png"
+    }
+  ]
+}

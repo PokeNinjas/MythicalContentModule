@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:magmar",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_emissive.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_shiny_emissive.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "pokemon": ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "zeraora", "rayquaza", "walkingwake", "beedrill", "kakuna", "weedle", "mew", "mewtwo"],
+  "features": ["mythical_rainbow"]
+}

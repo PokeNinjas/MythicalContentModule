@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:scatterbug",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:scatterbug",
+      "model": "cobblemon:scatterbug.geo",
+      "texture": "cobblemon:textures/pokemon/0664_scatterbug/scatterbug.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0664_scatterbug/scatterbug_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0664_scatterbug/scatterbug_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0664_scatterbug/scatterbug_shiny_radiant.png"
+    }
+  ]
+}

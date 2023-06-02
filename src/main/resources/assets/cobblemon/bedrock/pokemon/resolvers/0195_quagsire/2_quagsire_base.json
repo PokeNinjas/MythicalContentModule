@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:quagsire",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0195_quagsire/quagsire_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0195_quagsire/quagsire_shiny_radiant.png"
+    }
+  ]
+}

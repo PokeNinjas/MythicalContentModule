@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:yanma",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0193_yanma/yanma_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0193_yanma/yanma_shiny_radiant.png"
+    }
+  ]
+}

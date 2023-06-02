@@ -1,0 +1,117 @@
+{
+  "species": "cobblemon:dragonair",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mythical_easter"],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_easter.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_easter.png"
+    },
+    {
+      "aspects": ["mythical_radiant"],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_easter_radiant.png"
+    },
+    {
+      "aspects": ["mythical_blazing"],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_blazing.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_blazing.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_blazing_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_blazing_radiant.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

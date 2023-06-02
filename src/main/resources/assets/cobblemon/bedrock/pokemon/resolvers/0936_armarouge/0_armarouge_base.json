@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:armarouge",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:armarouge",
+      "model": "cobblemon:armarouge.geo",
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_radiant.png"
+    }
+  ]
+}

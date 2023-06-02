@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:dodrio",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0085_dodrio/dodrio_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0085_dodrio/dodrio_shiny_radiant.png"
+    }
+  ]
+}

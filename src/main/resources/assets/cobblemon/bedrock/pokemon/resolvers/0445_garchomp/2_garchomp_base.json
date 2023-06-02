@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:garchomp",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny_blazing_radiant.png"
+    }
+  ]
+}

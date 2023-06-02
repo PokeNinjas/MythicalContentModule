@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:servine",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0496_servine/servine_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0496_servine/servine_shiny_radiant.png"
+    }
+  ]
+}

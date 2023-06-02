@@ -1,6 +1,7 @@
 package com.mythicalnetwork.mythicalmod.content.cramomatic
 
 import com.cobblemon.mod.common.util.giveOrDropItemStack
+import com.mythicalnetwork.mythicalmod.MythicalContent
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.Level
 
@@ -22,7 +23,13 @@ class CramomaticPlayerHandler(private var level: Level) {
             }
         } else {
             for (player in playersToTickList) {
-                players[player]!!.tick()
+                if(!players[player]!!.isPaused()){
+                    players[player]!!.tick()
+                    if(players[player]!!.isComplete && players[player]!!.getTime()%5==0){
+                        onComplete(players[player]!!)
+                        removePlayer(player)
+                    }
+                }
             }
         }
     }
@@ -31,16 +38,27 @@ class CramomaticPlayerHandler(private var level: Level) {
         return level
     }
 
+    fun pausePlayer(player: Player){
+        players[player]?.pause()
+    }
+
+    fun resumePlayer(player: Player){
+        players[player]?.resume()
+    }
+
     fun onComplete(cramomaticInstance: CramomaticInstance){
+        MythicalContent.LOGGER.info("Cramomatic instance completed")
         val player = players.filterValues { it == cramomaticInstance }.keys.first()
-        cramomaticInstance.output?.let {
-            for (itemStack in it) {
-                player.giveOrDropItemStack(itemStack, true)
+        cramomaticInstance.output?.let { instance ->
+            CramomaticRewardPoolEntry.getRandomWithWeight(instance).let {
+                MythicalContent.LOGGER.info("Giving player ${player.displayName} ${it.displayName.string}")
+                player.giveOrDropItemStack(it, true)
             }
         }
         cramomaticInstance.getCurrentItems().let {
             if(it.isNotEmpty()){
                 for (itemStack in it) {
+                    MythicalContent.LOGGER.info("Giving player ${player.displayName} ${itemStack.displayName.string} back")
                     player.giveOrDropItemStack(itemStack, true)
                 }
             }
@@ -50,11 +68,13 @@ class CramomaticPlayerHandler(private var level: Level) {
     }
 
     fun addPlayer(player: Player, instance: CramomaticInstance): CramomaticInstance {
+        MythicalContent.LOGGER.info("Adding player ${player.displayName} to handler")
         players[player] = instance
         return instance
     }
 
     fun removePlayer(player: Player) {
+        MythicalContent.LOGGER.info("Removing player ${player.displayName} from handler")
         players.remove(player)
     }
 

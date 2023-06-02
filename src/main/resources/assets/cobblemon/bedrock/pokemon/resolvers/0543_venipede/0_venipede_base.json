@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:venipede",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:venipede",
+      "model": "cobblemon:venipede.geo",
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+		    "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny.png",
+      "layers": [
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny_radiant.png"
+    }
+  ]
+}
