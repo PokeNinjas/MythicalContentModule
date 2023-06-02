@@ -124,25 +124,10 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                         update(player, playerHandler)
                     }
                 }
-            }
-            MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
-                handler.getPlayer(player)?.let { playerHandler ->
-                    MythicalContent.LOGGER.info("Got player handler for player $player")
-                    if (!playerHandler.isComplete) {
-                        addItem(player.getItemInHand(hand), player)
-                        player.getItemInHand(hand).shrink(1)
-                        state = STATE.CONSUMING
-                    } else {
-                        playerHandler.onComplete {
-                            MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
-                        }
-                        MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
-                        state = STATE.EJECTING
-                    }
-                    update(player, playerHandler)
-                } ?: run {
-                    handler.addPlayer(player, CramomaticInstance(this)).let { playerHandler ->
-                        MythicalContent.LOGGER.info("Created player handler for player $player")
+            } else {
+                MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
+                    handler.getPlayer(player)?.let { playerHandler ->
+                        MythicalContent.LOGGER.info("Got player handler for player $player")
                         if (!playerHandler.isComplete) {
                             addItem(player.getItemInHand(hand), player)
                             player.getItemInHand(hand).shrink(1)
@@ -155,6 +140,22 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                             state = STATE.EJECTING
                         }
                         update(player, playerHandler)
+                    } ?: run {
+                        handler.addPlayer(player, CramomaticInstance(this)).let { playerHandler ->
+                            MythicalContent.LOGGER.info("Created player handler for player $player")
+                            if (!playerHandler.isComplete) {
+                                addItem(player.getItemInHand(hand), player)
+                                player.getItemInHand(hand).shrink(1)
+                                state = STATE.CONSUMING
+                            } else {
+                                playerHandler.onComplete {
+                                    MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
+                                }
+                                MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                                state = STATE.EJECTING
+                            }
+                            update(player, playerHandler)
+                        }
                     }
                 }
             }
