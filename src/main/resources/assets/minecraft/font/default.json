@@ -1214,6 +1214,33 @@
       "ascent": 7,
       "height": 7,
       "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ꐘ"
+      ],
+      "file": "misc/daycare.png",
+      "ascent": 20,
+      "height": 91,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ꐙ"
+      ],
+      "file": "misc/daycare_parents.png",
+      "ascent": 20,
+      "height": 91,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ꐚ"
+      ],
+      "file": "misc/daycare_eggs.png",
+      "ascent": 20,
+      "height": 91,
+      "type": "bitmap"
     }
   ]
 }
