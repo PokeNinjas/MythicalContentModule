@@ -14,7 +14,7 @@ plugins {
 group = ProjectInfo.GROUP
 version = ProjectInfo.VERSION
 base {
-    archivesName.set("MythicalContentModule")
+    archivesName.set("MythicalMod")
 }
 
 loom {
