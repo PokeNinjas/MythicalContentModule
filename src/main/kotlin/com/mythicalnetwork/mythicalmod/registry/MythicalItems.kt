@@ -2260,6 +2260,11 @@ object MythicalItems {
         "mew_3"
     )
 
+    var PROGRESS_BAR: Item = Item(
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "progress_bar"
+    )
+
     fun registerItems() {
         for(item in ITEMS){
             registerItem(item.value, item.key)

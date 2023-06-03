@@ -1,0 +1,68 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mythicalmod:item/progress_bar/progress_bar_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.1
+      },
+      "model": "mythicalmod:item/progress_bar/progress_bar_1"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.2
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_2"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.3
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_3"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.4
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_4"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.5
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_5"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.6
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_6"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.7
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_7"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.8
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_8"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 0.9
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_9"
+    },
+    {
+      "predicate": {
+        "mythicalmod:progress": 1.0
+      },
+        "model": "mythicalmod:item/progress_bar/progress_bar_10"
+    }
+  ]
+}

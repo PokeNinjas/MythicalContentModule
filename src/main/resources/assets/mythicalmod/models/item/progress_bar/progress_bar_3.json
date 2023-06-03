@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mythicalmod:item/progress_bar/progress_bar_3"
+  }
+}

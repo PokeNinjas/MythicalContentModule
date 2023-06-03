@@ -35,6 +35,10 @@ class MythicalContent : ModInitializer {
         val LOGGER: Logger = LogUtils.getLogger()
         var PLACEHOLDER_LIST = mutableMapOf<ResourceLocation, BiFunction<PlaceholderContext, String?, PlaceholderResult>>()
         var CRAMOMATIC_HANDLER: CramomaticPlayerHandler? = null
+
+        fun asResource(str: String): ResourceLocation {
+            return ResourceLocation(MODID, str)
+        }
     }
     override fun onInitialize(mod: ModContainer?) {
         setupPlaceholders()
