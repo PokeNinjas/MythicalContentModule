@@ -44,7 +44,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     MythicalBlockEntity(MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!!, pos, state), IAnimatable, Tooltippable {
     private var state = STATE.CONSUMING
     private var animationFactory: AnimationFactory = GeckoLibUtil.createFactory(this)
-    private var ticksSinceItemAdded: Int = -1
+    var ticksSinceItemAdded: Int = -1
     private var instance: CramomaticInstance? = null
     private var tooltip: MutableList<Component> = mutableListOf()
     private var progress: Int = 0
@@ -52,6 +52,42 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         it.addColor("background", Color(53, 141, 222).multiply(1.0f, 1.0f, 1.0f, 0.75f))
         it.addColor("topBorder", Color(249, 224, 29))
         it.addColor("bottomBorder", Color(255, 122, 83))
+    }
+
+    fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
+        if (ticksSinceItemAdded < 100 && ticksSinceItemAdded != -1) {
+            ticksSinceItemAdded++
+        }
+        if(ticksSinceItemAdded == 100) {
+            ticksSinceItemAdded = -1
+        }
+        if (level.isClientSide) {
+            tooltip[1] = TooltipHelper.makeProgressBar(
+                ((instance?.getTime() ?: 0).toFloat() / (instance?.getMaxTime() ?: 200).toFloat()),
+                theme.getColor("bottomBorder").rgb,
+                theme.getColor("topBorder").rgb
+            )
+            instance?.getCurrentItems()?.let {
+                if (it.isNotEmpty()) {
+                    if (tooltip.size < 3) {
+                        tooltip.add(Component.empty())
+                        tooltip.add(Component.empty())
+                        tooltip.add(Component.empty())
+                        tooltip.add(Component.empty())
+                        tooltip.add(Component.literal("[Sneak + Interact to empty Cramomatic]")
+                            .withStyle { s -> s.withColor(theme.getColor("topBorder").rgb) })
+                    }
+                } else {
+                    if (tooltip.size == 7) {
+                        tooltip.removeAt(6)
+                        tooltip.removeAt(5)
+                        tooltip.removeAt(4)
+                        tooltip.removeAt(3)
+                        tooltip.removeAt(2)
+                    }
+                }
+            }
+        }
     }
 
     init {
@@ -62,6 +98,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     override fun registerControllers(animationData: AnimationData) {
         animationData.addAnimationController(AnimationController(this, "controller", 0.0F, this::predicate))
     }
+
 
     private fun <E> predicate(animationEvent: AnimationEvent<E>): PlayState
             where E : IAnimatable, E : BlockEntity {
@@ -89,7 +126,6 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         return PlayState.CONTINUE
     }
 
-
     override fun saveAdditional(nbt: CompoundTag) {
         super.saveAdditional(nbt)
     }
@@ -98,20 +134,14 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         return animationFactory
     }
 
-    fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
-        if (ticksSinceItemAdded < 20 && ticksSinceItemAdded != -1) {
-            ticksSinceItemAdded++
-        }
-        if (level.isClientSide) {
-            tooltip[1] = TooltipHelper.makeProgressBar(
-                ((instance?.getTime() ?: 0) / (instance?.getMaxTime() ?: 200)).toFloat(),
-                theme.getColor("bottomBorder").rgb,
-                theme.getColor("bottomBorder").rgb
-            )
-        }
-    }
-
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
+        if(player.level.isClientSide){
+            if(!player.isCrouching){
+                if(player.getItemInHand(hand) != ItemStack.EMPTY){
+                    ticksSinceItemAdded = 0
+                }
+            }
+        }
         if (!player.level.isClientSide) {
             if (player.isCrouching) {
                 MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
@@ -173,6 +203,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         }
     }
 
+    // TODO: add max item count of 5
     private fun addItem(stack: ItemStack, player: Player) {
         if (stack.isEmpty) return
         if (!player.level.isClientSide) {
@@ -270,11 +301,14 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     override fun getTooltipWidth(): Int {
+        instance?.let {
+            return it.getCurrentItems().size * 16
+        }
         return 0
     }
 
     override fun getTooltipHeight(): Int {
-        return 32
+        return 0
     }
 
     override fun getTooltipXOffset(): Int {
@@ -289,7 +323,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         val itemList: MutableList<VeilUIItemTooltipDataHolder> = mutableListOf()
         instance?.getCurrentItems()?.size?.let {
             for (i in 0 until it) {
-                itemList.add(VeilUIItemTooltipDataHolder(instance!!.getCurrentItems()[i], { i * 16f }, { 0f }))
+                itemList.add(VeilUIItemTooltipDataHolder(instance!!.getCurrentItems()[i], { i * 16f }, { -48f }))
             }
         }
         instance?.getRecipeGuess()?.let { recipe ->
@@ -299,7 +333,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                         (level?.gameTime?.plus(it)
                             ?.div(10)).let { it1 -> it1?.let { it2 -> sin(it2.toDouble()).toFloat() } }
                     }, {
-                        16f + cos((level?.gameTime?.plus(it)?.div(10))?.toDouble() ?: 0.0).toFloat()
+                        -32f + cos((level?.gameTime?.plus(it)?.div(10))?.toDouble() ?: 0.0).toFloat()
                     })
             )
         }
