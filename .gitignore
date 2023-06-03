@@ -4,3 +4,4 @@
 /run/
 /buildSrc/build/
 /buildSrc/.gradle/
+/buildSrc/build/
