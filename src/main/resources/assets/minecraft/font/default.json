@@ -1241,6 +1241,24 @@
       "ascent": 20,
       "height": 91,
       "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ꀽ"
+      ],
+      "file": "misc/null.png",
+      "ascent": -32768,
+      "height": -10,
+      "type": "bitmap"
+    },
+    {
+      "chars": [
+        "ꐒ"
+      ],
+      "file": "misc/menu_banner.png",
+      "ascent": 128,
+      "height": 256,
+      "type": "bitmap"
     }
   ]
 }
