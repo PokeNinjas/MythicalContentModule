@@ -4,17 +4,33 @@ import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
 import com.mojang.math.Matrix4f
 import com.mojang.math.Vector3f
+import foundry.veil.anim.Keyframe
+import foundry.veil.anim.Path
+import foundry.veil.math.Easings
+import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.entity.EnderDragonRenderer
 import net.minecraft.util.RandomSource
+import net.minecraft.world.phys.Vec3
+import org.lwjgl.glfw.GLFW
 import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer
 import kotlin.math.min
 import kotlin.math.sqrt
+import kotlin.properties.Delegates
 
 class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticModel()) {
+    val itemPath: Path = Path(listOf(
+        Keyframe(Vec3(0.5, 0.75, -0.5), Vec3.ZERO, Vec3.ZERO, 20, Easings.Easing.linear),
+        Keyframe(Vec3(0.5, 0.75, -0.5), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInQuad),
+        Keyframe(Vec3(0.5, 1.1, -0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
+        Keyframe(Vec3(0.5, 1.1, 0.0), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
+        Keyframe(Vec3(0.5, 1.1, 0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
+        Keyframe(Vec3(0.5, 1.1, 0.75), Vec3.ZERO, Vec3.ZERO, 10, Easings.Easing.easeInBounce)
+    ), false, true)
+    var oldPos: Vec3 = Vec3(-0.5, 0.75, -0.5)
     companion object {
-        val HALF_SQRT_3: Float = (sqrt(3.0) / 3.0).toFloat()
+        val HALF_SQRT_3: Float = 0.05f
     }
 
     override fun render(
@@ -24,33 +40,38 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
         bufferSource: MultiBufferSource,
         packedLight: Int
     ) {
+        if(tile.ticksSinceItemAdded == 0) {
+            oldPos = Vec3(-0.5, 0.75, -0.5)
+        }
         super.render(tile, partialTick, poseStack, bufferSource, packedLight)
         poseStack.pushPose()
-        poseStack.translate(-0.5, 1.5, -0.5)
+        val ticks = if(tile.ticksSinceItemAdded == -1) 0 else tile.ticksSinceItemAdded
+        val pos: Vec3 = itemPath.frameAtProgress(ticks / 20f).position
+        oldPos = oldPos.lerp(pos, 0.02)
+        poseStack.translate(oldPos.x, oldPos.y, oldPos.z)
         var l = 0.0
         var m = 0.0
         if(tile.ticksSinceItemAdded > 0){
-            l = ((tile.ticksSinceItemAdded + partialTick).toFloat() / 200.0)
+            l = ((tile.ticksSinceItemAdded + partialTick) / 180.0)
             val le = if(l > 0.8F) (l - 0.8F) / 0.2F else 0.0F
             m = min(le.toDouble(), 1.0)
             val randomSource: RandomSource = RandomSource.create(432L)
             val vertexConsumer: VertexConsumer = bufferSource.getBuffer(RenderType.lightning())
             poseStack.pushPose()
-            poseStack.translate(0.0,-1.0,-2.0)
-            val e = (l+l*l)/2.0F * 240.0F
+            val e = (l+l*l)/4.0*240.0
             var i = 0
             while(i < e){
                 i++
-                poseStack.mulPose(Vector3f.XP.rotationDegrees(randomSource.nextFloat() * 360.0f))
-                poseStack.mulPose(Vector3f.YP.rotationDegrees(randomSource.nextFloat() * 360.0f))
-                poseStack.mulPose(Vector3f.ZP.rotationDegrees(randomSource.nextFloat() * 360.0f))
-                poseStack.mulPose(Vector3f.XP.rotationDegrees(randomSource.nextFloat() * 360.0f))
-                poseStack.mulPose(Vector3f.YP.rotationDegrees(randomSource.nextFloat() * 360.0f))
+                poseStack.mulPose(Vector3f.XP.rotationDegrees((randomSource.nextFloat() * 360.0f) + partialTick))
+                poseStack.mulPose(Vector3f.YP.rotationDegrees((randomSource.nextFloat() * 360.0f) + partialTick))
+                poseStack.mulPose(Vector3f.ZP.rotationDegrees((randomSource.nextFloat() * 360.0f) + partialTick))
+                poseStack.mulPose(Vector3f.XP.rotationDegrees((randomSource.nextFloat() * 360.0f) + partialTick))
+                poseStack.mulPose(Vector3f.YP.rotationDegrees((randomSource.nextFloat() * 360.0f) + partialTick))
                 poseStack.mulPose(Vector3f.ZP.rotationDegrees((randomSource.nextFloat() * 360.0f + l * 90.0f).toFloat()))
-                val o: Float = (randomSource.nextFloat() * 20.0f + 5.0f + m * 10.0f).toFloat() / 250.0f
-                val p: Float = (randomSource.nextFloat() * 2.0f + 1.0f + m * 2.0f).toFloat() / 5.0f
+                val o: Float = (randomSource.nextFloat() * 20.0f + 5.0f + m * 10.0f).toFloat() / 500.0f
+                val p: Float = (randomSource.nextFloat() * 2.0f + 1.0f + m * 2.0f).toFloat() / 10.0f
                 val matrix4f: Matrix4f = poseStack.last().pose()
-                val q: Int = (255.0f * (1.0f - m)).toInt() / 5
+                val q: Int = (255.0f * (1.0f - m)).toInt()
                 vertex01(vertexConsumer, matrix4f, q)
                 vertex2(vertexConsumer, matrix4f, o, p)
                 vertex3(vertexConsumer, matrix4f, o, p)
@@ -68,7 +89,7 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
     }
 
     private fun vertex01(vertices: VertexConsumer, matrix: Matrix4f, alpha: Int) {
-        vertices.vertex(matrix, 0.0f, 0.0f, 0.0f).color(255, 255, 255, alpha).endVertex()
+        vertices.vertex(matrix, 0.0f, 0.0f, 0.0f).color(255, 255, 255, 255).endVertex()
     }
 
     private fun vertex2(vertices: VertexConsumer, matrix: Matrix4f, y: Float, x: Float) {

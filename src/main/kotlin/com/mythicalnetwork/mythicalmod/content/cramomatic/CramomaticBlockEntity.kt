@@ -36,6 +36,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent
 import software.bernie.geckolib3.core.manager.AnimationData
 import software.bernie.geckolib3.core.manager.AnimationFactory
 import software.bernie.geckolib3.util.GeckoLibUtil
+import java.util.UUID
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -55,10 +56,10 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
-        if (ticksSinceItemAdded < 100 && ticksSinceItemAdded != -1) {
+        if (ticksSinceItemAdded < 20 && ticksSinceItemAdded != -1) {
             ticksSinceItemAdded++
         }
-        if(ticksSinceItemAdded == 100) {
+        if(ticksSinceItemAdded == 20) {
             ticksSinceItemAdded = -1
         }
         if (level.isClientSide) {
@@ -135,6 +136,9 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
+        if(ticksSinceItemAdded != -1) {
+            return InteractionResult.PASS
+        }
         if(player.level.isClientSide){
             if(!player.isCrouching){
                 if(player.getItemInHand(hand) != ItemStack.EMPTY){
@@ -145,18 +149,18 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         if (!player.level.isClientSide) {
             if (player.isCrouching) {
                 MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
-                    handler.getPlayer(player)?.let { playerHandler ->
+                    handler.getPlayer(player.uuid)?.let { playerHandler ->
                         playerHandler.onComplete {
                             MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
                         }
-                        MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                        MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player.uuid)
                         state = STATE.EJECTING
-                        update(player, playerHandler)
+                        update(player.uuid, playerHandler)
                     }
                 }
             } else {
                 MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
-                    handler.getPlayer(player)?.let { playerHandler ->
+                    handler.getPlayer(player.uuid)?.let { playerHandler ->
                         MythicalContent.LOGGER.info("Got player handler for player $player")
                         if (!playerHandler.isComplete) {
                             addItem(player.getItemInHand(hand), player)
@@ -166,12 +170,12 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                             playerHandler.onComplete {
                                 MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
                             }
-                            MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                            MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player.uuid)
                             state = STATE.EJECTING
                         }
-                        update(player, playerHandler)
+                        update(player.uuid, playerHandler)
                     } ?: run {
-                        handler.addPlayer(player, CramomaticInstance(this)).let { playerHandler ->
+                        handler.addPlayer(player.uuid, CramomaticInstance(this)).let { playerHandler ->
                             MythicalContent.LOGGER.info("Created player handler for player $player")
                             if (!playerHandler.isComplete) {
                                 addItem(player.getItemInHand(hand), player)
@@ -181,10 +185,10 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                                 playerHandler.onComplete {
                                     MythicalContent.CRAMOMATIC_HANDLER!!.onComplete(it)
                                 }
-                                MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player)
+                                MythicalContent.CRAMOMATIC_HANDLER!!.removePlayer(player.uuid)
                                 state = STATE.EJECTING
                             }
-                            update(player, playerHandler)
+                            update(player.uuid, playerHandler)
                         }
                     }
                 }
@@ -193,13 +197,16 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         return InteractionResult.SUCCESS
     }
 
-    fun update(player: Player, instance: CramomaticInstance?) {
+    fun update(player: UUID, instance: CramomaticInstance?) {
         instance?.let {
             MythicalContent.LOGGER.info("Updating Cramomatic for player $player")
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeBlockPos(worldPosition)
             buf.writeNbt(it.save())
-            ServerPlayNetworking.send(player as ServerPlayer, MythicalPackets.CRAMOMATIC_S2C_SYNC.identifier, buf)
+            val playerEntity: Player? = level?.getPlayerByUUID(player)
+            if (playerEntity != null) {
+                ServerPlayNetworking.send(playerEntity as ServerPlayer, MythicalPackets.CRAMOMATIC_S2C_SYNC.identifier, buf)
+            }
         }
     }
 
@@ -207,11 +214,11 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     private fun addItem(stack: ItemStack, player: Player) {
         if (stack.isEmpty) return
         if (!player.level.isClientSide) {
-            MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player)?.let {
+            MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player.uuid)?.let {
                 MythicalContent.LOGGER.info("Adding item ${stack.displayName.string} to Cramomatic, added by player $player")
                 it.addItem(stack)
                 player.sendSystemMessage(Component.literal("Added item ${stack.displayName.string} to Cramomatic"))
-                update(player, it)
+                update(player.uuid, it)
             }
         }
         ticksSinceItemAdded = 0
@@ -322,8 +329,13 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     override fun getItems(): MutableList<VeilUIItemTooltipDataHolder> {
         val itemList: MutableList<VeilUIItemTooltipDataHolder> = mutableListOf()
         instance?.getCurrentItems()?.size?.let {
+            var j = 0
             for (i in 0 until it) {
-                itemList.add(VeilUIItemTooltipDataHolder(instance!!.getCurrentItems()[i], { i * 16f }, { -48f }))
+                val item = instance!!.getCurrentItems()[i]
+                for(k in 0 until item.count) {
+                    itemList.add(VeilUIItemTooltipDataHolder(item, { (i+(k/8f)) * 16f }, { -48f + (k/4f) }))
+                    j++
+                }
             }
         }
         instance?.getRecipeGuess()?.let { recipe ->

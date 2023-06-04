@@ -18,6 +18,8 @@ object Dependencies {
     const val PLACEHOLDERAPI = "eu.pb4:placeholder-api:${Versions.PLACEHOLDERAPI}"
     const val GECKOLIB = "software.bernie.geckolib:geckolib-quilt-1.19:${Versions.GECKOLIB}"
     const val VEIL = "foundry.veil:Veil-quilt-1.19.2:${Versions.VEIL}"
+    const val CC_BASE = "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${Versions.CARDINAL_COMPONENTS}"
+    const val CC_WORLD = "dev.onyxstudios.cardinal-components-api:cardinal-components-level:${Versions.CARDINAL_COMPONENTS}"
 
     val CORE_DEPS = listOf<String>(
         QUILT_KOTLIN_CORE,
@@ -33,6 +35,21 @@ object Dependencies {
         MODMENU,
         PLACEHOLDERAPI,
         GECKOLIB,
-        VEIL
+        VEIL,
+        CC_BASE,
+        CC_WORLD
+    )
+
+    val DONT_INCLUDE = listOf<String>(
+        QUILT_KOTLIN_CORE,
+        QUILT_KOTLIN_LIBRARIES,
+        QUILT_LOADER,
+        QUILTED_FABRIC_API,
+        ARCHITECTURY,
+        COBBLEMON,
+        OWOLIB,
+        LUCKPERMS,
+        FABRIC_PERMS_API,
+        MODMENU
     )
 }

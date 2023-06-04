@@ -6,14 +6,17 @@ import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticPlayerHandle
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRecipeJsonListener
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
+import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
 import dev.architectury.registry.ReloadListenerRegistry
 import eu.pb4.placeholders.api.PlaceholderContext
 import eu.pb4.placeholders.api.PlaceholderResult
 import eu.pb4.placeholders.api.Placeholders
+import io.wispforest.owo.offline.DataSavedEvents
 import net.minecraft.Util
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.server.MinecraftServer
 import net.minecraft.server.packs.PackType
 import net.minecraft.world.level.Level
 import org.quiltmc.loader.api.ModContainer
@@ -31,6 +34,7 @@ import java.util.function.BiFunction
  */
 class MythicalContent : ModInitializer {
     companion object {
+        var SERVER: MinecraftServer? = null
         const val MODID = "mythicalmod"
         val LOGGER: Logger = LogUtils.getLogger()
         var PLACEHOLDER_LIST = mutableMapOf<ResourceLocation, BiFunction<PlaceholderContext, String?, PlaceholderResult>>()
@@ -45,26 +49,37 @@ class MythicalContent : ModInitializer {
         MythicalBlocks.registerBlocks()
         MythicalItems.registerItems()
         MythicalBlockEntities.init()
-        ServerLifecycleEvents.READY.register {
-            CRAMOMATIC_HANDLER = it.getLevel(Level.OVERWORLD)?.let { it1 -> CramomaticPlayerHandler(it1) }
+        ServerLifecycleEvents.READY.register { server ->
+//            server.getLevel(Level.OVERWORLD)!!.levelData.getComponent(MythicalComponentRegistry.CRAMOMATIC).handler?.let { CRAMOMATIC_HANDLER = it }
+//                ?: run {
+//                    CRAMOMATIC_HANDLER = CramomaticPlayerHandler(server.getLevel(Level.OVERWORLD)!!)
+//                    server.getLevel(Level.OVERWORLD)!!.levelData.getComponent(MythicalComponentRegistry.CRAMOMATIC).handler = CRAMOMATIC_HANDLER
+//                }
+            SERVER = server
+
         }
 
-        ServerTickEvents.END.register {
+        ServerTickEvents.END.register { server ->
             if(CRAMOMATIC_HANDLER == null) {
-                if (it.getLevel(Level.OVERWORLD) != null) {
-                    CRAMOMATIC_HANDLER = CramomaticPlayerHandler(it.getLevel(Level.OVERWORLD)!!)
+                CRAMOMATIC_HANDLER = CramomaticPlayerHandler(server.getLevel(Level.OVERWORLD)!!)
+                server.getLevel(Level.OVERWORLD)!!.levelData.getComponent(MythicalComponentRegistry.CRAMOMATIC).handler =
+                    CRAMOMATIC_HANDLER
+            } else {
+                if(CRAMOMATIC_HANDLER!!.isEmpty()){
+                    CramomaticPlayerHandler.toLoad.forEach { server.playerList.getPlayer(it.key)
+                        ?.let { it1 -> CRAMOMATIC_HANDLER?.addPlayer(it1.uuid, it.value) } }
                 }
             }
-            if(!it.getLevel(Level.OVERWORLD)!!.isClientSide){
+            if(!server.getLevel(Level.OVERWORLD)!!.isClientSide){
                 CRAMOMATIC_HANDLER?.tick()
             }
         }
 
         ServerPlayConnectionEvents.DISCONNECT.register { handler, server ->
-            CRAMOMATIC_HANDLER?.pausePlayer(handler.player)
+            CRAMOMATIC_HANDLER?.pausePlayer(handler.player.uuid)
         }
         ServerPlayConnectionEvents.JOIN.register { handler, sender, server ->
-            CRAMOMATIC_HANDLER?.resumePlayer(handler.player)
+            CRAMOMATIC_HANDLER?.resumePlayer(handler.player.uuid)
         }
         ReloadListenerRegistry.register(PackType.SERVER_DATA, CramomaticRecipeJsonListener.INSTANCE)
     }

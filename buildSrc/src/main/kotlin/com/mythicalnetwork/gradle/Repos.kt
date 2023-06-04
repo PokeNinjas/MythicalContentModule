@@ -16,6 +16,7 @@ object Repos {
         "https://repo.lightdream.dev/",
         "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/",
         "https://maven.blamejared.com",
-        "https://jitpack.io"
+        "https://jitpack.io",
+        "https://ladysnake.jfrog.io/artifactory/mods"
     )
 }

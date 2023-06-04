@@ -23,6 +23,11 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
             if(ticks % 5 == 0){
                 testRecipe()
             }
+            if(ticks % 60 == 0) {
+                MythicalContent.CRAMOMATIC_HANDLER!!.players.filterValues { it == this }.keys.first().let {
+                    cramomaticBlock?.update(it, this)
+                }
+            }
         } else {
             isComplete = true
             MythicalContent.CRAMOMATIC_HANDLER!!.players.filterValues { it == this }.keys.first().let {
@@ -185,6 +190,10 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
             tag.put("recipeGuess", it.save())
         }
         return tag
+    }
+
+    override fun toString(): String {
+        return "CramomaticInstance{ticks=$ticks, maxTicks=$maxTicks, isComplete=$isComplete, wasTicked=$wasTicked, recipeGuess=$recipeGuess, paused=$paused}"
     }
 
     companion object {

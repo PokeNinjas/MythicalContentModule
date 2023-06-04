@@ -2,15 +2,31 @@ package com.mythicalnetwork.mythicalmod.content.cramomatic
 
 import com.cobblemon.mod.common.util.giveOrDropItemStack
 import com.mythicalnetwork.mythicalmod.MythicalContent
+import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.Level
+import java.util.*
 
 class CramomaticPlayerHandler(private var level: Level) {
-    var players: MutableMap<Player, CramomaticInstance> = mutableMapOf()
+    var players: MutableMap<UUID, CramomaticInstance> = mutableMapOf()
+
+    companion object {
+        var toLoad: MutableMap<UUID, CramomaticInstance> = mutableMapOf()
+        fun load(tag: CompoundTag): CramomaticPlayerHandler? {
+            toLoad.clear()
+            val handler = MythicalContent.SERVER?.overworld()?.let { CramomaticPlayerHandler(it) } ?: return null
+            for (player in tag.allKeys) {
+                val instance = CramomaticInstance.load(tag.getCompound(player))
+                toLoad[UUID.fromString(player)] = instance
+                println("Loading CramomaticInstance for $player with data $instance")
+            }
+            return handler
+        }
+    }
 
     fun tick() {
         val playersToTick = (size()/20).coerceAtLeast(1)
-        val playersToTickList = mutableListOf<Player>()
+        val playersToTickList = mutableListOf<UUID>()
         for (i in 0 until playersToTick) {
             if (players.isNotEmpty()) {
                 val player = players.keys.first()
@@ -38,17 +54,19 @@ class CramomaticPlayerHandler(private var level: Level) {
         return level
     }
 
-    fun pausePlayer(player: Player){
+    fun pausePlayer(player: UUID){
         players[player]?.pause()
     }
 
-    fun resumePlayer(player: Player){
+    fun resumePlayer(player: UUID){
         players[player]?.resume()
+        players[player]?.getBlock()?.update(player, players[player]!!)
     }
 
     fun onComplete(cramomaticInstance: CramomaticInstance){
         MythicalContent.LOGGER.info("Cramomatic instance completed")
-        val player = players.filterValues { it == cramomaticInstance }.keys.first()
+        val playerUUID = players.filterValues { it == cramomaticInstance }.keys.first()
+        val player = level.getPlayerByUUID(playerUUID) ?: return
         cramomaticInstance.output?.let { instance ->
             CramomaticRewardPoolEntry.getRandomWithWeight(instance).let {
                 MythicalContent.LOGGER.info("Giving player ${player.displayName} ${it.displayName.string}")
@@ -64,25 +82,25 @@ class CramomaticPlayerHandler(private var level: Level) {
             }
         }
         cramomaticInstance.clear()
-        cramomaticInstance.getBlock()?.update(player, cramomaticInstance)
+        cramomaticInstance.getBlock()?.update(player.uuid, cramomaticInstance)
     }
 
-    fun addPlayer(player: Player, instance: CramomaticInstance): CramomaticInstance {
-        MythicalContent.LOGGER.info("Adding player ${player.displayName} to handler")
+    fun addPlayer(player: UUID, instance: CramomaticInstance): CramomaticInstance {
+        MythicalContent.LOGGER.info("Adding player $player to handler")
         players[player] = instance
         return instance
     }
 
-    fun removePlayer(player: Player) {
-        MythicalContent.LOGGER.info("Removing player ${player.displayName} from handler")
+    fun removePlayer(player: UUID) {
+        MythicalContent.LOGGER.info("Removing player ${player} from handler")
         players.remove(player)
     }
 
-    fun getPlayer(player: Player): CramomaticInstance? {
+    fun getPlayer(player: UUID): CramomaticInstance? {
         return players[player]
     }
 
-    fun hasPlayer(player: Player): Boolean {
+    fun hasPlayer(player: UUID): Boolean {
         return players.containsKey(player)
     }
 
@@ -98,11 +116,19 @@ class CramomaticPlayerHandler(private var level: Level) {
         return players.isEmpty()
     }
 
-    fun containsPlayer(player: Player): Boolean {
+    fun containsPlayer(player: UUID): Boolean {
         return players.containsKey(player)
     }
 
     fun containsInstance(instance: CramomaticInstance): Boolean {
         return players.containsValue(instance)
+    }
+
+    fun save(): CompoundTag {
+        val tag = CompoundTag()
+        for (player in players.keys) {
+            tag.put(player.toString(), players[player]!!.save())
+        }
+        return tag
     }
 }

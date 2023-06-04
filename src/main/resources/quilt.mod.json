@@ -24,7 +24,8 @@
       "client_init": {
         "adapter": "kotlin",
         "value": "com.mythicalnetwork.mythicalmod.MythicalModClient"
-      }
+      },
+      "cardinal-components": "com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry::INSTANCE"
     },
     "depends": [
       {
@@ -49,5 +50,9 @@
       }
     ]
   },
-  "mixin": "mythicalcontent.mixins.json"
+  "cardinal-components": [
+    "mythicalmod:cramomatic"
+  ],
+  "mixin": "mythicalcontent.mixins.json",
+  "access_widener": "mythicalmod.accesswidener"
 }
