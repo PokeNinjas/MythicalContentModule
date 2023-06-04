@@ -70,6 +70,13 @@
       ],
       "model": "cobblemon:lucario_unite_costume_party.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_costume_party.png"
+    },
+    {
+      "aspects": [
+        "unite_ruins"
+      ],
+      "model": "cobblemon:lucario_unite_ruins.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_ruins.png"
     }
   ]
 }
