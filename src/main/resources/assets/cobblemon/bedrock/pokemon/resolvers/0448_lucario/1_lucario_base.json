@@ -42,6 +42,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "unite_aristocrat"
+      ],
+      "model": "cobblemon:lucario_unite_aristocrat.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_aristocrat.png"
+    },
+    {
+      "aspects": [
+        "unite_martial_arts"
+      ],
+      "model": "cobblemon:lucario_unite_martial_arts.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_martial_arts.png"
+    },
+    {
+      "aspects": [
+        "unite_concert"
+      ],
+      "model": "cobblemon:lucario_unite_concert.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_concert.png"
+    },
+    {
+      "aspects": [
+        "unite_costume_party"
+      ],
+      "model": "cobblemon:lucario_unite_costume_party.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_costume_party.png"
     }
   ]
 }

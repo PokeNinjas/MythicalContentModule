@@ -1,0 +1,13 @@
+{
+  "type": "choice",
+  "keys": ["mythical_lucario_form"],
+  "default": "false",
+  "choices": [
+	"unite_aristocrat",
+	"unite_martial_arts",
+    "unite_concert",
+    "unite_costume_party"
+	],
+  "isAspect": true,
+  "aspectForm": "mythical_lucario_form-{{choice}}"
+}
