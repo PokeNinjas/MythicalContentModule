@@ -5,3 +5,5 @@
 /buildSrc/build/
 /buildSrc/.gradle/
 /buildSrc/build/
+buildSrc/build/*
+buildSrc/.gradle/*
