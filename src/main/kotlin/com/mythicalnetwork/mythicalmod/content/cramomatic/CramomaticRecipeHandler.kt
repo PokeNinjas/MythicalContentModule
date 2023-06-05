@@ -60,7 +60,6 @@ object CramomaticRecipeHandler {
 
     fun getClosestRecipe(input: MutableList<ItemStack>): CramomaticRecipe? {
         // taking the items in the input list, find the recipe that matches the most items, regardless of order, even if some items are missing
-        MythicalContent.LOGGER.info("Finding closest recipe for input: $input")
         var closestRecipe: CramomaticRecipe? = null
         var closestRecipeMatches = 0
         for (recipe in RECIPES) {
@@ -69,18 +68,15 @@ object CramomaticRecipeHandler {
                 for (inputItemStack in input) {
                     if (inputItemStack.item == itemStack.item) {
                         if(inputItemStack.count < itemStack.count && itemStack.count - inputItemStack.count > 0){
-                            MythicalContent.LOGGER.info("Found item: ${inputItemStack.displayName.string}. But count is too low. Resetting count.")
                             matches = 0
                             break
                         }
-                        MythicalContent.LOGGER.info("Found item: ${inputItemStack.displayName.string}. Increasing count by 1.")
                         matches++
                         break
                     }
                 }
             }
             if (matches > closestRecipeMatches) {
-                MythicalContent.LOGGER.info("Found recipe with more matches: ${recipe.key}")
                 closestRecipe = recipe.value
                 closestRecipeMatches = matches
             }

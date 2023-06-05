@@ -43,15 +43,27 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
         if(tile.ticksSinceItemAdded == 0) {
             oldPos = Vec3(-0.5, 0.75, -0.5)
         }
+        tile.getInstance()?.let { instance ->
+            if(instance.getOutputTicks() > 0){
+                oldPos = Vec3(0.5, 1.1, 0.75)
+            }
+        }
         super.render(tile, partialTick, poseStack, bufferSource, packedLight)
         poseStack.pushPose()
         val ticks = if(tile.ticksSinceItemAdded == -1) 0 else tile.ticksSinceItemAdded
-        val pos: Vec3 = itemPath.frameAtProgress(ticks / 20f).position
+        var pos: Vec3 = itemPath.frameAtProgress(ticks / 20f).position
+        var outputTest: Int = 0
+        tile.getInstance()?.let {
+            outputTest = it.getOutputTicks()
+            if(outputTest > 0) {
+                pos = Minecraft.getInstance().player?.position() ?: Vec3.ZERO
+            }
+        }
         oldPos = oldPos.lerp(pos, 0.02)
         poseStack.translate(oldPos.x, oldPos.y, oldPos.z)
         var l = 0.0
         var m = 0.0
-        if(tile.ticksSinceItemAdded > 0){
+        if(tile.ticksSinceItemAdded > 0 || outputTest > 0) {
             l = ((tile.ticksSinceItemAdded + partialTick) / 180.0)
             val le = if(l > 0.8F) (l - 0.8F) / 0.2F else 0.0F
             m = min(le.toDouble(), 1.0)

@@ -64,19 +64,16 @@ class CramomaticPlayerHandler(private var level: Level) {
     }
 
     fun onComplete(cramomaticInstance: CramomaticInstance){
-        MythicalContent.LOGGER.info("Cramomatic instance completed")
         val playerUUID = players.filterValues { it == cramomaticInstance }.keys.first()
         val player = level.getPlayerByUUID(playerUUID) ?: return
         cramomaticInstance.output?.let { instance ->
             CramomaticRewardPoolEntry.getRandomWithWeight(instance).let {
-                MythicalContent.LOGGER.info("Giving player ${player.displayName} ${it.displayName.string}")
                 player.giveOrDropItemStack(it, true)
             }
         }
         cramomaticInstance.getCurrentItems().let {
             if(it.isNotEmpty()){
                 for (itemStack in it) {
-                    MythicalContent.LOGGER.info("Giving player ${player.displayName} ${itemStack.displayName.string} back")
                     player.giveOrDropItemStack(itemStack, true)
                 }
             }
@@ -86,13 +83,11 @@ class CramomaticPlayerHandler(private var level: Level) {
     }
 
     fun addPlayer(player: UUID, instance: CramomaticInstance): CramomaticInstance {
-        MythicalContent.LOGGER.info("Adding player $player to handler")
         players[player] = instance
         return instance
     }
 
     fun removePlayer(player: UUID) {
-        MythicalContent.LOGGER.info("Removing player ${player} from handler")
         players.remove(player)
     }
 

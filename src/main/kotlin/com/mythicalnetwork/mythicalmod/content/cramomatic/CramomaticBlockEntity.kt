@@ -51,8 +51,9 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     private var progress: Int = 0
     private var theme: ColorTheme = ColorTheme().also {
         it.addColor("background", Color(53, 141, 222).multiply(1.0f, 1.0f, 1.0f, 0.75f))
-        it.addColor("topBorder", Color(249, 224, 29))
-        it.addColor("bottomBorder", Color(255, 122, 83))
+        it.addColor("bottomBorder", Color(249, 224, 29))
+        it.addColor("topBorder", Color(255, 122, 83))
+        it.addColor("title", Color(255, 107, 0))
     }
 
     fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
@@ -63,11 +64,13 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
             ticksSinceItemAdded = -1
         }
         if (level.isClientSide) {
-            tooltip[1] = TooltipHelper.makeProgressBar(
-                ((instance?.getTime() ?: 0).toFloat() / (instance?.getMaxTime() ?: 200).toFloat()),
-                theme.getColor("bottomBorder").rgb,
-                theme.getColor("topBorder").rgb
-            )
+            instance?.let { instance ->
+                if(instance.getCurrentItems().isNotEmpty()){
+                    tooltip[1] = Component.literal("Time until auto-eject: ${TooltipHelper.formatTime((instance.getMaxTime()-instance.getTime()).toLong())}").withStyle { s -> s.withColor(theme.getColor("bottomBorder").rgb) }
+                }
+            } ?: run {
+                tooltip[1] = Component.translatable("block.mythicalmod.cramomatic.empty_tooltip", progress / 20).withStyle { s -> s.withColor(theme.getColor("bottomBorder").rgb) }
+            }
             instance?.getCurrentItems()?.let {
                 if (it.isNotEmpty()) {
                     if (tooltip.size < 3) {
@@ -75,8 +78,8 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                         tooltip.add(Component.empty())
                         tooltip.add(Component.empty())
                         tooltip.add(Component.empty())
-                        tooltip.add(Component.literal("[Sneak + Interact to empty Cramomatic]")
-                            .withStyle { s -> s.withColor(theme.getColor("topBorder").rgb) })
+                        tooltip.add(Component.literal("[Crouch + Right Click to empty Cramomatic!]")
+                            .withStyle { s -> s.withColor(theme.getColor("bottomBorder").rgb) })
                     }
                 } else {
                     if (tooltip.size == 7) {
@@ -92,12 +95,16 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     init {
-        tooltip.add(Component.translatable("block.mythicalmod.cramomatic"))
-        tooltip.add(Component.translatable("block.mythicalmod.cramomatic.progress_tooltip", progress / 20))
+        tooltip.add(Component.translatable("block.mythicalmod.cramomatic").withStyle { s -> s.withColor(theme.getColor("title").rgb) })
+        tooltip.add(Component.translatable("block.mythicalmod.cramomatic.empty_tooltip", progress / 20).withStyle { s -> s.withColor(theme.getColor("bottomBorder").rgb) })
     }
 
     override fun registerControllers(animationData: AnimationData) {
         animationData.addAnimationController(AnimationController(this, "controller", 0.0F, this::predicate))
+    }
+
+    fun getInstance(): CramomaticInstance? {
+        return instance
     }
 
 
@@ -161,7 +168,9 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
             } else {
                 MythicalContent.CRAMOMATIC_HANDLER?.let { handler ->
                     handler.getPlayer(player.uuid)?.let { playerHandler ->
-                        MythicalContent.LOGGER.info("Got player handler for player $player")
+                        if(playerHandler.getCurrentItems().size == 5){
+                            return InteractionResult.PASS
+                        }
                         if (!playerHandler.isComplete) {
                             addItem(player.getItemInHand(hand), player)
                             player.getItemInHand(hand).shrink(1)
@@ -176,7 +185,6 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
                         update(player.uuid, playerHandler)
                     } ?: run {
                         handler.addPlayer(player.uuid, CramomaticInstance(this)).let { playerHandler ->
-                            MythicalContent.LOGGER.info("Created player handler for player $player")
                             if (!playerHandler.isComplete) {
                                 addItem(player.getItemInHand(hand), player)
                                 player.getItemInHand(hand).shrink(1)
@@ -199,7 +207,6 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
 
     fun update(player: UUID, instance: CramomaticInstance?) {
         instance?.let {
-            MythicalContent.LOGGER.info("Updating Cramomatic for player $player")
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeBlockPos(worldPosition)
             buf.writeNbt(it.save())
@@ -215,7 +222,6 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         if (stack.isEmpty) return
         if (!player.level.isClientSide) {
             MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player.uuid)?.let {
-                MythicalContent.LOGGER.info("Adding item ${stack.displayName.string} to Cramomatic, added by player $player")
                 it.addItem(stack)
                 player.sendSystemMessage(Component.literal("Added item ${stack.displayName.string} to Cramomatic"))
                 update(player.uuid, it)
@@ -308,14 +314,12 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     override fun getTooltipWidth(): Int {
-        instance?.let {
-            return it.getCurrentItems().size * 16
-        }
         return 0
     }
 
     override fun getTooltipHeight(): Int {
         return 0
+
     }
 
     override fun getTooltipXOffset(): Int {
@@ -333,7 +337,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
             for (i in 0 until it) {
                 val item = instance!!.getCurrentItems()[i]
                 for(k in 0 until item.count) {
-                    itemList.add(VeilUIItemTooltipDataHolder(item, { (i+(k/8f)) * 16f }, { -48f + (k/4f) }))
+                    itemList.add(VeilUIItemTooltipDataHolder(item, { (i+(k/8f)) * 16f }, { -48f + (k/2f) }))
                     j++
                 }
             }

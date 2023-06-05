@@ -50,11 +50,6 @@ class MythicalContent : ModInitializer {
         MythicalItems.registerItems()
         MythicalBlockEntities.init()
         ServerLifecycleEvents.READY.register { server ->
-//            server.getLevel(Level.OVERWORLD)!!.levelData.getComponent(MythicalComponentRegistry.CRAMOMATIC).handler?.let { CRAMOMATIC_HANDLER = it }
-//                ?: run {
-//                    CRAMOMATIC_HANDLER = CramomaticPlayerHandler(server.getLevel(Level.OVERWORLD)!!)
-//                    server.getLevel(Level.OVERWORLD)!!.levelData.getComponent(MythicalComponentRegistry.CRAMOMATIC).handler = CRAMOMATIC_HANDLER
-//                }
             SERVER = server
 
         }

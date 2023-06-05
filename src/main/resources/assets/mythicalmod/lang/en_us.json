@@ -452,5 +452,6 @@
   "block.mythicalmod.mew_1": "Mew 1",
   "block.mythicalmod.mew_2": "Mew 2",
   "block.mythicalmod.mew_3": "Mew 3",
-  "block.mythicalmod.cramomatic": "Cramomatic"
+  "block.mythicalmod.cramomatic": "Cramomatic",
+  "block.mythicalmod.cramomatic.empty_tooltip": "Currently empty! Add an item to start crafting!"
 }
