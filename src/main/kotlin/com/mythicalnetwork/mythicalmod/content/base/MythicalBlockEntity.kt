@@ -17,7 +17,7 @@ import net.minecraft.world.phys.BlockHitResult
 
 open class MythicalBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockState) : BlockEntity(type, pos, state) {
     var needsSync = false
-    fun onBreak(player: Player?){
+    open fun onBreak(player: Player?){
 
     }
 
@@ -50,7 +50,7 @@ open class MythicalBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: B
         return ClientboundBlockEntityDataPacket.create(this)
     }
 
-    fun tick() {
+     fun tick() {
         if(needsSync) {
             init()
             needsSync = false

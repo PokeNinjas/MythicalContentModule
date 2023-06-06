@@ -22,11 +22,15 @@ class CramomaticSyncPacket(id: String) : AbstractPacket(id) {
     ) {
         val pos = buf.readBlockPos()
         val tag = buf.readNbt()
+        val shouldNull: Boolean = buf.readBoolean()
         client.execute {
             val blockEntity = client.level?.getBlockEntity(pos)
             if (blockEntity is CramomaticBlockEntity) {
                 if (tag != null) {
                     blockEntity.setInstance(CramomaticInstance.load(tag))
+                }
+                if (shouldNull) {
+                    blockEntity.setInstance(null)
                 }
             }
         }

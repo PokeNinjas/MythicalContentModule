@@ -10,14 +10,12 @@ import foundry.veil.math.Easings
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
-import net.minecraft.client.renderer.entity.EnderDragonRenderer
+import net.minecraft.core.Direction
 import net.minecraft.util.RandomSource
+import net.minecraft.world.level.block.HorizontalDirectionalBlock
 import net.minecraft.world.phys.Vec3
-import org.lwjgl.glfw.GLFW
 import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer
 import kotlin.math.min
-import kotlin.math.sqrt
-import kotlin.properties.Delegates
 
 class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticModel()) {
     val itemPath: Path = Path(listOf(
@@ -28,9 +26,9 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
         Keyframe(Vec3(0.5, 1.1, 0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
         Keyframe(Vec3(0.5, 1.1, 0.75), Vec3.ZERO, Vec3.ZERO, 10, Easings.Easing.easeInBounce)
     ), false, true)
-    var oldPos: Vec3 = Vec3(-0.5, 0.75, -0.5)
+    private var oldPos: Vec3 = Vec3(-0.5, 0.75, -0.5)
     companion object {
-        val HALF_SQRT_3: Float = 0.05f
+        const val HALF_SQRT_3: Float = 0.05f
     }
 
     override fun render(
@@ -40,6 +38,12 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
         bufferSource: MultiBufferSource,
         packedLight: Int
     ) {
+        poseStack.pushPose()
+        super.render(tile, partialTick, poseStack, bufferSource, packedLight)
+        poseStack.popPose()
+        poseStack.scale(1.5f, 1.5f, 1.5f)
+        poseStack.pushPose()
+        rotate(poseStack, tile.blockState.getValue(HorizontalDirectionalBlock.FACING))
         if(tile.ticksSinceItemAdded == 0) {
             oldPos = Vec3(-0.5, 0.75, -0.5)
         }
@@ -48,8 +52,6 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
                 oldPos = Vec3(0.5, 1.1, 0.75)
             }
         }
-        super.render(tile, partialTick, poseStack, bufferSource, packedLight)
-        poseStack.pushPose()
         val ticks = if(tile.ticksSinceItemAdded == -1) 0 else tile.ticksSinceItemAdded
         var pos: Vec3 = itemPath.frameAtProgress(ticks / 20f).position
         var outputTest: Int = 0
@@ -98,6 +100,26 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
         }
 
         poseStack.popPose()
+    }
+
+    private fun rotate(poseStack: PoseStack, facing: Direction){
+        when (facing) {
+            Direction.SOUTH -> {
+                poseStack.translate(1.0, 0.0, 1.0)
+                poseStack.mulPose(Vector3f.YP.rotationDegrees(180f))
+            }
+            Direction.WEST -> {
+                poseStack.translate(0.0, 0.0, 1.0)
+                poseStack.mulPose(Vector3f.YP.rotationDegrees(90f))
+            }
+            Direction.NORTH -> poseStack.mulPose(Vector3f.YP.rotationDegrees(0f))
+            Direction.EAST -> {
+                poseStack.translate(1.0, 0.0,0.0)
+                poseStack.mulPose(Vector3f.YP.rotationDegrees(270f))
+            }
+            Direction.UP -> poseStack.mulPose(Vector3f.XP.rotationDegrees(90f))
+            Direction.DOWN -> poseStack.mulPose(Vector3f.XN.rotationDegrees(90f))
+        }
     }
 
     private fun vertex01(vertices: VertexConsumer, matrix: Matrix4f, alpha: Int) {

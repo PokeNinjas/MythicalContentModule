@@ -79,7 +79,7 @@ class CramomaticPlayerHandler(private var level: Level) {
             }
         }
         cramomaticInstance.clear()
-        cramomaticInstance.getBlock()?.update(player.uuid, cramomaticInstance)
+        cramomaticInstance.getBlock()?.update(player.uuid, cramomaticInstance, true)
     }
 
     fun addPlayer(player: UUID, instance: CramomaticInstance): CramomaticInstance {

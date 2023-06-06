@@ -144,7 +144,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
 
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
         if(ticksSinceItemAdded != -1) {
-            return InteractionResult.PASS
+            return InteractionResult.CONSUME
         }
         if(player.level.isClientSide){
             if(!player.isCrouching){
@@ -205,12 +205,17 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         return InteractionResult.SUCCESS
     }
 
-    fun update(player: UUID, instance: CramomaticInstance?) {
+    fun update(player: UUID, instance: CramomaticInstance?, shouldNull: Boolean = false) {
         instance?.let {
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeBlockPos(worldPosition)
             buf.writeNbt(it.save())
             val playerEntity: Player? = level?.getPlayerByUUID(player)
+            if(shouldNull){
+                buf.writeBoolean(true)
+            } else {
+                buf.writeBoolean(false)
+            }
             if (playerEntity != null) {
                 ServerPlayNetworking.send(playerEntity as ServerPlayer, MythicalPackets.CRAMOMATIC_S2C_SYNC.identifier, buf)
             }
@@ -223,7 +228,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         if (!player.level.isClientSide) {
             MythicalContent.CRAMOMATIC_HANDLER?.getPlayer(player.uuid)?.let {
                 it.addItem(stack)
-                player.sendSystemMessage(Component.literal("Added item ${stack.displayName.string} to Cramomatic"))
+                player.displayClientMessage(Component.literal("Added item ${stack.displayName.string} to Cramomatic"), true)
                 update(player.uuid, it)
             }
         }
@@ -240,7 +245,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
         state = STATE.EJECTING
     }
 
-    fun setInstance(instance: CramomaticInstance) {
+    fun setInstance(instance: CramomaticInstance?) {
         this.instance = instance
     }
 

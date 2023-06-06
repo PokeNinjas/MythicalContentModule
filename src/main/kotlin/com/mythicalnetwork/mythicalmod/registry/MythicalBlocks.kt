@@ -1,6 +1,8 @@
 package com.mythicalnetwork.mythicalmod.registry
 
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticBlock
+import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlock
+import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkEmptyBlock
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
@@ -1012,11 +1014,20 @@ object MythicalBlocks {
         Block(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool(), "mew_3")
 
     var CRAMOMATIC: CramomaticBlock = CramomaticBlock(QuiltBlockSettings.of(Material.METAL).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!! } as CramomaticBlock
+
+    var EMPTY_LANDMARK_BLOCK: LandmarkEmptyBlock = LandmarkEmptyBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.EMPTY_LANDMARK!! } as LandmarkEmptyBlock
+    var NORMAL_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.NORMAL_LANDMARK!! } as LandmarkBlock
+    var ELECTRIC_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.ELECTRIC_LANDMARK!! } as LandmarkBlock
+    var DRAGON_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.DRAGON_LANDMARK!! } as LandmarkBlock
     fun registerBlocks() {
         for(block in BLOCKS) {
             registerBlock(block.value, block.key)
         }
         registerBlock(CRAMOMATIC, ResourceLocation("mythicalmod", "cramomatic"))
+        registerBlock(NORMAL_LANDMARK, ResourceLocation("mythicalmod", "normal_landmark"))
+        registerBlock(ELECTRIC_LANDMARK, ResourceLocation("mythicalmod", "electric_landmark"))
+        registerBlock(DRAGON_LANDMARK, ResourceLocation("mythicalmod", "dragon_landmark"))
+        registerBlock(EMPTY_LANDMARK_BLOCK, ResourceLocation("mythicalmod", "empty_landmark"))
     }
 
     private fun registerBlock(block: Block, rl: ResourceLocation) {

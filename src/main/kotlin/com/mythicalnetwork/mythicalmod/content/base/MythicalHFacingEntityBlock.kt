@@ -4,39 +4,36 @@ import net.minecraft.core.BlockPos
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.entity.player.Player
+import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.EntityBlock
+import net.minecraft.world.level.block.HorizontalDirectionalBlock
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.entity.BlockEntityTicker
 import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
+import net.minecraft.world.level.block.state.StateDefinition
 import net.minecraft.world.phys.BlockHitResult
 import java.util.function.Supplier
 
-open class MythicalEntityBlock<T : MythicalBlockEntity?>(properties: Properties) : Block(properties), EntityBlock {
+open class MythicalHFacingEntityBlock<T : MythicalBlockEntity?>(properties: Properties) : HorizontalDirectionalBlock(properties), EntityBlock {
     var blockEntityType: Supplier<BlockEntityType<T>>? = null
     var blockEntityTicker: BlockEntityTicker<T>? = null
     override fun newBlockEntity(pos: BlockPos, state: BlockState): BlockEntity? {
         return hasTileEntity(state).let { if (it) blockEntityType!!.get().create(pos, state) else null }
     }
 
+    override fun createBlockStateDefinition(builder: StateDefinition.Builder<Block, BlockState>) {
+        builder.add(FACING)
+    }
+
+    override fun getStateForPlacement(ctx: BlockPlaceContext): BlockState? {
+        return this.defaultBlockState().setValue(FACING, ctx.horizontalDirection.clockWise.clockWise)
+    }
+
     fun hasTileEntity(state: BlockState): Boolean {
         return blockEntityType != null
-    }
-
-    override fun playerWillDestroy(world: Level, pos: BlockPos, state: BlockState, player: Player) {
-        onBlockBroken(world, pos, state, player)
-        super.playerWillDestroy(world, pos, state, player)
-    }
-
-    open fun onBlockBroken(world: Level, pos: BlockPos, state: BlockState, player: Player?) {
-        if (hasTileEntity(state)) {
-            val blockEntity = world.getBlockEntity(pos)
-            if (blockEntity is MythicalBlockEntity) {
-                blockEntity.onBreak(player)
-            }
-        }
     }
 
     override fun <T : BlockEntity?> getTicker(
@@ -47,7 +44,7 @@ open class MythicalEntityBlock<T : MythicalBlockEntity?>(properties: Properties)
         return blockEntityTicker as BlockEntityTicker<T>?
     }
 
-    fun setBlockEntity(type: Supplier<BlockEntityType<T>>): MythicalEntityBlock<T> {
+    fun setBlockEntity(type: Supplier<BlockEntityType<T>>): MythicalHFacingEntityBlock<T> {
         this.blockEntityType = type
         this.blockEntityTicker = BlockEntityTicker { _, _, _, entity ->
             entity!!.tick()

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticInstance
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticPlayerHandler
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRecipeJsonListener
+import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkSpawnDataJsonListener
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
@@ -39,6 +40,7 @@ class MythicalContent : ModInitializer {
         val LOGGER: Logger = LogUtils.getLogger()
         var PLACEHOLDER_LIST = mutableMapOf<ResourceLocation, BiFunction<PlaceholderContext, String?, PlaceholderResult>>()
         var CRAMOMATIC_HANDLER: CramomaticPlayerHandler? = null
+        var CONFIG: MythicalModConfig = MythicalModConfig.createAndLoad()
 
         fun asResource(str: String): ResourceLocation {
             return ResourceLocation(MODID, str)
@@ -77,6 +79,7 @@ class MythicalContent : ModInitializer {
             CRAMOMATIC_HANDLER?.resumePlayer(handler.player.uuid)
         }
         ReloadListenerRegistry.register(PackType.SERVER_DATA, CramomaticRecipeJsonListener.INSTANCE)
+        ReloadListenerRegistry.register(PackType.SERVER_DATA, LandmarkSpawnDataJsonListener.INSTANCE)
     }
 
 

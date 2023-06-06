@@ -1,10 +1,15 @@
 package com.mythicalnetwork.mythicalmod.registry
 
+import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItem
+import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlockEntity
+import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
+import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
+import java.util.function.Supplier
 
 object MythicalItems {
     val ITEMS: MutableMap<ResourceLocation, Item> = mutableMapOf()
@@ -26,7 +31,40 @@ object MythicalItems {
         return blockItem
     }
 
-    var CRAMOMATIC: BlockItem = BlockItem(
+    private fun MultiblockItem(block: Block, tab: Item.Properties?, s: String, structure: Supplier<out MultiblockStructure>): MultiblockItem {
+        val blockItem = tab?.let { MultiblockItem(block, it, structure) }
+        ITEMS[ResourceLocation("mythicalmod", s)] = blockItem!!
+        return blockItem
+    }
+
+    private fun CramomaticItem(block: Block, tab: Item.Properties?, s: String): CramomaticItem {
+        val blockItem = tab?.let { CramomaticItem(block, it) }
+        ITEMS[ResourceLocation("mythicalmod", s)] = blockItem!!
+        return blockItem
+    }
+
+    var NORMAL_LANDMARK: BlockItem = MultiblockItem(
+        MythicalBlocks.NORMAL_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "normal_landmark",
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var ELECTRIC_LANDMARK: BlockItem = MultiblockItem(
+        MythicalBlocks.ELECTRIC_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "electric_landmark",
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var DRAGON_LANDMARK: BlockItem = MultiblockItem(
+        MythicalBlocks.DRAGON_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "dragon_landmark",
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var CRAMOMATIC: CramomaticItem = CramomaticItem(
         MythicalBlocks.CRAMOMATIC,
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
         "cramomatic"
