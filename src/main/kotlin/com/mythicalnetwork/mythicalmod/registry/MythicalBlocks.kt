@@ -1015,7 +1015,7 @@ object MythicalBlocks {
 
     var CRAMOMATIC: CramomaticBlock = CramomaticBlock(QuiltBlockSettings.of(Material.METAL).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!! } as CramomaticBlock
 
-    var EMPTY_LANDMARK_BLOCK: LandmarkEmptyBlock = LandmarkEmptyBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.EMPTY_LANDMARK!! } as LandmarkEmptyBlock
+    var EMPTY_LANDMARK_BLOCK: LandmarkEmptyBlock = LandmarkEmptyBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion().isViewBlocking{ _, _, _ -> false}).setBlockEntity { MythicalBlockEntities.EMPTY_LANDMARK!! } as LandmarkEmptyBlock
     var NORMAL_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.NORMAL_LANDMARK!! } as LandmarkBlock
     var ELECTRIC_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.ELECTRIC_LANDMARK!! } as LandmarkBlock
     var DRAGON_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).hardness(3.6F).requiresTool().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.DRAGON_LANDMARK!! } as LandmarkBlock

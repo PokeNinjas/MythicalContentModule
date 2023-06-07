@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies
 import com.cobblemon.mod.common.api.types.ElementalType
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.cobblemon.mod.common.particle.CobblemonParticles
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.pokemon.Species
 import com.mythicalnetwork.mythicalmod.MythicalContent
@@ -20,6 +21,7 @@ import foundry.veil.ui.VeilUIItemTooltipDataHolder
 import foundry.veil.ui.anim.TooltipKeyframe
 import foundry.veil.ui.anim.TooltipTimeline
 import net.minecraft.core.BlockPos
+import net.minecraft.core.particles.ParticleTypes
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionHand
@@ -31,6 +33,7 @@ import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
+import net.minecraft.world.phys.AABB
 import software.bernie.geckolib3.core.IAnimatable
 import software.bernie.geckolib3.core.PlayState
 import software.bernie.geckolib3.core.builder.AnimationBuilder
@@ -62,26 +65,26 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
 
     companion object {
         val STRUC: MultiblockStructure = MultiblockStructure.of(
-            MultiblockStructure.StructurePiece(1,0,1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,0,1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(-1,0,1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(1,0,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(-1,0,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(1,0,-1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,0,-1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(-1,0,-1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(1, 0, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 0, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(-1, 0, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(1, 0, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(-1, 0, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(1, 0, -1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 0, -1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(-1, 0, -1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
 
-            MultiblockStructure.StructurePiece(1,1,1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,1,1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(-1,1,1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(1,1,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(-1,1,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(1,1,-1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,1,-1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(-1,1,-1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,1,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,2,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
-            MultiblockStructure.StructurePiece(0,3,0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(1, 1, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 1, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(-1, 1, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(1, 1, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(-1, 1, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(1, 1, -1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 1, -1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(-1, 1, -1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 1, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 2, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
+            MultiblockStructure.StructurePiece(0, 3, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
         )
     }
 
@@ -90,14 +93,14 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     }
 
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
-        if(!level!!.isClientSide){
-            state = if (state == 0) {
-                1
-            } else {
-                0
-            }
+        state = if (state == 0) {
+            1
+        } else {
+            0
+        }
+        if (!level!!.isClientSide) {
             isActive = state == 1
-            if(isActive) {
+            if (isActive) {
                 duration = spawnData?.duration!!
                 cooldown = spawnData.cooldown
             }
@@ -107,10 +110,10 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     }
 
     fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
-        if(level.isClientSide) {
+        if (level.isClientSide) {
             return
         }
-        if (isActive && duration > 0){
+        if (isActive && duration > 0 && isPlayerNearby() && !isOverpopulated()) {
             duration--
             if (delay > 0) {
                 delay--
@@ -119,10 +122,35 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                 delay = (spawnData?.maxDelay?.let { spawnData.minDelay.rangeTo(it) })?.random() ?: 0
                 spawn()
             }
+            spawnParticles()
         }
-        if(cooldown > 0){
+        if (cooldown > 0) {
             cooldown--
         }
+    }
+
+    // TODO: Add idle active particles
+    private fun spawnParticles() {
+        for(i in 0..level!!.random.nextInt(1, MythicalContent.CONFIG.landmarkSpawnRange()/ 1.coerceAtLeast(MythicalContent.CONFIG.landmarkSpawnRange() / 10))) {
+            val blocks: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, 5)
+            blocks?.forEach { blockPos ->
+                if(level!!.canSeeSky(blockPos)){
+                    for(j in 0..level!!.random.nextInt(1, level!!.random.nextIntBetweenInclusive(5, 10))){
+                        level!!.addParticle(ParticleTypes.CRIMSON_SPORE, blockPos.x.toDouble() + (level!!.random.nextFloat()/10f), blockPos.y.toDouble(), blockPos.z.toDouble() + (level!!.random.nextFloat()/10f),  ((level!!.random.nextFloat()/10f).toDouble()), 0.25,  ((level!!.random.nextFloat()/10f).toDouble()))
+                    }
+                }
+            }
+        }
+    }
+
+    private fun isPlayerNearby(): Boolean {
+        val players = level!!.getEntitiesOfClass(Player::class.java, AABB(worldPosition).inflate(spawnData?.requiredPlayerRange?.toDouble() ?: 10.0))
+        return players.isNotEmpty()
+    }
+
+    private fun isOverpopulated(): Boolean {
+        val entities = level!!.getEntitiesOfClass(PokemonEntity::class.java, AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange().toDouble()))
+        return entities.size >= (spawnData?.maxNearbyEntities ?: 10)
     }
 
     private fun spawn() {
@@ -147,7 +175,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     private fun <E> predicate(animationEvent: AnimationEvent<E>): PlayState
             where E : IAnimatable, E : BlockEntity {
         val controller = animationEvent.controller
-        controller.transitionLengthTicks = 10.0
+//        controller.transitionLengthTicks = 10.0
         controller.easingType = EasingType.EaseInCubic
         when (state) {
             0 -> controller.setAnimation(AnimationBuilder().addAnimation("idle", ILoopType.EDefaultLoopTypes.LOOP))
@@ -159,6 +187,24 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
             )
         }
         return PlayState.CONTINUE
+    }
+
+    override fun saveAdditional(nbt: CompoundTag) {
+        super.saveAdditional(nbt)
+        nbt.putInt("state", state)
+        nbt.putInt("duration", duration)
+        nbt.putInt("cooldown", cooldown)
+        nbt.putInt("delay", delay)
+        nbt.putBoolean("isActive", isActive)
+    }
+
+    override fun load(nbt: CompoundTag) {
+        super.load(nbt)
+        state = nbt.getInt("state")
+        duration = nbt.getInt("duration")
+        cooldown = nbt.getInt("cooldown")
+        delay = nbt.getInt("delay")
+        isActive = nbt.getBoolean("isActive")
     }
 
     override fun getFactory(): AnimationFactory {
@@ -265,26 +311,43 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         // check all positions in the area (from config), if its a valid spawn location for the pokemon
         // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
         val range: Int = MythicalContent.CONFIG.landmarkSpawnRange()
-        val pos: Optional<BlockPos> = BlockPos.findClosestMatch(blockPos, range, range) { pos ->
-            val blocks: MutableIterable<BlockPos>? = BlockPos.withinManhattan(
-                pos,
-                pokemon.getDimensions(Pose.STANDING).width.toInt()+1,
-                pokemon.getDimensions(Pose.STANDING).height.toInt()+1,
-                pokemon.getDimensions(Pose.STANDING).width.toInt()+1
-            )
-            for (block in blocks!!) {
-                if (level!!.random.nextFloat() < 0.5) {
-                    continue
-                }
-                if (!level!!.getBlockState(block).isAir) {
-                    return@findClosestMatch false
-                }
-                if (level?.let { level!!.getBlockState(block.below()).isValidSpawn(it, pos, pokemon.type) } == true) {
-                    return@findClosestMatch true
+        var blockPos: BlockPos? = null
+        for(i in 0..5){
+            val blocksToCheck: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, range)
+            blocksToCheck?.forEach { pos ->
+                val blocks: MutableIterable<BlockPos>? = BlockPos.withinManhattan(
+                    pos,
+                    pokemon.getDimensions(Pose.STANDING).width.toInt() + 1,
+                    pokemon.getDimensions(Pose.STANDING).height.toInt() + 1,
+                    pokemon.getDimensions(Pose.STANDING).width.toInt() + 1
+                )
+                for (block in blocks!!) {
+                    if (level!!.random.nextFloat() < 0.5) {
+                        continue
+                    }
+                    if (!level!!.getBlockState(block).isAir) {
+                        continue
+                    }
+                    if(block == worldPosition || block == worldPosition.north() || block == worldPosition.south() || block == worldPosition.east() || block == worldPosition.west() || block == worldPosition.north().east() || block == worldPosition.north().west() || block == worldPosition.south().east() || block == worldPosition.south().west()) {
+                        continue
+                    }
+                    if(!level!!.getBlockState(block.above()).isAir || !level!!.getBlockState(block.north()).isAir || !level!!.getBlockState(block.south()).isAir || !level!!.getBlockState(block.east()).isAir || !level!!.getBlockState(block.west()).isAir || !level!!.getBlockState(block.north().east()).isAir || !level!!.getBlockState(block.north().west()).isAir || !level!!.getBlockState(block.south().east()).isAir || !level!!.getBlockState(block.south().west()).isAir){
+                    }
+                    if (!level!!.getBlockState(block.below()).isSolidRender(level!!, block)) {
+                        continue
+                    }
+                    blockPos = block
+                    break
                 }
             }
-            return@findClosestMatch true
+            if(blockPos != null){
+                break
+            }
         }
-        return pos.orElse(null)
+        return blockPos
+    }
+
+    private fun getRandomBlocks(pos: BlockPos, range: Int): MutableIterable<BlockPos>? {
+        return BlockPos.randomInCube(level!!.random, 16, pos, range)
     }
 }

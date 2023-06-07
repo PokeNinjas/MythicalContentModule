@@ -43,7 +43,7 @@ import kotlin.math.sin
 // TODO: Fix animation. Figure out why adding items makes the first item always air.
 class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     MythicalBlockEntity(MythicalBlockEntities.CRAMOMATIC_BLOCK_ENTITY!!, pos, state), IAnimatable, Tooltippable {
-    private var state = STATE.CONSUMING
+    private var state = STATE.IDLE
     private var animationFactory: AnimationFactory = GeckoLibUtil.createFactory(this)
     var ticksSinceItemAdded: Int = -1
     private var instance: CramomaticInstance? = null
@@ -57,11 +57,12 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
     }
 
     fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
-        if (ticksSinceItemAdded < 20 && ticksSinceItemAdded != -1) {
+        if (ticksSinceItemAdded < 30 && ticksSinceItemAdded != -1) {
             ticksSinceItemAdded++
         }
-        if(ticksSinceItemAdded == 20) {
+        if(ticksSinceItemAdded == 30) {
             ticksSinceItemAdded = -1
+            this.state = STATE.IDLE
         }
         if (level.isClientSide) {
             instance?.let { instance ->
@@ -124,11 +125,11 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
             }
 
             STATE.CONSUMING -> {
-                controller.setAnimation(AnimationBuilder().addAnimation("take", ILoopType.EDefaultLoopTypes.LOOP))
+                controller.setAnimation(AnimationBuilder().addAnimation("take", ILoopType.EDefaultLoopTypes.PLAY_ONCE))
             }
 
             STATE.EJECTING -> {
-                controller.setAnimation(AnimationBuilder().addAnimation("give", ILoopType.EDefaultLoopTypes.LOOP))
+                controller.setAnimation(AnimationBuilder().addAnimation("give", ILoopType.EDefaultLoopTypes.PLAY_ONCE))
             }
         }
         return PlayState.CONTINUE
@@ -150,6 +151,7 @@ class CramomaticBlockEntity(pos: BlockPos, state: BlockState) :
             if(!player.isCrouching){
                 if(player.getItemInHand(hand) != ItemStack.EMPTY){
                     ticksSinceItemAdded = 0
+                    state = STATE.CONSUMING
                 }
             }
         }

@@ -18,15 +18,15 @@ import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer
 import kotlin.math.min
 
 class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticModel()) {
-    val itemPath: Path = Path(listOf(
-        Keyframe(Vec3(0.5, 0.75, -0.5), Vec3.ZERO, Vec3.ZERO, 20, Easings.Easing.linear),
-        Keyframe(Vec3(0.5, 0.75, -0.5), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInQuad),
-        Keyframe(Vec3(0.5, 1.1, -0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
-        Keyframe(Vec3(0.5, 1.1, 0.0), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
-        Keyframe(Vec3(0.5, 1.1, 0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
-        Keyframe(Vec3(0.5, 1.1, 0.75), Vec3.ZERO, Vec3.ZERO, 10, Easings.Easing.easeInBounce)
+    var itemPath: Path = Path(listOf(
+        Keyframe(Vec3(0.5, 0.5, -0.5), Vec3.ZERO, Vec3.ZERO, 20, Easings.Easing.linear),
+        Keyframe(Vec3(0.5, 0.5, -0.5), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInQuad),
+        Keyframe(Vec3(0.5, 1.15, -0.5), Vec3.ZERO, Vec3.ZERO, 10, Easings.Easing.easeInBounce),
+        Keyframe(Vec3(0.5, 1.2, -0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
+        Keyframe(Vec3(0.5, 1.2, 0.25), Vec3.ZERO, Vec3.ZERO, 5, Easings.Easing.easeInBounce),
+        Keyframe(Vec3(0.5, 1.2, 0.75), Vec3.ZERO, Vec3.ZERO, 10, Easings.Easing.easeInBounce)
     ), false, true)
-    private var oldPos: Vec3 = Vec3(-0.5, 0.75, -0.5)
+    private var oldPos: Vec3 = Vec3(-0.5, 0.5, -0.5)
     companion object {
         const val HALF_SQRT_3: Float = 0.05f
     }
@@ -41,11 +41,11 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
         poseStack.pushPose()
         super.render(tile, partialTick, poseStack, bufferSource, packedLight)
         poseStack.popPose()
-        poseStack.scale(1.5f, 1.5f, 1.5f)
+//        poseStack.scale(1.5f, 1.5f, 1.5f)
         poseStack.pushPose()
         rotate(poseStack, tile.blockState.getValue(HorizontalDirectionalBlock.FACING))
         if(tile.ticksSinceItemAdded == 0) {
-            oldPos = Vec3(-0.5, 0.75, -0.5)
+            oldPos = Vec3(-0.5, 0.5, -0.5)
         }
         tile.getInstance()?.let { instance ->
             if(instance.getOutputTicks() > 0){
@@ -53,7 +53,7 @@ class CramomaticRenderer : GeoBlockRenderer<CramomaticBlockEntity>(CramomaticMod
             }
         }
         val ticks = if(tile.ticksSinceItemAdded == -1) 0 else tile.ticksSinceItemAdded
-        var pos: Vec3 = itemPath.frameAtProgress(ticks / 20f).position
+        var pos: Vec3 = itemPath.frameAtProgress(ticks / 30f).position
         var outputTest: Int = 0
         tile.getInstance()?.let {
             outputTest = it.getOutputTicks()

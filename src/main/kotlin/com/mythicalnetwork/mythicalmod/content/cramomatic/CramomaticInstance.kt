@@ -20,12 +20,12 @@ class CramomaticInstance(private var cramomaticBlock: CramomaticBlockEntity? = n
     private var paused: Boolean = false
 
     fun tick() {
-        if(processingTicks < 20){
+        if(processingTicks < 30){
             processingTicks++
             return
         }
-        if(processingTicks == 20 && output != null){
-            if(outputTicks < 20){
+        if(processingTicks == 30 && output != null){
+            if(outputTicks < 30){
                 outputTicks++
                 return
             } else {
