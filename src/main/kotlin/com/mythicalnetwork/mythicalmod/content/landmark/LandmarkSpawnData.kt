@@ -8,6 +8,7 @@ import com.cobblemon.mod.common.pokemon.Species
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import com.mythicalnetwork.mythicalmod.MythicalContent
+import net.minecraft.world.level.Level
 
 class LandmarkSpawnData(
     var species: List<LandmarkSpeciesData>,
@@ -40,6 +41,18 @@ class LandmarkSpawnData(
             SPAWN_DATA[type] = data
         }
         fun getForType(type: ElementalType): LandmarkSpawnData? = SPAWN_DATA[type]
+
+    }
+    fun getRandomWithWeight(level: Level): LandmarkSpeciesData {
+        val totalWeight = species.sumOf { it.weight}
+        var random = level.random.nextInt(totalWeight)
+        for (species in species) {
+            random -= species.weight
+            if (random <= 0) {
+                return species
+            }
+        }
+        return species[0]
     }
     override fun toString(): String {
         return "LandmarkSpawnData(species=$species, maxDelay=$maxDelay, minDelay=$minDelay, maxNearbyEntities=$maxNearbyEntities, requiredPlayerRange=$requiredPlayerRange)"

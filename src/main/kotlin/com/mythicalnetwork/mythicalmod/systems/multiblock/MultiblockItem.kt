@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.state.BlockState
 import java.util.function.Supplier
 
-class MultiblockItem(block: Block, properties: Properties, val structure: Supplier<out MultiblockStructure>) : BlockItem(block, properties) {
+open class MultiblockItem(block: Block, properties: Properties, open val structure: Supplier<out MultiblockStructure>) : BlockItem(block, properties) {
 
 
     override fun canPlace(context: BlockPlaceContext, state: BlockState): Boolean {

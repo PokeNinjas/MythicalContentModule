@@ -15,12 +15,24 @@
       "level_range": "1-20",
       "weight": 4,
       "shiny_chance": 0.1
+    },
+    {
+      "species": "jolteon",
+      "aspects": [
+        {
+          "aspect": "mythical_blazing=true",
+          "chance": 0.5
+        }
+      ],
+      "level_range": "20-60",
+      "weight": 4,
+      "shiny_chance": 0.1
     }
   ],
   "min_delay": 20,
-  "max_delay": 60,
-  "max_nearby_entities": 8,
+  "max_delay": 600,
+  "max_nearby_entities": 24,
   "player_range": 50,
-  "cooldown": 0,
-  "duration": 200
+  "cooldown": 60,
+  "duration": 2000
 }

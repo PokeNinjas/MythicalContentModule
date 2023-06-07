@@ -6,7 +6,7 @@ import java.util.Optional
 
 class LandmarkSpeciesData(
     var species: String,
-    var aspects: List<String>,
+    var aspects: List<AspectData>,
     var levelRange: Optional<IntRange> = Optional.empty(),
     var weight: Int,
     var shinyChance: Optional<Float>
@@ -19,7 +19,7 @@ class LandmarkSpeciesData(
         val CODEC: Codec<LandmarkSpeciesData> = RecordCodecBuilder.create { instance ->
             instance.group(
                 Codec.STRING.fieldOf("species").forGetter { it.species },
-                Codec.STRING.listOf().fieldOf("aspects").forGetter { it.aspects },
+                AspectData.CODEC.listOf().fieldOf("aspects").forGetter { it.aspects },
                 Codec.STRING.optionalFieldOf("level_range").xmap(
                     { str -> str.get().split("-").let { IntRange(it[0].toInt(), it[1].toInt()) } },
                     { Optional.of("${it.first}-${it.last}") }

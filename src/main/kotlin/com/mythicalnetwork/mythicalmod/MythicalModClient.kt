@@ -3,6 +3,7 @@ package com.mythicalnetwork.mythicalmod
 import com.mythicalnetwork.mythicalmod.content.base.AbstractPacket
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItemRenderer
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRenderer
+import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkItemRenderer
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkModel
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkRenderer
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
@@ -22,6 +23,7 @@ object MythicalModClient : ClientModInitializer {
         BlockEntityRenderers.register(MythicalBlockEntities.DRAGON_LANDMARK!!) { LandmarkRenderer() }
         BlockEntityRenderers.register(MythicalBlockEntities.ELECTRIC_LANDMARK!!) { LandmarkRenderer() }
         AbstractPacket.registerClientReceiver(MythicalPackets.CRAMOMATIC_S2C_SYNC)
+        AbstractPacket.registerClientReceiver(MythicalPackets.UNVALIDATED_SOUND)
         ItemProperties.register(MythicalItems.PROGRESS_BAR.asItem(), MythicalContent.asResource("progress")) { stack, level, entity, seed ->
             if(stack.item.equals(MythicalItems.PROGRESS_BAR.asItem())){
                 if(stack.hasTag()){
@@ -35,5 +37,8 @@ object MythicalModClient : ClientModInitializer {
         }
 
         GeoItemRenderer.registerItemRenderer(MythicalItems.CRAMOMATIC.asItem(), CramomaticItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.ELECTRIC_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.DRAGON_LANDMARK.asItem(), LandmarkItemRenderer())
+//        GeoItemRenderer.registerItemRenderer(MythicalItems.NORMAL_LANDMARK.asItem(), LandmarkItemRenderer())
     }
 }

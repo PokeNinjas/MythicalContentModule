@@ -1,7 +1,10 @@
 package com.mythicalnetwork.mythicalmod.registry
 
+import com.cobblemon.mod.common.api.types.ElementalType
+import com.cobblemon.mod.common.api.types.ElementalTypes
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItem
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlockEntity
+import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
 import net.minecraft.core.Registry
@@ -31,8 +34,8 @@ object MythicalItems {
         return blockItem
     }
 
-    private fun MultiblockItem(block: Block, tab: Item.Properties?, s: String, structure: Supplier<out MultiblockStructure>): MultiblockItem {
-        val blockItem = tab?.let { MultiblockItem(block, it, structure) }
+    private fun LandmarkItem(block: Block, tab: Item.Properties?, s: String, type: ElementalType, structure: Supplier<out MultiblockStructure>): MultiblockItem {
+        val blockItem = tab?.let { LandmarkItem(block, it, type, structure) }
         ITEMS[ResourceLocation("mythicalmod", s)] = blockItem!!
         return blockItem
     }
@@ -43,24 +46,27 @@ object MythicalItems {
         return blockItem
     }
 
-    var NORMAL_LANDMARK: BlockItem = MultiblockItem(
+    var NORMAL_LANDMARK: BlockItem = LandmarkItem(
         MythicalBlocks.NORMAL_LANDMARK,
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
         "normal_landmark",
+        ElementalTypes.NORMAL,
         Supplier { LandmarkBlockEntity.STRUC }
     )
 
-    var ELECTRIC_LANDMARK: BlockItem = MultiblockItem(
+    var ELECTRIC_LANDMARK: BlockItem = LandmarkItem(
         MythicalBlocks.ELECTRIC_LANDMARK,
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
         "electric_landmark",
+        ElementalTypes.ELECTRIC,
         Supplier { LandmarkBlockEntity.STRUC }
     )
 
-    var DRAGON_LANDMARK: BlockItem = MultiblockItem(
+    var DRAGON_LANDMARK: BlockItem = LandmarkItem(
         MythicalBlocks.DRAGON_LANDMARK,
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
         "dragon_landmark",
+        ElementalTypes.DRAGON,
         Supplier { LandmarkBlockEntity.STRUC }
     )
 
