@@ -77,6 +77,13 @@
       ],
       "model": "cobblemon:lucario_unite_ruins.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_ruins.png"
+    },
+    {
+      "aspects": [
+        "unite_space"
+      ],
+      "model": "cobblemon:lucario_unite_space.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_space.png"
     }
   ]
 }

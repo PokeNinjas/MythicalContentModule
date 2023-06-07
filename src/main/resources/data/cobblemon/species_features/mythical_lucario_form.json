@@ -7,7 +7,8 @@
 	"unite_martial_arts",
     "unite_concert",
     "unite_costume_party",
-    "unite_ruins"
+    "unite_ruins",
+    "unite_space"
 	],
   "isAspect": true,
   "aspectForm": "mythical_lucario_form-{{choice}}"

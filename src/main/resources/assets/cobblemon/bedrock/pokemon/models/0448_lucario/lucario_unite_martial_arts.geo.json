@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.lucario",
+				"identifier": "geometry.lucario_unite_martial_arts",
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 4,
