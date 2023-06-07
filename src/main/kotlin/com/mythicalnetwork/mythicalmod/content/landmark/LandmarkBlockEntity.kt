@@ -41,6 +41,7 @@ import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.sounds.SoundSource
+import net.minecraft.tags.BlockTags
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.entity.Entity
@@ -48,6 +49,7 @@ import net.minecraft.world.entity.Pose
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
+import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
@@ -85,7 +87,9 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     private var cooldown = 0
 
     init {
-        tooltip.add(Component.literal(LANDMARK_TYPES[pokemonType] + " Landmark").withStyle { s -> s.withColor(pokemonType.hue) })
+        tooltip.add(
+            Component.literal(LANDMARK_TYPES[pokemonType] + " Landmark")
+                .withStyle { s -> s.withColor(pokemonType.hue) })
         tooltip.add(Component.literal(""))
         tooltip.add(Component.literal(""))
     }
@@ -143,9 +147,10 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         return InteractionResult.SUCCESS
     }
 
-    private fun sendPacket(){
+    private fun sendPacket() {
         val buf: FriendlyByteBuf = PacketByteBufs.create()
-        val sound: ResourceLocation = ResourceLocation("cobblemon", "pokemon.${LANDMARK_TYPES[pokemonType]?.lowercase()}.ambient")
+        val sound: ResourceLocation =
+            ResourceLocation("cobblemon", "pokemon.${LANDMARK_TYPES[pokemonType]?.lowercase()}.ambient")
         buf.writeResourceLocation(sound)
         buf.writeEnum(SoundSource.BLOCKS)
         buf.writeDouble(worldPosition.x.toDouble())
@@ -153,16 +158,22 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         buf.writeDouble(worldPosition.z.toDouble())
         buf.writeFloat(1.0f)
         buf.writeFloat(1.0f)
-        var entities: List<ServerPlayer> = level!!.getEntities(null, AABB(worldPosition).inflate(16.0))!!.filterIsInstance<ServerPlayer>()
+        var entities: List<ServerPlayer> =
+            level!!.getEntities(null, AABB(worldPosition).inflate(16.0))!!.filterIsInstance<ServerPlayer>()
         ServerPlayNetworking.send(entities, MythicalPackets.UNVALIDATED_SOUND.identifier, buf)
     }
 
     fun tick(level: Level, pos: BlockPos, state: BlockState, entity: BlockEntity) {
         if (level.isClientSide) {
-            val isActive: String = if(isActive) TooltipHelper.formatTime(duration.toLong()) else "Inactive"
-            val component: MutableComponent = if(cooldown == 0) Component.literal("Remaining time: $isActive") else Component.literal("Cooldown: ${TooltipHelper.formatTime(cooldown.toLong())}")
+            val isActive: String = if (isActive) TooltipHelper.formatTime(duration.toLong()) else "Inactive"
+            val component: MutableComponent =
+                if (cooldown == 0) Component.literal("Remaining time: $isActive") else Component.literal(
+                    "Cooldown: ${
+                        TooltipHelper.formatTime(cooldown.toLong())
+                    }"
+                )
             tooltip[1] = component
-            if(isOverpopulated()){
+            if (isOverpopulated()) {
                 tooltip[2] = Component.literal("Too many nearby Pokemon")
             } else {
                 tooltip[2] = Component.literal("Nearby Pokemon: ${getNearbyPokemonCount()}")
@@ -174,13 +185,13 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
             if (delay > 0) {
                 delay--
             }
-            if (delay == 0 &&  isPlayerNearby() && !isOverpopulated()) {
+            if (delay == 0 && isPlayerNearby() && !isOverpopulated()) {
                 delay = (spawnData?.maxDelay?.let { spawnData.minDelay.rangeTo(it) })?.random() ?: 0
                 spawn()
             }
             spawnParticles(0.25)
         }
-        if(duration == 0 && isActive){
+        if (duration == 0 && isActive) {
             isActive = false
             cooldown = spawnData?.cooldown ?: 0
         }
@@ -191,7 +202,10 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     }
 
     private fun getNearbyPokemonCount(): String {
-        val entities = level!!.getEntitiesOfClass(PokemonEntity::class.java, AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange().toDouble() * 2.0))
+        val entities = level!!.getEntitiesOfClass(
+            PokemonEntity::class.java,
+            AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange().toDouble() * 2.0)
+        )
         return entities.count().toString()
     }
 
@@ -202,25 +216,53 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         var particleSpeed: Vec3 = Vec3(0.0, 0.0, 0.0)
         var particleCount: Int = 0
         val color: Color = Color(pokemonType.hue)
-        val blocks: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, MythicalContent.CONFIG.landmarkSpawnRange())
+        val blocks: MutableIterable<BlockPos>? =
+            getRandomBlocks(worldPosition, MythicalContent.CONFIG.landmarkSpawnRange())
         blocks?.forEach { blockPos ->
-            if(level!!.canSeeSky(blockPos)){
-                if(level!!.random.nextFloat() > chance) return
-                particlePos = Vec3.atCenterOf(blockPos).add(((level!!.random.nextFloat()/10f).toDouble()), -0.5, ((level!!.random.nextFloat()/10f).toDouble()))
-                particleSpeed = Vec3((level!!.random.nextFloat()).toDouble(), (level!!.random.nextFloat()).toDouble(), (level!!.random.nextFloat()).toDouble())
+            if (level!!.canSeeSky(blockPos)) {
+                if (level!!.random.nextFloat() > chance) return
+                particlePos = Vec3.atCenterOf(blockPos).add(
+                    ((level!!.random.nextFloat() / 10f).toDouble()),
+                    -0.5,
+                    ((level!!.random.nextFloat() / 10f).toDouble())
+                )
+                particleSpeed = Vec3(
+                    (level!!.random.nextFloat()).toDouble(),
+                    (level!!.random.nextFloat()).toDouble(),
+                    (level!!.random.nextFloat()).toDouble()
+                )
                 particleCount = 1
-                (level!! as ServerLevel).sendParticles(DustParticleOptions(Vector3f(color.red, color.green, color.blue), 1.0F), particlePos.x, particlePos.y, particlePos.z, particleCount, particleSpeed.x, particleSpeed.y, particleSpeed.z, 0.25)
+                (level!! as ServerLevel).sendParticles(
+                    DustParticleOptions(
+                        Vector3f(color.red, color.green, color.blue),
+                        1.0F
+                    ),
+                    particlePos.x,
+                    particlePos.y,
+                    particlePos.z,
+                    particleCount,
+                    particleSpeed.x,
+                    particleSpeed.y,
+                    particleSpeed.z,
+                    0.25
+                )
             }
         }
     }
 
     private fun isPlayerNearby(): Boolean {
-        val players = level!!.getEntitiesOfClass(Player::class.java, AABB(worldPosition).inflate(spawnData?.requiredPlayerRange?.toDouble() ?: 10.0))
+        val players = level!!.getEntitiesOfClass(
+            Player::class.java,
+            AABB(worldPosition).inflate(spawnData?.requiredPlayerRange?.toDouble() ?: 10.0)
+        )
         return players.isNotEmpty()
     }
 
     private fun isOverpopulated(): Boolean {
-        val entities = level!!.getEntitiesOfClass(PokemonEntity::class.java, AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange().toDouble() * 2.0))
+        val entities = level!!.getEntitiesOfClass(
+            PokemonEntity::class.java,
+            AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange().toDouble() * 2.0)
+        )
         return entities.size >= (spawnData?.maxNearbyEntities ?: 10)
     }
 
@@ -233,11 +275,11 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
             val level: Int? = level?.random?.nextInt(s.levelRange.get().first, s.levelRange.get().last)
             val pokemon: Pokemon = level?.let { species.create(it) } ?: species.create()
             s.aspects.forEach { aspect ->
-                if(this.level!!.random.nextFloat() < aspect.chance){
+                if (this.level!!.random.nextFloat() < aspect.chance) {
                     PokemonProperties.parse(aspect.aspect).apply(pokemon)
                 }
             }
-            spawn(pokemon)
+            spawn(pokemon, s.canSwim.orElse(false), s.canFly.orElse(false), s.canWalk.orElse(false))
         }
     }
 
@@ -368,28 +410,41 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         return mutableListOf()
     }
 
-    fun spawn(pokemon: Pokemon) {
+    fun spawn(pokemon: Pokemon, canSwim: Boolean, canFly: Boolean, canWalk: Boolean) {
         val pokemonEntity: PokemonEntity = PokemonEntity(level!!, pokemon)
-        val pos: BlockPos? = checkSpawnConditions(pokemonEntity)
+        val pos: BlockPos? = checkSpawnConditions(pokemonEntity, canSwim, canFly, canWalk)
         val color: Color = Color(pokemonType.hue)
         if (pos != null) {
             pokemonEntity.setPos(pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble())
             var particleType: ParticleOptions = ParticleTypes.CRIMSON_SPORE
             var particlePos: Vec3 = Vec3.atCenterOf(pos).add(0.0, -0.5, 0.0)
-            var particleSpeed: Vec3 = Vec3((level!!.random.nextFloat()/10f).toDouble(), 0.25, (level!!.random.nextFloat()/10f).toDouble())
+            var particleSpeed: Vec3 =
+                Vec3((level!!.random.nextFloat() / 10f).toDouble(), 0.25, (level!!.random.nextFloat() / 10f).toDouble())
             var particleCount: Int = 25
-            var aabbVec: Vec3 = Vec3(pokemonEntity.boundingBox.xsize, pokemonEntity.boundingBox.ysize, pokemonEntity.boundingBox.zsize)
-            (level!! as ServerLevel).sendParticles(DustParticleOptions(Vector3f(color.red, color.green, color.blue), 1.0F), particlePos.x, particlePos.y, particlePos.z, particleCount, aabbVec.x, aabbVec.y, aabbVec.z, 0.25)
-            (level!! as ServerLevel).sendParticles(DustParticleOptions(Vector3f(color.red, color.green, color.blue), 1.0F),
+            var aabbVec: Vec3 =
+                Vec3(pokemonEntity.boundingBox.xsize, pokemonEntity.boundingBox.ysize, pokemonEntity.boundingBox.zsize)
+            (level!! as ServerLevel).sendParticles(
+                DustParticleOptions(
+                    Vector3f(color.red, color.green, color.blue),
+                    1.0F
+                ), particlePos.x, particlePos.y, particlePos.z, particleCount, aabbVec.x, aabbVec.y, aabbVec.z, 0.25
+            )
+            (level!! as ServerLevel).sendParticles(
+                DustParticleOptions(Vector3f(color.red, color.green, color.blue), 1.0F),
                 worldPosition.x.toDouble(),
                 worldPosition.y.toDouble(),
-                worldPosition.z.toDouble(), particleCount * 2, 1.5, 5.0, 1.5, 0.25)
-            (level!! as ServerLevel).playSound(null,
+                worldPosition.z.toDouble(), particleCount * 2, 1.5, 5.0, 1.5, 0.25
+            )
+            (level!! as ServerLevel).playSound(
+                null,
                 pos.x.toDouble(), pos.y.toDouble(),
-                pos.z.toDouble(), SoundEvents.ALLAY_HURT, SoundSource.BLOCKS, 0.75f, 2.0f)
-            (level!! as ServerLevel).playSound(null,
+                pos.z.toDouble(), SoundEvents.ALLAY_HURT, SoundSource.BLOCKS, 0.75f, 2.0f
+            )
+            (level!! as ServerLevel).playSound(
+                null,
                 worldPosition.x.toDouble(), worldPosition.y.toDouble(),
-                worldPosition.z.toDouble(), SoundEvents.ALLAY_ITEM_GIVEN, SoundSource.BLOCKS, 1.0f, 0.75f)
+                worldPosition.z.toDouble(), SoundEvents.ALLAY_ITEM_GIVEN, SoundSource.BLOCKS, 1.0f, 0.75f
+            )
             level!!.addFreshEntity(pokemonEntity)
             level!!.server!!.playerList.players.forEach { player ->
                 player.sendSystemMessage(Component.literal("A wild ${pokemon.species.name} has appeared!"))
@@ -397,14 +452,15 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         }
     }
 
-    private fun checkSpawnConditions(pokemon: PokemonEntity): BlockPos? {
+    private fun checkSpawnConditions(pokemon: PokemonEntity, canSwim: Boolean, canFly: Boolean, canWalk: Boolean): BlockPos? {
         // check all positions in the area (from config), if its a valid spawn location for the pokemon
         // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
         val range: Int = MythicalContent.CONFIG.landmarkSpawnRange()
         var blockPos: BlockPos? = null
         var blockList: MutableList<BlockPos> = mutableListOf()
-        for(j in 0..5){
-            for(i in 0..5){
+        println("Pokemon: ${pokemon.pokemon.species.name}, canSwim: $canSwim, canFly: $canFly, canWalk: $canWalk")
+        for (j in 0..5) {
+            for (i in 0..5) {
                 val blocksToCheck: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, range)
                 blocksToCheck?.forEach { pos ->
                     val blocks: MutableIterable<BlockPos>? = BlockPos.withinManhattan(
@@ -420,26 +476,47 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                         if (!level!!.getBlockState(block).isAir) {
                             continue
                         }
-                        if(block == worldPosition || block == worldPosition.north() || block == worldPosition.south() || block == worldPosition.east() || block == worldPosition.west() || block == worldPosition.north().east() || block == worldPosition.north().west() || block == worldPosition.south().east() || block == worldPosition.south().west()) {
+                        if (block == worldPosition || block == worldPosition.north() || block == worldPosition.south() || block == worldPosition.east() || block == worldPosition.west() || block == worldPosition.north()
+                                .east() || block == worldPosition.north().west() || block == worldPosition.south()
+                                .east() || block == worldPosition.south().west()
+                        ) {
                             continue
                         }
-                        if(!level!!.getBlockState(block.above()).isAir || !level!!.getBlockState(block.north()).isAir || !level!!.getBlockState(block.south()).isAir || !level!!.getBlockState(block.east()).isAir || !level!!.getBlockState(block.west()).isAir || !level!!.getBlockState(block.north().east()).isAir || !level!!.getBlockState(block.north().west()).isAir || !level!!.getBlockState(block.south().east()).isAir || !level!!.getBlockState(block.south().west()).isAir){
-                            continue
+                        if (!canFly) {
+                            if (!level!!.getBlockState(block.above()).isAir || !level!!.getBlockState(block.north()).isAir || !level!!.getBlockState(
+                                    block.south()
+                                ).isAir || !level!!.getBlockState(block.east()).isAir || !level!!.getBlockState(block.west()).isAir || !level!!.getBlockState(
+                                    block.north().east()
+                                ).isAir || !level!!.getBlockState(block.north().west()).isAir || !level!!.getBlockState(
+                                    block.south().east()
+                                ).isAir || !level!!.getBlockState(block.south().west()).isAir
+                            ) {
+                                continue
+                            }
                         }
-                        if (!level!!.getBlockState(block.below()).isSolidRender(level!!, block)) {
-                            continue
+                        if (canWalk && !canSwim && !canFly) {
+                            if (!level!!.getBlockState(block.below()).isSolidRender(level!!, block)) {
+                                continue
+                            }
+                        }
+                        if (canSwim && !canWalk) {
+                            if (!level!!.getBlockState(block.below()).`is`(Blocks.WATER)) {
+                                continue
+                            }
                         }
                         blockPos = block
                         blockList.add(block)
                         break
                     }
                 }
-                if(blockPos != null){
+                if (blockPos != null) {
                     break
                 }
             }
         }
-
+        if(blockList.isEmpty()){
+            return null
+        }
         return blockList.random()
     }
 

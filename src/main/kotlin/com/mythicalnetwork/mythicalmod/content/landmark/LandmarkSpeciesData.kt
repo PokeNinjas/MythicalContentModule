@@ -9,7 +9,10 @@ class LandmarkSpeciesData(
     var aspects: List<AspectData>,
     var levelRange: Optional<IntRange> = Optional.empty(),
     var weight: Int,
-    var shinyChance: Optional<Float>
+    var shinyChance: Optional<Float>,
+    var canSwim: Optional<Boolean> = Optional.empty(),
+    var canFly: Optional<Boolean> = Optional.empty(),
+    var canWalk: Optional<Boolean> = Optional.empty()
 ) {
     fun copy(): LandmarkSpeciesData {
         return LandmarkSpeciesData(species, aspects, levelRange, weight, shinyChance)
@@ -25,9 +28,12 @@ class LandmarkSpeciesData(
                     { Optional.of("${it.first}-${it.last}") }
                 ).forGetter { it.levelRange.get() },
                 Codec.INT.fieldOf("weight").forGetter { it.weight },
-                Codec.FLOAT.optionalFieldOf("shiny_chance").forGetter { it.shinyChance }
-            ).apply(instance){ species, aspects, levelRange, weight, shinyChance ->
-                LandmarkSpeciesData(species, aspects, Optional.of(levelRange), weight, shinyChance)}
+                Codec.FLOAT.optionalFieldOf("shiny_chance").forGetter { it.shinyChance },
+                Codec.BOOL.optionalFieldOf("can_swim").forGetter { it.canSwim },
+                Codec.BOOL.optionalFieldOf("can_fly").forGetter { it.canFly },
+                Codec.BOOL.optionalFieldOf("can_walk").forGetter { it.canWalk }
+            ).apply(instance){ species, aspects, levelRange, weight, shinyChance, canSwim, canFly, canWalk ->
+                LandmarkSpeciesData(species, aspects, Optional.of(levelRange), weight, shinyChance, canSwim, canFly, canWalk)}
         }
     }
 

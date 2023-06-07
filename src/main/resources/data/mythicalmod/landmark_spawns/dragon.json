@@ -14,7 +14,8 @@
       ],
       "level_range": "20-60",
       "weight": 4,
-      "shiny_chance": 0.1
+      "shiny_chance": 0.1,
+      "can_walk": true
     },
     {
       "species": "garchomp",
@@ -30,7 +31,9 @@
       ],
       "level_range": "60-100",
       "weight": 4,
-      "shiny_chance": 0.1
+      "shiny_chance": 0.1,
+      "can_fly": true,
+      "can_walk": true
     },
     {
       "species": "tatsugiri",
@@ -38,13 +41,23 @@
       ],
       "level_range": "1-20",
       "weight": 4,
-      "shiny_chance": 0.1
+      "shiny_chance": 0.1,
+      "can_swim": true
+    },
+    {
+      "species": "kingdra",
+      "aspects": [],
+      "level_range": "60-100",
+      "weight": 4,
+      "shiny_chance": 0.1,
+      "can_swim": true,
+      "can_walk": false
     }
   ],
   "min_delay": 20,
-  "max_delay": 600,
+  "max_delay": 60,
   "max_nearby_entities": 24,
   "player_range": 50,
   "cooldown": 60,
-  "duration": 2000
+  "duration": 30000
 }
