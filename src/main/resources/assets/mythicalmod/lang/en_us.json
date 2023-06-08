@@ -453,5 +453,8 @@
   "block.mythicalmod.mew_2": "Mew 2",
   "block.mythicalmod.mew_3": "Mew 3",
   "block.mythicalmod.cramomatic": "Cramomatic",
-  "block.mythicalmod.cramomatic.empty_tooltip": "Currently empty! Add an item to start crafting!"
+  "block.mythicalmod.cramomatic.empty_tooltip": "Currently empty! Add an item to start crafting!",
+  "block.mythicalmod.dragon_landmark": "Rayquaza Landmark",
+  "block.mythicalmod.electric_landmark": "Zerora Landmark",
+  "block.mythicalmod.normal_landmark": "Arceus Landmark"
 }

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mythicalmod:empty_landmark",
+    "mythicalmod:dragon_landmark",
+    "mythicalmod:electric_landmark"
+  ]
+}
