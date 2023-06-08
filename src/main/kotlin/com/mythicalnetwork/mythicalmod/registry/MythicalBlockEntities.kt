@@ -48,7 +48,8 @@ object MythicalBlockEntities {
             Registry.BLOCK_ENTITY_TYPE,
             ResourceLocation("mythicalmod", "empty_landmark"),
             QuiltBlockEntityTypeBuilder.create(
-                { pos: BlockPos?, state: BlockState? -> LandmarkEmptyBlockEntity(pos!!, state!!) }, MythicalBlocks.EMPTY_LANDMARK_BLOCK
+                { pos: BlockPos?, state: BlockState? -> LandmarkEmptyBlockEntity(pos!!, state!!) },
+                MythicalBlocks.EMPTY_LANDMARK_BLOCK
             ).build(null)
         )
 
@@ -56,7 +57,8 @@ object MythicalBlockEntities {
             Registry.BLOCK_ENTITY_TYPE,
             ResourceLocation("mythicalmod", "multiblock_component"),
             QuiltBlockEntityTypeBuilder.create(
-                { pos: BlockPos?, state: BlockState? -> MultiblockComponentEntity(pos!!, state!!) }, *getBlocks(IMultiblockComponent::class.java)
+                { pos: BlockPos?, state: BlockState? -> MultiblockComponentEntity(pos!!, state!!) },
+                *getBlocks(IMultiblockComponent::class.java)
             ).build(null)
         )
 
@@ -72,7 +74,14 @@ object MythicalBlockEntities {
             Registry.BLOCK_ENTITY_TYPE,
             ResourceLocation("mythicalmod", "normal_landmark"),
             QuiltBlockEntityTypeBuilder.create(
-                { pos: BlockPos?, state: BlockState? -> LandmarkBlockEntity(NORMAL_LANDMARK!!, pos!!, state!!, ElementalTypes.NORMAL) }, MythicalBlocks.NORMAL_LANDMARK
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        NORMAL_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.NORMAL
+                    )
+                }, MythicalBlocks.NORMAL_LANDMARK
             ).build(null)
         )
 
@@ -80,7 +89,14 @@ object MythicalBlockEntities {
             Registry.BLOCK_ENTITY_TYPE,
             ResourceLocation("mythicalmod", "electric_landmark"),
             QuiltBlockEntityTypeBuilder.create(
-                { pos: BlockPos?, state: BlockState? -> LandmarkBlockEntity(ELECTRIC_LANDMARK!!, pos!!, state!!, ElementalTypes.ELECTRIC) }, MythicalBlocks.ELECTRIC_LANDMARK
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        ELECTRIC_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.ELECTRIC
+                    )
+                }, MythicalBlocks.ELECTRIC_LANDMARK
             ).build(null)
         )
 
@@ -88,7 +104,239 @@ object MythicalBlockEntities {
             Registry.BLOCK_ENTITY_TYPE,
             ResourceLocation("mythicalmod", "dragon_landmark"),
             QuiltBlockEntityTypeBuilder.create(
-                { pos: BlockPos?, state: BlockState? -> LandmarkBlockEntity(DRAGON_LANDMARK!!, pos!!, state!!, ElementalTypes.DRAGON) }, MythicalBlocks.DRAGON_LANDMARK
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        DRAGON_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.DRAGON
+                    )
+                }, MythicalBlocks.DRAGON_LANDMARK
+            ).build(null)
+        )
+
+        DARK_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "dark_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        DARK_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.DARK
+                    )
+                }, MythicalBlocks.DARK_LANDMARK
+            ).build(null)
+        )
+
+        STEEL_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "steel_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        STEEL_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.STEEL
+                    )
+                }, MythicalBlocks.STEEL_LANDMARK
+            ).build(null)
+        )
+
+        ROCK_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "rock_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        ROCK_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.ROCK
+                    )
+                }, MythicalBlocks.ROCK_LANDMARK
+            ).build(null)
+        )
+
+        BUG_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "bug_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        BUG_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.BUG
+                    )
+                }, MythicalBlocks.BUG_LANDMARK
+            ).build(null)
+        )
+
+        PSYCHIC_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "psychic_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        PSYCHIC_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.PSYCHIC
+                    )
+                }, MythicalBlocks.PSYCHIC_LANDMARK
+            ).build(null)
+        )
+
+        GHOST_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "ghost_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        GHOST_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.GHOST
+                    )
+                }, MythicalBlocks.GHOST_LANDMARK
+            ).build(null)
+        )
+
+        ICE_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "ice_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        ICE_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.ICE
+                    )
+                }, MythicalBlocks.ICE_LANDMARK
+            ).build(null)
+        )
+
+        GRASS_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "grass_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        GRASS_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.GRASS
+                    )
+                }, MythicalBlocks.GRASS_LANDMARK
+            ).build(null)
+        )
+
+        GROUND_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "ground_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        GROUND_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.GROUND
+                    )
+                }, MythicalBlocks.GROUND_LANDMARK
+            ).build(null)
+        )
+
+        FAIRY_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "fairy_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        FAIRY_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.FAIRY
+                    )
+                }, MythicalBlocks.FAIRY_LANDMARK
+            ).build(null)
+        )
+
+        FIGHTING_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "fighting_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        FIGHTING_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.FIGHTING
+                    )
+                }, MythicalBlocks.FIGHTING_LANDMARK
+            ).build(null)
+        )
+
+        FIRE_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "fire_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        FIRE_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.FIRE
+                    )
+                }, MythicalBlocks.FIRE_LANDMARK
+            ).build(null)
+        )
+
+        FLYING_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "flying_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        FLYING_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.FLYING
+                    )
+                }, MythicalBlocks.FLYING_LANDMARK
+            ).build(null)
+        )
+
+        POISON_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "poison_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        POISON_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.POISON
+                    )
+                }, MythicalBlocks.POISON_LANDMARK
+            ).build(null)
+        )
+
+        WATER_LANDMARK = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            ResourceLocation("mythicalmod", "water_landmark"),
+            QuiltBlockEntityTypeBuilder.create(
+                { pos: BlockPos?, state: BlockState? ->
+                    LandmarkBlockEntity(
+                        WATER_LANDMARK!!,
+                        pos!!,
+                        state!!,
+                        ElementalTypes.WATER
+                    )
+                }, MythicalBlocks.WATER_LANDMARK
             ).build(null)
         )
     }

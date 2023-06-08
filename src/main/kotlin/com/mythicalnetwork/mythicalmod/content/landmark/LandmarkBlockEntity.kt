@@ -98,7 +98,22 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         val LANDMARK_TYPES: Map<ElementalType, String> = mutableMapOf(
             ElementalTypes.ELECTRIC to "Zeraora",
             ElementalTypes.DRAGON to "Rayquaza",
-            ElementalTypes.NORMAL to "Arceus"
+            ElementalTypes.NORMAL to "Arceus",
+            ElementalTypes.FIRE to "Moltres",
+            ElementalTypes.WATER to "Keldeo",
+            ElementalTypes.GRASS to "Celebi",
+            ElementalTypes.ICE to "Glastrier",
+            ElementalTypes.FIGHTING to "Kubfu",
+            ElementalTypes.POISON to "Poipole",
+            ElementalTypes.GROUND to "Groudon",
+            ElementalTypes.FLYING to "Ho-Oh",
+            ElementalTypes.PSYCHIC to "Mewtwo",
+            ElementalTypes.BUG to "Buzzwole",
+            ElementalTypes.ROCK to "Diancie",
+            ElementalTypes.GHOST to "Lunala",
+            ElementalTypes.DARK to "Darkrai",
+            ElementalTypes.STEEL to "Magearna",
+            ElementalTypes.FAIRY to "Xerneas"
         )
         val STRUC: MultiblockStructure = MultiblockStructure.of(
             MultiblockStructure.StructurePiece(1, 0, 1, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),

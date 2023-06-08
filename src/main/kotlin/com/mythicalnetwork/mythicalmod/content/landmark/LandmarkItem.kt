@@ -3,8 +3,10 @@ package com.mythicalnetwork.mythicalmod.content.landmark
 import com.cobblemon.mod.common.api.types.ElementalType
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
+import net.minecraft.network.chat.Component
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
+import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.block.Block
 import software.bernie.geckolib3.core.IAnimatable
 import software.bernie.geckolib3.core.PlayState
@@ -20,6 +22,10 @@ class LandmarkItem(block: Block, properties: Item.Properties, var elementalType:
     private var animationFactory: AnimationFactory = GeckoLibUtil.createFactory(this)
     override fun registerControllers(p0: AnimationData) {
         p0.addAnimationController(AnimationController(this, "controller", 0.0F, this::predicate))
+    }
+
+    override fun getName(stack: ItemStack): Component {
+        return Component.literal("${LandmarkBlockEntity.LANDMARK_TYPES[elementalType]} Landmark").withStyle { s -> s.withColor(elementalType.hue) }
     }
 
     private fun <E> predicate(animationEvent: AnimationEvent<E>): PlayState

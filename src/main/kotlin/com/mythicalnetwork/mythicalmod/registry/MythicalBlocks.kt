@@ -1019,6 +1019,23 @@ object MythicalBlocks {
     var NORMAL_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.NORMAL_LANDMARK!! } as LandmarkBlock
     var ELECTRIC_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.ELECTRIC_LANDMARK!! } as LandmarkBlock
     var DRAGON_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.DRAGON_LANDMARK!! } as LandmarkBlock
+    var FIRE_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.FIRE_LANDMARK!! } as LandmarkBlock
+    var GRASS_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.GRASS_LANDMARK!! } as LandmarkBlock
+    var ICE_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.ICE_LANDMARK!! } as LandmarkBlock
+    var POISON_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.POISON_LANDMARK!! } as LandmarkBlock
+    var PSYCHIC_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.PSYCHIC_LANDMARK!! } as LandmarkBlock
+    var ROCK_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.ROCK_LANDMARK!! } as LandmarkBlock
+    var STEEL_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().dynamicShape().noOcclusion()).setBlockEntity { MythicalBlockEntities.STEEL_LANDMARK!! } as LandmarkBlock
+    var WATER_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().noOcclusion()).setBlockEntity { MythicalBlockEntities.WATER_LANDMARK!! } as LandmarkBlock
+    var FIGHTING_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).noOcclusion()).setBlockEntity { MythicalBlockEntities.FIGHTING_LANDMARK!! } as LandmarkBlock
+    var FLYING_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).noOcclusion()).setBlockEntity { MythicalBlockEntities.FLYING_LANDMARK!! } as LandmarkBlock
+    var BUG_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).noOcclusion()).setBlockEntity { MythicalBlockEntities.BUG_LANDMARK!! } as LandmarkBlock
+    var GHOST_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).noOcclusion()).setBlockEntity { MythicalBlockEntities.GHOST_LANDMARK!! } as LandmarkBlock
+    var DARK_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).noOcclusion()).setBlockEntity { MythicalBlockEntities.DARK_LANDMARK!! } as LandmarkBlock
+    var FAIRY_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).noOcclusion()).setBlockEntity { MythicalBlockEntities.FAIRY_LANDMARK!! } as LandmarkBlock
+    var GROUND_LANDMARK: LandmarkBlock = LandmarkBlock(QuiltBlockSettings.of(Material.STONE).strength(1.5F, 6.0F)).setBlockEntity { MythicalBlockEntities.GROUND_LANDMARK!! } as LandmarkBlock
+
+
     fun registerBlocks() {
         for(block in BLOCKS) {
             registerBlock(block.value, block.key)
@@ -1028,6 +1045,21 @@ object MythicalBlocks {
         registerBlock(ELECTRIC_LANDMARK, ResourceLocation("mythicalmod", "electric_landmark"))
         registerBlock(DRAGON_LANDMARK, ResourceLocation("mythicalmod", "dragon_landmark"))
         registerBlock(EMPTY_LANDMARK_BLOCK, ResourceLocation("mythicalmod", "empty_landmark"))
+        registerBlock(FIRE_LANDMARK, ResourceLocation("mythicalmod", "fire_landmark"))
+        registerBlock(GRASS_LANDMARK, ResourceLocation("mythicalmod", "grass_landmark"))
+        registerBlock(ICE_LANDMARK, ResourceLocation("mythicalmod", "ice_landmark"))
+        registerBlock(POISON_LANDMARK, ResourceLocation("mythicalmod", "poison_landmark"))
+        registerBlock(PSYCHIC_LANDMARK, ResourceLocation("mythicalmod", "psychic_landmark"))
+        registerBlock(ROCK_LANDMARK, ResourceLocation("mythicalmod", "rock_landmark"))
+        registerBlock(STEEL_LANDMARK, ResourceLocation("mythicalmod", "steel_landmark"))
+        registerBlock(WATER_LANDMARK, ResourceLocation("mythicalmod", "water_landmark"))
+        registerBlock(FIGHTING_LANDMARK, ResourceLocation("mythicalmod", "fighting_landmark"))
+        registerBlock(FLYING_LANDMARK, ResourceLocation("mythicalmod", "flying_landmark"))
+        registerBlock(BUG_LANDMARK, ResourceLocation("mythicalmod", "bug_landmark"))
+        registerBlock(GHOST_LANDMARK, ResourceLocation("mythicalmod", "ghost_landmark"))
+        registerBlock(DARK_LANDMARK, ResourceLocation("mythicalmod", "dark_landmark"))
+        registerBlock(FAIRY_LANDMARK, ResourceLocation("mythicalmod", "fairy_landmark"))
+        registerBlock(GROUND_LANDMARK, ResourceLocation("mythicalmod", "ground_landmark"))
     }
 
     private fun registerBlock(block: Block, rl: ResourceLocation) {

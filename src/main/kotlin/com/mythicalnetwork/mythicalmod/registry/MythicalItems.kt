@@ -70,6 +70,126 @@ object MythicalItems {
         Supplier { LandmarkBlockEntity.STRUC }
     )
 
+    var FIRE_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.FIRE_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "fire_landmark",
+        ElementalTypes.FIRE,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var WATER_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.WATER_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "water_landmark",
+        ElementalTypes.WATER,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var GRASS_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.GRASS_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "grass_landmark",
+        ElementalTypes.GRASS,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var ICE_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.ICE_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "ice_landmark",
+        ElementalTypes.ICE,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var FIGHTING_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.FIGHTING_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "fighting_landmark",
+        ElementalTypes.FIGHTING,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var POISON_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.POISON_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "poison_landmark",
+        ElementalTypes.POISON,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var GROUND_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.GROUND_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "ground_landmark",
+        ElementalTypes.GROUND,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+var FLYING_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.FLYING_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "flying_landmark",
+        ElementalTypes.FLYING,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var PSYCHIC_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.PSYCHIC_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "psychic_landmark",
+        ElementalTypes.PSYCHIC,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var BUG_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.BUG_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "bug_landmark",
+        ElementalTypes.BUG,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var ROCK_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.ROCK_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "rock_landmark",
+        ElementalTypes.ROCK,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var GHOST_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.GHOST_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "ghost_landmark",
+        ElementalTypes.GHOST,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var DARK_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.DARK_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "dark_landmark",
+        ElementalTypes.DARK,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var STEEL_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.STEEL_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "steel_landmark",
+        ElementalTypes.STEEL,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
+    var FAIRY_LANDMARK: BlockItem = LandmarkItem(
+        MythicalBlocks.FAIRY_LANDMARK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+        "fairy_landmark",
+        ElementalTypes.FAIRY,
+        Supplier { LandmarkBlockEntity.STRUC }
+    )
+
     var CRAMOMATIC: CramomaticItem = CramomaticItem(
         MythicalBlocks.CRAMOMATIC,
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),

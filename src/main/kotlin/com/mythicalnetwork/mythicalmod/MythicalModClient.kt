@@ -22,6 +22,21 @@ object MythicalModClient : ClientModInitializer {
         BlockEntityRenderers.register(MythicalBlockEntities.NORMAL_LANDMARK!!) { LandmarkRenderer() }
         BlockEntityRenderers.register(MythicalBlockEntities.DRAGON_LANDMARK!!) { LandmarkRenderer() }
         BlockEntityRenderers.register(MythicalBlockEntities.ELECTRIC_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.FIRE_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.WATER_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.GRASS_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.ICE_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.FIGHTING_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.POISON_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.GROUND_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.FLYING_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.PSYCHIC_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.BUG_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.ROCK_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.GHOST_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.DARK_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.STEEL_LANDMARK!!) { LandmarkRenderer() }
+        BlockEntityRenderers.register(MythicalBlockEntities.FAIRY_LANDMARK!!) { LandmarkRenderer() }
         AbstractPacket.registerClientReceiver(MythicalPackets.CRAMOMATIC_S2C_SYNC)
         AbstractPacket.registerClientReceiver(MythicalPackets.UNVALIDATED_SOUND)
         ItemProperties.register(MythicalItems.PROGRESS_BAR.asItem(), MythicalContent.asResource("progress")) { stack, level, entity, seed ->
@@ -39,6 +54,21 @@ object MythicalModClient : ClientModInitializer {
         GeoItemRenderer.registerItemRenderer(MythicalItems.CRAMOMATIC.asItem(), CramomaticItemRenderer())
         GeoItemRenderer.registerItemRenderer(MythicalItems.ELECTRIC_LANDMARK.asItem(), LandmarkItemRenderer())
         GeoItemRenderer.registerItemRenderer(MythicalItems.DRAGON_LANDMARK.asItem(), LandmarkItemRenderer())
-//        GeoItemRenderer.registerItemRenderer(MythicalItems.NORMAL_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.NORMAL_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.FIRE_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.WATER_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.GRASS_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.ICE_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.FIGHTING_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.POISON_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.GROUND_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.FLYING_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.PSYCHIC_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.BUG_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.ROCK_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.GHOST_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.DARK_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.STEEL_LANDMARK.asItem(), LandmarkItemRenderer())
+        GeoItemRenderer.registerItemRenderer(MythicalItems.FAIRY_LANDMARK.asItem(), LandmarkItemRenderer())
     }
 }
