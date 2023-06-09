@@ -16,7 +16,7 @@
 				"PROFILE"
 			],
 			"animations": [
-				"bedrock(sprigatito, idle)"
+				"bedrock(sprigatito, ground_idle)"
 			]
 		},
 		"walking": {
@@ -24,7 +24,7 @@
 			"transformTicks": 10,
 			"poseTypes": [ "WALK" ],
 			"animations": [
-				"bedrock(sprigatito, idle)"
+				"bedrock(sprigatito, ground_idle)"
 			]
 		}
 	}

@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.sprigatito.idle": {
+		"animation.sprigatito.ground_idle": {
 			"loop": true,
 			"bones": {
 				"neck": {
