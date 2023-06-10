@@ -51,7 +51,8 @@
     ]
   },
   "cardinal-components": [
-    "mythicalmod:cramomatic"
+    "mythicalmod:cramomatic",
+    "mythicalmod:landmark_player_tracker"
   ],
   "mixin": "mythicalcontent.mixins.json",
   "access_widener": "mythicalmod.accesswidener"

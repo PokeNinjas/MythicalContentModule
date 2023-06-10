@@ -20,6 +20,7 @@ object Dependencies {
     const val VEIL = "foundry.veil:Veil-quilt-1.19.2:${Versions.VEIL}"
     const val CC_BASE = "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${Versions.CARDINAL_COMPONENTS}"
     const val CC_WORLD = "dev.onyxstudios.cardinal-components-api:cardinal-components-level:${Versions.CARDINAL_COMPONENTS}"
+    const val CC_ENTITY = "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${Versions.CARDINAL_COMPONENTS}"
 
     val CORE_DEPS = listOf<String>(
         QUILT_KOTLIN_CORE,
@@ -37,7 +38,8 @@ object Dependencies {
         GECKOLIB,
         VEIL,
         CC_BASE,
-        CC_WORLD
+        CC_WORLD,
+        CC_ENTITY
     )
 
     val DONT_INCLUDE = listOf<String>(
