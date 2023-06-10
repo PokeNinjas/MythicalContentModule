@@ -20,7 +20,16 @@ object MythicalItems {
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "platinum_ingot")
 
     val POKEMON_EGG: Item =
-        Item(Item.Properties().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS), "pokemon_egg")
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "pokemon_egg")
+
+    val EASTER_EGG: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "easter_egg")
+
+    val RAINBOW_SHARD: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "rainbow_shard")
+
+    val RADIANT_CRYSTAL: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "radiant_crystal")
 
     private fun Item(tab: Item.Properties?, s: String): Item {
         val item = tab?.let { Item(it) }

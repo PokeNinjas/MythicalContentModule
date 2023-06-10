@@ -9,6 +9,24 @@
         "custom_model_data": 1000
       },
       "model": "item/backpack"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 100022
+      },
+      "model": "item/easter_egg"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 100021
+      },
+      "model": "item/rainbow_shard"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 100036
+      },
+      "model": "item/radiant_crystal"
     }
   ]
 }
