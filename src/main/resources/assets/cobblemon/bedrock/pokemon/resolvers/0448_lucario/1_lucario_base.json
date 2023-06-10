@@ -3,9 +3,22 @@
   "order": 1,
   "variations": [
     {
+      "aspects": [],
+      "model": "cobblemon:lucario.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "model": "cobblemon:lucario.geo",
+      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny.png"
+    },
+    {
       "aspects": [
         "mythical_blazing"
       ],
+      "model": "cobblemon:lucario.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_blazing.png"
     },
     {
@@ -13,12 +26,14 @@
         "mythical_blazing",
         "shiny"
       ],
+      "model": "cobblemon:lucario.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing.png"
     },
     {
       "aspects": [
         "mythical_radiant"
       ],
+      "model": "cobblemon:lucario.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_radiant.png"
     },
     {
@@ -26,6 +41,7 @@
         "mythical_radiant",
         "shiny"
       ],
+      "model": "cobblemon:lucario.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_radiant.png"
     },
     {
@@ -33,6 +49,7 @@
         "mythical_radiant",
         "mythical_blazing"
       ],
+      "model": "cobblemon:lucario.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_blazing_radiant.png"
     },
     {
@@ -41,6 +58,7 @@
         "mythical_blazing",
         "shiny"
       ],
+      "model": "cobblemon:lucario.geo",
       "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing_radiant.png"
     },
     {
