@@ -4,53 +4,53 @@
   "variations": [
     {
       "aspects": [],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario.png"
     },
     {
       "aspects": [
         "shiny"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny.png"
     },
     {
       "aspects": [
         "mythical_blazing"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_blazing.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing.png"
     },
     {
       "aspects": [
         "mythical_blazing",
         "shiny"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing.png"
     },
     {
       "aspects": [
         "mythical_radiant"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_radiant.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_radiant.png"
     },
     {
       "aspects": [
         "mythical_radiant",
         "shiny"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_radiant.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_radiant.png"
     },
     {
       "aspects": [
         "mythical_radiant",
         "mythical_blazing"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_blazing_radiant.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_radiant.png"
     },
     {
       "aspects": [
@@ -58,50 +58,50 @@
         "mythical_blazing",
         "shiny"
       ],
-      "model": "cobblemon:lucario.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_shiny_blazing_radiant.png"
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_radiant.png"
     },
     {
       "aspects": [
         "unite_aristocrat"
       ],
-      "model": "cobblemon:lucario_unite_aristocrat.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_aristocrat.png"
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat.png"
     },
     {
       "aspects": [
         "unite_martial_arts"
       ],
-      "model": "cobblemon:lucario_unite_martial_arts.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_martial_arts.png"
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts.png"
     },
     {
       "aspects": [
         "unite_concert"
       ],
-      "model": "cobblemon:lucario_unite_concert.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_concert.png"
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert.png"
     },
     {
       "aspects": [
         "unite_costume_party"
       ],
-      "model": "cobblemon:lucario_unite_costume_party.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_costume_party.png"
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party.png"
     },
     {
       "aspects": [
         "unite_ruins"
       ],
-      "model": "cobblemon:lucario_unite_ruins.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_ruins.png"
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins.png"
     },
     {
       "aspects": [
         "unite_space"
       ],
-      "model": "cobblemon:lucario_unite_space.geo",
-      "texture": "cobblemon:textures/pokemon/0448_lucario/lucario_unite_space.png"
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space.png"
     }
   ]
 }
