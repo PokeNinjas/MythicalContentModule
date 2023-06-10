@@ -16,6 +16,7 @@ import com.mythicalnetwork.mythicalmod.content.base.MythicalBlockEntity
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticBlockEntity
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
+import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
 import com.mythicalnetwork.mythicalmod.registry.MythicalPackets
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockCoreEntity
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
@@ -68,6 +69,7 @@ import software.bernie.geckolib3.core.manager.AnimationData
 import software.bernie.geckolib3.core.manager.AnimationFactory
 import software.bernie.geckolib3.util.GeckoLibUtil
 import java.util.Optional
+import java.util.UUID
 
 class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockState, var pokemonType: ElementalType) :
     MultiblockCoreEntity(type, pos, state, STRUC), IAnimatable, Tooltippable {
@@ -85,6 +87,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     private var isActive = false
     private var duration = 0
     private var cooldown = 0
+    private var owner: UUID? = null
 
     init {
         tooltip.add(
@@ -144,12 +147,25 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     }
 
     override fun onUse(player: Player, hand: InteractionHand): InteractionResult {
+        if (owner != player.uuid && !level!!.isClientSide) {
+            player.sendSystemMessage(Component.literal("You do not own this landmark!"))
+            return InteractionResult.CONSUME
+        }
         state = if (state == 0) {
             1
         } else {
             0
         }
         if (!level!!.isClientSide) {
+            player.getComponent(MythicalComponentRegistry.LANDMARK_PLAYER_TRACKER).let { tracker ->
+                if(tracker.getActiveCount() < MythicalContent.CONFIG.maxPlayerLandmarkCount()) {
+                    tracker.addActiveCount(1)
+                    tracker.setCooldown(tracker.getCooldown() + MythicalContent.CONFIG.perMaxLandmarkTimer())
+                } else {
+                    player.sendSystemMessage(Component.literal("You have reached the maximum amount of active landmarks!"))
+                    return InteractionResult.CONSUME
+                }
+            }
             isActive = state == 1
             if (isActive) {
                 sendPacket()
@@ -319,6 +335,10 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         return PlayState.CONTINUE
     }
 
+    fun setOwner(player: UUID) {
+        this.owner = player
+    }
+
     override fun saveAdditional(nbt: CompoundTag) {
         super.saveAdditional(nbt)
         nbt.putInt("state", state)
@@ -326,6 +346,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         nbt.putInt("cooldown", cooldown)
         nbt.putInt("delay", delay)
         nbt.putBoolean("isActive", isActive)
+        owner?.let { nbt.putUUID("owner", it) }
     }
 
     override fun load(nbt: CompoundTag) {
@@ -335,6 +356,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         cooldown = nbt.getInt("cooldown")
         delay = nbt.getInt("delay")
         isActive = nbt.getBoolean("isActive")
+        if (nbt.contains("owner")) owner = nbt.getUUID("owner")
     }
 
     override fun getFactory(): AnimationFactory {
@@ -467,7 +489,12 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         }
     }
 
-    private fun checkSpawnConditions(pokemon: PokemonEntity, canSwim: Boolean, canFly: Boolean, canWalk: Boolean): BlockPos? {
+    private fun checkSpawnConditions(
+        pokemon: PokemonEntity,
+        canSwim: Boolean,
+        canFly: Boolean,
+        canWalk: Boolean
+    ): BlockPos? {
         // check all positions in the area (from config), if its a valid spawn location for the pokemon
         // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
         val range: Int = MythicalContent.CONFIG.landmarkSpawnRange()
@@ -529,7 +556,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                 }
             }
         }
-        if(blockList.isEmpty()){
+        if (blockList.isEmpty()) {
             return null
         }
         return blockList.random()

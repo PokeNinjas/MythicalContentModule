@@ -9,4 +9,8 @@ class MythicalModConfigModel {
 
     @JvmField
     var landmarkSpawnRange: Int = 16
+    @JvmField
+    var maxPlayerLandmarkCount: Int = 3
+    @JvmField
+    var perMaxLandmarkTimer: Int = 1200
 }
