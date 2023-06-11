@@ -4,6 +4,19 @@
   "variations": [
     {
       "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing.png"
+    },
+    {
+      "aspects": [
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_radiant.png"
@@ -14,6 +27,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_radiant.png"
     }
   ]
 }

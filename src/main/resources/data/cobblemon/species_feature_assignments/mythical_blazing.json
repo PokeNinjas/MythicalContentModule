@@ -1,4 +1,4 @@
 {
-  "pokemon": ["rayquaza", "butterfree", "metapod", "caterpie", "ironleaves", "articuno", "gastly", "gengar", "haunter", "mew", "mewtwo", "beedrill", "kakuna", "moltres", "zapdos", "weedle", "rapidash", "ponyta", "growlithe", "mewtwo", "arcanine", "dratini", "abra", "alakazam", "dragonair", "dragonite", "kadabra", "scyther", "mankey", "meowth", "persian", "porygon", "porygon2", "porygonz", "primeape", "tauros", "walkingwake", "gible", "gabite", "garchomp", "eevee", "flareon", "jolteon", "sylveon", "umbreon", "vaporeon", "riolu", "lucario"],
+  "pokemon": ["rayquaza", "butterfree", "metapod", "caterpie", "ironleaves", "articuno", "gastly", "gengar", "haunter", "mew", "mewtwo", "beedrill", "kakuna", "moltres", "zapdos", "weedle", "rapidash", "ponyta", "growlithe", "mewtwo", "arcanine", "dratini", "abra", "alakazam", "dragonair", "dragonite", "kadabra", "scyther", "mankey", "meowth", "persian", "porygon", "porygon2", "porygonz", "primeape", "tauros", "walkingwake", "gible", "gabite", "garchomp", "eevee", "flareon", "jolteon", "sylveon", "umbreon", "vaporeon", "riolu", "lucario", "espeon", "glaceon", "leafeon"],
   "features": ["mythical_blazing"]
 }

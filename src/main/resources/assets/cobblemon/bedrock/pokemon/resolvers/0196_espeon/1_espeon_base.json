@@ -4,6 +4,35 @@
   "variations": [
     {
       "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_radiant.png",
@@ -27,6 +56,37 @@
           "name": "emissive",
           "emissive": true,
           "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_radiant.png",
           "translucent": true
         }
       ]
