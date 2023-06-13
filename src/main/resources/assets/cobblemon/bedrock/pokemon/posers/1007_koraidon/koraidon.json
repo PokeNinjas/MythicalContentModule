@@ -1,10 +1,10 @@
 {
 	
 	"head": "head",
-	"portraitScale": 0.4,
+	"portraitScale": 1.8,
 	"portraitTranslation": [0.1, 0.7, 0],
-	"profileScale": 0.3,
-	"profileTranslation": [0.2, 1.0, 0],
+	"profileScale": 0.7,
+	"profileTranslation": [-0.1, 0.8, 0],
 	"poses": {
 		"standing": {
 			"poseName": "standing",
