@@ -76,11 +76,11 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     private var animationFactory: AnimationFactory = GeckoLibUtil.createFactory(this)
     private var tooltip: MutableList<Component> = mutableListOf()
     private var state: Int = 0
-    private var theme: ColorTheme = ColorTheme().also {
-        it.addColor("background", Color(56, 63, 71).multiply(1.0f, 1.0f, 1.0f, 0.75f))
-        it.addColor("bottomBorder", Color(pokemonType.hue, false).lightenCopy(0.25f))
-        it.addColor("topBorder", Color(pokemonType.hue, false))
-        it.addColor("title", Color(174, 182, 198))
+    private var theme: ColorTheme = ColorTheme().also { theme ->
+        theme.addColor("background", Color(56, 63, 71).multiply(1.0f, 1.0f, 1.0f, 0.75f))
+        theme.addColor("bottomBorder", Color(pokemonType.hue, false).lightenCopy(0.25f))
+        theme.addColor("topBorder", Color(pokemonType.hue, false))
+        theme.addColor("title", Color(174, 182, 198))
     }
     private val spawnData: LandmarkSpawnData? = LandmarkSpawnData.getForType(pokemonType)
     private var delay = 0
@@ -440,7 +440,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
     }
 
     override fun getTooltipYOffset(): Int {
-        return 15
+        return -30
     }
 
     override fun getItems(): MutableList<VeilUIItemTooltipDataHolder> {
