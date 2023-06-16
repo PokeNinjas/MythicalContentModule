@@ -12,8 +12,10 @@ import com.mythicalnetwork.mythicalmod.registry.MythicalPackets
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers
 import net.minecraft.client.renderer.item.ItemProperties
+import net.minecraft.world.entity.LivingEntity
 import org.quiltmc.loader.api.ModContainer
 import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer
+import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer
 import software.bernie.geckolib3.renderers.geo.GeoItemRenderer
 
 object MythicalModClient : ClientModInitializer {
@@ -70,5 +72,6 @@ object MythicalModClient : ClientModInitializer {
         GeoItemRenderer.registerItemRenderer(MythicalItems.DARK_LANDMARK.asItem(), LandmarkItemRenderer())
         GeoItemRenderer.registerItemRenderer(MythicalItems.STEEL_LANDMARK.asItem(), LandmarkItemRenderer())
         GeoItemRenderer.registerItemRenderer(MythicalItems.FAIRY_LANDMARK.asItem(), LandmarkItemRenderer())
+//        GeoArmorRenderer.registerArmorRenderer<LivingEntity>(RocketBootsRenderer(), MythicalItems.ROCKET_BOOTS)
     }
 }

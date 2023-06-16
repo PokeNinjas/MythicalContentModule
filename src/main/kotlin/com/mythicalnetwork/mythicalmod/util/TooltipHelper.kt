@@ -8,11 +8,11 @@ import net.minecraft.network.chat.MutableComponent
 
 object TooltipHelper {
     fun makeProgressBar(progress: Float, lightColor: Int, darkColor: Int): Component {
-        var fontRenderer: Font = Minecraft.getInstance().font
-        var char: Int = fontRenderer.width("|")
-        var tip: Int = fontRenderer.width("Tooltip Bar Progress")
-        var max: Int = tip / char
-        var total: Int = (progress * max).toInt()
+        val fontRenderer: Font = Minecraft.getInstance().font
+        val char: Int = fontRenderer.width("|")
+        val tip: Int = fontRenderer.width("Progress")
+        val max: Int = tip / char
+        val total: Int = (progress * max).toInt()
         var bars: String = ""
         bars += Strings.repeat('|', total)
         if (progress < 1)

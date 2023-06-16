@@ -2,16 +2,20 @@ package com.mythicalnetwork.mythicalmod.registry
 
 import com.cobblemon.mod.common.api.types.ElementalType
 import com.cobblemon.mod.common.api.types.ElementalTypes
+import com.mythicalnetwork.mythicalmod.MythicalContent
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItem
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlockEntity
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkItem
+import com.mythicalnetwork.mythicalmod.content.misc.rocketboots.RocketBootsItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
+import org.quiltmc.qsl.item.setting.api.QuiltItemSettings
 import java.util.function.Supplier
 
 object MythicalItems {
@@ -31,8 +35,25 @@ object MythicalItems {
     val RADIANT_CRYSTAL: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "radiant_crystal")
 
+    val ROCKET_BOOTS: Item =
+        RocketBootsItem(QuiltItemSettings().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS) as QuiltItemSettings, "rocketboots")
+
     private fun Item(tab: Item.Properties?, s: String): Item {
         val item = tab?.let { Item(it) }
+        ITEMS[ResourceLocation("mythicalmod", s)] = item!!
+        return item
+    }
+
+    private fun RocketBootsItem(tab: QuiltItemSettings?, s: String): RocketBootsItem {
+        val item = tab?.let { RocketBootsItem(
+            it.customDamage { stack, amount, entity, callback ->
+                if(entity != MythicalContent.entity!!){
+                    0
+                } else {
+                    amount
+                }
+            },
+        )}
         ITEMS[ResourceLocation("mythicalmod", s)] = item!!
         return item
     }
