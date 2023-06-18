@@ -483,7 +483,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                 worldPosition.z.toDouble(), SoundEvents.ALLAY_ITEM_GIVEN, SoundSource.BLOCKS, 1.0f, 0.75f
             )
             level!!.addFreshEntity(pokemonEntity)
-            level!!.server!!.playerList.players.forEach { player ->
+            level!!.getEntities(null, AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange() * 3.0)) { entity -> entity is Player }.forEach { player ->
                 player.sendSystemMessage(Component.literal("A wild ${pokemon.species.name} has appeared!"))
             }
         }
