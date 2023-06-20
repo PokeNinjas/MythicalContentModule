@@ -1,6 +1,10 @@
 package com.mythicalnetwork.mythicalmod
 
+import com.cobblemon.mod.common.api.events.CobblemonEvents
+import com.cobblemon.mod.common.api.pokemon.stats.Stats
+import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.mojang.logging.LogUtils
+import com.mythicalnetwork.mythicalmod.content.alphas.*
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticPlayerHandler
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRecipeJsonListener
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkSpawnDataJsonListener
@@ -9,6 +13,9 @@ import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
+import dev.architectury.event.EventResult
+import dev.architectury.event.events.common.EntityEvent
+import dev.architectury.event.events.common.EntityEvent.LivingCheckSpawn
 import dev.architectury.event.events.common.PlayerEvent
 import dev.architectury.event.events.common.TickEvent
 import dev.architectury.registry.ReloadListenerRegistry
@@ -22,13 +29,21 @@ import net.minecraft.Util
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.MinecraftServer
+import net.minecraft.server.level.ServerPlayer
 import net.minecraft.server.packs.PackType
+import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.LivingEntity
+import net.minecraft.world.entity.ai.attributes.AttributeModifier
+import net.minecraft.world.entity.ai.attributes.Attributes
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal
+import net.minecraft.world.entity.ai.goal.target.TargetGoal
 import net.minecraft.world.entity.animal.Cow
 import net.minecraft.world.entity.player.Player
+import net.minecraft.world.entity.projectile.Snowball
 import net.minecraft.world.entity.projectile.WitherSkull
 import net.minecraft.world.level.Level
 import org.quiltmc.loader.api.ModContainer
@@ -37,6 +52,7 @@ import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerTickEvents
 import org.quiltmc.qsl.networking.api.ServerPlayConnectionEvents
 import org.slf4j.Logger
+import java.util.*
 import java.util.function.BiFunction
 
 
@@ -126,6 +142,82 @@ class MythicalContent : ModInitializer {
                     player.removeTag("rocketbootsfalling")
                 } else {
                     player.fallDistance = 0f
+                }
+            }
+        }
+
+        CobblemonEvents.CAPTURE_CONDITIONS.subscribe { event ->
+            AlphaHelper.alphaTest(event)
+        }
+
+        EntityEvent.ADD.register { entity, level ->
+            if(level.isClientSide) return@register EventResult.pass()
+            if(entity is PokemonEntity){
+                if(entity.pokemon.aspects.contains("alpha") && !entity.pokemon.aspects.contains("alpha_defeated")){
+                    LOGGER.info("Alpha pokemon found, max health is ${entity.health}")
+                    entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(AttributeModifier("alpha",
+                        entity.pokemon.getStat(Stats.HP).toDouble() * 10, AttributeModifier.Operation.ADDITION))
+                    entity.health = entity.pokemon.getStat(Stats.HP).toFloat() * 10
+                    LOGGER.info("Alpha pokemon edited, max health is ${entity.health}")
+                    return@register EventResult.pass()
+                }
+            }
+            EventResult.pass()
+        }
+
+        EntityEvent.LIVING_HURT.register { entity, source, amount ->
+            if(source.entity is Snowball) {
+                if((source.entity as Snowball).tags.any { tag -> tag.contains("pokemonid=") }){
+                    val id: Int = (source.entity as Snowball).tags.first { tag -> tag.contains("pokemonid=") }.split("=")[1].toInt()
+                    val pokemonEntity: PokemonEntity? = entity.level.getEntity(id) as PokemonEntity?
+                    if(pokemonEntity != null) {
+                        if(pokemonEntity.target != null) {
+                            pokemonEntity.doHurtTarget(pokemonEntity.target!!)
+                        }
+                    }
+                }
+            }
+            EventResult.pass()
+        }
+
+        CobblemonEvents.POKEMON_ENTITY_GOALS.subscribe { event ->
+            if(event.entity.pokemon.aspects.contains("alpha")){
+                event.entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(AttributeModifier("alpha",
+                    event.entity.pokemon.getStat(Stats.HP).toDouble() * 2, AttributeModifier.Operation.ADDITION))
+                event.entity.health = event.entity.pokemon.getStat(Stats.HP).toFloat() * 2
+                event.goalSelector.addGoal(0, NearestAttackableTargetGoal(event.entity, ServerPlayer::class.java, true))
+//                event.goalSelector.addGoal(0, HurtByTargetGoal(event.entity))
+                if(event.entity.pokemon.hasLabels("melee")) {
+                    LOGGER.info("Adding melee attack goal")
+                    event.goalSelector.addGoal(2, PokemonMeleeAttackGoal(event.entity))
+                }
+                if(event.entity.pokemon.hasLabels("ranged")) {
+                    LOGGER.info("Adding ranged attack goal")
+                    event.goalSelector.addGoal(2, PokemonRangedAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 15))
+                }
+                if(event.entity.pokemon.hasLabels("beam")){
+                    LOGGER.info("Adding beam attack goal")
+                    event.goalSelector.addGoal(1, PokemonBreathAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 20, 10.0F, 60, 4800))
+                }
+                if(event.entity.pokemon.hasLabels("fireball")){
+                    LOGGER.info("Adding fireball attack goal")
+                    event.goalSelector.addGoal(1, PokemonFireballGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 12f, 120))
+                }
+                if(event.entity.pokemon.hasLabels("lightning_bolt")){
+                    LOGGER.info("Adding lightning bolt attack goal")
+                    event.goalSelector.addGoal(1, PokemonLightningBoltGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 16f, 120))
+                }
+                if(event.entity.pokemon.hasLabels("invisibility")){
+                    LOGGER.info("Adding invisibility goal")
+                    event.goalSelector.addGoal(1, PokemonInvisGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240))
+                }
+                if(event.entity.pokemon.hasLabels("teleportation")){
+                    LOGGER.info("Adding teleportation goal")
+                    event.goalSelector.addGoal(1, PokemonTeleportGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240))
+                }
+                if(event.entity.pokemon.hasLabels("kick")){
+                    LOGGER.info("Adding kick goal")
+                    event.goalSelector.addGoal(1, PokemonMegaKickGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 90))
                 }
             }
         }

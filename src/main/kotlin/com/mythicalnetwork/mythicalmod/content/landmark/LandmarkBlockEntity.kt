@@ -140,6 +140,89 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
             MultiblockStructure.StructurePiece(0, 2, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
             MultiblockStructure.StructurePiece(0, 3, 0, MythicalBlocks.EMPTY_LANDMARK_BLOCK.defaultBlockState()),
         )
+
+        fun checkSpawnConditions(
+            pokemon: PokemonEntity,
+            canSwim: Boolean,
+            canFly: Boolean,
+            canWalk: Boolean,
+            range: Int = MythicalContent.CONFIG.landmarkSpawnRange(),
+            worldPosition: BlockPos,
+            level: Level
+        ): BlockPos? {
+            // check all positions in the area (from config), if its a valid spawn location for the pokemon
+            // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
+            var blockPos: BlockPos? = null
+            var blockList: MutableList<BlockPos> = mutableListOf()
+            println("Pokemon: ${pokemon.pokemon.species.name}, canSwim: $canSwim, canFly: $canFly, canWalk: $canWalk")
+            for (j in 0..5) {
+                for (i in 0..5) {
+                    val blocksToCheck: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, range, level)
+                    blocksToCheck?.forEach { pos ->
+                        val blocks: MutableIterable<BlockPos>? = BlockPos.withinManhattan(
+                            pos,
+                            pokemon.getDimensions(Pose.STANDING).width.toInt() + 1,
+                            pokemon.getDimensions(Pose.STANDING).height.toInt() + 1,
+                            pokemon.getDimensions(Pose.STANDING).width.toInt() + 1
+                        )
+                        for (block in blocks!!) {
+                            if (level!!.random.nextFloat() < 0.5) {
+                                continue
+                            }
+                            if (!level!!.getBlockState(block).isAir) {
+                                continue
+                            }
+                            if (block == worldPosition || block == worldPosition.north() || block == worldPosition.south() || block == worldPosition.east() || block == worldPosition.west() || block == worldPosition.north()
+                                    .east() || block == worldPosition.north().west() || block == worldPosition.south()
+                                    .east() || block == worldPosition.south().west()
+                            ) {
+                                continue
+                            }
+                            if (!canFly) {
+                                if (!level!!.getBlockState(block.above()).isAir || !level!!.getBlockState(block.north()).isAir || !level!!.getBlockState(
+                                        block.south()
+                                    ).isAir || !level!!.getBlockState(block.east()).isAir || !level!!.getBlockState(
+                                        block.west()
+                                    ).isAir || !level!!.getBlockState(
+                                        block.north().east()
+                                    ).isAir || !level!!.getBlockState(
+                                        block.north().west()
+                                    ).isAir || !level!!.getBlockState(
+                                        block.south().east()
+                                    ).isAir || !level!!.getBlockState(block.south().west()).isAir
+                                ) {
+                                    continue
+                                }
+                            }
+                            if (canWalk && !canSwim && !canFly) {
+                                if (!level!!.getBlockState(block.below()).isSolidRender(level!!, block)) {
+                                    continue
+                                }
+                            }
+                            if (canSwim && !canWalk) {
+                                if (!level!!.getBlockState(block.below()).`is`(Blocks.WATER)) {
+                                    continue
+                                }
+                            }
+                            blockPos = block
+                            blockList.add(block)
+                            break
+                        }
+                    }
+                    if (blockPos != null) {
+                        break
+                    }
+                }
+            }
+            if (blockList.isEmpty()) {
+                return null
+            }
+            return blockList.random()
+        }
+
+        fun getRandomBlocks(pos: BlockPos, range: Int, level: Level): MutableIterable<BlockPos>? {
+            return BlockPos.randomInCube(level!!.random, 16, pos, range)
+        }
     }
 
 
@@ -158,7 +241,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         }
         if (!level!!.isClientSide) {
             player.getComponent(MythicalComponentRegistry.LANDMARK_PLAYER_TRACKER).let { tracker ->
-                if(tracker.getActiveCount() < MythicalContent.CONFIG.maxPlayerLandmarkCount()) {
+                if (tracker.getActiveCount() < MythicalContent.CONFIG.maxPlayerLandmarkCount()) {
                     tracker.addActiveCount(1)
                     tracker.setCooldown(tracker.getCooldown() + MythicalContent.CONFIG.perMaxLandmarkTimer())
                 } else {
@@ -483,21 +566,24 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                 worldPosition.z.toDouble(), SoundEvents.ALLAY_ITEM_GIVEN, SoundSource.BLOCKS, 1.0f, 0.75f
             )
             level!!.addFreshEntity(pokemonEntity)
-            level!!.getEntities(null, AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange() * 3.0)) { entity -> entity is Player }.forEach { player ->
+            level!!.getEntities(
+                null,
+                AABB(worldPosition).inflate(MythicalContent.CONFIG.landmarkSpawnRange() * 3.0)
+            ) { entity -> entity is Player }.forEach { player ->
                 player.sendSystemMessage(Component.literal("A wild ${pokemon.species.name} has appeared!"))
             }
         }
     }
 
-    private fun checkSpawnConditions(
+    fun checkSpawnConditions(
         pokemon: PokemonEntity,
         canSwim: Boolean,
         canFly: Boolean,
-        canWalk: Boolean
+        canWalk: Boolean,
+        range: Int = MythicalContent.CONFIG.landmarkSpawnRange()
     ): BlockPos? {
         // check all positions in the area (from config), if its a valid spawn location for the pokemon
         // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
-        val range: Int = MythicalContent.CONFIG.landmarkSpawnRange()
         var blockPos: BlockPos? = null
         var blockList: MutableList<BlockPos> = mutableListOf()
         println("Pokemon: ${pokemon.pokemon.species.name}, canSwim: $canSwim, canFly: $canFly, canWalk: $canWalk")
