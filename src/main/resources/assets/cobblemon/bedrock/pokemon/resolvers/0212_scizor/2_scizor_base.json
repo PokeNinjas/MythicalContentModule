@@ -27,6 +27,21 @@
         "shiny"
       ],
         "texture": "cobblemon:textures/pokemon/0212_scizor/scizor_shiny_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0212_scizor/scizor_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0212_scizor/scizor_shiny_blazing_radiant.png"
     }
   ]
 }

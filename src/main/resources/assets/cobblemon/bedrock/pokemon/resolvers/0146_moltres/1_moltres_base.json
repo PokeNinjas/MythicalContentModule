@@ -119,6 +119,37 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0146_moltres/moltres_rainbow_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0146_moltres/moltres_emissive_rainbow_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0146_moltres/moltres_shiny_rainbow_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0146_moltres/moltres_emissive_rainbow_radiant.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

@@ -69,6 +69,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_radiant.png"
     }
   ]
 }

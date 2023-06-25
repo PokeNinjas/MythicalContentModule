@@ -96,7 +96,7 @@
         "mythical_rainbow"
       ],
       "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_rainbow.png",
-"layers": [
+      "layers": [
         {
           "name": "emissive",
           "emissive": true,
@@ -106,19 +106,50 @@
       ]
     },
     {
-        "aspects": [
-            "mythical_rainbow",
-            "shiny"
-        ],
-        "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_rainbow.png",
-        "layers": [
-            {
-                "name": "emissive",
-                "emissive": true,
-                "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_shiny_rainbow.png",
-                "translucent": true
-            }
-        ]
+      "aspects": [
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_rainbow.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_shiny_rainbow.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_rainbow_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_rainbow_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_rainbow_radiant.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_shiny_rainbow_radiant.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

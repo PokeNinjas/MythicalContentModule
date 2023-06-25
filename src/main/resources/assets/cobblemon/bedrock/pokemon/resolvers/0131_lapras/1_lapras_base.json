@@ -4,6 +4,19 @@
   "variations": [
     {
       "aspects": [
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_radiant.png"
@@ -14,6 +27,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_shiny_rainbow_radiant.png"
     }
   ]
 }

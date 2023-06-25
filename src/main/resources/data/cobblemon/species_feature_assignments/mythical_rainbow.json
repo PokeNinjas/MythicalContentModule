@@ -1,4 +1,4 @@
 {
-  "pokemon": ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "zeraora", "rayquaza", "walkingwake", "beedrill", "kakuna", "weedle", "mew", "mewtwo", "koraidon", "eevee", "umbreon", "zapdos", "moltres", "articuno"],
+  "pokemon": ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "zeraora", "rayquaza", "walkingwake", "beedrill", "kakuna", "weedle", "mew", "mewtwo", "koraidon", "eevee", "umbreon", "zapdos", "moltres", "articuno", "lapras", "xerneas", "yveltal"],
   "features": ["mythical_rainbow"]
 }

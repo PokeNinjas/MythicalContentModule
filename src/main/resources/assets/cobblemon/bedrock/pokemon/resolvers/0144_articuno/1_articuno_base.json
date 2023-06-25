@@ -55,6 +55,21 @@
         "shiny"
       ],
         "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_shiny_rainbow_radiant.png"
     }
   ]
 }

@@ -55,6 +55,21 @@
         "shiny"
       ],
         "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_shiny_rainbow.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_shiny_rainbow_radiant.png"
     }
   ]
 }
