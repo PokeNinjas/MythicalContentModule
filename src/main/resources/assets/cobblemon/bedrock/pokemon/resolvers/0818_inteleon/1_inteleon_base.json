@@ -40,6 +40,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0818_inteleon/inteleon_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0818_inteleon/inteleon_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0818_inteleon/inteleon_shiny_glitch.png"
     }
   ]
 }

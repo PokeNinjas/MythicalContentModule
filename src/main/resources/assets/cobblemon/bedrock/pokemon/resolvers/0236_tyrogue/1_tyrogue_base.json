@@ -40,6 +40,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0236_tyrogue/tyrogue_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0236_tyrogue/tyrogue_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0236_tyrogue/tyrogue_shiny_glitch.png"
     }
   ]
 }

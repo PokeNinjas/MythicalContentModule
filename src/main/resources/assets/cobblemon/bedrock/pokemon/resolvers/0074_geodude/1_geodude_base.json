@@ -40,6 +40,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0074_geodude/geodude_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0074_geodude/geodude_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0074_geodude/geodude_shiny_glitch.png"
     }
   ]
 }

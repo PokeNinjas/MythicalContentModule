@@ -40,6 +40,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0400_bibarel/bibarel_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0400_bibarel/bibarel_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0400_bibarel/bibarel_shiny_glitch.png"
     }
   ]
 }

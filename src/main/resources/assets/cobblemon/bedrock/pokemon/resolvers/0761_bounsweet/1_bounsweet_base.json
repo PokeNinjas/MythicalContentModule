@@ -98,6 +98,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_shiny_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_glitch.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_easter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0761_bounsweet/bounsweet_shiny_easter_glitch.png"
     }
   ]
 }

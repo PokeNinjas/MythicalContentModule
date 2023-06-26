@@ -85,6 +85,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "bluestriped"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "bluestriped",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_glitch.png"
     }
   ]
 }

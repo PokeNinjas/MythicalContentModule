@@ -63,6 +63,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_galaxy.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_glitch.png",
+      "layers": []
     }
   ]
 }

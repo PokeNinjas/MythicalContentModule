@@ -156,6 +156,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_shiny_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0013_weedle/weedle_shiny_blazing_glitch.png"
     }
   ]
 }

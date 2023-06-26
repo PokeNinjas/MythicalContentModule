@@ -209,6 +209,66 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_glitch.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_glitch.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_easter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_shiny_easter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "alolan",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_easter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "alolan",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter_glitch.png"
     }
   ]
 }

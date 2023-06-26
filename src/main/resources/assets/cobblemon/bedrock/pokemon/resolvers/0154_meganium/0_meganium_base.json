@@ -26,6 +26,12 @@
         "mythical_galaxy"
       ],
       "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_glitch.png"
     }
   ]
 }

@@ -85,6 +85,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_glitch.png"
     }
   ]
 }

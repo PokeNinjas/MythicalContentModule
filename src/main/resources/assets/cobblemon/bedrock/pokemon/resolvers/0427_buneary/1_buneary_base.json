@@ -98,6 +98,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_shiny_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_glitch.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_easter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_shiny_easter_glitch.png"
     }
   ]
 }

@@ -640,6 +640,181 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_glitch.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_glitch.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_glitch.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/glitch_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_glitch.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_rainbow_glitch.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_rainbow_glitch.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_rainbow_glitch.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_glitch_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_glitch.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_gilded_glitch.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_gilded_glitch.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_gilded_glitch.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_glitch_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_glitch.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

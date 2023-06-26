@@ -156,6 +156,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_shiny_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0144_articuno/articuno_shiny_rainbow_glitch.png"
     }
   ]
 }

@@ -25,6 +25,12 @@
         "mythical_galaxy"
       ],
       "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_glitch.png"
     }
   ]
 }

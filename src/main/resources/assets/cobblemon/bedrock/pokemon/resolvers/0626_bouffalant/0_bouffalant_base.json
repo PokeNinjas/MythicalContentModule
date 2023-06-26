@@ -54,6 +54,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0626_bouffalant/bouffalant_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0626_bouffalant/bouffalant_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0626_bouffalant/bouffalant_shiny_glitch.png"
     }
   ]
 }

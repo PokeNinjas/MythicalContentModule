@@ -88,6 +88,35 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_glitch.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_gem_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_shiny_glitch.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0120_staryu/staryu_gem_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

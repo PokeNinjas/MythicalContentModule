@@ -130,6 +130,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_male_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_male_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "female"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_female_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "female"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_female_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_shiny_glitch.png"
     }
   ]
 }

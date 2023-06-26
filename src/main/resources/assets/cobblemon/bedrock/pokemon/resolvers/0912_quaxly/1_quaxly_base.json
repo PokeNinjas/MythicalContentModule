@@ -19,6 +19,12 @@
         "mythical_galaxy"
       ],
       "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_glitch.png"
     }
   ]
 }

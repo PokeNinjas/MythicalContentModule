@@ -98,6 +98,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_shiny_blazing_glitch.png"
     }
   ]
 }

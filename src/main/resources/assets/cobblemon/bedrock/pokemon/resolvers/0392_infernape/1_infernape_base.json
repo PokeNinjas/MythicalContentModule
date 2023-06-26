@@ -64,6 +64,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_shiny_glitch.png"
     }
   ]
 }

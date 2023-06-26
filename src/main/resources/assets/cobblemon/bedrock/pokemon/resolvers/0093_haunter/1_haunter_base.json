@@ -98,6 +98,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0093_haunter/haunter_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0093_haunter/haunter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0093_haunter/haunter_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0093_haunter/haunter_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0093_haunter/haunter_shiny_blazing_glitch.png"
     }
   ]
 }

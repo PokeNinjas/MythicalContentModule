@@ -175,6 +175,64 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "autumn"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "summer"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "winter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "autumn",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "summer",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "winter",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny_glitch.png"
     }
   ]
 }

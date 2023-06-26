@@ -166,6 +166,38 @@
       ],
       "model": "mythicalmod:lucario.geo",
       "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_glitch.png"
     }
   ]
 }

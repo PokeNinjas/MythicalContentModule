@@ -70,6 +70,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas_shiny_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas_shiny_rainbow_glitch.png"
     }
   ]
 }

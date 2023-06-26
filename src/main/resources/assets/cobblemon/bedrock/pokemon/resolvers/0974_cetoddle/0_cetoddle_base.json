@@ -54,6 +54,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0974_cetoddle/cetoddle_shiny_glitch.png"
     }
   ]
 }

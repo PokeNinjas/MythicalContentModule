@@ -82,6 +82,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_glitch.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_glitch.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

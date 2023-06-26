@@ -272,6 +272,79 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_glitch.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_gilded_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_gilded_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shadow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_shadow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_glitch.png"
     }
   ]
 }

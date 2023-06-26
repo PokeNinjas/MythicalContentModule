@@ -169,6 +169,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_gilded_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_glitch.png"
     }
   ]
 }

@@ -54,6 +54,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0338_solrock/solrock_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0338_solrock/solrock_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0338_solrock/solrock_shiny_glitch.png"
     }
   ]
 }

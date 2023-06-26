@@ -19,6 +19,12 @@
         "mythical_galaxy"
       ],
       "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_glitch.png"
     }
   ]
 }
