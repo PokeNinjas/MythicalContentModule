@@ -70,10 +70,60 @@
     },
     {
       "aspects": [
+        "unite_aristocrat",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_aristocrat"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_aristocrat",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat_radiant.png"
+    },
+    {
+      "aspects": [
         "unite_martial_arts"
       ],
       "model": "mythicalmod:lucario_unite_martial_arts.geo",
       "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts.png"
+    },
+    {
+      "aspects": [
+        "unite_martial_arts",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_martial_arts"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_martial_arts",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts_radiant.png"
     },
     {
       "aspects": [
@@ -84,10 +134,60 @@
     },
     {
       "aspects": [
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_concert"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert_radiant.png"
+    },
+    {
+      "aspects": [
         "unite_costume_party"
       ],
       "model": "mythicalmod:lucario_unite_costume_party.geo",
       "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party.png"
+    },
+    {
+      "aspects": [
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_costume_party"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party_radiant.png"
     },
     {
       "aspects": [
@@ -98,6 +198,31 @@
     },
     {
       "aspects": [
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_ruins"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins_radiant.png"
+    },
+    {
+      "aspects": [
         "unite_space"
       ],
       "model": "mythicalmod:lucario_unite_space.geo",
@@ -105,67 +230,162 @@
     },
     {
       "aspects": [
-        "mythical_matrix"
+        "unite_space",
+        "shiny"
       ],
-      "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_matrix.png"
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
+        "mythical_radiant",
+        "unite_space"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
         "shiny"
       ],
       "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_matrix.png"
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_magma.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
+        "mythical_magma",
         "mythical_blazing"
       ],
       "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_matrix.png"
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_magma.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
+        "mythical_magma",
         "mythical_blazing",
         "shiny"
       ],
       "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_matrix.png"
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_magma.png"
     },
     {
       "aspects": [
-        "mythical_galaxy"
+        "mythical_magma",
+        "unite_aristocrat"
       ],
-      "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_galaxy.png"
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat_magma.png"
     },
     {
       "aspects": [
-        "mythical_galaxy",
+        "mythical_magma",
+        "unite_aristocrat",
         "shiny"
       ],
-      "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_galaxy.png"
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat_magma.png"
     },
     {
       "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing"
+        "mythical_magma",
+        "unite_martial_arts"
       ],
-      "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_galaxy.png"
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts_magma.png"
     },
     {
       "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing",
+        "mythical_magma",
+        "unite_martial_arts",
         "shiny"
       ],
-      "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_galaxy.png"
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_concert"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_costume_party"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_ruins"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_space"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_magma.png"
     },
     {
       "aspects": [
@@ -201,35 +421,373 @@
     },
     {
       "aspects": [
-        "mythical_magma"
+        "mythical_glitch",
+        "unite_aristocrat"
       ],
-      "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_magma.png"
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat_glitch.png"
     },
     {
       "aspects": [
-        "mythical_magma",
+        "mythical_glitch",
+        "unite_aristocrat",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_martial_arts"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_martial_arts",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_concert"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_costume_party"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_ruins"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_space"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
         "shiny"
       ],
       "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_magma.png"
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_galaxy.png"
     },
     {
       "aspects": [
-        "mythical_magma",
+        "mythical_galaxy",
         "mythical_blazing"
       ],
       "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_magma.png"
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_galaxy.png"
     },
     {
       "aspects": [
-        "mythical_magma",
+        "mythical_galaxy",
         "mythical_blazing",
         "shiny"
       ],
       "model": "mythicalmod:lucario.geo",
-      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_magma.png"
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_aristocrat"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_aristocrat",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_martial_arts"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_martial_arts",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_concert"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_costume_party"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_ruins"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_space"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_aristocrat"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_aristocrat",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_martial_arts"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_martial_arts",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_concert"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_costume_party"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_ruins"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_space"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_matrix.png"
     }
   ]
 }
