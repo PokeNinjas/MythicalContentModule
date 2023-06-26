@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mythicalmod:item/magma_gem"
+    "layer0": "mythicalmod:item/magma_crystal"
   }
 }

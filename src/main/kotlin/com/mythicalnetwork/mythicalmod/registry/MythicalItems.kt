@@ -35,8 +35,8 @@ object MythicalItems {
     val RADIANT_CRYSTAL: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "radiant_crystal")
 
-    val BLAZING_CRYSTAL: Item =
-        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "blazing_crystal")
+    val BLAZING_GEM: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "blazing_gem")
 
     val GALAXY_STAR: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "galaxy_star")
@@ -44,8 +44,8 @@ object MythicalItems {
     val GILDED_CUBE: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gilded_cube")
 
-    val MAGMA_GEM: Item =
-        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "magma_gem")
+    val MAGMA_CRYSTAL: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "magma_crystal")
 
     val MATRIX_CUBE: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "matrix_cube")

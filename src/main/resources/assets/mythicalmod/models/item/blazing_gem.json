@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mythicalmod:item/blazing_crystal"
+    "layer0": "mythicalmod:item/blazing_gem"
   }
 }
