@@ -1,6 +1,5 @@
-package com.mythicalnetwork.mythicalmod.content.alphas
+package com.mythicalnetwork.mythicalmod.content.alphas.trackers
 
-import net.minecraft.core.BlockPos
 import net.minecraft.world.phys.Vec3
 
 class FakeProjectile(
@@ -28,4 +27,8 @@ class FakeProjectile(
     fun isNotEmpty() = positions.isNotEmpty()
 
     fun getFirst() = positions.first()
+
+    fun stop() {
+        positions = mutableListOf()
+    }
 }

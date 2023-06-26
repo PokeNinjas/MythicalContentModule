@@ -1,6 +1,7 @@
 package com.mythicalnetwork.mythicalmod
 
 import com.cobblemon.mod.common.api.events.CobblemonEvents
+import com.cobblemon.mod.common.api.events.entity.PokemonEntityGoalsEvent
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.mojang.logging.LogUtils
@@ -38,6 +39,7 @@ import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.ai.attributes.AttributeModifier
 import net.minecraft.world.entity.ai.attributes.Attributes
+import net.minecraft.world.entity.ai.goal.Goal
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal
 import net.minecraft.world.entity.ai.goal.target.TargetGoal
@@ -54,6 +56,9 @@ import org.quiltmc.qsl.networking.api.ServerPlayConnectionEvents
 import org.slf4j.Logger
 import java.util.*
 import java.util.function.BiFunction
+import java.util.function.Consumer
+import java.util.function.Function
+import java.util.function.Supplier
 
 
 /**
@@ -73,6 +78,19 @@ class MythicalContent : ModInitializer {
         fun asResource(str: String): ResourceLocation {
             return ResourceLocation(MODID, str)
         }
+
+        val ALPHA_GOALS: Map<String, Function<PokemonEntityGoalsEvent, Goal>> = mapOf(
+            "melee" to Function { event -> PokemonMeleeAttackGoal(event.entity) },
+            "ranged" to Function { event -> PokemonRangedAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 15) },
+            "beam" to Function { event -> PokemonBreathAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 20, 10.0F, 60, 4800)},
+            "fireball" to Function { event -> PokemonFireballGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 12f, 120) },
+            "lightning_bolt" to Function { event -> PokemonLightningBoltGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 16f, 120)},
+            "invisibility" to Function { event -> PokemonInvisGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240)},
+            "teleport" to Function { event -> PokemonTeleportGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240)},
+            "mega_kick" to Function { event -> PokemonMegaKickGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 90)},
+            "dream_eater" to Function { event -> PokemonDreamEaterGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 12.0f, 480)},
+            "ball" to Function { event -> PokemonBallAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 120)},
+        )
     }
     override fun onInitialize(mod: ModContainer?) {
         setupPlaceholders()
@@ -186,38 +204,13 @@ class MythicalContent : ModInitializer {
                     event.entity.pokemon.getStat(Stats.HP).toDouble() * 2, AttributeModifier.Operation.ADDITION))
                 event.entity.health = event.entity.pokemon.getStat(Stats.HP).toFloat() * 2
                 event.goalSelector.addGoal(0, NearestAttackableTargetGoal(event.entity, ServerPlayer::class.java, true))
-//                event.goalSelector.addGoal(0, HurtByTargetGoal(event.entity))
-                if(event.entity.pokemon.hasLabels("melee")) {
-                    LOGGER.info("Adding melee attack goal")
-                    event.goalSelector.addGoal(2, PokemonMeleeAttackGoal(event.entity))
-                }
-                if(event.entity.pokemon.hasLabels("ranged")) {
-                    LOGGER.info("Adding ranged attack goal")
-                    event.goalSelector.addGoal(2, PokemonRangedAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 15))
-                }
-                if(event.entity.pokemon.hasLabels("beam")){
-                    LOGGER.info("Adding beam attack goal")
-                    event.goalSelector.addGoal(1, PokemonBreathAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 20, 10.0F, 60, 4800))
-                }
-                if(event.entity.pokemon.hasLabels("fireball")){
-                    LOGGER.info("Adding fireball attack goal")
-                    event.goalSelector.addGoal(1, PokemonFireballGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 12f, 120))
-                }
-                if(event.entity.pokemon.hasLabels("lightning_bolt")){
-                    LOGGER.info("Adding lightning bolt attack goal")
-                    event.goalSelector.addGoal(1, PokemonLightningBoltGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 16f, 120))
-                }
-                if(event.entity.pokemon.hasLabels("invisibility")){
-                    LOGGER.info("Adding invisibility goal")
-                    event.goalSelector.addGoal(1, PokemonInvisGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240))
-                }
-                if(event.entity.pokemon.hasLabels("teleportation")){
-                    LOGGER.info("Adding teleportation goal")
-                    event.goalSelector.addGoal(1, PokemonTeleportGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240))
-                }
-                if(event.entity.pokemon.hasLabels("kick")){
-                    LOGGER.info("Adding kick goal")
-                    event.goalSelector.addGoal(1, PokemonMegaKickGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 90))
+                event.goalSelector.addGoal(0, HurtByTargetGoal(event.entity))
+                println(ALPHA_GOALS.keys.toString())
+                ALPHA_GOALS.forEach { (name, goal) ->
+                    println("Checking for $name")
+                    if(event.entity.pokemon.hasLabels(name)){
+                        event.goalSelector.addGoal(2, goal.apply(event))
+                    }
                 }
             }
         }

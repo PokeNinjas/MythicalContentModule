@@ -13,13 +13,21 @@ import net.minecraft.world.entity.Pose
 import net.minecraft.world.entity.ai.goal.Goal
 import net.minecraft.world.phys.Vec3
 
-class PokemonTeleportGoal(val mob: PokemonEntity, val speed: Double, val teleportCooldown: Int) :
+class PokemonTeleportGoal(val mob: PokemonEntity, val speed: Double, var teleportCooldown: Int) :
     Goal() {
     private var target: LivingEntity? = null
     private var targetNotVisibleTicks: Int = 0
     private var cooldown: Int = -1
     private var left: Boolean = false
     private var backwards: Boolean = false
+    private var range: Int = 8
+
+    init {
+        if(!this.mob.pokemon.hasLabels("ranged")){
+            this.range = 3
+            this.teleportCooldown = this.teleportCooldown / 2
+        }
+    }
     override fun canUse(): Boolean {
         val livingEntity: LivingEntity = this.mob.target ?: return false
         if (livingEntity.isAlive && canMove() && this.mob.canAttack(livingEntity)) {

@@ -8,8 +8,10 @@ import com.cobblemon.mod.common.util.math.toRGB
 import com.cobblemon.mod.common.util.sendParticlesServer
 import com.mojang.math.Vector3f
 import net.minecraft.core.particles.DustParticleOptions
+import net.minecraft.core.particles.ParticleOptions
 import net.minecraft.core.particles.ParticleTypes
 import net.minecraft.sounds.SoundEvents
+import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.entity.ai.goal.Goal
@@ -126,7 +128,7 @@ class PokemonBreathAttackGoal(val mob: PokemonEntity, val speed: Double, val att
             if(distance < this.squaredMaxRange) {
                 if (canSee && this.mob.isHeadLookingAt(target, maxRange)) {
                     this.mob.lookControl.setLookAt(target, 30.0f, 30.0f)
-                    this.mob.doHurtTarget(target)
+                    this.target!!.hurt(DamageSource(this.mob.pokemon.primaryType.name+"_breath"), 1.0f)
                 }
             }
         } else if (cooldown > 0) {
@@ -148,12 +150,7 @@ class PokemonBreathAttackGoal(val mob: PokemonEntity, val speed: Double, val att
         for (i in 0 until steps) {
             if(this.mob.random.nextFloat() < 0.75) continue
             val pos = startPos.add(direction.scale(step * i))
-            val particle: DustParticleOptions = DustParticleOptions(
-                Vector3f(
-                    color.first.toFloat(), color.second.toFloat(),
-                    color.third.toFloat()
-                ), 1.0f
-            )
+            val particle: ParticleOptions = AlphaHelper.TYPE_PARTICLES[this.mob.pokemon.primaryType]!!
             level.sendParticlesServer(
                 particle,
                 pos,

@@ -14,7 +14,7 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 
-class PokemonRangedAttackGoal(val mob: PokemonEntity, val speed: Double, val attackCooldown: Int) :
+class PokemonBallAttackGoal(val mob: PokemonEntity, val speed: Double, val attackCooldown: Int) :
     Goal() {
     private var target: LivingEntity? = null
     private var targetNotVisibleTicks: Int = 0
@@ -47,7 +47,7 @@ class PokemonRangedAttackGoal(val mob: PokemonEntity, val speed: Double, val att
     }
 
     override fun requiresUpdateEveryTick(): Boolean {
-    return !this.mob.pokemon.aspects.contains("alpha_defeated") && projectiles.isEmpty()
+        return !this.mob.pokemon.aspects.contains("alpha_defeated") && projectiles.isEmpty()
     }
 
     private fun getSquaredMaxAttackDistance(entity: LivingEntity?): Double {
@@ -57,7 +57,7 @@ class PokemonRangedAttackGoal(val mob: PokemonEntity, val speed: Double, val att
 
     override fun tick() {
         tickProjectiles()
-        if(this.mob.pokemon.aspects.contains("alpha_defeated")) return
+        if (this.mob.pokemon.aspects.contains("alpha_defeated")) return
         this.cooldown--
         val target: LivingEntity = this.target ?: return
         val canSee: Boolean = this.mob.hasLineOfSight(target)
@@ -66,16 +66,16 @@ class PokemonRangedAttackGoal(val mob: PokemonEntity, val speed: Double, val att
         } else {
             this.targetNotVisibleTicks++
         }
-        if(this.mob.random.nextFloat() < 0.3) {
+        if (this.mob.random.nextFloat() < 0.3) {
             this.left = !this.left
         }
-        if(this.mob.random.nextFloat() < 0.3) {
+        if (this.mob.random.nextFloat() < 0.3) {
             this.backwards = !this.backwards
         }
         val distance: Double = this.mob.distanceToSqr(target)
-        if(distance > getSquaredMaxAttackDistance(target) && canSee) {
+        if (distance > getSquaredMaxAttackDistance(target) && canSee) {
             this.mob.moveControl.setWantedPosition(target.x, target.y, target.z, this.speed * 1.85)
-            if(this.mob.random.nextFloat() < 0.3 && this.cooldown <= 0) {
+            if (this.mob.random.nextFloat() < 0.3 && this.cooldown <= 0) {
                 this.mob.playSound(SoundEvents.ALLAY_THROW, 1.0f, 1.1f)
                 this.mob.playSound(SoundEvents.WITCH_THROW, 1.0f, 0.2f)
                 this.cooldown = this.attackCooldown
@@ -84,17 +84,21 @@ class PokemonRangedAttackGoal(val mob: PokemonEntity, val speed: Double, val att
         }
     }
 
-    private fun summonAttackEntity() {
+    fun summonAttackEntity() {
         // summon an invisible vanilla entity with a particle trail that arcs towards the target
         // when it hits the target, it explodes and deals damage
         // the entity is summoned at the pokemon's position, and is given a motion vector that arcs towards the target
         val starPos: Vec3 = this.mob.position().add(0.0, this.mob.eyeHeight.toDouble(), 0.0)
-        val direction = this.target!!.position().add(0.0, this.target!!.eyeHeight.toDouble(), 0.0).subtract(starPos).normalize()
-        val distance: Double = starPos.distanceTo(this.target!!.position().add(0.0, this.target!!.eyeHeight.toDouble(), 0.0)).coerceAtLeast(8.0)
-        val step: Double = distance / 20
+        val direction =
+            this.target!!.position().add(0.0, this.target!!.eyeHeight.toDouble() / 2f, 0.0).subtract(starPos)
+                .normalize()
+        val distance: Double =
+            starPos.distanceTo(this.target!!.position().add(0.0, this.target!!.eyeHeight.toDouble() / 2f, 0.0))
+                .coerceAtLeast(8.0)
+        val step: Double = distance / 8.0
         val steps: Int = (distance / step).toInt()
         val fakeProjectile: FakeProjectile = FakeProjectile(length = steps.toDouble(), stepSize = step)
-        for(i in 0..steps) {
+        for (i in 0..steps) {
             val pos = starPos.add(direction.scale(step * i))
             fakeProjectile.positions.add(pos)
         }
@@ -103,33 +107,59 @@ class PokemonRangedAttackGoal(val mob: PokemonEntity, val speed: Double, val att
 //        entity.isInvisible = true
     }
 
-    private fun tickProjectiles() {
+    fun tickProjectiles() {
         val color = mob.pokemon.primaryType.hue.toRGB()
         val particle: ParticleOptions = AlphaHelper.TYPE_PARTICLES[this.mob.pokemon.primaryType]!!
         val toRemove: MutableList<FakeProjectile> = mutableListOf()
         var tracker: Int = 0
         for (projectile in projectiles) {
-            if(projectile.isNotEmpty()){
-                for(i in 0..3.coerceAtMost(projectile.positions.size - 1)) {
-                    if(projectile.positions.size - 1 < i) continue
+            if (projectile.isNotEmpty()) {
+                val pos = projectile.positions[0]
+                this.mob.level.sendParticlesServer(
+                    particle,
+                    pos,
+                    5,
+                    Vec3.ZERO.add(0.4, 0.4, 0.4),
+                    0.0
+                )
+                projectile.tick()
+                for (i in 0..3.coerceAtMost(projectile.positions.size - 1)) {
+                    if (projectile.positions.size - 1 < i) continue
                     val pos = projectile.positions[i.coerceAtMost(projectile.positions.size - 1)]
                     this.mob.level.sendParticlesServer(
                         particle,
                         pos,
                         5,
-                        Vec3.ZERO.add(0.1, 0.1, 0.1),
+                        Vec3.ZERO.add(0.2, 0.2, 0.2),
                         0.0
                     )
-
                     projectile.tick()
                     tracker++
                 }
-                if(projectile.positions.size == 0) continue
-                this.mob.level.getEntities(null, AABB.ofSize(projectile.positions[0], 0.5, 0.5, 0.5)).filterIsInstance<Player>()
+                if (projectile.positions.size == 0) continue
+                this.mob.level.getEntities(null, AABB.ofSize(projectile.positions[0], 0.25, 0.25, 0.25))
+                    .filterIsInstance<Player>()
+                    .also { players ->
+                        if(players.isNotEmpty()){
+                            this.mob.level.sendParticlesServer(
+                                particle,
+                                projectile.positions[0],
+                                50,
+                                Vec3.ZERO.add(3.0, 3.0, 3.0),
+                                1.0
+                            )
+                            this.mob.level.getEntities(this.mob, AABB.ofSize(projectile.positions[0], 3.0, 3.0, 3.0))
+                                .filterIsInstance<LivingEntity>()
+                                .forEach { entity ->
+                                    this.mob.doHurtTarget(entity)
+                                }
+                            projectile.stop()
+                        }
+                    }
                     .forEach { player ->
-                    this.mob.doHurtTarget(player as Player)
-                        this.target!!.hurt(DamageSource.mobAttack(this.mob), 1.0f)
-                }
+                        this.mob.doHurtTarget(player as Player)
+                        player.hurt(DamageSource(this.mob.pokemon.primaryType.name+"_ball"), 8.0f)
+                    }
             }
         }
         projectiles.removeAll(toRemove)
