@@ -35,6 +35,27 @@ object MythicalItems {
     val RADIANT_CRYSTAL: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "radiant_crystal")
 
+    val BLAZING_CRYSTAL: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "blazing_crystal")
+
+    val GALAXY_STAR: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "galaxy_star")
+
+    val GILDED_CUBE: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gilded_cube")
+
+    val MAGMA_GEM: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "magma_gem")
+
+    val MATRIX_CUBE: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "matrix_cube")
+
+    val SHADOW_ORB: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "shadow_orb")
+
+    val VIRUS_CRYSTAL: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "virus_crystal")
+
     val ROCKET_BOOTS: Item =
         RocketBootsItem(QuiltItemSettings().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS) as QuiltItemSettings, "rocketboots")
 
