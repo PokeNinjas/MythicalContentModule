@@ -2,6 +2,7 @@ package com.mythicalnetwork.mythicalmod.content.alphas
 
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import net.minecraft.sounds.SoundEvents
+import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.entity.LivingEntity
@@ -69,12 +70,14 @@ class PokemonMegaKickGoal(val mob: PokemonEntity, val speed: Double, val kickCoo
         if(distance < getSquaredMaxAttackDistance(target)) {
             this.mob.moveControl.setWantedPosition(target.x, target.y, target.z, this.speed * 1.85)
             if(this.mob.random.nextFloat() < 0.3 && this.cooldown <= 0) {
-                this.target!!.push(
-                    (this.mob.random.nextFloat()+(round(this.mob.random.nextFloat()-0.5))*this.mob.random.nextInt(5)).toDouble(),
-                    (this.mob.random.nextFloat()+(round(this.mob.random.nextFloat()-0.5))*this.mob.random.nextInt(5)).toDouble(),
-                    (this.mob.random.nextFloat()+(round(this.mob.random.nextFloat()-0.5))*this.mob.random.nextInt(5)).toDouble()
-                )
-                this.mob.doHurtTarget(this.target!!)
+                var x: Double = if(this.mob.random.nextFloat() < 0.5) 5.0 else 0.0
+                var y: Double = if(this.mob.random.nextFloat() < 0.5) 5.0 else 0.0
+                var z: Double = if(this.mob.random.nextFloat() < 0.5) 5.0 else 0.0
+                // randomly invert the direction
+                x = if(this.mob.random.nextFloat() < 0.5) -x else x
+                z = if(this.mob.random.nextFloat() < 0.5) -z else z
+                this.target!!.push(x, y, z)
+                this.target!!.hurt(DamageSource("mega_kick"), 5.0f)
                 this.mob.playSound(SoundEvents.PLAYER_ATTACK_STRONG, 0.8f, 0.65f)
                 this.cooldown = this.mob.random.nextIntBetweenInclusive(kickCooldown, kickCooldown * 2)
             }

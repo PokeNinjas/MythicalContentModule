@@ -1,4 +1,4 @@
 {
-  "pokemon": ["charizard", "mismagius", "raichu", "koraidon"],
+  "pokemon": ["charizard", "mismagius", "raichu", "koraidon", "umbreon", "sableye"],
   "features": ["alpha_defeated"]
 }
