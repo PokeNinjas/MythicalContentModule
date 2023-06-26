@@ -19,6 +19,12 @@
         "mythical_matrix"
       ],
       "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_galaxy.png"
     }
   ]
 }

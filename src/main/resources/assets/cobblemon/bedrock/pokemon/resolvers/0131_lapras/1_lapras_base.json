@@ -70,6 +70,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0131_lapras/lapras_shiny_rainbow_galaxy.png"
     }
   ]
 }

@@ -41,6 +41,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_shiny_galaxy.png"
     }
   ]
 }

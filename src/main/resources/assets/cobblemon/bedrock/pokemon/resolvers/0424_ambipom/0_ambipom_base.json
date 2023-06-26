@@ -43,6 +43,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_shiny_matrix.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_shiny_galaxy.png",
+      "layers": []
     }
   ]
 }

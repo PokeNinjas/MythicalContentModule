@@ -41,6 +41,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny_galaxy.png"
     }
   ]
 }

@@ -27,6 +27,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0259_marshtomp/marshtomp_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0259_marshtomp/marshtomp_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0259_marshtomp/marshtomp_shiny_galaxy.png"
     }
   ]
 }

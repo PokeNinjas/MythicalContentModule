@@ -13,6 +13,12 @@
         "mythical_matrix"
       ],
       "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_galaxy.png"
     }
   ]
 }

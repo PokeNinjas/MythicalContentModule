@@ -27,6 +27,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0043_oddish/oddish_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0043_oddish/oddish_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0043_oddish/oddish_shiny_galaxy.png"
     }
   ]
 }

@@ -13,6 +13,12 @@
         "mythical_matrix"
       ],
       "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_galaxy.png"
     }
   ]
 }

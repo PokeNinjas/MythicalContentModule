@@ -465,6 +465,181 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_galaxy.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_galaxy.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_galaxy.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/galaxy_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_galaxy.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_rainbow_galaxy.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_rainbow_galaxy.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_rainbow_galaxy.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_galaxy_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_galaxy.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_gilded_galaxy.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_gilded_galaxy.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_gilded_galaxy.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_galaxy_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_galaxy.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

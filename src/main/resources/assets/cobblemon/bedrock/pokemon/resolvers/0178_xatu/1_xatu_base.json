@@ -39,6 +39,25 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0178_xatu/xatu_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0178_xatu/xatu_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "female"
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0178_xatu/xatu_shiny_galaxy.png"
     }
   ]
 }

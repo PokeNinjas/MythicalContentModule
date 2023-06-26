@@ -84,6 +84,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_rainbow_galaxy.png"
     }
   ]
 }

@@ -41,6 +41,26 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_galaxy.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_shiny_galaxy.png"
     }
   ]
 }

@@ -43,6 +43,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_shiny_galaxy.png"
     }
   ]
 }

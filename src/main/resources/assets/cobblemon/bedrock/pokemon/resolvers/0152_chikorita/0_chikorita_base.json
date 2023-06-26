@@ -20,6 +20,12 @@
         "mythical_matrix"
       ],
       "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_galaxy.png"
     }
   ]
 }

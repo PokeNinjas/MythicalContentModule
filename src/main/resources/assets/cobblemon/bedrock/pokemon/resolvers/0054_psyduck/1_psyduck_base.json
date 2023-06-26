@@ -70,6 +70,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_galaxy.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter_galaxy.png"
     }
   ]
 }

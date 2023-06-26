@@ -20,6 +20,12 @@
         "mythical_matrix"
       ],
       "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_galaxy.png"
     }
   ]
 }

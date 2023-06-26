@@ -231,6 +231,93 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_galaxy.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_shiny_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_galaxy.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_blazing_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_blazing_galaxy.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_shiny_blazing_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_shiny_blazing_galaxy.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "sleep",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_sleep_blazing_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_blazing_galaxy.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "sleep",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_sleep_shiny_blazing_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_shiny_blazing_galaxy.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

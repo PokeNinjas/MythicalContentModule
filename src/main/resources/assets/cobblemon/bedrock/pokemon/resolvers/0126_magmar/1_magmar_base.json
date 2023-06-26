@@ -55,6 +55,33 @@
           "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_shiny_emissive.png"
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_emissive.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_shiny_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0126_magmar/magmar_shiny_emissive.png"
+        }
+      ]
     }
   ]
 }

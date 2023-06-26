@@ -113,6 +113,49 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_galaxy.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_shiny_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0058_growlithe/growlithe_shiny_blazing_galaxy.png"
     }
   ]
 }

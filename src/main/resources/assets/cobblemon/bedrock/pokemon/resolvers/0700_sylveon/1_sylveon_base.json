@@ -70,6 +70,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0700_sylveon/sylveon_shiny_blazing_galaxy.png"
     }
   ]
 }

@@ -113,6 +113,49 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_galaxy.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_shiny_easter_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_shiny_blazing_galaxy.png"
     }
   ]
 }

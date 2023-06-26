@@ -55,6 +55,33 @@
           "texture": "cobblemon:textures/pokemon/0140_kabuto/kabuto_emissive.png"
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0140_kabuto/kabuto_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0140_kabuto/kabuto_emissive.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0140_kabuto/kabuto_shiny_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0140_kabuto/kabuto_emissive.png"
+        }
+      ]
     }
   ]
 }

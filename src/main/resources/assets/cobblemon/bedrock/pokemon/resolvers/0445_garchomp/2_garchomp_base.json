@@ -70,6 +70,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny_blazing_galaxy.png"
     }
   ]
 }

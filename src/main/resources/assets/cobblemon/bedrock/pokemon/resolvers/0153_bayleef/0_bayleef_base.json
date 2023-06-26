@@ -20,6 +20,12 @@
         "mythical_matrix"
       ],
       "texture": "cobblemon:textures/pokemon/0153_bayleef/bayleef_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0153_bayleef/bayleef_galaxy.png"
     }
   ]
 }

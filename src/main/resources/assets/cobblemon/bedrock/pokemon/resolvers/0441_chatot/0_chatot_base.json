@@ -41,6 +41,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_shiny_galaxy.png"
     }
   ]
 }

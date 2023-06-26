@@ -1,0 +1,6 @@
+{
+  "type": "flag",
+  "keys": ["mythical_galaxy"],
+  "default": "false",
+  "isAspect": true
+}

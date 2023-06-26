@@ -49,6 +49,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_matrix.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_galaxy.png",
+      "layers": []
     }
   ]
 }
