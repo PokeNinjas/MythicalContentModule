@@ -16,7 +16,7 @@ object Dependencies {
     const val FABRIC_PERMS_API = "me.lucko:fabric-permissions-api:0.2-SNAPSHOT"
     const val MODMENU = "com.terraformersmc:modmenu:${Versions.MODMENU}"
     const val PLACEHOLDERAPI = "eu.pb4:placeholder-api:${Versions.PLACEHOLDERAPI}"
-    const val GECKOLIB = "software.bernie.geckolib:geckolib-quilt-1.19:${Versions.GECKOLIB}"
+    const val GECKOLIB = "software.bernie.geckolib:geckolib-quilt-1.19.4:${Versions.GECKOLIB}"
     const val VEIL = "foundry.veil:Veil-quilt-1.19.2:${Versions.VEIL}"
     const val CC_BASE = "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${Versions.CARDINAL_COMPONENTS}"
     const val CC_WORLD = "dev.onyxstudios.cardinal-components-api:cardinal-components-level:${Versions.CARDINAL_COMPONENTS}"
