@@ -67,6 +67,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_shiny_magma.png"
     }
   ]
 }

@@ -67,6 +67,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus_shiny_magma.png"
     }
   ]
 }

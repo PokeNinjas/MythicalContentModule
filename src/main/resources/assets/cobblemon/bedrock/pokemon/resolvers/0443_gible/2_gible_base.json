@@ -126,6 +126,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny_blazing_magma.png"
     }
   ]
 }

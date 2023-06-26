@@ -77,6 +77,25 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "female"
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_magma.png"
     }
   ]
 }

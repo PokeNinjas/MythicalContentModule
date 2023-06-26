@@ -53,6 +53,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0344_claydol/claydol_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0344_claydol/claydol_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0344_claydol/claydol_shiny_magma.png"
     }
   ]
 }

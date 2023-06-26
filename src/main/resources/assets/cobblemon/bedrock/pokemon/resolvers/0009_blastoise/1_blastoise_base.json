@@ -199,6 +199,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_shiny_gilded_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_magma.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_shiny_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0009_blastoise/blastoise_shiny_gilded_magma.png"
     }
   ]
 }

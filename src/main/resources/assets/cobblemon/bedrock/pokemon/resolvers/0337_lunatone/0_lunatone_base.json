@@ -67,6 +67,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny_magma.png"
     }
   ]
 }

@@ -137,6 +137,40 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0978_tatsugiri/tatsugiri_curly_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0978_tatsugiri/tatsugiri_curly_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tatsugiri-texture-curly"
+      ],
+      "texture": "cobblemon:textures/pokemon/0978_tatsugiri/tatsugiri_curly_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tatsugiri-texture-droopy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0978_tatsugiri/tatsugiri_droopy_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tatsugiri-texture-stretchy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0978_tatsugiri/tatsugiri_stretchy_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0978_tatsugiri/tatsugiri_curly_magma.png"
     }
   ]
 }

@@ -199,6 +199,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_rainbow_magma.png"
     }
   ]
 }

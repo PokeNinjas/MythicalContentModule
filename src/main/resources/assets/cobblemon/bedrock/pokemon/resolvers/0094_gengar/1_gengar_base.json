@@ -126,6 +126,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_shiny_blazing_magma.png"
     }
   ]
 }

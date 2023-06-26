@@ -53,6 +53,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0302_sableye/sableye_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0302_sableye/sableye_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0302_sableye/sableye_shiny_magma.png"
     }
   ]
 }

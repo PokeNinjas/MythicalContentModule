@@ -53,6 +53,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0599_klink/klink_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0599_klink/klink_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0599_klink/klink_shiny_magma.png"
     }
   ]
 }

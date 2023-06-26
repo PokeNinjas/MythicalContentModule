@@ -53,6 +53,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0446_munchlax/munchlax_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0446_munchlax/munchlax_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0446_munchlax/munchlax_shiny_magma.png"
     }
   ]
 }

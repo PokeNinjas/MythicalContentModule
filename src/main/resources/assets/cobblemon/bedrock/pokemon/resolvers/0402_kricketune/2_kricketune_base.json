@@ -53,6 +53,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune_shiny_magma.png"
     }
   ]
 }

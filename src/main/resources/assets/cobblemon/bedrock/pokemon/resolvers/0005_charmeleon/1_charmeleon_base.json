@@ -815,6 +815,181 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_magma.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_emissive_magma.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_magma.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/magma_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_emissive_magma.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_rainbow_magma.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_emissive_rainbow_magma.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_rainbow_magma.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_magma_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_emissive_magma.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_gilded_magma.png",
+      "layers": [
+        {
+          "name": "gilded_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_emissive_gilded_magma.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_gilded_magma.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_magma_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_emissive_magma.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

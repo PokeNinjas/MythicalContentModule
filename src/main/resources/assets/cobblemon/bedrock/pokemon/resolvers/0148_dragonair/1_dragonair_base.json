@@ -343,6 +343,81 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_blazing_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_blazing_magma.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

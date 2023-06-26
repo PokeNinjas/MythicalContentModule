@@ -85,6 +85,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_shiny_magma.png"
     }
   ]
 }

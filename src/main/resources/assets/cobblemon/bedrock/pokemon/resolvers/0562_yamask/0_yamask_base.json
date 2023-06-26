@@ -67,6 +67,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny_magma.png"
     }
   ]
 }

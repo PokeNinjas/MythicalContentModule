@@ -67,6 +67,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0170_chinchou/chinchou_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0170_chinchou/chinchou_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0170_chinchou/chinchou_shiny_magma.png"
     }
   ]
 }

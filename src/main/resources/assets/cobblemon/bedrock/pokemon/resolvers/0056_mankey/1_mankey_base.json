@@ -126,6 +126,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0056_mankey/mankey_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0056_mankey/mankey_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0056_mankey/mankey_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0056_mankey/mankey_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0056_mankey/mankey_shiny_blazing_magma.png"
     }
   ]
 }

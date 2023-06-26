@@ -66,6 +66,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_magma.png"
     }
   ]
 }

@@ -71,6 +71,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny_glitch.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny_magma.png",
+      "layers": []
     }
   ]
 }

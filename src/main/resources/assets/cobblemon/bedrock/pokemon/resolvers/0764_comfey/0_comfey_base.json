@@ -66,6 +66,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0764_comfey/comfey_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0764_comfey/comfey_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0764_comfey/comfey_shiny_magma.png"
     }
   ]
 }

@@ -66,6 +66,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0926_fidough/fidough_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0926_fidough/fidough_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0926_fidough/fidough_shiny_magma.png"
     }
   ]
 }

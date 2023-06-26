@@ -405,6 +405,93 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_magma.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_shiny_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_magma.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_blazing_magma.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_shiny_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_shiny_blazing_magma.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "sleep",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_sleep_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_blazing_magma.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "sleep",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_sleep_shiny_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_shiny_blazing_magma.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

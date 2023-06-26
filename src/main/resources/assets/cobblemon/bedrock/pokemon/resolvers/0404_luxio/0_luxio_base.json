@@ -77,6 +77,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_glitch.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_magma.png",
+      "layers": []
     }
   ]
 }

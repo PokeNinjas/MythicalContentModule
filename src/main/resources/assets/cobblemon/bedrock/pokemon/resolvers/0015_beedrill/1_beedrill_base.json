@@ -423,6 +423,97 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_emissive_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_rainbow_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_rainbow_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_rainbow_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_rainbow_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_blazing_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_blazing_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_shiny_blazing_magma.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

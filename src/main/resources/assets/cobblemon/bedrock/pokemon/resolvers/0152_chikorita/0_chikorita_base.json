@@ -32,6 +32,12 @@
         "mythical_glitch"
       ],
       "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_magma.png"
     }
   ]
 }

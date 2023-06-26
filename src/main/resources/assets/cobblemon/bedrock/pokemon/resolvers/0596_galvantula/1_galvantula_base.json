@@ -109,6 +109,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_magma.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_shiny_magma.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

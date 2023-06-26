@@ -85,6 +85,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0392_infernape/infernape_shiny_magma.png"
     }
   ]
 }

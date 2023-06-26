@@ -425,6 +425,98 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_magma.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_magma.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "valencian",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "valencian",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "valencian",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "valencian",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_magma.png"
     }
   ]
 }

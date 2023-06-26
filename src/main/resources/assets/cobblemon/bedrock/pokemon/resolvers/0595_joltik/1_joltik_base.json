@@ -109,6 +109,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_magma.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_eye_emissives.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_shiny_magma.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_eye_emissives_shiny.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

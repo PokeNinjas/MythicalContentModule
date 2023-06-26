@@ -233,6 +233,64 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "autumn"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "summer"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "winter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "autumn",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "summer",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "winter",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_shiny_magma.png"
     }
   ]
 }

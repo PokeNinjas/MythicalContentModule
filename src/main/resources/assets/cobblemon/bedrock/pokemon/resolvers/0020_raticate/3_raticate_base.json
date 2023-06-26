@@ -113,6 +113,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0020_raticate/raticate_alolan_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0020_raticate/raticate_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0020_raticate/raticate_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0020_raticate/raticate_alolan_magma.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0020_raticate/raticate_alolan_shiny_magma.png"
     }
   ]
 }

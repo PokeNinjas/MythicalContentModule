@@ -126,6 +126,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_magma.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter_magma.png"
     }
   ]
 }

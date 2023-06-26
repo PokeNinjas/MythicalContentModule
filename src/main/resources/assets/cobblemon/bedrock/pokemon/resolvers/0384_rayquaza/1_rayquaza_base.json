@@ -345,6 +345,79 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_magma.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shadow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_shadow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_magma.png"
     }
   ]
 }

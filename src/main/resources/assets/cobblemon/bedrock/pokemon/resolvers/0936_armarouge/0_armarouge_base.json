@@ -66,6 +66,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_magma.png"
     }
   ]
 }

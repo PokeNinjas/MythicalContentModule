@@ -109,6 +109,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_magma.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_shiny_magma.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0710_pumpkaboo/pumpkaboo_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

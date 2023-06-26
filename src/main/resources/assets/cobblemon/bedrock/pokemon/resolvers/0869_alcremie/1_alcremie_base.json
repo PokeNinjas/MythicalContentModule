@@ -697,6 +697,180 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_vanilla_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-berry"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_berry_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-strawberry"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_strawberry_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-clover"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_clover_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-flower"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_flower_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-love"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_heart_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-ribbon"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_ribbon_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "decoration-star"
+      ],
+      "layers": [
+        {
+          "name": "decoration",
+          "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_star_decoration.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-vanilla"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_vanilla_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-caramel_swirl"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_caramel_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-ruby"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_ruby_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-matcha"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_matcha_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-mint"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_mint_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-ruby"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_ruby_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-lemon"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_lemon_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-salted"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_salted_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-ruby_swirl"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_rubyswirl_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "cream-rainbow_swirl"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_rainbowswirl_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0869_alcremie/alcremie_shiny_magma.png"
     }
   ]
 }

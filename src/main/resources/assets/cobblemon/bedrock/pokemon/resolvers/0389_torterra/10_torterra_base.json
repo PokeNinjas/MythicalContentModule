@@ -593,6 +593,154 @@
         "tree-mangrove"
       ],
       "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_mangrove_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-birch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_birch_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-birch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_birch_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-darkoak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_darkoak_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-darkoak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_darkoak_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-oak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_oak_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-oak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_oak_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-spruce"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_spruce_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-spruce"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_spruce_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-jungle"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_jungle_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-jungle"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_jungle_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-swamp"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_swamp_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-swamp"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_swamp_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-acacia"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_acacia_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-acacia"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_acacia_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-azalea"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_azalea_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-azalea"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_azalea_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "tree-mangrove"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_mangrove_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny",
+        "tree-mangrove"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_mangrove_shiny_magma.png"
     }
   ]
 }

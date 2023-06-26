@@ -109,6 +109,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_magma.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_magma.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

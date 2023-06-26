@@ -173,6 +173,49 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0606_beheeyem/beheeyem_magma.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0606_beheeyem/glow/hand_glow_yellow.png",
+              "cobblemon:textures/pokemon/0606_beheeyem/glow/hand_glow_red.png",
+              "cobblemon:textures/pokemon/0606_beheeyem/glow/hand_glow_green.png"
+            ],
+            "fps": 5,
+            "loop": true
+          },
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0606_beheeyem/beheeyem_shiny_magma.png",
+      "layers": [
+        {
+          "name": "shiny_color",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0606_beheeyem/glow/hand_shiny_blue.png",
+              "cobblemon:textures/pokemon/0606_beheeyem/glow/hand_shiny_purple.png",
+              "cobblemon:textures/pokemon/0606_beheeyem/glow/hand_shiny_green.png"
+            ],
+            "fps": 5,
+            "loop": true
+          },
+          "emissive": true
+        }
+      ]
     }
   ]
 }

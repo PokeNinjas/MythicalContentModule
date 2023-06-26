@@ -32,6 +32,12 @@
         "mythical_glitch"
       ],
       "texture": "cobblemon:textures/pokemon/0153_bayleef/bayleef_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0153_bayleef/bayleef_magma.png"
     }
   ]
 }

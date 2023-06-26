@@ -71,6 +71,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_shiny_glitch.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_shiny_magma.png",
+      "layers": []
     }
   ]
 }
