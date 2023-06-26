@@ -7,16 +7,14 @@
       "poser": "cobblemon:stonjourner",
       "model": "cobblemon:stonjourner.geo",
       "texture": "cobblemon:textures/pokemon/0874_stonjourner/stonjourner.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0874_stonjourner/stonjourner_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0874_stonjourner/stonjourner_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0874_stonjourner/stonjourner_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0874_stonjourner/stonjourner_shiny_matrix.png"
     }
   ]
 }

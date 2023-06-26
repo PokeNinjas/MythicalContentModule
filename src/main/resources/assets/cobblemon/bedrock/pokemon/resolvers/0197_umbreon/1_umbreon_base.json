@@ -150,6 +150,97 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_blazing_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_emissive_blazing_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_rainbow_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_rainbow_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_shiny_rainbow_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0197_umbreon/umbreon_emissive_shiny_rainbow_matrix.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

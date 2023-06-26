@@ -7,16 +7,14 @@
       "poser": "cobblemon:roggenrola",
       "model": "cobblemon:roggenrola.geo",
       "texture": "cobblemon:textures/pokemon/0524_roggenrola/roggenrola.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0524_roggenrola/roggenrola_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0524_roggenrola/roggenrola_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0524_roggenrola/roggenrola_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0524_roggenrola/roggenrola_shiny_matrix.png"
     }
   ]
 }

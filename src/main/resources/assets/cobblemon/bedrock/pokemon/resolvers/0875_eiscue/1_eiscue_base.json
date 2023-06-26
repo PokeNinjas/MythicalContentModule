@@ -3,7 +3,9 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["mythical_easter"],
+      "aspects": [
+        "mythical_easter"
+      ],
       "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_easter.png"
     },
     {
@@ -29,7 +31,9 @@
       "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_radiant.png"
     },
     {
@@ -85,6 +89,66 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "no_ice",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_matrix.png"
+    },
+    {
+      "aspects": [
+        "no_ice",
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "no_ice",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "no_ice",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0875_eiscue/eiscue_no_ice_shiny_easter_matrix.png"
     }
   ]
 }

@@ -7,16 +7,14 @@
       "poser": "cobblemon:lunatone",
       "model": "cobblemon:lunatone.geo",
       "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny_matrix.png"
     }
   ]
 }

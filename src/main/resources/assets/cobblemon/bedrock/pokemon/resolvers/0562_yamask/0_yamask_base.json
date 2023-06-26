@@ -7,16 +7,14 @@
       "poser": "cobblemon:yamask",
       "model": "cobblemon:yamask.geo",
       "texture": "cobblemon:textures/pokemon/0562_yamask/yamask.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0562_yamask/yamask_shiny_matrix.png"
     }
   ]
 }

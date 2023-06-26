@@ -3,7 +3,9 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["mythical_rainbow"],
+      "aspects": [
+        "mythical_rainbow"
+      ],
       "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_rainbow.png"
     },
     {
@@ -14,7 +16,9 @@
       "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_rainbow.png"
     },
     {
-      "aspects": ["mythical_blazing"],
+      "aspects": [
+        "mythical_blazing"
+      ],
       "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_blazing.png",
       "layers": [
         {
@@ -41,7 +45,9 @@
       ]
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_radiant.png"
     },
     {
@@ -92,6 +98,65 @@
         {
           "name": "emissive",
           "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_emissive_blazing_radiant.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_emissive_blazing_matrix.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_emissive_blazing_matrix.png",
           "emissive": true,
           "translucent": false
         }

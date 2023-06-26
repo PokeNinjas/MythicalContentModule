@@ -27,6 +27,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0207_gligar/gligar_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0207_gligar/gligar_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0207_gligar/gligar_shiny_matrix.png"
     }
   ]
 }

@@ -3,7 +3,9 @@
   "order": 3,
   "variations": [
     {
-      "aspects": ["mythical_easter"],
+      "aspects": [
+        "mythical_easter"
+      ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_easter.png"
     },
     {
@@ -29,7 +31,9 @@
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_blazing"],
+      "aspects": [
+        "mythical_blazing"
+      ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_blazing.png"
     },
     {
@@ -55,7 +59,9 @@
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_radiant.png"
     },
     {
@@ -143,6 +149,98 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_matrix.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "valencian",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "valencian",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "valencian",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "valencian",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_matrix.png"
     }
   ]
 }

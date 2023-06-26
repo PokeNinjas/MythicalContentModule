@@ -13,6 +13,12 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_matrix.png"
     }
   ]
 }

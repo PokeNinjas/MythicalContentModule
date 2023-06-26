@@ -7,6 +7,12 @@
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_matrix.png"
     }
   ]
 }

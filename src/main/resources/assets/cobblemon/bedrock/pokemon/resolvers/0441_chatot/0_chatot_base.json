@@ -7,16 +7,14 @@
       "poser": "cobblemon:chatot",
       "model": "cobblemon:chatot.geo",
       "texture": "cobblemon:textures/pokemon/0441_chatot/chatot.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0441_chatot/chatot_shiny_matrix.png"
     }
   ]
 }

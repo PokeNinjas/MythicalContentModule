@@ -7,16 +7,14 @@
       "poser": "cobblemon:dusclops",
       "model": "cobblemon:dusclops.geo",
       "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0356_dusclops/dusclops_shiny_matrix.png"
     }
   ]
 }

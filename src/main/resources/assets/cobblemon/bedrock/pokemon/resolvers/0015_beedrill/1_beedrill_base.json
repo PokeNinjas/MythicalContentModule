@@ -38,10 +38,10 @@
       "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_radiant.png",
       "layers": [
         {
-            "name": "emissive",
-            "emissive": true,
-            "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_radiant.png",
-            "translucent": true
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_radiant.png",
+          "translucent": true
         }
       ]
     },
@@ -53,10 +53,10 @@
       "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_radiant.png",
       "layers": [
         {
-            "name": "emissive",
-            "emissive": true,
-            "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_emissive_radiant.png",
-            "translucent": true
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_emissive_radiant.png",
+          "translucent": true
         }
       ]
     },
@@ -147,6 +147,97 @@
           "name": "emissive",
           "emissive": true,
           "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_shiny_blazing_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_emissive_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_rainbow_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_rainbow_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_rainbow_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_rainbow_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_blazing_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_shiny_blazing_matrix.png",
           "translucent": true
         }
       ]

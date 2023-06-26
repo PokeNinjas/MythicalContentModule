@@ -7,16 +7,14 @@
       "poser": "cobblemon:venipede",
       "model": "cobblemon:venipede.geo",
       "texture": "cobblemon:textures/pokemon/0543_venipede/venipede.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny_matrix.png"
     }
   ]
 }

@@ -7,16 +7,14 @@
       "poser": "cobblemon:relicanth",
       "model": "cobblemon:relicanth.geo",
       "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,8 +28,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny_radiant.png",
-      "layers": [
-      ]
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny_matrix.png",
+      "layers": []
     }
   ]
 }

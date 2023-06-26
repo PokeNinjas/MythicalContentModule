@@ -7,16 +7,14 @@
       "poser": "cobblemon:scolipede",
       "model": "cobblemon:scolipede.geo",
       "texture": "cobblemon:textures/pokemon/0545_scolipede/scolipede.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0545_scolipede/scolipede_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0545_scolipede/scolipede_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0545_scolipede/scolipede_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0545_scolipede/scolipede_shiny_matrix.png"
     }
   ]
 }

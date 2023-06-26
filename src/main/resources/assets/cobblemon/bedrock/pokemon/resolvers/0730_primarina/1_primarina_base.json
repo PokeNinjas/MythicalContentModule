@@ -14,6 +14,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0730_primarina/primarina_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0730_primarina/primarina_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0730_primarina/primarina_shiny_matrix.png"
     }
   ]
 }

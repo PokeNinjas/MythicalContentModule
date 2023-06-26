@@ -1,4 +1,3 @@
-
 {
   "species": "cobblemon:zeraora",
   "order": 0,
@@ -84,6 +83,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_gilded_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_matrix.png"
     }
   ]
 }

@@ -55,6 +55,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_shiny_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_shiny_blazing_matrix.png"
     }
   ]
 }

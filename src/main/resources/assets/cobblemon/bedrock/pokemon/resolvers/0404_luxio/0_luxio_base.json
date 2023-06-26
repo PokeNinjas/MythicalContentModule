@@ -7,16 +7,14 @@
       "poser": "cobblemon:luxio",
       "model": "cobblemon:luxio_male.geo",
       "texture": "cobblemon:textures/pokemon/0404_luxio/luxio.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,14 +28,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_radiant.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "female"
       ],
       "model": "cobblemon:luxio_female.geo"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_matrix.png",
+      "layers": []
     }
   ]
 }

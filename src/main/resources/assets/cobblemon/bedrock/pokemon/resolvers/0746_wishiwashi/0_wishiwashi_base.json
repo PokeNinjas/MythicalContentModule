@@ -26,6 +26,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny_matrix.png"
     }
   ]
 }

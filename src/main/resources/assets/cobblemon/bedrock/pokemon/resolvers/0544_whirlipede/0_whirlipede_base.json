@@ -7,16 +7,14 @@
       "poser": "cobblemon:whirlipede",
       "model": "cobblemon:whirlipede.geo",
       "texture": "cobblemon:textures/pokemon/0544_whirlipede/whirlipede.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0544_whirlipede/whirlipede_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0544_whirlipede/whirlipede_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0544_whirlipede/whirlipede_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0544_whirlipede/whirlipede_shiny_matrix.png"
     }
   ]
 }

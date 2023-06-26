@@ -7,16 +7,14 @@
       "poser": "cobblemon:cacturne",
       "model": "cobblemon:cacturne.geo",
       "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_shiny_matrix.png"
     }
   ]
 }

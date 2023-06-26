@@ -14,6 +14,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0303_mawile/mawile_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0303_mawile/mawile_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0303_mawile/mawile_shiny_matrix.png"
     }
   ]
 }

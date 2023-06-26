@@ -15,6 +15,20 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0021_spearow/spearow_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0021_spearow/spearow_matrix.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0021_spearow/spearow_shiny_matrix.png"
     }
   ]
 }

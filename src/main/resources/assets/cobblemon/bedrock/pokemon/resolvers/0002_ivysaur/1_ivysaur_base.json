@@ -3,29 +3,35 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["mythical_rainbow"],
+      "aspects": [
+        "mythical_rainbow"
+      ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_rainbow.png"
     },
     {
       "aspects": [
         "shiny",
-		"mythical_rainbow"
+        "mythical_rainbow"
       ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_rainbow.png"
     },
-	{
-      "aspects": ["mythical_gilded"],
+    {
+      "aspects": [
+        "mythical_gilded"
+      ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_gilded.png"
     },
     {
       "aspects": [
-		"shiny",
+        "shiny",
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_gilded.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_radiant.png"
     },
     {
@@ -64,6 +70,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_gilded_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_gilded_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_gilded_matrix.png"
     }
   ]
 }

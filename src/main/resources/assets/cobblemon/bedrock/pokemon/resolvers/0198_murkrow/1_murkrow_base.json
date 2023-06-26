@@ -20,6 +20,25 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "female"
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_matrix.png"
     }
   ]
 }

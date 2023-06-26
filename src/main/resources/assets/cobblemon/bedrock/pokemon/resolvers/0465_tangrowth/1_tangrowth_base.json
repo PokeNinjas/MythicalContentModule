@@ -14,6 +14,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth_shiny_matrix.png"
     }
   ]
 }

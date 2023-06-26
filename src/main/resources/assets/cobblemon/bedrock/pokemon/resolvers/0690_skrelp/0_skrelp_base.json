@@ -7,16 +7,14 @@
       "poser": "cobblemon:skrelp",
       "model": "cobblemon:skrelp.geo",
       "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0690_skrelp/skrelp_shiny_matrix.png"
     }
   ]
 }

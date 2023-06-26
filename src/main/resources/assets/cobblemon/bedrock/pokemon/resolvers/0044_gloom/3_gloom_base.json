@@ -29,6 +29,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_matrix.png"
     }
   ]
 }

@@ -29,6 +29,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_matrix.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_shiny_matrix.png"
     }
   ]
 }

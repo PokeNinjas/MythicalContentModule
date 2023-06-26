@@ -7,16 +7,14 @@
       "poser": "cobblemon:spewpa",
       "model": "cobblemon:spewpa.geo",
       "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0665_spewpa/spewpa_shiny_matrix.png"
     }
   ]
 }

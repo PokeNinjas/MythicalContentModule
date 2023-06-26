@@ -3,7 +3,9 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["mythical_easter"],
+      "aspects": [
+        "mythical_easter"
+      ],
       "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_easter.png"
     },
     {
@@ -14,7 +16,9 @@
       "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_radiant.png"
     },
     {
@@ -40,7 +44,9 @@
       "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_shiny_easter_radiant.png"
     },
     {
-      "aspects": ["mythical_blazing"],
+      "aspects": [
+        "mythical_blazing"
+      ],
       "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_blazing.png"
     },
     {
@@ -64,6 +70,49 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_shiny_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0149_dragonite/dragonite_shiny_blazing_matrix.png"
     }
   ]
 }

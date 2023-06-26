@@ -14,6 +14,12 @@
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_matrix.png"
     }
   ]
 }

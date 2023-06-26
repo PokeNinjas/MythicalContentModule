@@ -84,6 +84,62 @@
           "emissive": "true"
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_matrix.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_emissive_matrix.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_matrix.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_emissive_matrix.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_emissive_blazing_matrix.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_emissive_blazing_matrix.png",
+          "emissive": "true"
+        }
+      ]
     }
   ]
 }

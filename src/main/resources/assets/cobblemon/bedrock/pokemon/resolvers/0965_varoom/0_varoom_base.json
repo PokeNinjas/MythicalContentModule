@@ -7,16 +7,14 @@
       "poser": "cobblemon:varoom",
       "model": "cobblemon:varoom.geo",
       "texture": "cobblemon:textures/pokemon/0965_varoom/varoom.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_shiny_matrix.png"
     }
   ]
 }

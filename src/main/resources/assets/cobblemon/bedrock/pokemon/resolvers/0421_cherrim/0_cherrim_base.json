@@ -7,16 +7,14 @@
       "poser": "cobblemon:cherrim_sunshine",
       "model": "cobblemon:cherrim_sunshine.geo",
       "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,8 +28,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny_radiant.png",
-      "layers": [
-      ]
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny_matrix.png",
+      "layers": []
     }
   ]
 }

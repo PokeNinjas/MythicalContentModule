@@ -27,6 +27,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0937_ceruledge/ceruledge_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0937_ceruledge/ceruledge_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0937_ceruledge/ceruledge_shiny_matrix.png"
     }
   ]
 }

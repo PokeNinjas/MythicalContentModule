@@ -7,16 +7,14 @@
       "poser": "cobblemon:cetitan",
       "model": "cobblemon:cetitan.geo",
       "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny_matrix.png"
     }
   ]
 }

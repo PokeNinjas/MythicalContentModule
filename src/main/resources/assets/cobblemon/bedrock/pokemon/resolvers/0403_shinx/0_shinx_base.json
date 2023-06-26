@@ -7,16 +7,14 @@
       "poser": "cobblemon:shinx",
       "model": "cobblemon:shinx_male.geo",
       "texture": "cobblemon:textures/pokemon/0403_shinx/shinx.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,14 +28,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_radiant.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "female"
       ],
       "model": "cobblemon:shinx_female.geo"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_matrix.png",
+      "layers": []
     }
   ]
 }

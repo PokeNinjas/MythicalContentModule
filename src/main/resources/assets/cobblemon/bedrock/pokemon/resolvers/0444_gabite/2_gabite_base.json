@@ -42,6 +42,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0444_gabite/gabite_shiny_blazing_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0444_gabite/gabite_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0444_gabite/gabite_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0444_gabite/gabite_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0444_gabite/gabite_shiny_blazing_matrix.png"
     }
   ]
 }

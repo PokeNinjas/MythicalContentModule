@@ -7,16 +7,14 @@
       "poser": "cobblemon:gigalith",
       "model": "cobblemon:gigalith.geo",
       "texture": "cobblemon:textures/pokemon/0526_gigalith/gigalith.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0526_gigalith/gigalith_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0526_gigalith/gigalith_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0526_gigalith/gigalith_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0526_gigalith/gigalith_shiny_matrix.png"
     }
   ]
 }

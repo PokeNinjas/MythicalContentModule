@@ -3,7 +3,9 @@
   "order": 2,
   "variations": [
     {
-      "aspects": ["mythical_easter"],
+      "aspects": [
+        "mythical_easter"
+      ],
       "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_easter.png"
     },
     {
@@ -29,7 +31,9 @@
       "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_radiant.png"
     },
     {
@@ -85,6 +89,66 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_matrix.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "alolan",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "alolan",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter_matrix.png"
     }
   ]
 }

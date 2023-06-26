@@ -3,7 +3,9 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["mythical_easter"],
+      "aspects": [
+        "mythical_easter"
+      ],
       "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_easter.png"
     },
     {
@@ -14,7 +16,9 @@
       "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_radiant.png"
     },
     {
@@ -38,6 +42,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_shiny_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0428_lopunny/lopunny_shiny_easter_matrix.png"
     }
   ]
 }

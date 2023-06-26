@@ -7,16 +7,14 @@
       "poser": "cobblemon:chimecho",
       "model": "cobblemon:chimecho.geo",
       "texture": "cobblemon:textures/pokemon/0358_chimecho/chimecho.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0358_chimecho/chimecho_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0358_chimecho/chimecho_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0358_chimecho/chimecho_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0358_chimecho/chimecho_shiny_matrix.png"
     }
   ]
 }

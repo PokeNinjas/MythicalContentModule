@@ -28,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_shiny_matrix.png"
     }
   ]
 }

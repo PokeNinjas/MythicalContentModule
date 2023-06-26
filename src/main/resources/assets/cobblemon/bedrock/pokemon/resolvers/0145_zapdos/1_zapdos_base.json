@@ -47,14 +47,14 @@
       "aspects": [
         "mythical_rainbow"
       ],
-        "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_rainbow.png"
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_rainbow.png"
     },
     {
       "aspects": [
         "mythical_rainbow",
         "shiny"
       ],
-        "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_rainbow.png"
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_rainbow.png"
     },
     {
       "aspects": [
@@ -70,6 +70,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0145_zapdos/zapdos_shiny_rainbow_matrix.png"
     }
   ]
 }

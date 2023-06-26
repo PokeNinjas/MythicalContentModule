@@ -7,6 +7,12 @@
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_matrix.png"
     }
   ]
 }

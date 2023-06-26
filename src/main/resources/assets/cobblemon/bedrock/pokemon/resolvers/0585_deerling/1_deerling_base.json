@@ -59,6 +59,64 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "autumn"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "summer"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "winter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "autumn",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "summer",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "winter",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny_matrix.png"
     }
   ]
 }

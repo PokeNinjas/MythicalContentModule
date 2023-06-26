@@ -7,16 +7,14 @@
       "poser": "cobblemon:ambipom",
       "model": "cobblemon:ambipom.geo",
       "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -30,8 +28,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_shiny_radiant.png",
-      "layers": [
-      ]
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0424_ambipom/ambipom_shiny_matrix.png",
+      "layers": []
     }
   ]
 }

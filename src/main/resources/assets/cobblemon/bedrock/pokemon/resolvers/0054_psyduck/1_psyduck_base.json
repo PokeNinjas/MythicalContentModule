@@ -16,7 +16,9 @@
       "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_radiant.png"
     },
     {
@@ -40,6 +42,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_matrix.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny_easter_matrix.png"
     }
   ]
 }

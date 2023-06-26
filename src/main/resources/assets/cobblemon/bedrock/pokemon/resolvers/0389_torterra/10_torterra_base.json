@@ -149,6 +149,154 @@
         "tree-mangrove"
       ],
       "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_mangrove_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-birch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_birch_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-birch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_birch_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-darkoak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_darkoak_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-darkoak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_darkoak_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-oak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_oak_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-oak"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_oak_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-spruce"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_spruce_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-spruce"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_spruce_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-jungle"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_jungle_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-jungle"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_jungle_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-swamp"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_swamp_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-swamp"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_swamp_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-acacia"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_acacia_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-acacia"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_acacia_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-azalea"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_azalea_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-azalea"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_azalea_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "tree-mangrove"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_mangrove_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "tree-mangrove"
+      ],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_mangrove_shiny_matrix.png"
     }
   ]
 }

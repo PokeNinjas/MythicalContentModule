@@ -28,6 +28,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0355_duskull/duskull_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0355_duskull/duskull_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0355_duskull/duskull_shiny_matrix.png"
     }
   ]
 }

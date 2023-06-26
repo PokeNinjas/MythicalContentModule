@@ -3,7 +3,9 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["mythical_easter"],
+      "aspects": [
+        "mythical_easter"
+      ],
       "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_easter.png"
     },
     {
@@ -14,7 +16,9 @@
       "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_easter.png"
     },
     {
-      "aspects": ["mythical_radiant"],
+      "aspects": [
+        "mythical_radiant"
+      ],
       "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_radiant.png",
       "layers": [
         {
@@ -56,7 +60,9 @@
       "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_easter_radiant.png"
     },
     {
-      "aspects": ["mythical_blazing"],
+      "aspects": [
+        "mythical_blazing"
+      ],
       "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_blazing.png",
       "layers": [
         {
@@ -109,6 +115,81 @@
           "name": "emissive",
           "emissive": true,
           "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_blazing_radiant.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_easter_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_emissive_blazing_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0148_dragonair/dragonair_shiny_emissive_blazing_matrix.png",
           "translucent": true
         }
       ]

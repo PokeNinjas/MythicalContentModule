@@ -7,16 +7,14 @@
       "poser": "cobblemon:yveltal",
       "model": "cobblemon:yveltal.geo",
       "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
-		    "shiny"
+        "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny.png",
-      "layers": [
-      ]
+      "layers": []
     },
     {
       "aspects": [
@@ -58,6 +56,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_rainbow_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_rainbow_matrix.png"
     }
   ]
 }
