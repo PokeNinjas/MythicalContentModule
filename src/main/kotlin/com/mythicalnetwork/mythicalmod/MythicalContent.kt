@@ -141,7 +141,7 @@ class MythicalContent : ModInitializer {
             if (player.tags.contains("rocketboots") && !player.level.isClientSide && player.getItemBySlot(EquipmentSlot.FEET).item is RocketBootsItem) {
                 player.abilities.mayfly = true
                 player.onUpdateAbilities()
-                if((player.level.gameTime % 1).toInt() == 0 && player.abilities.flying){
+                if((player.level.gameTime % 20).toInt() == 0 && player.abilities.flying){
 
                     player.getItemBySlot(EquipmentSlot.FEET).hurtAndBreak(1, entity!!) { player1 ->
                         player1.broadcastBreakEvent(
