@@ -59,6 +59,61 @@ object MythicalItems {
     val ROCKET_BOOTS: Item =
         RocketBootsItem(QuiltItemSettings().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS) as QuiltItemSettings, "rocketboots")
 
+    // Boxes
+    val GIFT_BOX_1: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_1")
+
+    val GIFT_BOX_2: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_2")
+
+    val GIFT_BOX_3: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_3")
+
+    val GIFT_BOX_4: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_4")
+
+    val GIFT_BOX_5: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_5")
+
+    val GIFT_BOX_6: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_6")
+
+    val GIFT_BOX_7: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_7")
+
+    val GIFT_BOX_8: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_8")
+
+    val GIFT_BOX_9: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_9")
+
+    val GIFT_BOX_10: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_10")
+
+    val GIFT_BOX_11: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_11")
+
+    val GIFT_BOX_12: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_12")
+
+    val GIFT_BOX_13: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_13")
+
+    val GIFT_BOX_14: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_14")
+
+    val GIFT_BOX_15: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_15")
+
+    val GIFT_BOX_16: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_16")
+
+    val GIFT_BOX_17: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_17")
+
+    val GIFT_BOX_18: Item =
+        Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_18")
+
     private fun Item(tab: Item.Properties?, s: String): Item {
         val item = tab?.let { Item(it) }
         ITEMS[ResourceLocation("mythicalmod", s)] = item!!
