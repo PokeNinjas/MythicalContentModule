@@ -14,6 +14,7 @@ import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
+import com.mythicalnetwork.mythicalmod.util.KingdomsHelper
 import com.pokeninjas.kingdoms.fabric.dto.database.impl.User
 import dev.architectury.event.EventResult
 import dev.architectury.event.events.common.EntityEvent
@@ -50,6 +51,7 @@ import net.minecraft.world.entity.projectile.Snowball
 import net.minecraft.world.entity.projectile.WitherSkull
 import net.minecraft.world.level.Level
 import org.quiltmc.loader.api.ModContainer
+import org.quiltmc.loader.api.QuiltLoader
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
 import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerTickEvents
@@ -139,7 +141,7 @@ class MythicalContent : ModInitializer {
             }
         }
         TickEvent.PLAYER_POST.register { player ->
-            if (player.tags.contains("rocketboots") && !player.level.isClientSide && player.getItemBySlot(EquipmentSlot.FEET).item is RocketBootsItem && User.get(player.uuid).kingdomAtLocation != null) {
+            if (player.tags.contains("rocketboots") && !player.level.isClientSide && player.getItemBySlot(EquipmentSlot.FEET).item is RocketBootsItem && kingdomsCheck(player as ServerPlayer)) {
                 player.abilities.mayfly = true
                 player.onUpdateAbilities()
                 if((player.level.gameTime % 20).toInt() == 0 && player.abilities.flying){
@@ -227,6 +229,18 @@ class MythicalContent : ModInitializer {
             Placeholders.register(key) { ctx, arg ->
                 value.apply(ctx, arg)
             }
+        }
+    }
+
+    private fun kingdomsCheck(player: ServerPlayer): Boolean {
+        if(QuiltLoader.isModLoaded("kingdoms")){
+            if(KingdomsHelper.isInKingdom(player)){
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return true
         }
     }
 
