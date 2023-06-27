@@ -1,5 +1,6 @@
 package com.mythicalnetwork.mythicalmod.registry
 
+import com.cobblemon.mod.common.CobblemonBlockEntities.equals
 import com.cobblemon.mod.common.api.types.ElementalType
 import com.cobblemon.mod.common.api.types.ElementalTypes
 import com.mythicalnetwork.mythicalmod.MythicalContent

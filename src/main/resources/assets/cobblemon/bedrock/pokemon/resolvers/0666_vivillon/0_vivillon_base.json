@@ -272,6 +272,101 @@
           "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_ender.png"
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_radiant.png",
+      "layers": [
+        {
+          "name": "wings",
+          "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_pokeball_radiant.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_magma.png",
+      "layers": [
+        {
+          "name": "wings",
+          "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_pokeball_magma.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_glitch.png",
+      "layers": [
+        {
+          "name": "wings",
+          "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_pokeball_glitch.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_galaxy.png",
+      "layers": [
+        {
+          "name": "wings",
+          "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_pokeball_galaxy.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_matrix.png",
+      "layers": [
+        {
+          "name": "wings",
+          "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_pokeball_matrix.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_matrix.png"
     }
   ]
 }

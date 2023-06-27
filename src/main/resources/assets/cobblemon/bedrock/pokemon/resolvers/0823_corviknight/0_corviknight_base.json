@@ -14,6 +14,71 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_shiny.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_radiant",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0823_corviknight/corviknight_shiny_matrix.png"
     }
   ]
 }
