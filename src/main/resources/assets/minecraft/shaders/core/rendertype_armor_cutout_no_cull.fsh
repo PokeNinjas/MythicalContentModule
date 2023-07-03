@@ -1,6 +1,6 @@
 #version 150
 #define FSH
-#define RENDERTYPE_ENTITY_CUTOUT
+#define RENDERTYPE_ARMOR_CUTOUT_NO_CULL
 
 #moj_import <fog.glsl>
 
@@ -27,7 +27,7 @@ out vec4 fragColor;
 #moj_import <pokemoneffects.glsl>
 
 void main() {
-    vec4 color = texture(Sampler0, texCoord0) * baseColor;
+    vec4 color = texture(Sampler0, texCoord0);
     if(color.a < 0.1) discard;
 
     SurfaceData surface;
@@ -41,11 +41,11 @@ void main() {
     surface.isGui = FogStart > 2000.0;
     surface.emissive = 0.0;
     surface.normalEmissive = 0.0;
-    surface.dyeColor = vec3(1.0);
+    surface.dyeColor = baseColor.rgb;
 
     if(surface.isGui) surface.position = vec3(1.0, -1.0, -3.0);
 
-    applyEffects(surface, uint(round(color.a * 255.0)));
+    applyEffects(surface, colorId(baseColor.rgb));
 
     if(getDither(ivec2(gl_FragCoord.xy)) > surface.alpha) discard;
 

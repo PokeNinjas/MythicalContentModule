@@ -1,16 +1,19 @@
 #version 150
 
-#moj_import <spheya_utils.glsl>
+#moj_import<spheya_utils.glsl>
 
-struct SurfaceData {
+struct SurfaceData { 
     ivec2 texSize;
     vec3 albedo;
     float alpha;
     vec3 position;
     vec3 normal;
     vec2 uv;
+    vec2 corner;
+    bool isGui;
     float emissive;
-    float isGui;
+    float normalEmissive;
+    vec3 dyeColor;
 };
 
 void applyRadiantEffect(inout SurfaceData surface) {
@@ -31,7 +34,7 @@ void applyMagmaLayer(inout SurfaceData surface, float scale, float alpha, float 
             surface.albedo += hsvToRgb(mix(vec3(0.16, 0.6, 1), vec3(-0.0444, 0.75, 0.20), (i-1.0) / 11.0) + ivec3(0.0, 0.3, 0.0)) * alpha;
             if(i == 0.0) surface.albedo = vec3(1.0, 0.95, 0.85);
             surface.emissive = (1.0 - i / 11.0) * alpha;
-            break;
+            return;
         }
     }
 }
@@ -119,10 +122,9 @@ vec4 matrixLayer(vec2 uv, float scale, float gap) {
     ivec2 pixelCoords = ivec2(floor((uv * scale - vec2(0.0, offsetY) - gridCoords) * 6.0 - vec2(mix(0.0, 3.0, offsetX), 0.5)));
 
     const uint numbers[10] = uint[10]( 0x3Fu, 0x06u, 0x5Bu, 0x4Fu, 0x66u, 0x6Du, 0x7Du, 0x07u, 0x7Fu, 0x6Fu );
-    uint n = uint(floor(random(seed + floor(GameTime * 1200 * 6 + 0.5) + gridCoords.y) * 9.99));//uint((gridCoords.y + int(GameTime * 1200 * 12)) % 10);
+    uint n = uint(floor(random(seed + floor(GameTime * 1200 * 6 + 0.5) + gridCoords.y) * 9.99));
     
     float toScanLine = mod(-gridCoords.y + GameTime * 1200 * 6 + floor(random(seed + 30.0) * 20.0), gap);
-    //if(toScanLine >= 16.0) return vec4(0.0);
     float opacity = max(1.0 - (toScanLine / 16.0), 0.3);
 
     if(segmentDisplay(pixelCoords, numbers[n])) {
@@ -141,12 +143,92 @@ void applyMatrixEffect(inout SurfaceData surface) {
     surface.emissive = finalColor.a;
 }
 
-void applyEffects(inout SurfaceData surface, uint key) {
-    switch(key) {
-        case 254u: applyRadiantEffect(surface); break;
-        case 253u: applyMagmaEffect(surface); break;
-        case 252u: applyGlitchEffect(surface); break;
-        case 251u: applyGalaxyEffect(surface); break;
-        case 250u: applyMatrixEffect(surface); break;
+void applyfireWorksLayer(inout SurfaceData surface, float t) {
+    float seed = floor(t);
+    t = t - seed;
+
+    vec2 position = vec2(random(seed), random(seed + 0.1));
+    vec3 color = hsvToRgb(vec3(random(seed + 0.2), 0.7, 1.0));
+
+    float size = 0.6;
+
+    if(t < 0.2) {
+        t /= 0.2;
+        vec2 pos = position + 5.0 * vec2(0.0, 1.0 - t) / surface.texSize;
+        vec2 delta = abs((pos - surface.uv));
+        if(delta.x < 0.5 * size / surface.texSize.x && delta.y < 0.5 * size / surface.texSize.y) surface.albedo += t * 0.5;
+    }else{
+        t = (t - 0.2) / 0.8;
+        for(int i = 0; i < 32; i++) {
+            for(int j = 0; j < 3; j++) {
+                float gradient = (1.0 - t) / 3.0;
+                if(gradient < 0.0) continue;
+                gradient = 1.0 - easeIn(1.0 - gradient);
+
+                float time = (8.0 - j) * t / 8.0;
+
+                float theta = i * PHI * TAU;//random(seed + i * 0.563632) * TAU;
+                float speed = (random(seed + i * 0.123423) * 7.0 + 1.0) * mix(1.0, 0.7, time);
+                float rotation = random(seed + i * 0.846316) * TAU + j;
+                vec2 pos = position + (vec2(sin(theta), cos(theta)) * speed * time + vec2(0.0, 1.0 * time)) / surface.texSize;
+
+                vec2 delta = abs((pos - surface.uv) * mat2(cos(rotation), sin(rotation), -sin(rotation), cos(rotation)));
+                if(delta.x < 0.5 * size / surface.texSize.x && delta.y < 0.5 * size / surface.texSize.y) {
+                     surface.albedo += color * gradient;
+                     surface.emissive += gradient;
+                }
+            }
+        }
     }
+}
+
+void applyFireworksEffect(inout SurfaceData surface) {
+    surface.albedo *= 0.5;
+
+    applyfireWorksLayer(surface, 1000.0 + GameTime * 2400.0);
+    applyfireWorksLayer(surface, 2000.0 + GameTime * 2400.0);
+    applyfireWorksLayer(surface, 3000.0 + GameTime * 2400.0);
+    applyfireWorksLayer(surface, 4000.0 + GameTime * 2400.0);
+}
+
+void applyHolographicEffect(inout SurfaceData surface) {
+    float fres = fresnel(surface.normal, normalize(-surface.position), 0.1);
+    float offset = GameTime * 1200.0;
+
+    vec2 pixel = surface.uv * surface.texSize + offset;
+    surface.alpha = fres * 2.0;
+    if(min(mod(pixel.x, 3.0), mod(pixel.y, 3.0)) < 0.5) {
+        surface.alpha = 1.0;
+    }
+    
+    if(bool(int(surface.uv.y * surface.texSize.y * 4.0 + GameTime * 2400.0) & 0x1)) surface.alpha += 0.3;
+
+    surface.albedo = mix(vec3(0.0, 0.1, 0.2), vec3(0.3, 1.0, 0.4) , min(surface.alpha, 1.0) * luminance(surface.albedo));
+    surface.albedo += 0.2 * fres;
+    surface.emissive = 0.5 + fres;
+}
+
+#define MATERIAL_EFFECTS switch(key)
+
+#ifdef RENDERTYPE_ENTITY_CUTOUT
+    #define RADIANT(key, col)     case uint(key): applyRadiantEffect(surface); return;
+    #define MAGMA(key, col)       case uint(key): applyMagmaEffect(surface); return;
+    #define FIREWORKS(key, col)   case uint(key): applyFireworksEffect(surface); return;
+    #define GALAXY(key, col)      case uint(key): applyGalaxyEffect(surface); return;
+    #define MATRIX(key, col)      case uint(key): applyMatrixEffect(surface); return;
+    #define GLITCH(key, col)      case uint(key): applyGlitchEffect(surface); return;
+    #define HOLOGRAPHIC(key, col) case uint(key): applyHolographicEffect(surface); return;
+#else
+    #define RADIANT(key, col)     case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyRadiantEffect(surface); return;
+    #define MAGMA(key, col)       case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyMagmaEffect(surface); return;
+    #define FIREWORKS(key, col)   case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyFireworksEffect(surface); return;
+    #define GALAXY(key, col)      case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyGalaxyEffect(surface); return;
+    #define MATRIX(key, col)      case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyMatrixEffect(surface); return;
+    #define GLITCH(key, col)      case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyGlitchEffect(surface); return;
+    #define HOLOGRAPHIC(key, col) case ((uint(col.r) << 24) | (uint(col.g) << 16) | (uint(col.b) << 8) | 255u): applyHolographicEffect(surface); return;
+#endif
+
+void applyEffects(inout SurfaceData surface, uint key) {
+#moj_import<config.glsl>
+    surface.albedo *= surface.dyeColor;
 }
