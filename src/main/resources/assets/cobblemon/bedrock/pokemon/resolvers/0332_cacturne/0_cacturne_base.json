@@ -80,6 +80,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0332_cacturne/cacturne_shiny_fireworks.png"
     }
   ]
 }

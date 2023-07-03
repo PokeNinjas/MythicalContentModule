@@ -141,6 +141,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_fireworks.png"
     }
   ]
 }

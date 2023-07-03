@@ -79,6 +79,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0934_garganacl/garganacl_shiny_fireworks.png"
     }
   ]
 }

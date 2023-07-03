@@ -80,6 +80,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0975_cetitan/cetitan_shiny_fireworks.png"
     }
   ]
 }

@@ -291,6 +291,64 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "autumn"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "summer"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "winter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "autumn",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "summer",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "winter",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_shiny_fireworks.png"
     }
   ]
 }

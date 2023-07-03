@@ -80,6 +80,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0965_varoom/varoom_shiny_fireworks.png"
     }
   ]
 }

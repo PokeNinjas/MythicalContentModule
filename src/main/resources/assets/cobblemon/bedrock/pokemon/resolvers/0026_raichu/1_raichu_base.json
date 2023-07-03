@@ -37,6 +37,12 @@
         "mythical_magma"
       ],
       "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_fireworks.png"
     }
   ]
 }

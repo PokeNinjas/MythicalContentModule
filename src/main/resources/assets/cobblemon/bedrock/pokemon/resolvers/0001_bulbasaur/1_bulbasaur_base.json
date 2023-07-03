@@ -242,6 +242,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_shiny_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0001_bulbasaur/bulbasaur_shiny_gilded_fireworks.png"
     }
   ]
 }

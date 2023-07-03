@@ -216,6 +216,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_male_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_male_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "female"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_female_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "female"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_female_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0045_vileplume/vileplume_valencian_shiny_fireworks.png"
     }
   ]
 }

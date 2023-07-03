@@ -330,6 +330,66 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_fireworks.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_fireworks.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_easter_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_fireworks.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_easter_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_shiny_easter_fireworks.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

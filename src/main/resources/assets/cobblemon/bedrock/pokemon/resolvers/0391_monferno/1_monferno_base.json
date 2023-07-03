@@ -106,6 +106,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0391_monferno/monferno_shiny_fireworks.png"
     }
   ]
 }

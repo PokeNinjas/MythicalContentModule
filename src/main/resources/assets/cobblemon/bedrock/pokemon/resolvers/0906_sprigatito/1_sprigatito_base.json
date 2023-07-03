@@ -79,6 +79,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_fireworks.png"
     }
   ]
 }

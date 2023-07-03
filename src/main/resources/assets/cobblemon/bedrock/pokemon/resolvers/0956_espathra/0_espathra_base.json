@@ -79,6 +79,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_shiny_fireworks.png"
     }
   ]
 }

@@ -154,6 +154,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0763_tsareena/tsareena_shiny_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0763_tsareena/tsareena_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0763_tsareena/tsareena_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0763_tsareena/tsareena_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0763_tsareena/tsareena_shiny_easter_fireworks.png"
     }
   ]
 }

@@ -31,6 +31,12 @@
         "mythical_magma"
       ],
       "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_fireworks.png"
     }
   ]
 }

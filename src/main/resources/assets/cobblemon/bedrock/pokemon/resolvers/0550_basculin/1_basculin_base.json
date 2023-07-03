@@ -141,6 +141,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "bluestriped"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "bluestriped",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_fireworks.png"
     }
   ]
 }

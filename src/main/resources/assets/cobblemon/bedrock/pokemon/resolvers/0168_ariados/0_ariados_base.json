@@ -79,6 +79,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0168_ariados/ariados_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0168_ariados/ariados_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0168_ariados/ariados_shiny_fireworks.png"
     }
   ]
 }

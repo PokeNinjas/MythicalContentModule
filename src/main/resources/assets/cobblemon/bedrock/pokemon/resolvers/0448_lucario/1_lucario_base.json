@@ -788,6 +788,140 @@
       ],
       "model": "mythicalmod:lucario_unite_space.geo",
       "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_aristocrat"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_aristocrat_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_aristocrat",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_aristocrat.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_aristocrat_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_martial_arts"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_martial_arts_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_martial_arts",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_martial_arts.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_martial_arts_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_concert"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_concert_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_concert",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_concert.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_concert_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_costume_party"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_costume_party_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_costume_party",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_costume_party.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_costume_party_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_ruins"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_ruins_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_ruins",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_ruins.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_ruins_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_space"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_unite_space_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:lucario_unite_space.geo",
+      "texture": "mythicalmod:textures/pokemon/0448_lucario/lucario_shiny_unite_space_fireworks.png"
     }
   ]
 }

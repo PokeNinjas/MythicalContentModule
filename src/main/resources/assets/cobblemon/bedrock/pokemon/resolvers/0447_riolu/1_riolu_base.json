@@ -154,6 +154,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0447_riolu/riolu_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0447_riolu/riolu_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0447_riolu/riolu_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0447_riolu/riolu_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0447_riolu/riolu_shiny_blazing_fireworks.png"
     }
   ]
 }

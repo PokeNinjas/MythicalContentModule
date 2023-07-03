@@ -242,6 +242,49 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_shiny_blazing_fireworks.png"
     }
   ]
 }

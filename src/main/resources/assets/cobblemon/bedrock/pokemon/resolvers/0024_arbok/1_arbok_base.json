@@ -1151,6 +1151,236 @@
           "emissive": false
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_fireworks.png",
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_classic_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_shiny_fireworks.png",
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_classic_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-attack"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_attack_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-dark"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_dark_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-elusive"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_elusive_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-heart"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_heart_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-legacy"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_legacy_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-sound"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_sound_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "snake-pattern-speed"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_speed_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-attack"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_attack_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-dark"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_dark_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-elusive"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_elusive_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-heart"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_heart_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-legacy"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_legacy_shiny_fireworksv.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-sound"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_sound_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-speed"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_speed_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "snake-pattern-classic"
+      ],
+      "layers": [
+        {
+          "name": "pattern",
+          "texture": "cobblemon:textures/pokemon/0024_arbok/arbok_pattern_classic_shiny_fireworks.png",
+          "emissive": false
+        }
+      ]
     }
   ]
 }

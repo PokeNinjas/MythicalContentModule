@@ -79,6 +79,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0924_tandemaus/tandemaus_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0924_tandemaus/tandemaus_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0924_tandemaus/tandemaus_shiny_fireworks.png"
     }
   ]
 }

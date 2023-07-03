@@ -566,6 +566,104 @@
       ],
       "model": "mythicalmod:cinderace_unite_tuxedo.geo",
       "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_unite_tuxedo_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_captain"
+      ],
+      "model": "mythicalmod:cinderace_unite_captain.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_unite_captain_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_captain",
+        "shiny"
+      ],
+      "model": "mythicalmod:cinderace_unite_captain.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_unite_captain_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_guardian"
+      ],
+      "model": "mythicalmod:cinderace_unite_guardian.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_unite_guardian_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_guardian",
+        "shiny"
+      ],
+      "model": "mythicalmod:cinderace_unite_guardian.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_unite_guardian_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_space"
+      ],
+      "model": "mythicalmod:cinderace_unite_space.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_unite_space_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_space",
+        "shiny"
+      ],
+      "model": "mythicalmod:cinderace_unite_space.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_unite_space_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_supersuit"
+      ],
+      "model": "mythicalmod:cinderace_unite_supersuit.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_unite_supersuit_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_supersuit",
+        "shiny"
+      ],
+      "model": "mythicalmod:cinderace_unite_supersuit.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_unite_supersuit_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_tuxedo"
+      ],
+      "model": "mythicalmod:cinderace_unite_tuxedo.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_unite_tuxedo_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "unite_tuxedo",
+        "shiny"
+      ],
+      "model": "mythicalmod:cinderace_unite_tuxedo.geo",
+      "texture": "cobblemon:textures/pokemon/0815_cinderace/cinderace_shiny_unite_tuxedo_fireworks.png"
     }
   ]
 }

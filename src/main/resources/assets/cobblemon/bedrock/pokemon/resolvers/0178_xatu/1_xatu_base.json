@@ -96,6 +96,25 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0178_xatu/xatu_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0178_xatu/xatu_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "female"
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0178_xatu/xatu_shiny_fireworks.png"
     }
   ]
 }

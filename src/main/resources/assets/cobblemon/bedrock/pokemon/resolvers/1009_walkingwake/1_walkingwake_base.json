@@ -338,6 +338,65 @@
           "translucent": false
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_blazing_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_emissive_blazing_fireworks.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_blazing_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_emissive_blazing_fireworks.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
     }
   ]
 }

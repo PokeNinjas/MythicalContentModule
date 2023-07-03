@@ -167,6 +167,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0213_shuckle/shuckle_shiny_blazing_fireworks.png"
     }
   ]
 }

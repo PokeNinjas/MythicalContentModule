@@ -85,6 +85,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_shiny_magma.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0420_cherubi/cherubi_shiny_fireworks.png",
+      "layers": []
     }
   ]
 }

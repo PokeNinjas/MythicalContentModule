@@ -517,6 +517,98 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_fireworks.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "valencian",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_fireworks.png"
     }
   ]
 }

@@ -31,6 +31,12 @@
         "mythical_magma"
       ],
       "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_fireworks.png"
     }
   ]
 }

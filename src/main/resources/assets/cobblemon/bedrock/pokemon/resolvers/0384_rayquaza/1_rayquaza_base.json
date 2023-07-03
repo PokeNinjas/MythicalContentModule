@@ -418,6 +418,79 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shadow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_shadow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_fireworks.png"
     }
   ]
 }

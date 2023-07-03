@@ -91,6 +91,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_magma.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_fireworks.png",
+      "layers": []
     }
   ]
 }

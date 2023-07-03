@@ -85,6 +85,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny_magma.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny_fireworks.png",
+      "layers": []
     }
   ]
 }

@@ -91,6 +91,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_magma.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0404_luxio/luxio_shiny_fireworks.png",
+      "layers": []
     }
   ]
 }

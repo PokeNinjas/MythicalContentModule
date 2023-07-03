@@ -329,6 +329,66 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_alolan_shiny_easter_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_fireworks.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_alolan_fireworks.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_alolan_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "alolan",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_alolan_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "alolan",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_alolan_shiny_easter_fireworks.png"
     }
   ]
 }

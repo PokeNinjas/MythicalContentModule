@@ -38,6 +38,12 @@
         "mythical_magma"
       ],
       "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_fireworks.png"
     }
   ]
 }

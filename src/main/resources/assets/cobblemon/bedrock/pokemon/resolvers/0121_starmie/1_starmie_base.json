@@ -146,6 +146,35 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_fireworks.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_shiny_fireworks.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0121_starmie/starmie_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

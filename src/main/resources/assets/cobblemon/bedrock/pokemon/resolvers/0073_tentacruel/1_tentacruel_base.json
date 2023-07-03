@@ -136,6 +136,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_fireworks.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_fireworks.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

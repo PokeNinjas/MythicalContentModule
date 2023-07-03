@@ -78,6 +78,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny_fireworks.png"
     }
   ]
 }

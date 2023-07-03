@@ -990,6 +990,181 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_fireworks.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_fireworks.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_fireworks.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/fireworks_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_fireworks.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_rainbow_fireworks.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_rainbow_fireworks.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_rainbow_fireworks.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/rainbow_fireworks_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_fireworks.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_gilded_fireworks.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_emissive_gilded_fireworks.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_gilded_fireworks.png",
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail1.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail2.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail3.png",
+              "cobblemon:textures/pokemon/0004_charmander/gilded_fireworks_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0004_charmander/charmander_shiny_emissive_fireworks.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

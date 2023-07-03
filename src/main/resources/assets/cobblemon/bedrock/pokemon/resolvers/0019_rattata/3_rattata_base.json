@@ -141,6 +141,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_shiny_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_fireworks.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_shiny_fireworks.png"
     }
   ]
 }

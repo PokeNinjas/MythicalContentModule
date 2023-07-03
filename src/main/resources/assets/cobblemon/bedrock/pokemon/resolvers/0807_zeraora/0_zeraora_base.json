@@ -255,6 +255,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0807_zeraora/zeraora_shiny_gilded_fireworks.png"
     }
   ]
 }

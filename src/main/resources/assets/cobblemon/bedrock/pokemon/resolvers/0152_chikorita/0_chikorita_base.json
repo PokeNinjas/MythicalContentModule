@@ -38,6 +38,12 @@
         "mythical_magma"
       ],
       "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks"
+      ],
+      "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_fireworks.png"
     }
   ]
 }
