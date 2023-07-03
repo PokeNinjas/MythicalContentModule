@@ -1,0 +1,14 @@
+{
+  "type": "choice",
+  "keys": ["mythical_cinderace_form"],
+  "default": "false",
+  "choices": [
+	"unite_captain",
+	"unite_guardian",
+    "unite_space",
+    "unite_supersuit",
+    "unite_tuxedo"
+	],
+  "isAspect": true,
+  "aspectForm": "mythical_cinderace_form-{{choice}}"
+}
