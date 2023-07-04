@@ -8,6 +8,7 @@ import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItem
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlockEntity
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkItem
 import com.mythicalnetwork.mythicalmod.content.misc.rocketboots.RocketBootsItem
+import com.mythicalnetwork.mythicalmod.content.radar.RadarItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
 import net.minecraft.core.Registry
@@ -59,6 +60,9 @@ object MythicalItems {
 
     val ROCKET_BOOTS: Item =
         RocketBootsItem(QuiltItemSettings().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS) as QuiltItemSettings, "rocketboots")
+
+    val RADAR: Item =
+        RadarItem(QuiltItemSettings().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS) as QuiltItemSettings, "radar")
 
     // Boxes
     val GIFT_BOX_1: Item =
@@ -131,6 +135,12 @@ object MythicalItems {
                 }
             },
         )}
+        ITEMS[ResourceLocation("mythicalmod", s)] = item!!
+        return item
+    }
+
+    private fun RadarItem(tab: QuiltItemSettings?, s: String): RadarItem {
+        val item = tab?.let { RadarItem(it) }
         ITEMS[ResourceLocation("mythicalmod", s)] = item!!
         return item
     }

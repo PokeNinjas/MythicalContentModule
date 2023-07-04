@@ -21,6 +21,7 @@ object Dependencies {
     const val CC_BASE = "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${Versions.CARDINAL_COMPONENTS}"
     const val CC_WORLD = "dev.onyxstudios.cardinal-components-api:cardinal-components-level:${Versions.CARDINAL_COMPONENTS}"
     const val CC_ENTITY = "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${Versions.CARDINAL_COMPONENTS}"
+    const val CC_ITEM = "dev.onyxstudios.cardinal-components-api:cardinal-components-item:${Versions.CARDINAL_COMPONENTS}"
 
     val CORE_DEPS = listOf<String>(
         QUILT_KOTLIN_CORE,
@@ -39,7 +40,8 @@ object Dependencies {
         VEIL,
         CC_BASE,
         CC_WORLD,
-        CC_ENTITY
+        CC_ENTITY,
+        CC_ITEM
     )
 
     val DONT_INCLUDE = listOf<String>(

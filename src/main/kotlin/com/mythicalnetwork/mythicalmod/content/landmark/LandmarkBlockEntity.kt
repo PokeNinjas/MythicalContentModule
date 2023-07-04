@@ -154,7 +154,6 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
             // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
             var blockPos: BlockPos? = null
             var blockList: MutableList<BlockPos> = mutableListOf()
-            println("Pokemon: ${pokemon.pokemon.species.name}, canSwim: $canSwim, canFly: $canFly, canWalk: $canWalk")
             for (j in 0..5) {
                 for (i in 0..5) {
                     val blocksToCheck: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, range, level)

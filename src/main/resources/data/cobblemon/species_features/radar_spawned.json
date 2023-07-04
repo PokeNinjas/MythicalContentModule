@@ -1,0 +1,6 @@
+{
+  "type": "flag",
+  "keys": ["radar_spawned"],
+  "default": "false",
+  "isAspect": true
+}

@@ -2,19 +2,26 @@ package com.mythicalnetwork.mythicalmod
 
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.entity.PokemonEntityGoalsEvent
+import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.cobblemon.mod.common.util.sendParticlesServer
 import com.mojang.logging.LogUtils
 import com.mythicalnetwork.mythicalmod.content.alphas.*
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticPlayerHandler
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRecipeJsonListener
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkSpawnDataJsonListener
 import com.mythicalnetwork.mythicalmod.content.misc.rocketboots.RocketBootsItem
+import com.mythicalnetwork.mythicalmod.content.radar.RadarItem
+import com.mythicalnetwork.mythicalmod.content.radar.RadarItemComponent
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
+import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry.RADAR_ITEM
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
 import com.mythicalnetwork.mythicalmod.util.KingdomsHelper
+import com.mythicalnetwork.mythicalmod.util.getSpeciesRadar
+import com.mythicalnetwork.mythicalmod.util.runOnAllRadars
 import com.pokeninjas.kingdoms.fabric.dto.database.impl.User
 import dev.architectury.event.EventResult
 import dev.architectury.event.events.common.EntityEvent
@@ -29,11 +36,16 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.EquipmentChange
 import net.minecraft.Util
+import net.minecraft.core.particles.ItemParticleOption
+import net.minecraft.core.particles.ParticleTypes
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.MinecraftServer
+import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.server.packs.PackType
+import net.minecraft.sounds.SoundEvents
+import net.minecraft.sounds.SoundSource
 import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
@@ -49,7 +61,9 @@ import net.minecraft.world.entity.animal.Cow
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.entity.projectile.Snowball
 import net.minecraft.world.entity.projectile.WitherSkull
+import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
+import net.minecraft.world.phys.Vec3
 import org.quiltmc.loader.api.ModContainer
 import org.quiltmc.loader.api.QuiltLoader
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
@@ -168,6 +182,35 @@ class MythicalContent : ModInitializer {
 
         CobblemonEvents.CAPTURE_CONDITIONS.subscribe { event ->
             AlphaHelper.alphaTest(event)
+            RadarItem.testRadarSpawnedPokemon(event)
+        }
+
+        CobblemonEvents.POKEMON_CAPTURED.subscribe { event ->
+            val hasRadar: Boolean = event.player.getSpeciesRadar(event.pokemon.species) != ItemStack.EMPTY
+            if(!hasRadar) {
+                event.player.runOnAllRadars { radar ->
+                    radar.hurtAndBreak(radar.maxDamage, event.player) { player ->
+                        player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
+                    }
+                }
+                if(!event.player.level.isClientSide) {
+                    var serverLevel: ServerLevel = event.player.level as ServerLevel
+                    serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
+                    serverLevel.playSound(null, event.player, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                }
+            } else {
+                val radar: ItemStack = event.player.getSpeciesRadar(event.pokemon.species)
+                val component: RadarItemComponent = RADAR_ITEM.get(radar)
+                component.setChainLength(component.getChainLength() + 1)
+                if(component.getChainLength() >= component.getMaxLength()) {
+                    radar.hurtAndBreak(radar.maxDamage, event.player) { player ->
+                        player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
+                    }
+                }
+            }
+            if(event.pokemon.aspects.contains("radar_spawned")){
+                PokemonProperties.parse("radar_spawned=false").apply(event.pokemon)
+            }
         }
 
         EntityEvent.ADD.register { entity, level ->

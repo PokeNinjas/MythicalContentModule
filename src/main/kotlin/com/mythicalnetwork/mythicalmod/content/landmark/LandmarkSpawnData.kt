@@ -44,14 +44,21 @@ class LandmarkSpawnData(
 
     }
     fun getRandomWithWeight(level: Level): LandmarkSpeciesData {
+        MythicalContent.LOGGER.info("Getting weighted random species. Species: $species")
         val totalWeight = species.sumOf { it.weight}
+        MythicalContent.LOGGER.info("Total weight: $totalWeight")
         var random = level.random.nextInt(totalWeight)
+        MythicalContent.LOGGER.info("Random: $random")
         for (species in species) {
             random -= species.weight
+            MythicalContent.LOGGER.info("Species: ${species.weight}")
+            MythicalContent.LOGGER.info("Random: $random")
             if (random <= 0) {
+                MythicalContent.LOGGER.info("Returning species: $species")
                 return species
             }
         }
+        MythicalContent.LOGGER.info("Returning species: ${species[0]}")
         return species[0]
     }
     override fun toString(): String {
