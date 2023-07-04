@@ -35,6 +35,7 @@ import net.minecraft.world.phys.Vec3
 import org.quiltmc.qkl.library.math.times
 import java.util.Date
 
+// TODO: Make it so radar bonuses are only applied if the player actually has the radar in their inventory.
 class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemComponent(stack) {
     override fun isActive(): Boolean {
         if (!this.hasTag("active")) {
@@ -128,7 +129,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
 
     override fun getMaxLength(): Int {
         if (!this.hasTag("maxLength", CcaNbtType.INT)) {
-            this.putInt("maxLength", 100)
+            this.putInt("maxLength", MythicalContent.CONFIG.defaultMaxChainLength())
         }
         return this.getInt("maxLength")
     }
@@ -151,12 +152,12 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
     override fun tick(player: ServerPlayer) {
         if(!isActive()) return
         var isSearchedSpeciesNear: Boolean = false
-        if(player.level.gameTime.toInt() % 20 == 0) {
-            isSearchedSpeciesNear = player.level.getEntitiesOfClass(PokemonEntity::class.java, player.boundingBox.inflate(16.0)).any { it.pokemon.species.name == getSpecies() && it.pokemon.aspects.contains("radar_spawned") && it.tags.contains(player.uuid.toString()) }
+        if(player.level.gameTime.toInt() % MythicalContent.CONFIG.spawnDelay() == 0) {
+            isSearchedSpeciesNear = player.level.getEntitiesOfClass(PokemonEntity::class.java, player.boundingBox.inflate(MythicalContent.CONFIG.spawnRadius().toDouble())).any { it.pokemon.species.name == getSpecies() && it.pokemon.aspects.contains("radar_spawned") && it.tags.contains(player.uuid.toString()) }
         }
-        if(player.level.gameTime - getLastTickedTime() >= 100) {
+        if(player.level.gameTime - getLastTickedTime() >= MythicalContent.CONFIG.scanDelay()) {
             val spawner: PlayerSpawner = CobblemonWorldSpawnerManager.spawnersForPlayers[player.uuid] ?: return
-            val buckets: List<String> = listOf("common", "uncommon", "rare", "ultra-rare", "legendary")
+            val buckets: List<String> = MythicalContent.CONFIG.bucketsToCheck()
             var canSpawn: Boolean = false
             for (buck in buckets) {
                 if(canSpawn) {
@@ -205,7 +206,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
             }
             setLastTickedTime(player.level.gameTime.toInt())
         }
-        if((player.level.gameTime % 20).toInt() == 0){
+        if((player.level.gameTime % MythicalContent.CONFIG.spawnDelay()).toInt() == 0){
             if((isEnabled() || isSearchedSpeciesNear) && getSpecies() != "") {
                 player.displayClientMessage(Component.literal("Searching.." + ".".repeat((player.level.gameTime.toInt() - getLastTickedTime())/20)), true)
                 if (!isSearchedSpeciesNear) player.level.playSound(null, player, SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS,  0.5F, 1.5f + (player.level.random.nextFloat() * 0.5f))
@@ -219,10 +220,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
                     val attemptedPos: BlockPos? = LandmarkBlockEntity.checkSpawnConditions(entity, false, false, true, 16, player.onPos, level)
                     if(attemptedPos != null) {
                         entity.setPos(attemptedPos.x.toDouble(), attemptedPos.y.toDouble(), attemptedPos.z.toDouble())
-                        MythicalContent.LOGGER.info("Spawning ${entity.name.string} at ${attemptedPos.x}, ${attemptedPos.y}, ${attemptedPos.z}")
                         entity.addTag(player.uuid.toString())
-                        entity.isCustomNameVisible = true
-                        entity.customName = Component.literal("DEBUG: Player who spawned this: ${player.name.string}")
                         level.addFreshEntity(entity)
                     }
                 }
