@@ -4,26 +4,21 @@ import com.mythicalnetwork.gradle.ProjectInfo
 import com.mythicalnetwork.gradle.Repos
 
 plugins {
-    id("java")
-    id("io.github.juuxel.loom-quiltflower") version ("1.8.+")
-    id("org.quiltmc.loom") version("1.1.+")
+    java
+    idea
+    id("io.github.juuxel.loom-quiltflower") version ("1.10.+")
+    id("org.quiltmc.loom") version("1.2.+")
     kotlin("jvm") version ("1.8.0")
     kotlin("kapt") version("1.8.20")
 }
 
 group = ProjectInfo.GROUP
 version = ProjectInfo.VERSION
-base {
-    archivesName.set("MythicalMod")
-}
+base.archivesName.set("MythicalMod")
 
 loom {
-    mixin {
-        defaultRefmapName.set("mixins.${project.name}.refmap.json")
-    }
-    interfaceInjection {
-        enableDependencyInterfaceInjection.set(true)
-    }
+    mixin.defaultRefmapName.set("mixins.${project.name}.refmap.json")
+    interfaceInjection.enableDependencyInterfaceInjection.set(true)
 
     accessWidenerPath.set(file("src/main/resources/mythicalmod.accesswidener"))
 }
@@ -69,6 +64,4 @@ dependencies {
     modImplementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 }
 
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
-}
+tasks.getByName<Test>("test").useJUnitPlatform()
