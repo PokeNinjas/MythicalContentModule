@@ -3,15 +3,19 @@ package com.mythicalnetwork.mythicalmod.content.radar
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies
+import com.cobblemon.mod.common.api.spawning.CobblemonSpawnPools
 import com.cobblemon.mod.common.api.spawning.CobblemonWorldSpawnerManager
 import com.cobblemon.mod.common.api.spawning.SpawnBucket
 import com.cobblemon.mod.common.api.spawning.SpawnCause
+import com.cobblemon.mod.common.api.spawning.condition.AreaSpawningCondition
+import com.cobblemon.mod.common.api.spawning.detail.PokemonSpawnDetail
 import com.cobblemon.mod.common.api.spawning.spawner.PlayerSpawner
 import com.cobblemon.mod.common.api.spawning.spawner.SpawningArea
 import com.cobblemon.mod.common.command.argument.SpawnBucketArgumentType
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.pokemon.Species
+import com.cobblemon.mod.common.registry.BiomeIdentifierCondition
 import com.cobblemon.mod.common.util.sendParticlesServer
 import com.mythicalnetwork.mythicalmod.MythicalContent
 import com.mythicalnetwork.mythicalmod.content.landmark.AspectData
@@ -29,6 +33,7 @@ import net.minecraft.server.level.ServerPlayer
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.sounds.SoundSource
 import net.minecraft.util.Mth
+import net.minecraft.world.entity.item.ItemEntity
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.pathfinder.Path
 import net.minecraft.world.phys.Vec3
@@ -74,10 +79,10 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
         if (!this.hasTag("species", CcaNbtType.STRING)) {
             this.putString("species", "random")
         }
-        if(this.getString("species") == "random"){
+        if (this.getString("species") == "random") {
             var species = PokemonSpecies.random()
             var pokemon: Pokemon = species.create()
-            while(pokemon.hasLabels("legendary") || pokemon.hasLabels("mythical")){
+            while (pokemon.hasLabels("legendary") || pokemon.hasLabels("mythical")) {
                 species = PokemonSpecies.random()
                 pokemon = species.create()
             }
@@ -150,17 +155,24 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
     }
 
     override fun tick(player: ServerPlayer) {
-        if(!isActive()) return
+        if (!isActive()) return
         var isSearchedSpeciesNear: Boolean = false
-        if(player.level.gameTime.toInt() % MythicalContent.CONFIG.spawnDelay() == 0) {
-            isSearchedSpeciesNear = player.level.getEntitiesOfClass(PokemonEntity::class.java, player.boundingBox.inflate(MythicalContent.CONFIG.spawnRadius().toDouble())).any { it.pokemon.species.name == getSpecies() && it.pokemon.aspects.contains("radar_spawned") && it.tags.contains(player.uuid.toString()) }
+        if (player.level.gameTime.toInt() % MythicalContent.CONFIG.spawnDelay() == 0) {
+            isSearchedSpeciesNear = player.level.getEntitiesOfClass(
+                PokemonEntity::class.java,
+                player.boundingBox.inflate(MythicalContent.CONFIG.spawnRadius().toDouble())
+            ).any {
+                it.pokemon.species.name == getSpecies() && it.pokemon.aspects.contains("radar_spawned") && it.tags.contains(
+                    player.uuid.toString()
+                )
+            }
         }
-        if(player.level.gameTime - getLastTickedTime() >= MythicalContent.CONFIG.scanDelay()) {
+        if (player.level.gameTime - getLastTickedTime() >= MythicalContent.CONFIG.scanDelay()) {
             val spawner: PlayerSpawner = CobblemonWorldSpawnerManager.spawnersForPlayers[player.uuid] ?: return
             val buckets: List<String> = MythicalContent.CONFIG.bucketsToCheck()
             var canSpawn: Boolean = false
             for (buck in buckets) {
-                if(canSpawn) {
+                if (canSpawn) {
                     break
                 }
                 val bucket = SpawnBucket()
@@ -195,33 +207,75 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
                     canSpawn = true
                 }
             }
-            if(!canSpawn && isEnabled() && !isSearchedSpeciesNear) {
+            if (!canSpawn && isEnabled() && !isSearchedSpeciesNear) {
                 setEnabled(false)
-                player.level.playSound(null, player, SoundEvents.RESPAWN_ANCHOR_DEPLETE, SoundSource.MASTER,  1F, 1.5f)
-            } else if(canSpawn && !isEnabled()) {
-                if(!isEnabled()) {
-                    player.level.playSound(null, player, SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.MASTER,  1F, 1.5f)
+                player.level.playSound(null, player, SoundEvents.RESPAWN_ANCHOR_DEPLETE, SoundSource.MASTER, 0.5F, 1.5f)
+            } else if (canSpawn && !isEnabled()) {
+                if (!isEnabled()) {
+                    player.level.playSound(
+                        null,
+                        player,
+                        SoundEvents.RESPAWN_ANCHOR_CHARGE,
+                        SoundSource.MASTER,
+                        0.5F,
+                        1.5f
+                    )
                 }
                 setEnabled(true)
             }
             setLastTickedTime(player.level.gameTime.toInt())
         }
-        if((player.level.gameTime % MythicalContent.CONFIG.spawnDelay()).toInt() == 0){
-            if((isEnabled() || isSearchedSpeciesNear) && getSpecies() != "") {
-                player.displayClientMessage(Component.literal("Searching.." + ".".repeat((player.level.gameTime.toInt() - getLastTickedTime())/20)), true)
-                if (!isSearchedSpeciesNear) player.level.playSound(null, player, SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS,  0.5F, 1.5f + (player.level.random.nextFloat() * 0.5f))
-                else player.level.playSound(null, player, SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS,  0.5F, 1.5f + (player.level.random.nextFloat() * 0.5f))
+        if ((player.level.gameTime % MythicalContent.CONFIG.spawnDelay()).toInt() == 0) {
+            if ((isEnabled() || isSearchedSpeciesNear) && getSpecies() != "") {
+                player.displayClientMessage(
+                    Component.literal("Searching.." + ".".repeat((player.level.gameTime.toInt() - getLastTickedTime()) / 20)),
+                    true
+                )
+                if (!isSearchedSpeciesNear) player.level.playSound(
+                    null,
+                    player,
+                    SoundEvents.PLAYER_LEVELUP,
+                    SoundSource.PLAYERS,
+                    0.25F,
+                    1.5f + (player.level.random.nextFloat() * 0.5f)
+                )
+                else player.level.playSound(
+                    null,
+                    player,
+                    SoundEvents.EXPERIENCE_ORB_PICKUP,
+                    SoundSource.PLAYERS,
+                    0.25F,
+                    1.5f + (player.level.random.nextFloat() * 0.5f)
+                )
                 val level: ServerLevel = player.level as ServerLevel
-                if(level.random.nextFloat() < MythicalContent.CONFIG.spawnChance() && !isSearchedSpeciesNear) {
-                    val species: Species = PokemonSpecies.getByName(getSpecies().toLowerCase().filter { it.isLetterOrDigit() || it == '_' }) ?: return
+                if (level.random.nextFloat() < MythicalContent.CONFIG.spawnChance() && !isSearchedSpeciesNear) {
+                    val species: Species = PokemonSpecies.getByName(
+                        getSpecies().toLowerCase().filter { it.isLetterOrDigit() || it == '_' }) ?: return
                     val pokemon: Pokemon = species.create()
                     PokemonProperties.parse("radar_spawned").apply(pokemon)
                     val entity: PokemonEntity = PokemonEntity(level, pokemon)
-                    val attemptedPos: BlockPos? = LandmarkBlockEntity.checkSpawnConditions(entity, false, false, true, 16, player.onPos, level)
-                    if(attemptedPos != null) {
+                    val attemptedPos: BlockPos? =
+                        LandmarkBlockEntity.checkSpawnConditions(entity, false, false, true, 16, player.onPos, level)
+                    if (attemptedPos != null) {
                         entity.setPos(attemptedPos.x.toDouble(), attemptedPos.y.toDouble(), attemptedPos.z.toDouble())
                         entity.addTag(player.uuid.toString())
                         level.addFreshEntity(entity)
+                        player.level.playSound(
+                            null,
+                            player,
+                            SoundEvents.BOTTLE_FILL_DRAGONBREATH,
+                            SoundSource.PLAYERS,
+                            1.0F,
+                            1.5f + (player.level.random.nextFloat() * 0.5f)
+                        )
+                        player.level.playSound(
+                            null,
+                            player,
+                            SoundEvents.BEACON_ACTIVATE,
+                            SoundSource.PLAYERS,
+                            1.0F,
+                            1.5f + (player.level.random.nextFloat() * 0.5f)
+                        )
                     }
                 }
             }
@@ -229,7 +283,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
     }
 
     override fun canSpawn(): Boolean {
-        if(!this.hasTag("canSpawn")) {
+        if (!this.hasTag("canSpawn")) {
             this.putBoolean("canSpawn", false)
         }
         return this.getBoolean("canSpawn")
@@ -241,17 +295,17 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
 
     override fun applyChainModifiers(level: ServerLevel, pokemon: Pokemon) {
         val ranges = MythicalContent.formatIvRangeValues()
-        for(range in ranges.keys) {
-            if(getChainLength() in range){
+        for (range in ranges.keys) {
+            if (getChainLength() in range) {
                 Cobblemon.statProvider.createEmptyIVs(ranges[range]!!).forEach { iv ->
                     pokemon.ivs[iv.key] = iv.value
                 }
             }
         }
         val shinyRanges = MythicalContent.formatShinyChance()
-        for(range in shinyRanges.keys) {
-            if(getChainLength() in range){
-                if(level.random.nextFloat() < shinyRanges[range]!!) {
+        for (range in shinyRanges.keys) {
+            if (getChainLength() in range) {
+                if (level.random.nextFloat() < shinyRanges[range]!!) {
                     PokemonProperties.parse("shiny=yes").apply(pokemon)
                 }
             }
