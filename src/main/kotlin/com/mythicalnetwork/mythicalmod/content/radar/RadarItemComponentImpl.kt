@@ -198,7 +198,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
             if(!canSpawn && isEnabled() && !isSearchedSpeciesNear) {
                 setEnabled(false)
                 player.level.playSound(null, player, SoundEvents.RESPAWN_ANCHOR_DEPLETE, SoundSource.MASTER,  1F, 1.5f)
-            } else {
+            } else if(canSpawn && !isEnabled()) {
                 if(!isEnabled()) {
                     player.level.playSound(null, player, SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.MASTER,  1F, 1.5f)
                 }

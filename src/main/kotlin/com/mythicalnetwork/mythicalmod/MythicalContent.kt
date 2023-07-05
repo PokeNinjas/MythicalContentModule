@@ -299,6 +299,7 @@ class MythicalContent : ModInitializer {
                             val serverLevel: ServerLevel = event.player.level as ServerLevel
                             serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
                             serverLevel.playSound(null, event.player, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                            event.player.sendSystemMessage(Component.literal("Your radar broke!"))
                         }
                     }
                 }
@@ -315,6 +316,7 @@ class MythicalContent : ModInitializer {
                         val serverLevel: ServerLevel = event.player.level as ServerLevel
                         serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
                         serverLevel.playSound(null, event.player, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                        event.player.sendSystemMessage(Component.literal("Your radar broke!"))
                     }
                 }
             }
@@ -345,6 +347,7 @@ class MythicalContent : ModInitializer {
                         }.forEach { radar ->
                         radar.hurtAndBreak(radar.maxDamage, player.entity!!) { player1 ->
                             player1.broadcastBreakEvent(EquipmentSlot.MAINHAND)
+                            player1.sendSystemMessage(Component.literal("Your radar broke!"))
                         }
                     }
                 }
