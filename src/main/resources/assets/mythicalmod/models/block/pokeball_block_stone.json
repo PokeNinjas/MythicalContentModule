@@ -1,0 +1,60 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "pokeninjas:block/furniture/pokeball_block_stone",
+		"particle": "pokeninjas:block/furniture/pokeball_block_stone"
+	},
+	"elements": [
+		{
+			"from": [-16, -16, -16],
+			"to": [32, 32, 32],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"east": {"uv": [4, 4, 8, 8], "texture": "#0"},
+				"south": {"uv": [4, 4, 8, 8], "texture": "#0"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#0"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#0"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"firstperson_righthand": {
+			"translation": [2.5, 0.75, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"firstperson_lefthand": {
+			"translation": [2.5, 0.75, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"ground": {
+			"translation": [0, 4.25, 0],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"gui": {
+			"rotation": [25, 135, 0],
+			"scale": [0.21, 0.21, 0.21]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -15],
+			"scale": [2, 2, 2]
+		}
+	},
+	"groups": [
+		{
+			"name": "pokebola",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

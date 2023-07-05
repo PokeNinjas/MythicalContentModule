@@ -1,0 +1,82 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "pokeninjas:block/furniture/salad_1",
+		"particle": "pokeninjas:block/furniture/salad_1"
+	},
+	"ambientocclusion": false,
+    "elements": [
+		{
+			"from": [8.29289, 1.29289, 5],
+			"to": [8.29289, 8.29289, 10],
+			"rotation": {"angle": -45, "axis": "z", "origin": [8.29289, 0.29289, 9]},
+			"faces": {
+				"north": {"uv": [2.5, 2.5, 2.5, 6], "texture": "#0"},
+				"east": {"uv": [0, 2.5, 2.5, 6], "texture": "#0"},
+				"south": {"uv": [5, 2.5, 5, 6], "texture": "#0"},
+				"west": {"uv": [2.5, 2.5, 5, 6], "texture": "#0"},
+				"up": {"uv": [2.5, 2.5, 2.5, 0], "texture": "#0"},
+				"down": {"uv": [2.5, 0, 2.5, 2.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2.22798, 3.14713, 6],
+			"to": [7.22798, 3.14713, 10],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [4.22798, 3.14713, 8.5]},
+			"faces": {
+				"north": {"uv": [2, 2, 4.5, 2], "texture": "#0"},
+				"east": {"uv": [0, 2, 2, 2], "texture": "#0"},
+				"south": {"uv": [6.5, 2, 9, 2], "texture": "#0"},
+				"west": {"uv": [4.5, 2, 6.5, 2], "texture": "#0"},
+				"up": {"uv": [4.5, 2, 2, 0], "texture": "#0"},
+				"down": {"uv": [7, 0, 4.5, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0, 7],
+			"to": [9, 3, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [6, 3, 7, 4.5], "texture": "#0"},
+				"east": {"uv": [5, 3, 6, 4.5], "texture": "#0"},
+				"south": {"uv": [8, 3, 9, 4.5], "texture": "#0"},
+				"west": {"uv": [7, 3, 8, 4.5], "texture": "#0"},
+				"up": {"uv": [7, 3, 6, 2], "texture": "#0"},
+				"down": {"uv": [8, 2, 7, 3], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0, -1],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 0, -1],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"translation": [2.5, 2.5, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"translation": [2.5, 2.75, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 1, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"rotation": [25, 135, 0],
+			"translation": [0, -1, 0],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -15],
+			"scale": [2, 2, 2]
+		}
+	}
+}
