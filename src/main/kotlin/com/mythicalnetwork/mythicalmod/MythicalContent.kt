@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.entity.PokemonEntityGoalsEvent
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
+import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.util.sendParticlesServer
 import com.mojang.logging.LogUtils
@@ -20,6 +21,7 @@ import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry.RADAR_ITEM
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
 import com.mythicalnetwork.mythicalmod.util.KingdomsHelper
+import com.mythicalnetwork.mythicalmod.util.getAllNonMatchingRadars
 import com.mythicalnetwork.mythicalmod.util.getSpeciesRadar
 import com.mythicalnetwork.mythicalmod.util.runOnAllRadars
 import com.pokeninjas.kingdoms.fabric.dto.database.impl.User
@@ -87,7 +89,8 @@ class MythicalContent : ModInitializer {
         var SERVER: MinecraftServer? = null
         const val MODID = "mythicalmod"
         val LOGGER: Logger = LogUtils.getLogger()
-        var PLACEHOLDER_LIST = mutableMapOf<ResourceLocation, BiFunction<PlaceholderContext, String?, PlaceholderResult>>()
+        var PLACEHOLDER_LIST =
+            mutableMapOf<ResourceLocation, BiFunction<PlaceholderContext, String?, PlaceholderResult>>()
         var CRAMOMATIC_HANDLER: CramomaticPlayerHandler? = null
         var CONFIG: MythicalModConfig = MythicalModConfig.createAndLoad()
         var entity: LivingEntity? = null
@@ -98,17 +101,110 @@ class MythicalContent : ModInitializer {
 
         val ALPHA_GOALS: Map<String, Function<PokemonEntityGoalsEvent, Goal>> = mapOf(
             "melee" to Function { event -> PokemonMeleeAttackGoal(event.entity) },
-            "ranged" to Function { event -> PokemonRangedAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 15) },
-            "beam" to Function { event -> PokemonBreathAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 20, 10.0F, 60, 4800)},
-            "fireball" to Function { event -> PokemonFireballGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 12f, 120) },
-            "lightning_bolt" to Function { event -> PokemonLightningBoltGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 16f, 120)},
-            "invisibility" to Function { event -> PokemonInvisGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240)},
-            "teleport" to Function { event -> PokemonTeleportGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 240)},
-            "mega_kick" to Function { event -> PokemonMegaKickGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 90)},
-            "dream_eater" to Function { event -> PokemonDreamEaterGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 12.0f, 480)},
-            "ball" to Function { event -> PokemonBallAttackGoal(event.entity, event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED), 120)},
+            "ranged" to Function { event ->
+                PokemonRangedAttackGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    15
+                )
+            },
+            "beam" to Function { event ->
+                PokemonBreathAttackGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    20,
+                    10.0F,
+                    60,
+                    4800
+                )
+            },
+            "fireball" to Function { event ->
+                PokemonFireballGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    12f,
+                    120
+                )
+            },
+            "lightning_bolt" to Function { event ->
+                PokemonLightningBoltGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    16f,
+                    120
+                )
+            },
+            "invisibility" to Function { event ->
+                PokemonInvisGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    240
+                )
+            },
+            "teleport" to Function { event ->
+                PokemonTeleportGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    240
+                )
+            },
+            "mega_kick" to Function { event ->
+                PokemonMegaKickGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    90
+                )
+            },
+            "dream_eater" to Function { event ->
+                PokemonDreamEaterGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    12.0f,
+                    480
+                )
+            },
+            "ball" to Function { event ->
+                PokemonBallAttackGoal(
+                    event.entity,
+                    event.entity.getAttributeValue(Attributes.MOVEMENT_SPEED),
+                    120
+                )
+            },
         )
+
+        fun formatIvRangeValues(): Map<IntRange, Int> {
+            val ivs: String = CONFIG.ivRangeValues()
+            val ivSubString = ivs.split(",")
+            val ivMap: MutableMap<IntRange, Int> = mutableMapOf()
+            for (iv in ivSubString) {
+                iv.replace(" ", "")
+                val ivSplit = iv.split(":")
+                val ivRange = ivSplit[0].replace(" ", "").split("-")
+                val ivStart = ivRange[0].replace(" ", "").toInt()
+                val ivEnd = ivRange[1].replace(" ", "").toInt()
+                val ivValue = ivSplit[1].replace(" ", "").toInt()
+                ivMap[ivStart..ivEnd] = ivValue
+            }
+            return ivMap
+        }
+
+        fun formatShinyChance(): Map<IntRange, Float> {
+            val shinyChance: String = CONFIG.shinyChance()
+            val shinySubString = shinyChance.split(",")
+            val shinyMap: MutableMap<IntRange, Float> = mutableMapOf()
+            for (shiny in shinySubString) {
+                shiny.replace(" ", "")
+                val shinySplit = shiny.split(":")
+                val shinyRange = shinySplit[0].replace(" ", "").split("-")
+                val shinyStart = shinyRange[0].replace(" ", "").toInt()
+                val shinyEnd = shinyRange[1].replace(" ", "").toInt()
+                val shinyValue = 1f / shinySplit[1].replace(" ", "").replace("1/", "").toFloat()
+                shinyMap[shinyStart..shinyEnd] = shinyValue
+            }
+            return shinyMap
+        }
     }
+
     override fun onInitialize(mod: ModContainer?) {
         setupPlaceholders()
         MythicalBlocks.registerBlocks()
@@ -120,17 +216,19 @@ class MythicalContent : ModInitializer {
         }
 
         ServerTickEvents.END.register { server ->
-            if(CRAMOMATIC_HANDLER == null) {
+            if (CRAMOMATIC_HANDLER == null) {
                 CRAMOMATIC_HANDLER = CramomaticPlayerHandler(server.getLevel(Level.OVERWORLD)!!)
                 server.getLevel(Level.OVERWORLD)!!.levelData.getComponent(MythicalComponentRegistry.CRAMOMATIC).handler =
                     CRAMOMATIC_HANDLER
             } else {
-                if(CRAMOMATIC_HANDLER!!.isEmpty()){
-                    CramomaticPlayerHandler.toLoad.forEach { server.playerList.getPlayer(it.key)
-                        ?.let { it1 -> CRAMOMATIC_HANDLER?.addPlayer(it1.uuid, it.value) } }
+                if (CRAMOMATIC_HANDLER!!.isEmpty()) {
+                    CramomaticPlayerHandler.toLoad.forEach {
+                        server.playerList.getPlayer(it.key)
+                            ?.let { it1 -> CRAMOMATIC_HANDLER?.addPlayer(it1.uuid, it.value) }
+                    }
                 }
             }
-            if(!server.getLevel(Level.OVERWORLD)!!.isClientSide){
+            if (!server.getLevel(Level.OVERWORLD)!!.isClientSide) {
                 CRAMOMATIC_HANDLER?.tick()
             }
         }
@@ -155,10 +253,13 @@ class MythicalContent : ModInitializer {
             }
         }
         TickEvent.PLAYER_POST.register { player ->
-            if (player.tags.contains("rocketboots") && !player.level.isClientSide && player.getItemBySlot(EquipmentSlot.FEET).item is RocketBootsItem && kingdomsCheck(player as ServerPlayer)) {
+            if (player.tags.contains("rocketboots") && !player.level.isClientSide && player.getItemBySlot(EquipmentSlot.FEET).item is RocketBootsItem && kingdomsCheck(
+                    player as ServerPlayer
+                )
+            ) {
                 player.abilities.mayfly = true
                 player.onUpdateAbilities()
-                if((player.level.gameTime % 20).toInt() == 0 && player.abilities.flying){
+                if ((player.level.gameTime % 20).toInt() == 0 && player.abilities.flying) {
                     player.getItemBySlot(EquipmentSlot.FEET).hurtAndBreak(1, entity!!) { player1 ->
                         player1.broadcastBreakEvent(
                             EquipmentSlot.FEET
@@ -171,8 +272,8 @@ class MythicalContent : ModInitializer {
                 player.onUpdateAbilities()
                 player.addTag("rocketbootsfalling")
             }
-            if(player.tags.contains("rocketbootsfalling") && !player.level.isClientSide){
-                if(player.isOnGround){
+            if (player.tags.contains("rocketbootsfalling") && !player.level.isClientSide) {
+                if (player.isOnGround) {
                     player.removeTag("rocketbootsfalling")
                 } else {
                     player.fallDistance = 0f
@@ -187,39 +288,80 @@ class MythicalContent : ModInitializer {
 
         CobblemonEvents.POKEMON_CAPTURED.subscribe { event ->
             val hasRadar: Boolean = event.player.getSpeciesRadar(event.pokemon.species) != ItemStack.EMPTY
-            if(!hasRadar) {
+            if (!hasRadar) {
                 event.player.runOnAllRadars { radar ->
                     radar.hurtAndBreak(radar.maxDamage, event.player) { player ->
                         player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
                     }
-                }
-                if(!event.player.level.isClientSide) {
-                    var serverLevel: ServerLevel = event.player.level as ServerLevel
-                    serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
-                    serverLevel.playSound(null, event.player, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                }.also {
+                    if (it) {
+                        if (!event.player.level.isClientSide) {
+                            val serverLevel: ServerLevel = event.player.level as ServerLevel
+                            serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
+                            serverLevel.playSound(null, event.player, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                        }
+                    }
                 }
             } else {
                 val radar: ItemStack = event.player.getSpeciesRadar(event.pokemon.species)
+                if (radar == ItemStack.EMPTY) return@subscribe
                 val component: RadarItemComponent = RADAR_ITEM.get(radar)
                 component.setChainLength(component.getChainLength() + 1)
-                if(component.getChainLength() >= component.getMaxLength()) {
+                if (component.getChainLength() >= component.getMaxLength()) {
                     radar.hurtAndBreak(radar.maxDamage, event.player) { player ->
                         player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
                     }
+                    if (!event.player.level.isClientSide) {
+                        val serverLevel: ServerLevel = event.player.level as ServerLevel
+                        serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
+                        serverLevel.playSound(null, event.player, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                    }
                 }
             }
-            if(event.pokemon.aspects.contains("radar_spawned")){
+            if (event.pokemon.aspects.contains("radar_spawned")) {
                 PokemonProperties.parse("radar_spawned=false").apply(event.pokemon)
+                if(event.player.level !is ServerLevel) return@subscribe
+                val radar: ItemStack = event.player.getSpeciesRadar(event.pokemon.species)
+                if (radar == ItemStack.EMPTY) return@subscribe
+                val component: RadarItemComponent = RADAR_ITEM.get(radar)
+                component.applyChainModifiers(event.player.level as ServerLevel, event.pokemon)
+            }
+        }
+
+        CobblemonEvents.BATTLE_VICTORY.subscribe { event ->
+            if (event.battle.isPvW) {
+                if (event.battle.actors.any { a -> a is PlayerBattleActor }) {
+                    val player: PlayerBattleActor =
+                        event.battle.actors.first { a -> a is PlayerBattleActor } as PlayerBattleActor
+                    player.entity!!.getAllNonMatchingRadars(event.battle.actors.first { p -> p !is PlayerBattleActor }.pokemonList.first().originalPokemon.species.name)
+                        .also {
+                            if (it.isNotEmpty()) {
+                                if (!player.entity!!.level.isClientSide) {
+                                    val serverLevel: ServerLevel = player.entity!!.level as ServerLevel
+                                    serverLevel.sendParticlesServer(ItemParticleOption(ParticleTypes.ITEM, MythicalItems.RADAR.defaultInstance), player.entity!!.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05)
+                                    serverLevel.playSound(null, player.entity!!, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f, 1.0f)
+                                }
+                            }
+                        }.forEach { radar ->
+                        radar.hurtAndBreak(radar.maxDamage, player.entity!!) { player1 ->
+                            player1.broadcastBreakEvent(EquipmentSlot.MAINHAND)
+                        }
+                    }
+                }
             }
         }
 
         EntityEvent.ADD.register { entity, level ->
-            if(level.isClientSide) return@register EventResult.pass()
-            if(entity is PokemonEntity){
-                if(entity.pokemon.aspects.contains("alpha") && !entity.pokemon.aspects.contains("alpha_defeated")){
+            if (level.isClientSide) return@register EventResult.pass()
+            if (entity is PokemonEntity) {
+                if (entity.pokemon.aspects.contains("alpha") && !entity.pokemon.aspects.contains("alpha_defeated")) {
                     LOGGER.info("Alpha pokemon found, max health is ${entity.health}")
-                    entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(AttributeModifier("alpha",
-                        entity.pokemon.getStat(Stats.HP).toDouble() * 10, AttributeModifier.Operation.ADDITION))
+                    entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(
+                        AttributeModifier(
+                            "alpha",
+                            entity.pokemon.getStat(Stats.HP).toDouble() * 10, AttributeModifier.Operation.ADDITION
+                        )
+                    )
                     entity.health = entity.pokemon.getStat(Stats.HP).toFloat() * 10
                     LOGGER.info("Alpha pokemon edited, max health is ${entity.health}")
                     return@register EventResult.pass()
@@ -229,12 +371,13 @@ class MythicalContent : ModInitializer {
         }
 
         EntityEvent.LIVING_HURT.register { entity, source, amount ->
-            if(source.entity is Snowball) {
-                if((source.entity as Snowball).tags.any { tag -> tag.contains("pokemonid=") }){
-                    val id: Int = (source.entity as Snowball).tags.first { tag -> tag.contains("pokemonid=") }.split("=")[1].toInt()
+            if (source.entity is Snowball) {
+                if ((source.entity as Snowball).tags.any { tag -> tag.contains("pokemonid=") }) {
+                    val id: Int = (source.entity as Snowball).tags.first { tag -> tag.contains("pokemonid=") }
+                        .split("=")[1].toInt()
                     val pokemonEntity: PokemonEntity? = entity.level.getEntity(id) as PokemonEntity?
-                    if(pokemonEntity != null) {
-                        if(pokemonEntity.target != null) {
+                    if (pokemonEntity != null) {
+                        if (pokemonEntity.target != null) {
                             pokemonEntity.doHurtTarget(pokemonEntity.target!!)
                         }
                     }
@@ -244,16 +387,20 @@ class MythicalContent : ModInitializer {
         }
 
         CobblemonEvents.POKEMON_ENTITY_GOALS.subscribe { event ->
-            if(event.entity.pokemon.aspects.contains("alpha")){
-                event.entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(AttributeModifier("alpha",
-                    event.entity.pokemon.getStat(Stats.HP).toDouble() * 2, AttributeModifier.Operation.ADDITION))
+            if (event.entity.pokemon.aspects.contains("alpha")) {
+                event.entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(
+                    AttributeModifier(
+                        "alpha",
+                        event.entity.pokemon.getStat(Stats.HP).toDouble() * 2, AttributeModifier.Operation.ADDITION
+                    )
+                )
                 event.entity.health = event.entity.pokemon.getStat(Stats.HP).toFloat() * 2
                 event.goalSelector.addGoal(0, NearestAttackableTargetGoal(event.entity, ServerPlayer::class.java, true))
                 event.goalSelector.addGoal(0, HurtByTargetGoal(event.entity))
                 println(ALPHA_GOALS.keys.toString())
                 ALPHA_GOALS.forEach { (name, goal) ->
                     println("Checking for $name")
-                    if(event.entity.pokemon.hasLabels(name)){
+                    if (event.entity.pokemon.hasLabels(name)) {
                         event.goalSelector.addGoal(2, goal.apply(event))
                     }
                 }
@@ -262,10 +409,17 @@ class MythicalContent : ModInitializer {
     }
 
 
-    private fun setupPlaceholders(){
+    private fun setupPlaceholders() {
         Placeholders.register(ResourceLocation("player", "biome")) { ctx, arg ->
             ctx.player?.let { player ->
-                PlaceholderResult.value(Component.translatable(Util.makeDescriptionId("biome", player.level.getBiome(player.blockPosition()).unwrapKey().get().location()).toString()))
+                PlaceholderResult.value(
+                    Component.translatable(
+                        Util.makeDescriptionId(
+                            "biome",
+                            player.level.getBiome(player.blockPosition()).unwrapKey().get().location()
+                        ).toString()
+                    )
+                )
             } ?: PlaceholderResult.invalid("Player not found")
         }
         PLACEHOLDER_LIST.forEach { (key, value) ->
@@ -276,8 +430,8 @@ class MythicalContent : ModInitializer {
     }
 
     private fun kingdomsCheck(player: ServerPlayer): Boolean {
-        if(QuiltLoader.isModLoaded("kingdoms")){
-            if(KingdomsHelper.isInKingdom(player)){
+        if (QuiltLoader.isModLoaded("kingdoms")) {
+            if (KingdomsHelper.isInKingdom(player)) {
                 return true
             } else {
                 return false

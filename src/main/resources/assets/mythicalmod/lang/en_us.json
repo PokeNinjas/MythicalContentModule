@@ -1,4 +1,14 @@
 {
+  "text.config.mythical-mod.title": "Mythical Mod Config",
+  "text.config.mythical-mod.section.Radar": "Landmark Config",
+  "text.config.mythical-mod.option.landmarkSpawnRange": "Landmark Spawn Range",
+  "text.config.mythical-mod.option.maxPlayerLandmarkCount": "Max Player Landmark Count",
+  "text.config.mythical-mod.option.perMaxLandmarkTimer": "Per Max Landmark Timer",
+  "text.config.mythical-mod.section.Radar": "Radar Config",
+  "text.config.mythical-mod.option.defaultMaxChainLength": "Default Max Chain Length",
+  "text.config.mythical-mod.option.spawnRadius": "Spawn Radius",
+  "text.config.mythical-mod.option.spawnDelay": "Spawn Delay",
+  "text.config.mythical-mod.option.scanDelay": "Scan Delay",
   "itemGroup.mythicalmod.items": "Mythical Items",
   "itemGroup.mythicalmod.blocks": "Mythical Blocks",
 
