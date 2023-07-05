@@ -64,4 +64,12 @@ dependencies {
     modImplementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 }
 
+tasks.processResources {
+    inputs.property("version", version)
+
+    filesMatching("quilt.mod.json") {
+        expand("version" to version)
+    }
+}
+
 tasks.getByName<Test>("test").useJUnitPlatform()
