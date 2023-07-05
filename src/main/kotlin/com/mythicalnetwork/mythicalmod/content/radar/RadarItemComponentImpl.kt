@@ -212,7 +212,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
                 if (!isSearchedSpeciesNear) player.level.playSound(null, player, SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS,  0.5F, 1.5f + (player.level.random.nextFloat() * 0.5f))
                 else player.level.playSound(null, player, SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS,  0.5F, 1.5f + (player.level.random.nextFloat() * 0.5f))
                 val level: ServerLevel = player.level as ServerLevel
-                if(level.random.nextFloat() < 0.05 && !isSearchedSpeciesNear) {
+                if(level.random.nextFloat() < MythicalContent.CONFIG.spawnChance() && !isSearchedSpeciesNear) {
                     val species: Species = PokemonSpecies.getByName(getSpecies().toLowerCase().filter { it.isLetterOrDigit() || it == '_' }) ?: return
                     val pokemon: Pokemon = species.create()
                     PokemonProperties.parse("radar_spawned").apply(pokemon)
@@ -237,5 +237,24 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
 
     override fun setCanSpawn(canSpawn: Boolean) {
         this.putBoolean("canSpawn", canSpawn)
+    }
+
+    override fun applyChainModifiers(level: ServerLevel, pokemon: Pokemon) {
+        val ranges = MythicalContent.formatIvRangeValues()
+        for(range in ranges.keys) {
+            if(getChainLength() in range){
+                Cobblemon.statProvider.createEmptyIVs(ranges[range]!!).forEach { iv ->
+                    pokemon.ivs[iv.key] = iv.value
+                }
+            }
+        }
+        val shinyRanges = MythicalContent.formatShinyChance()
+        for(range in shinyRanges.keys) {
+            if(getChainLength() in range){
+                if(level.random.nextFloat() < shinyRanges[range]!!) {
+                    PokemonProperties.parse("shiny=yes").apply(pokemon)
+                }
+            }
+        }
     }
 }

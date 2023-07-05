@@ -8,6 +8,9 @@ import io.wispforest.owo.config.annotation.SectionHeader
 @Config(name = "mythical-mod", wrapperName = "MythicalModConfig")
 class MythicalModConfigModel {
 
+    @SectionHeader("Landmarks")
+    @JvmField
+    var comment: String = "Landmark Config"
     @JvmField
     var landmarkSpawnRange: Int = 16
     @JvmField
@@ -17,13 +20,21 @@ class MythicalModConfigModel {
 
     @SectionHeader("Radar")
     @JvmField
-    var defaultMaxChainLength: Int = 100
+    var _comment: String = "Radar Config"
+    @JvmField
+    var defaultMaxChainLength: Int = 200
     @JvmField
     var spawnRadius: Int = 16
     @JvmField
     var spawnDelay: Int = 20
     @JvmField
+    var spawnChance: Float = 0.05f
+    @JvmField
     var scanDelay: Int = 100
     @JvmField
     var bucketsToCheck: List<String> = listOf("common", "uncommon", "rare", "ultra-rare")
+    @JvmField
+    var ivRangeValues: String = "0-49: 0, 50-99: 1, 100-149: 2, 150-200: 3"
+    @JvmField
+    var shinyChance: String = "0-49: 1/8192, 50-99: 1/4096, 100-149: 1/2048, 150-200: 1/1024"
 }

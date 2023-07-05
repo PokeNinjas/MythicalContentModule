@@ -235,14 +235,8 @@ object MythicalBlocks {
     var ANDESITE_COBBLED_MOSSY: Block = Block(StoneSettings, "andesite_cobbled_mossy")
     var ANDESITE_DIAMOND_PAVERS: Block = Block(StoneSettings, "andesite_diamond_pavers")
     var ANDESITE_LARGE_BRICKS: Block = Block(StoneSettings, "andesite_large_bricks")
-    var ANDESITE_LARGE_BRICKS_CRACKED: Block = Block(
-        StoneSettings,
-        "andesite_large_bricks_cracked"
-    )
-    var ANDESITE_LARGE_BRICKS_MOSSY: Block = Block(
-        StoneSettings,
-        "andesite_large_bricks_mossy"
-    )
+    var ANDESITE_LARGE_BRICKS_CRACKED: Block = Block(StoneSettings, "andesite_large_bricks_cracked")
+    var ANDESITE_LARGE_BRICKS_MOSSY: Block = Block(StoneSettings, "andesite_large_bricks_mossy")
     var ANDESITE_PANELS: Block = Block(StoneSettings, "andesite_panels")
     var ANDESITE_PAVERS: Block = Block(StoneSettings, "andesite_pavers")
     var ANDESITE_POLISHED: Block = Block(StoneSettings, "andesite_polished")
@@ -258,60 +252,27 @@ object MythicalBlocks {
     var ANDESITE_ENGRAVED: Block = Block(StoneSettings, "andesite_engraved")
     var ANDESITE_PILLAR: Block = Block(StoneSettings, "andesite_pillar")
     var ANDESITE_ROUGH_CUT: Block = Block(StoneSettings, "andesite_rough_cut")
-    var DARK_PRISMARINE_CARVED_CREEPER: Block = Block(
-        StoneSettings,
-        "dark_prismarine_carved_creeper"
-    )
-    var DARK_PRISMARINE_CARVED_DERP: Block = Block(
-        StoneSettings,
-        "dark_prismarine_carved_derp"
-    )
-    var DARK_PRISMARINE_CARVED_VILLAGER: Block = Block(
-        StoneSettings,
-        "dark_prismarine_carved_villager"
-    )
-    var DARK_PRISMARINE_CARVED_WITHER: Block = Block(
-        StoneSettings,
-        "dark_prismarine_carved_wither"
-    )
-    var DARK_PRISMARINE_CARVED_WRITING: Block = Block(
-        StoneSettings,
-        "dark_prismarine_carved_writing"
-    )
+    var DARK_PRISMARINE_CARVED_CREEPER: Block = Block(StoneSettings, "dark_prismarine_carved_creeper")
+    var DARK_PRISMARINE_CARVED_DERP: Block = Block(StoneSettings, "dark_prismarine_carved_derp")
+    var DARK_PRISMARINE_CARVED_VILLAGER: Block = Block(StoneSettings, "dark_prismarine_carved_villager")
+    var DARK_PRISMARINE_CARVED_WITHER: Block = Block(StoneSettings, "dark_prismarine_carved_wither")
+    var DARK_PRISMARINE_CARVED_WRITING: Block = Block(StoneSettings, "dark_prismarine_carved_writing")
     var DARK_PRISMARINE_CHISELED: Block = Block(StoneSettings, "dark_prismarine_chiseled")
     var DARK_PRISMARINE_COBBLED: Block = Block(StoneSettings, "dark_prismarine_cobbled")
-    var DARK_PRISMARINE_COBBLED_MOSSY: Block = Block(
-        StoneSettings,
-        "dark_prismarine_cobbled_mossy"
-    )
+    var DARK_PRISMARINE_COBBLED_MOSSY: Block = Block(StoneSettings, "dark_prismarine_cobbled_mossy")
     var DARK_PRISMARINE_COLUMN: Block = Block(StoneSettings, "dark_prismarine_column")
     var DARK_PRISMARINE_CUT: Block = Block(StoneSettings, "dark_prismarine_cut")
-    var DARK_PRISMARINE_DIAMOND_PAVERS: Block = Block(
-        StoneSettings,
-        "dark_prismarine_diamond_pavers"
-    )
+    var DARK_PRISMARINE_DIAMOND_PAVERS: Block = Block(StoneSettings, "dark_prismarine_diamond_pavers")
     var DARK_PRISMARINE_ENGRAVED: Block = Block(StoneSettings, "dark_prismarine_engraved")
-    var DARK_PRISMARINE_LARGE_BRICKS: Block = Block(
-        StoneSettings,
-        "dark_prismarine_large_bricks"
-    )
-    var DARK_PRISMARINE_LARGE_BRICKS_CRACKED: Block = Block(
-        StoneSettings,
-        "dark_prismarine_large_bricks_cracked"
-    )
-    var DARK_PRISMARINE_LARGE_BRICKS_MOSSY: Block = Block(
-        StoneSettings,
-        "dark_prismarine_large_bricks_mossy"
-    )
+    var DARK_PRISMARINE_LARGE_BRICKS: Block = Block(StoneSettings, "dark_prismarine_large_bricks")
+    var DARK_PRISMARINE_LARGE_BRICKS_CRACKED: Block = Block(StoneSettings, "dark_prismarine_large_bricks_cracked")
+    var DARK_PRISMARINE_LARGE_BRICKS_MOSSY: Block = Block(StoneSettings, "dark_prismarine_large_bricks_mossy")
     var DARK_PRISMARINE_PANELS: Block = Block(StoneSettings, "dark_prismarine_panels")
     var DARK_PRISMARINE_PAVERS: Block = Block(StoneSettings, "dark_prismarine_pavers")
     var DARK_PRISMARINE_PILLAR: Block = Block(StoneSettings, "dark_prismarine_pillar")
     var DARK_PRISMARINE_POLISHED: Block = Block(StoneSettings, "dark_prismarine_polished")
     var DARK_PRISMARINE_ROUGH_CUT: Block = Block(StoneSettings, "dark_prismarine_rough_cut")
-    var DARK_PRISMARINE_SMALL_BRICK: Block = Block(
-        StoneSettings,
-        "dark_prismarine_small_brick"
-    )
+    var DARK_PRISMARINE_SMALL_BRICK: Block = Block(StoneSettings, "dark_prismarine_small_brick")
     var DARK_PRISMARINE_TILED: Block = Block(StoneSettings, "dark_prismarine_tiled")
     var DIORITE_CARVED_CREEPER: Block = Block(StoneSettings, "diorite_carved_creeper")
     var DIORITE_CARVED_DERP: Block = Block(StoneSettings, "diorite_carved_derp")
@@ -326,14 +287,8 @@ object MythicalBlocks {
     var DIORITE_DIAMOND_PAVERS: Block = Block(StoneSettings, "diorite_diamond_pavers")
     var DIORITE_ENGRAVED: Block = Block(StoneSettings, "diorite_engraved")
     var DIORITE_LARGE_BRICKS: Block = Block(StoneSettings, "diorite_large_bricks")
-    var DIORITE_LARGE_BRICKS_CRACKED: Block = Block(
-        StoneSettings,
-        "diorite_large_bricks_cracked"
-    )
-    var DIORITE_LARGE_BRICKS_MOSSY: Block = Block(
-        StoneSettings,
-        "diorite_large_bricks_mossy"
-    )
+    var DIORITE_LARGE_BRICKS_CRACKED: Block = Block(StoneSettings, "diorite_large_bricks_cracked")
+    var DIORITE_LARGE_BRICKS_MOSSY: Block = Block(StoneSettings, "diorite_large_bricks_mossy")
     var DIORITE_PANELS: Block = Block(StoneSettings, "diorite_panels")
     var DIORITE_PAVERS: Block = Block(StoneSettings, "diorite_pavers")
     var DIORITE_PILLAR: Block = Block(StoneSettings, "diorite_pillar")
@@ -354,14 +309,8 @@ object MythicalBlocks {
     var GRANITE_DIAMOND_PAVERS: Block = Block(StoneSettings, "granite_diamond_pavers")
     var GRANITE_ENGRAVED: Block = Block(StoneSettings, "granite_engraved")
     var GRANITE_LARGE_BRICKS: Block = Block(StoneSettings, "granite_large_bricks")
-    var GRANITE_LARGE_BRICKS_CRACKED: Block = Block(
-        StoneSettings,
-        "granite_large_bricks_cracked"
-    )
-    var GRANITE_LARGE_BRICKS_MOSSY: Block = Block(
-        StoneSettings,
-        "granite_large_bricks_mossy"
-    )
+    var GRANITE_LARGE_BRICKS_CRACKED: Block = Block(StoneSettings, "granite_large_bricks_cracked")
+    var GRANITE_LARGE_BRICKS_MOSSY: Block = Block(StoneSettings, "granite_large_bricks_mossy")
     var GRANITE_PANELS: Block = Block(StoneSettings, "granite_panels")
     var GRANITE_PAVERS: Block = Block(StoneSettings, "granite_pavers")
     var GRANITE_PILLAR: Block = Block(StoneSettings, "granite_pillar")
@@ -371,12 +320,8 @@ object MythicalBlocks {
     var GRANITE_TILED: Block = Block(StoneSettings, "granite_tiled")
     var PRISMARINE_CARVED_CREEPER: Block = Block(StoneSettings, "prismarine_carved_creeper")
     var PRISMARINE_CARVED_DERP: Block = Block(StoneSettings, "prismarine_carved_derp")
-    var PRISMARINE_CARVED_VILLAGER: Block = Block(
-        StoneSettings,
-        "prismarine_carved_villager"
-    )
+    var PRISMARINE_CARVED_VILLAGER: Block = Block(StoneSettings, "prismarine_carved_villager")
     var PRISMARINE_CARVED_WITHER: Block = Block(StoneSettings, "prismarine_carved_wither")
-
 
 
     var PRISMARINE_CARVED_WRITING: Block = Block(StoneSettings, "prismarine_carved_writing")
@@ -388,14 +333,8 @@ object MythicalBlocks {
     var PRISMARINE_DIAMOND_PAVERS: Block = Block(StoneSettings, "prismarine_diamond_pavers")
     var PRISMARINE_ENGRAVED: Block = Block(StoneSettings, "prismarine_engraved")
     var PRISMARINE_LARGE_BRICKS: Block = Block(StoneSettings, "prismarine_large_bricks")
-    var PRISMARINE_LARGE_BRICKS_CRACKED: Block = Block(
-        StoneSettings,
-        "prismarine_large_bricks_cracked"
-    )
-    var PRISMARINE_LARGE_BRICKS_MOSSY: Block = Block(
-        StoneSettings,
-        "prismarine_large_bricks_mossy"
-    )
+    var PRISMARINE_LARGE_BRICKS_CRACKED: Block = Block(StoneSettings, "prismarine_large_bricks_cracked")
+    var PRISMARINE_LARGE_BRICKS_MOSSY: Block = Block(StoneSettings, "prismarine_large_bricks_mossy")
     var PRISMARINE_PANELS: Block = Block(StoneSettings, "prismarine_panels")
     var PRISMARINE_PAVERS: Block = Block(StoneSettings, "prismarine_pavers")
     var PRISMARINE_PILLAR: Block = Block(StoneSettings, "prismarine_pillar")

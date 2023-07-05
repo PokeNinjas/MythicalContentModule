@@ -17,10 +17,13 @@ fun Player.getSpeciesRadar(string: Species): ItemStack {
     return ItemStack.EMPTY
 }
 
-fun Player.runOnAllRadars(function: (ItemStack) -> Unit) {
+fun Player.runOnAllRadars(function: (ItemStack) -> Unit): Boolean {
+    var ran = false
     this.inventory.items.filter { it.item == MythicalItems.RADAR }.forEach {
         function(it)
+        ran = true
     }
+    return ran
 }
 
 fun Player.getAllNonMatchingRadars(species: String): List<ItemStack> {
