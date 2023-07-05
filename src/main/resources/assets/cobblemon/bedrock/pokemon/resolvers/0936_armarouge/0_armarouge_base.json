@@ -92,6 +92,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_holographic.png"
     }
   ]
 }

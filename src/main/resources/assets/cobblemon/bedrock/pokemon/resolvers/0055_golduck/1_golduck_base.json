@@ -390,6 +390,66 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_easter_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny_easter_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive_shiny_easter_holographic.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

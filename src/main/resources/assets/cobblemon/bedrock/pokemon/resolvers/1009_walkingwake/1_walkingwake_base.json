@@ -397,6 +397,65 @@
           "translucent": false
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_emissive_blazing_holographic.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny_emissive_blazing_holographic.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
     }
   ]
 }

@@ -196,6 +196,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0717_yveltal/yveltal_shiny_rainbow_holographic.png"
     }
   ]
 }

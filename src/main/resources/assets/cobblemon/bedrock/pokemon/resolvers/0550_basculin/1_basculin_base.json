@@ -169,6 +169,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "bluestriped"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "bluestriped",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny_holographic.png"
     }
   ]
 }

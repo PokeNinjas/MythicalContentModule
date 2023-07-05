@@ -92,6 +92,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0925_maushold/maushold_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0925_maushold/maushold_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0925_maushold/maushold_shiny_holographic.png"
     }
   ]
 }

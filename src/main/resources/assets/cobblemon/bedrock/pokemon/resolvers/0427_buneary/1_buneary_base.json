@@ -182,6 +182,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0427_buneary/buneary_shiny_easter_holographic.png"
     }
   ]
 }

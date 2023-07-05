@@ -43,6 +43,12 @@
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0026_raichu/raichu_holographic.png"
     }
   ]
 }

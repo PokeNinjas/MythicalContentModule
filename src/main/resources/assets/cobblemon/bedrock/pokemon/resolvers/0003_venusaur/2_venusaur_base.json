@@ -285,6 +285,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_shiny_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_shiny_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_gilded_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0003_venusaur/venusaur_shiny_gilded_holographic.png"
     }
   ]
 }

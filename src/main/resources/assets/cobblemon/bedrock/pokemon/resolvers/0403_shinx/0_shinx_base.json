@@ -105,6 +105,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_fireworks.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0403_shinx/shinx_shiny_holographic.png",
+      "layers": []
     }
   ]
 }

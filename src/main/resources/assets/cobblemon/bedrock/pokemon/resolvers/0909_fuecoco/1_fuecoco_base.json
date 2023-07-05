@@ -37,6 +37,12 @@
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0909_fuecoco/fuecoco_holographic.png"
     }
   ]
 }

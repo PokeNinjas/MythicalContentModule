@@ -93,6 +93,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0759_stufful/stufful_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0759_stufful/stufful_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0759_stufful/stufful_shiny_holographic.png"
     }
   ]
 }

@@ -285,6 +285,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0014_kakuna/kakuna_shiny_blazing_holographic.png"
     }
   ]
 }

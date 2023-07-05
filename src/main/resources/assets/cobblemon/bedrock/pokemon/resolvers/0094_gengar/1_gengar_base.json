@@ -182,6 +182,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0094_gengar/gengar_shiny_blazing_holographic.png"
     }
   ]
 }

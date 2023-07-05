@@ -121,6 +121,26 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_holographic.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0933_naclstack/naclstack_shiny_holographic.png"
     }
   ]
 }

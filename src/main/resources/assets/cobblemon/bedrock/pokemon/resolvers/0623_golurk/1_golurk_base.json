@@ -163,6 +163,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0623_golurk/golurk_holographic.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0623_golurk/golurk_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0623_golurk/golurk_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0623_golurk/golurk_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

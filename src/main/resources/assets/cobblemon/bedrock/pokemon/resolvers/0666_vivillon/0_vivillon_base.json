@@ -367,6 +367,25 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_holographic.png",
+      "layers": [
+        {
+          "name": "wings",
+          "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_wings_pokeball_holographic.png"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0666_vivillon/vivillon_shiny_holographic.png"
     }
   ]
 }

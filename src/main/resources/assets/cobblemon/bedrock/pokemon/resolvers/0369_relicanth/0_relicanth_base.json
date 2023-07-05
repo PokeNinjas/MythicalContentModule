@@ -99,6 +99,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny_fireworks.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0369_relicanth/relicanth_shiny_holographic.png",
+      "layers": []
     }
   ]
 }

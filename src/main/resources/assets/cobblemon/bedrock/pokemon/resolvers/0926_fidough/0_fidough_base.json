@@ -92,6 +92,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0926_fidough/fidough_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0926_fidough/fidough_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0926_fidough/fidough_shiny_holographic.png"
     }
   ]
 }

@@ -169,6 +169,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_holographic.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0019_rattata/rattata_alolan_shiny_holographic.png"
     }
   ]
 }

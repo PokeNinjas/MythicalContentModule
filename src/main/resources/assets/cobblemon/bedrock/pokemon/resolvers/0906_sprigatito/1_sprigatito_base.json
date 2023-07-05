@@ -92,6 +92,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0906_sprigatito/sprigatito_shiny_holographic.png"
     }
   ]
 }

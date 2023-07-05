@@ -175,6 +175,35 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0615_cryogonal/cryogonal_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0615_cryogonal/cryogonal_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0615_cryogonal/cryogonal_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0615_cryogonal/cryogonal_shiny_emissive.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

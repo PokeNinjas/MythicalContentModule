@@ -285,6 +285,49 @@
         "mythical_gilded"
       ],
       "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_gilded_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0002_ivysaur/ivysaur_shiny_gilded_holographic.png"
     }
   ]
 }

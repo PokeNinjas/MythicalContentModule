@@ -105,6 +105,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_fireworks.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0405_luxray/luxray_shiny_holographic.png",
+      "layers": []
     }
   ]
 }

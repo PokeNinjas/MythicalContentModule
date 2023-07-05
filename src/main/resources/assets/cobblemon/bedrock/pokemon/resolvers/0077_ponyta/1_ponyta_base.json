@@ -364,6 +364,62 @@
           "emissive": "true"
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_emissive_holographic.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_emissive_holographic.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_emissive_blazing_holographic.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0077_ponyta/ponyta_shiny_emissive_blazing_holographic.png",
+          "emissive": "true"
+        }
+      ]
     }
   ]
 }

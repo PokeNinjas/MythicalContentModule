@@ -44,6 +44,12 @@
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0152_chikorita/chikorita_holographic.png"
     }
   ]
 }

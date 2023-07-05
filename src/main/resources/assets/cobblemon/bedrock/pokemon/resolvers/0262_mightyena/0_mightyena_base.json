@@ -93,6 +93,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0262_mightyena/mightyena_shiny_holographic.png"
     }
   ]
 }

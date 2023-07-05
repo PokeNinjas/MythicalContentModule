@@ -285,6 +285,49 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_shiny_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0133_eevee/eevee_shiny_rainbow_holographic.png"
     }
   ]
 }
