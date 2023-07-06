@@ -86,7 +86,7 @@ class RadarItem(properties: Properties) : Item(properties.tab(MythicalGroups.MYT
         }
         biomes.removeAll(toRemove)
 
-        if (component.isEnabled()) {
+        if (component.isEnabled() && component.isActive()) {
             tooltip.add(
                 Component.literal("Current chain length: ${component.getChainLength()}")
                     .withStyle { s -> s.withColor(ChatFormatting.GOLD) })

@@ -1,6 +1,7 @@
 package com.mythicalnetwork.mythicalmod.content.radar
 
 import com.cobblemon.mod.common.Cobblemon
+import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies
 import com.cobblemon.mod.common.api.spawning.CobblemonSpawnPools
@@ -55,7 +56,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
 
     override fun isEnabled(): Boolean {
         if (!this.hasTag("enabled")) {
-            this.putBoolean("enabled", false)
+            this.putBoolean("enabled", true)
         }
         return this.getBoolean("enabled")
     }
@@ -110,8 +111,8 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
 
     override fun getLevelRange(): IntRange {
         if (!this.hasTag("minLevel", CcaNbtType.INT) || !this.hasTag("maxLevel", CcaNbtType.INT)) {
-            this.putInt("minLevel", 0)
-            this.putInt("maxLevel", 0)
+            this.putInt("minLevel", 15)
+            this.putInt("maxLevel", 38)
         }
         return this.getInt("minLevel")..this.getInt("maxLevel")
     }
@@ -202,26 +203,34 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
                     } else {
                         namedProbabilities[nameString] = (namedProbabilities[nameString] ?: 0F) + it.value
                     }
+                    if(it.key.getName().string == getSpecies()) {
+                        if(it.key is PokemonSpawnDetail){
+                            (it.key as PokemonSpawnDetail).levelRange?.let { it1 -> setLevelRange(it1) }
+                        }
+                    }
                 }
+                MythicalContent.sendDebugMessage("Spawn probabilities for player ${player.name.string}: $namedProbabilities")
                 if (namedProbabilities.containsKey(getSpecies())) {
+                    MythicalContent.sendDebugMessage("Found spawn for player ${player.name.string}, found ${getSpecies()}. ${canSpawn()}, ${isEnabled()}, $isSearchedSpeciesNear")
                     canSpawn = true
                 }
             }
-            if (!canSpawn && isEnabled() && !isSearchedSpeciesNear) {
-                setEnabled(false)
-                player.level.playSound(null, player, SoundEvents.RESPAWN_ANCHOR_DEPLETE, SoundSource.MASTER, 0.5F, 1.5f)
-            } else if (canSpawn && !isEnabled()) {
+            if (canSpawn) {
                 if (!isEnabled()) {
                     player.level.playSound(
                         null,
                         player,
-                        SoundEvents.RESPAWN_ANCHOR_CHARGE,
-                        SoundSource.MASTER,
+                        CobblemonSounds.PC_ON.get(),
+                        SoundSource.PLAYERS,
                         0.5F,
                         1.5f
                     )
                 }
+                MythicalContent.sendDebugMessage("Enabled spawn anchor for player ${player.name.string}. ${canSpawn()}, ${isEnabled()}, $isSearchedSpeciesNear")
                 setEnabled(true)
+            } else if (isEnabled() && !isSearchedSpeciesNear) {
+                MythicalContent.sendDebugMessage("Disabled spawn anchor for player ${player.name.string}. ${canSpawn()}, ${isEnabled()}, $isSearchedSpeciesNear")
+                setEnabled(false)
             }
             setLastTickedTime(player.level.gameTime.toInt())
         }
@@ -252,10 +261,11 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
                     val species: Species = PokemonSpecies.getByName(
                         getSpecies().toLowerCase().filter { it.isLetterOrDigit() || it == '_' }) ?: return
                     val pokemon: Pokemon = species.create()
+                    pokemon.level = getLevelRange().random()
                     PokemonProperties.parse("radar_spawned").apply(pokemon)
                     val entity: PokemonEntity = PokemonEntity(level, pokemon)
                     val attemptedPos: BlockPos? =
-                        LandmarkBlockEntity.checkSpawnConditions(entity, false, false, true, 16, player.onPos, level)
+                        LandmarkBlockEntity.checkSpawnConditions(entity, pokemon.form.behaviour.moving.swim.canBreatheUnderwater, pokemon.form.behaviour.moving.fly.canFly, !pokemon.form.behaviour.moving.walk.avoidsLand, 16, player.onPos, level)
                     if (attemptedPos != null) {
                         entity.setPos(attemptedPos.x.toDouble(), attemptedPos.y.toDouble(), attemptedPos.z.toDouble())
                         entity.addTag(player.uuid.toString())
@@ -307,6 +317,14 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
             if (getChainLength() in range) {
                 if (level.random.nextFloat() < shinyRanges[range]!!) {
                     PokemonProperties.parse("shiny=yes").apply(pokemon)
+                }
+            }
+        }
+        val haRanges = MythicalContent.formatHiddenAbilityChance()
+        for(range in haRanges.keys){
+            if(getChainLength() in range){
+                if(level.random.nextFloat() < haRanges[range]!!){
+                    PokemonProperties.parse("hiddenability").apply(pokemon)
                 }
             }
         }

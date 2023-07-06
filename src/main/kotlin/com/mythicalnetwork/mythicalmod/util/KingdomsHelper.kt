@@ -7,6 +7,6 @@ import net.minecraft.world.entity.player.Player
 object KingdomsHelper {
 
     fun isInKingdom(player: Player): Boolean {
-        return User.get(player as ServerPlayer).kingdomAtLocation != null
+        return User.get((player as ServerPlayer).uuid).kingdomAtLocation != null
     }
 }

@@ -20,11 +20,8 @@ import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkSpawnDataJsonLis
 import com.mythicalnetwork.mythicalmod.content.misc.rocketboots.RocketBootsItem
 import com.mythicalnetwork.mythicalmod.content.radar.RadarItem
 import com.mythicalnetwork.mythicalmod.content.radar.RadarItemComponent
-import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
-import com.mythicalnetwork.mythicalmod.registry.MythicalBlocks
-import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry
+import com.mythicalnetwork.mythicalmod.registry.*
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry.RADAR_ITEM
-import com.mythicalnetwork.mythicalmod.registry.MythicalItems
 import com.mythicalnetwork.mythicalmod.util.*
 import com.pokeninjas.kingdoms.fabric.dto.database.impl.User
 import dev.architectury.event.CompoundEventResult
@@ -45,6 +42,11 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents.EquipmentCh
 import net.minecraft.Util
 import net.minecraft.core.particles.ItemParticleOption
 import net.minecraft.core.particles.ParticleTypes
+import net.minecraft.nbt.CompoundTag
+import net.minecraft.nbt.ListTag
+import net.minecraft.nbt.StringTag
+import net.minecraft.nbt.Tag
+import net.minecraft.network.FriendlyByteBuf
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.MinecraftServer
@@ -78,7 +80,9 @@ import org.quiltmc.qsl.base.api.entrypoint.ModInitializer
 import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerTickEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerWorldLoadEvents
+import org.quiltmc.qsl.networking.api.PacketByteBufs
 import org.quiltmc.qsl.networking.api.ServerPlayConnectionEvents
+import org.quiltmc.qsl.networking.api.ServerPlayNetworking
 import org.slf4j.Logger
 import java.util.*
 import java.util.function.BiFunction
@@ -178,6 +182,11 @@ class MythicalContent : ModInitializer {
                 )
             },
         )
+        fun sendDebugMessage(string: String){
+            if(CONFIG.enableDebugPrints()){
+                LOGGER.info(string)
+            }
+        }
         val SPECIES_BIOME_INFO: MultiMap<String, String> = MultiMap()
         fun getSpawnBiomes() {
             SPECIES_BIOME_INFO.clear()
@@ -188,11 +197,13 @@ class MythicalContent : ModInitializer {
                             if (biome is BiomeIdentifierCondition) {
                                 val species = detail.pokemon.species
                                 if(species != null){
+                                    sendDebugMessage("Adding ${biome.identifier} to ${species}")
                                     SPECIES_BIOME_INFO.put(species, "biome."+biome.identifier.toLanguageKey())
                                 }
                             } else if(biome is BiomeTagCondition){
                                 val species = detail.pokemon.species
                                 if(species != null){
+                                    sendDebugMessage("Adding ${biome.tag.location} to ${species}")
                                     SPECIES_BIOME_INFO.put(species, "biome."+biome.tag.location.toLanguageKey())
                                 }
                             }
@@ -216,6 +227,22 @@ class MythicalContent : ModInitializer {
                 ivMap[ivStart..ivEnd] = ivValue
             }
             return ivMap
+        }
+
+        fun formatHiddenAbilityChance(): Map<IntRange, Float> {
+            val hiddenAbilityChance: String = CONFIG.hiddenAbilityChance()
+            val hiddenAbilitySubString = hiddenAbilityChance.split(",")
+            val hiddenAbilityMap: MutableMap<IntRange, Float> = mutableMapOf()
+            for (hiddenAbility in hiddenAbilitySubString) {
+                hiddenAbility.replace(" ", "")
+                val hiddenAbilitySplit = hiddenAbility.split(":")
+                val hiddenAbilityRange = hiddenAbilitySplit[0].replace(" ", "").split("-")
+                val hiddenAbilityStart = hiddenAbilityRange[0].replace(" ", "").toInt()
+                val hiddenAbilityEnd = hiddenAbilityRange[1].replace(" ", "").toInt()
+                val hiddenAbilityValue = 1f / hiddenAbilitySplit[1].replace(" ", "").replace("1/", "").toFloat()
+                hiddenAbilityMap[hiddenAbilityStart..hiddenAbilityEnd] = hiddenAbilityValue
+            }
+            return hiddenAbilityMap
         }
 
         fun formatShinyChance(): Map<IntRange, Float> {
@@ -248,6 +275,21 @@ class MythicalContent : ModInitializer {
             SERVER = server
             entity = server.getLevel(Level.OVERWORLD)?.let { Cow(EntityType.COW, it) }
             getSpawnBiomes()
+            server.playerList.players.forEach { player ->
+                val tag: CompoundTag = CompoundTag()
+                for((key, value) in SPECIES_BIOME_INFO.interator()){
+                    val list = ListTag()
+                    if (value != null) {
+                        for(biome in value){
+                            list.add(StringTag.valueOf(biome))
+                        }
+                    }
+                    tag.put(key, list)
+                }
+                val buf: FriendlyByteBuf = PacketByteBufs.create()
+                buf.writeNbt(tag)
+                ServerPlayNetworking.send(player, MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
+            }
         }
 
         ServerTickEvents.END.register { server ->
@@ -269,14 +311,49 @@ class MythicalContent : ModInitializer {
 
             if ((server.overworld().gameTime % 216000).toInt() == 0) {
                 getSpawnBiomes()
+                val tag: CompoundTag = CompoundTag()
+                for((key, value) in SPECIES_BIOME_INFO.interator()){
+                    val list = ListTag()
+                    if (value != null) {
+                        for(biome in value){
+                            list.add(StringTag.valueOf(biome))
+                        }
+                    }
+                    tag.put(key, list)
+                }
+                val buf: FriendlyByteBuf = PacketByteBufs.create()
+                buf.writeNbt(tag)
+                server.playerList.players.forEach { player ->
+                    ServerPlayNetworking.send(player, MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
+                }
             }
         }
 
         ServerPlayConnectionEvents.DISCONNECT.register { handler, server ->
             CRAMOMATIC_HANDLER?.pausePlayer(handler.player.uuid)
+            handler.player.level.getEntitiesOfClass(PokemonEntity::class.java, handler.player.boundingBox.inflate(64.0)) { entity ->
+                entity.tags.contains(
+                    handler.player.uuid.toString()
+                )
+            }.forEach { pokemon ->
+                pokemon.discard()
+            }
         }
         ServerPlayConnectionEvents.JOIN.register { handler, sender, server ->
             CRAMOMATIC_HANDLER?.resumePlayer(handler.player.uuid)
+            val tag: CompoundTag = CompoundTag()
+            for((key, value) in SPECIES_BIOME_INFO.interator()){
+                val list = ListTag()
+                if (value != null) {
+                    for(biome in value){
+                        list.add(StringTag.valueOf(biome))
+                    }
+                }
+                tag.put(key, list)
+            }
+            val buf: FriendlyByteBuf = PacketByteBufs.create()
+            buf.writeNbt(tag)
+            sender.sendPacket(MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
         }
         ReloadListenerRegistry.register(PackType.SERVER_DATA, CramomaticRecipeJsonListener.INSTANCE)
         ReloadListenerRegistry.register(PackType.SERVER_DATA, LandmarkSpawnDataJsonListener.INSTANCE)
@@ -294,6 +371,8 @@ class MythicalContent : ModInitializer {
 
         InteractionEvent.INTERACT_ENTITY.register { player, entity, hand ->
             if(entity is PokemonEntity) {
+                val tag: CompoundTag = CompoundTag()
+                println(entity.saveWithoutId(tag).toString())
                 if (entity.pokemon.aspects.contains("radar_spawned")) {
                     if (player != null) {
                         if (!entity.tags.contains(player.uuid.toString())) {
@@ -335,50 +414,82 @@ class MythicalContent : ModInitializer {
             }
         }
 
+        EntityEvent.ADD.register { entity, level ->
+            if(level.isClientSide) return@register EventResult.pass()
+            if (entity is PokemonEntity){
+                if(entity.owner != null && entity.pokemon.aspects.contains("radar_spawned")){
+                    PokemonProperties.parse("radar_spawned=false").apply(entity)
+                }
+            }
+            return@register EventResult.pass()
+        }
+
         CobblemonEvents.CAPTURE_CONDITIONS.subscribe { event ->
             AlphaHelper.alphaTest(event)
             RadarItem.testRadarSpawnedPokemon(event)
         }
         InteractionEvent.RIGHT_CLICK_ITEM.register { player, hand ->
+            if(player.level.isClientSide) return@register CompoundEventResult.pass()
             val item = player.getItemInHand(hand)
             if(item.`is`(Items.GLOW_INK_SAC)){
                 getSpawnBiomes()
+                val tag: CompoundTag = CompoundTag()
+                for((key, value) in SPECIES_BIOME_INFO.interator()){
+                    val list = ListTag()
+                    if (value != null) {
+                        for(biome in value){
+                            list.add(StringTag.valueOf(biome))
+                        }
+                    }
+                    tag.put(key, list)
+                }
+                val buf: FriendlyByteBuf = PacketByteBufs.create()
+                buf.writeNbt(tag)
+                player.level.server!!.playerList.players.forEach { player ->
+                    ServerPlayNetworking.send(player, MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
+                }
             }
             return@register CompoundEventResult.pass()
         }
         CobblemonEvents.POKEMON_CAPTURED.subscribe { event ->
             val hasRadar: Boolean = event.player.getSpeciesRadar(event.pokemon.species) != ItemStack.EMPTY
-            if (!hasRadar) {
-                event.player.runOnAllRadars { radar ->
-                    val component: RadarItemComponent = RADAR_ITEM.get(radar)
-                    if (!component.isActive()) return@runOnAllRadars false
-                    radar.hurtAndBreak(radar.maxDamage, event.player) { player ->
-                        player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
+            var hasPlayedParticles = false
+            event.player.getAllNonMatchingRadars(event.pokemon.species.name).forEach { radar ->
+                val component: RadarItemComponent = RADAR_ITEM.get(radar)
+                if (!component.isActive()) return@forEach
+                radar.hurtAndBreak(radar.maxDamage, event.player) { player ->
+                    player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
+                }
+                if(!event.player.level.isClientSide){
+                    event.player.level.getEntitiesOfClass(PokemonEntity::class.java, event.player.boundingBox.inflate(64.0)) { entity ->
+                        entity.tags.contains(
+                            event.player.uuid.toString()
+                        ) && entity.pokemon.species.name == component.getSpecies()
+                    }.forEach { pokemon ->
+                        pokemon.discard()
                     }
-                    return@runOnAllRadars true
-                }.also {
-                    if (it) {
-                        if (!event.player.level.isClientSide) {
-                            val serverLevel: ServerLevel = event.player.level as ServerLevel
-                            serverLevel.sendParticlesServer(
-                                ItemParticleOption(
-                                    ParticleTypes.ITEM,
-                                    MythicalItems.RADAR.defaultInstance
-                                ), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05
-                            )
-                            serverLevel.playSound(
-                                null,
-                                event.player,
-                                SoundEvents.ITEM_BREAK,
-                                SoundSource.PLAYERS,
-                                1.0f,
-                                1.0f
-                            )
-                            event.player.sendSystemMessage(Component.literal("Your radar broke!"))
-                        }
+                    if(!hasPlayedParticles) {
+                        val serverLevel: ServerLevel = event.player.level as ServerLevel
+                        serverLevel.sendParticlesServer(
+                            ItemParticleOption(
+                                ParticleTypes.ITEM,
+                                MythicalItems.RADAR.defaultInstance
+                            ), event.player.eyePosition, 20, Vec3(0.5, 0.0, 0.5), 0.05
+                        )
+                        serverLevel.playSound(
+                            null,
+                            event.player,
+                            SoundEvents.ITEM_BREAK,
+                            SoundSource.PLAYERS,
+                            1.0f,
+                            1.0f
+                        )
+                        event.player.sendSystemMessage(Component.literal("Your radar broke!"))
+                        hasPlayedParticles = true
                     }
                 }
-            } else {
+            }
+            if (hasRadar) {
                 val radar: ItemStack = event.player.getSpeciesRadar(event.pokemon.species)
                 if (radar == ItemStack.EMPTY) return@subscribe
                 val component: RadarItemComponent = RADAR_ITEM.get(radar)
@@ -389,6 +500,13 @@ class MythicalContent : ModInitializer {
                         player.broadcastBreakEvent(EquipmentSlot.MAINHAND)
                     }
                     if (!event.player.level.isClientSide) {
+                        event.player.level.getEntitiesOfClass(PokemonEntity::class.java, event.player.boundingBox.inflate(64.0)) { entity ->
+                            entity.tags.contains(
+                                event.player.uuid.toString()
+                            ) && entity.pokemon.species.name == component.getSpecies()
+                        }.forEach { pokemon ->
+                            pokemon.discard()
+                        }
                         val serverLevel: ServerLevel = event.player.level as ServerLevel
                         serverLevel.sendParticlesServer(
                             ItemParticleOption(
@@ -424,10 +542,11 @@ class MythicalContent : ModInitializer {
                 if (event.battle.actors.any { a -> a is PlayerBattleActor }) {
                     val player: PlayerBattleActor =
                         event.battle.actors.first { a -> a is PlayerBattleActor } as PlayerBattleActor
+                    var hasPlayedParticle: Boolean = false
                     player.entity!!.getAllNonMatchingRadars(event.battle.actors.first { p -> p !is PlayerBattleActor }.pokemonList.first().originalPokemon.species.name)
                         .filter { RADAR_ITEM.get(it).isActive() }.also {
                             if (it.isNotEmpty()) {
-                                if (!player.entity!!.level.isClientSide) {
+                                if (!player.entity!!.level.isClientSide && !hasPlayedParticle) {
                                     val serverLevel: ServerLevel = player.entity!!.level as ServerLevel
                                     serverLevel.sendParticlesServer(
                                         ItemParticleOption(
@@ -443,6 +562,7 @@ class MythicalContent : ModInitializer {
                                         1.0f,
                                         1.0f
                                     )
+                                    hasPlayedParticle = true
                                 }
                             }
                         }.forEach { radar ->
@@ -451,6 +571,13 @@ class MythicalContent : ModInitializer {
                             radar.hurtAndBreak(radar.maxDamage, player.entity!!) { player1 ->
                                 player1.broadcastBreakEvent(EquipmentSlot.MAINHAND)
                                 player1.sendSystemMessage(Component.literal("Your radar broke!"))
+                            }
+                            player.entity!!.level.getEntitiesOfClass(PokemonEntity::class.java, player.entity!!.boundingBox.inflate(64.0)) { entity ->
+                                entity.tags.contains(
+                                    player.entity!!.uuid.toString()
+                                ) && entity.pokemon.species.name == component.getSpecies()
+                            }.forEach { pokemon ->
+                                pokemon.discard()
                             }
                         }
                 }
@@ -461,7 +588,7 @@ class MythicalContent : ModInitializer {
             if (level.isClientSide) return@register EventResult.pass()
             if (entity is PokemonEntity) {
                 if (entity.pokemon.aspects.contains("alpha") && !entity.pokemon.aspects.contains("alpha_defeated")) {
-                    LOGGER.info("Alpha pokemon found, max health is ${entity.health}")
+                    sendDebugMessage("Alpha pokemon found, max health is ${entity.health}")
                     entity.getAttribute(Attributes.MAX_HEALTH)?.addPermanentModifier(
                         AttributeModifier(
                             "alpha",
@@ -469,7 +596,7 @@ class MythicalContent : ModInitializer {
                         )
                     )
                     entity.health = entity.pokemon.getStat(Stats.HP).toFloat() * 10
-                    LOGGER.info("Alpha pokemon edited, max health is ${entity.health}")
+                    sendDebugMessage("Alpha pokemon edited, max health is ${entity.health}")
                     return@register EventResult.pass()
                 }
             }

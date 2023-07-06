@@ -41,6 +41,7 @@ object MythicalModClient : ClientModInitializer {
         BlockEntityRenderers.register(MythicalBlockEntities.FAIRY_LANDMARK!!) { LandmarkRenderer() }
         AbstractPacket.registerClientReceiver(MythicalPackets.CRAMOMATIC_S2C_SYNC)
         AbstractPacket.registerClientReceiver(MythicalPackets.UNVALIDATED_SOUND)
+        AbstractPacket.registerClientReceiver(MythicalPackets.RADAR_BIOME_DATA)
         ItemProperties.register(MythicalItems.PROGRESS_BAR.asItem(), MythicalContent.asResource("progress")) { stack, level, entity, seed ->
             if(stack.item.equals(MythicalItems.PROGRESS_BAR.asItem())){
                 if(stack.hasTag()){
