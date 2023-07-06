@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mythicalmod:block/teleport_pad"
+    }
+  }
+}
