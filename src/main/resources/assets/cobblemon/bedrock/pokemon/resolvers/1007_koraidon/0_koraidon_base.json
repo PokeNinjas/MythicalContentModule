@@ -17,19 +17,6 @@
     },
     {
       "aspects": [
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing.png"
-    },
-    {
-      "aspects": [
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing.png"
-    },
-    {
-      "aspects": [
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_radiant.png"
@@ -40,6 +27,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing.png"
     },
     {
       "aspects": [
@@ -86,132 +86,31 @@
     },
     {
       "aspects": [
-        "mythical_matrix"
+        "mythical_gilded"
       ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_matrix.png"
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
+        "mythical_gilded",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_matrix.png"
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
-        "mythical_blazing"
+        "mythical_radiant",
+        "mythical_gilded"
       ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing_matrix.png"
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_radiant.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
-        "mythical_blazing",
+        "mythical_radiant",
+        "mythical_gilded",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing_matrix.png"
-    },
-    {
-      "aspects": [
-        "mythical_matrix",
-        "mythical_rainbow"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_matrix.png"
-    },
-    {
-      "aspects": [
-        "mythical_matrix",
-        "mythical_rainbow",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_matrix.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_rainbow"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_rainbow",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_rainbow"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_rainbow",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_glitch.png"
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_radiant.png"
     },
     {
       "aspects": [
@@ -258,6 +157,195 @@
     },
     {
       "aspects": [
+        "mythical_magma",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_gilded",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_gilded",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_gilded",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_gilded",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_matrix.png"
+    },
+    {
+      "aspects": [
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_fireworks.png"
@@ -301,6 +389,21 @@
     },
     {
       "aspects": [
+        "mythical_fireworks",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_gilded",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_fireworks.png"
+    },
+    {
+      "aspects": [
         "radar_spawned"
       ],
       "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_holographic.png"
@@ -341,6 +444,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_gilded_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1007_koraidon/koraidon_shiny_gilded_holographic.png"
     }
   ]
 }
