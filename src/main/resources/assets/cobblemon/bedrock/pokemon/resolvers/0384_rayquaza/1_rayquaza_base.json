@@ -491,6 +491,79 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_gilded_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_gilded_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shadow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_shadow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_shadow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0384_rayquaza/rayquaza_shiny_blazing_holographic.png"
     }
   ]
 }

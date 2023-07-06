@@ -115,6 +115,25 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "female"
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0198_murkrow/murkrow_shiny_holographic.png"
     }
   ]
 }

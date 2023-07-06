@@ -182,6 +182,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny_blazing_holographic.png"
     }
   ]
 }

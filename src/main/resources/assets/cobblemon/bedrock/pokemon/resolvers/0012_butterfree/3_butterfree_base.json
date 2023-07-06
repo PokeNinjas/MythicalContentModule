@@ -609,6 +609,98 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_holographic.png"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "valencian",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "valencian",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_shiny_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "valencian",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "valencian",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0012_butterfree/butterfree_valencian_shiny_blazing_holographic.png"
     }
   ]
 }

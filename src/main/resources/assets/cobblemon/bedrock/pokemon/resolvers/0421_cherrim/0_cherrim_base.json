@@ -99,6 +99,20 @@
       ],
       "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny_fireworks.png",
       "layers": []
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0421_cherrim/cherrim_sunshine_shiny_holographic.png",
+      "layers": []
     }
   ]
 }

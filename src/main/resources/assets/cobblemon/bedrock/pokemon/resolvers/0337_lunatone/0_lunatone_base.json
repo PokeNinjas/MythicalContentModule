@@ -93,6 +93,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0337_lunatone/lunatone_shiny_holographic.png"
     }
   ]
 }

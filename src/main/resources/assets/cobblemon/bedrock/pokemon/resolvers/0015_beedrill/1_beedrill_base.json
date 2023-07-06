@@ -605,6 +605,97 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_emissive_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_rainbow_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_rainbow_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_blazing_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_shiny_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0015_beedrill/beedrill_emissive_shiny_blazing_holographic.png",
+          "translucent": true
+        }
+      ]
     }
   ]
 }

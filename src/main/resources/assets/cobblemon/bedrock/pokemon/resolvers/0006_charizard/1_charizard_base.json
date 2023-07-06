@@ -1165,6 +1165,181 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_holographic.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_rainbow_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/rainbow_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_gilded_holographic.png",
+      "layers": [
+        {
+          "name": "gilded_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_emissive_gilded_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_gilded_holographic.png",
+      "layers": [
+        {
+          "name": "gilded_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0006_charizard/gilded_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0006_charizard/charizard_shiny_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

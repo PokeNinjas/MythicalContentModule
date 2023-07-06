@@ -163,6 +163,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0072_tentacool/tentacool_holographic.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0072_tentacool/tentacool_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0072_tentacool/tentacool_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0072_tentacool/tentacool_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

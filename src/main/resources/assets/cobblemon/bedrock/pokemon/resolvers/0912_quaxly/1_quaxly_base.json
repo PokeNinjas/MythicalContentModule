@@ -37,6 +37,12 @@
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0912_quaxly/quaxly_holographic.png"
     }
   ]
 }

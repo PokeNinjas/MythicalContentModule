@@ -349,6 +349,64 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "autumn"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "summer"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "winter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "autumn",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "summer",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "winter",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny_holographic.png"
     }
   ]
 }

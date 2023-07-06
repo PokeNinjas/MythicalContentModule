@@ -579,6 +579,93 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_holographic.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_holographic.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_blazing_holographic.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_shiny_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_shiny_blazing_holographic.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "sleep",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_sleep_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_blazing_holographic.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "sleep",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_sleep_shiny_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1010_ironleaves/ironleaves_emissive_shiny_blazing_holographic.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

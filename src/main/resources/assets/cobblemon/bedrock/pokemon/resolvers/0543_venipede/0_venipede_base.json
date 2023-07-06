@@ -93,6 +93,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0543_venipede/venipede_shiny_holographic.png"
     }
   ]
 }

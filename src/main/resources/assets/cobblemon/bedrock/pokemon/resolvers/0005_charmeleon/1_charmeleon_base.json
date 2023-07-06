@@ -1165,6 +1165,181 @@
           "translucent": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_holographic.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_emissive_rainbow_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/rainbow_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_gilded_holographic.png",
+      "layers": [
+        {
+          "name": "gilded_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_emissive_gilded_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_gilded"
+      ],
+      "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_gilded_holographic.png",
+      "layers": [
+        {
+          "name": "rainbow_radiant_flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail1.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail2.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail3.png",
+              "cobblemon:textures/pokemon/0005_charmeleon/gilded_holographic_flame/tail4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0005_charmeleon/charmeleon_shiny_emissive_holographic.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
     }
   ]
 }

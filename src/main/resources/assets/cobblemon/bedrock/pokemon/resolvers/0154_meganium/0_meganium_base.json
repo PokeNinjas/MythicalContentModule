@@ -44,6 +44,12 @@
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0154_meganium/meganium_holographic.png"
     }
   ]
 }

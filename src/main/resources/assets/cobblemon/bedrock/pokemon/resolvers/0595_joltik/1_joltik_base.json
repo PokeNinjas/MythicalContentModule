@@ -163,6 +163,33 @@
           "emissive": true
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_holographic.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_eye_emissives.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_eye_emissives_shiny.png",
+          "emissive": true
+        }
+      ]
     }
   ]
 }

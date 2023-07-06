@@ -285,6 +285,49 @@
         "mythical_blazing"
       ],
       "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_shiny_blazing_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_shiny_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0059_arcanine/arcanine_shiny_blazing_holographic.png"
     }
   ]
 }

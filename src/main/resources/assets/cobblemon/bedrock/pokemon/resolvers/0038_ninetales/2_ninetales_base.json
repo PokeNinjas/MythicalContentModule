@@ -389,6 +389,66 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_holographic.png"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_shiny_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "alolan",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "alolan",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0038_ninetales/ninetales_alolan_shiny_easter_holographic.png"
     }
   ]
 }

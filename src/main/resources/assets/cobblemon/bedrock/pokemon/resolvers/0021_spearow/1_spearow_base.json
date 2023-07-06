@@ -85,6 +85,20 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0021_spearow/spearow_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0021_spearow/spearow_holographic.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0021_spearow/spearow_shiny_holographic.png"
     }
   ]
 }

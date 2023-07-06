@@ -91,6 +91,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny_holographic.png"
     }
   ]
 }

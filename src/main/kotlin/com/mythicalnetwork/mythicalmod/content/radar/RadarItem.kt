@@ -12,6 +12,7 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.mythicalnetwork.mythicalmod.MythicalContent
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry.RADAR_ITEM
 import com.mythicalnetwork.mythicalmod.registry.MythicalGroups
+import com.mythicalnetwork.mythicalmod.util.ClientUtils
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
@@ -53,7 +54,7 @@ class RadarItem(properties: Properties) : Item(properties.tab(MythicalGroups.MYT
         }
         val component: RadarItemComponent = RADAR_ITEM.get(player.getItemInHand(hand))
         component.setActive(!component.isActive())
-        if(component.isActive()){
+        if (component.isActive()) {
             player.playSound(SoundEvents.ALLAY_HURT, 1.0f, 0.75f)
         }
         return super.use(world, player, hand)
@@ -66,7 +67,26 @@ class RadarItem(properties: Properties) : Item(properties.tab(MythicalGroups.MYT
         context: TooltipFlag
     ) {
         val component: RadarItemComponent = RADAR_ITEM.get(stack)
-        if(component.isEnabled()){
+        tooltip.add(
+            Component.literal("Approximate biomes: ")
+                .withStyle { s -> s.withColor(ChatFormatting.GOLD) })
+        val biomes: MutableList<String> = MythicalContent.getBiomesForSpecies(component.getSpecies().toLowerCase().filter { c -> c.isLetter() }).toMutableList()
+        var counter = 0
+        val toRemove: MutableList<String> = ArrayList()
+        for (biome in biomes) {
+            if(biome in toRemove) continue
+            if (counter >= 3) {
+                break
+            }
+            counter++
+            tooltip.add(
+                Component.literal(" - ").append(Component.translatable(biome))
+                    .withStyle { s -> s.withColor(ChatFormatting.GRAY) })
+            toRemove.add(biome)
+        }
+        biomes.removeAll(toRemove)
+
+        if (component.isEnabled()) {
             tooltip.add(
                 Component.literal("Current chain length: ${component.getChainLength()}")
                     .withStyle { s -> s.withColor(ChatFormatting.GOLD) })
@@ -77,7 +97,7 @@ class RadarItem(properties: Properties) : Item(properties.tab(MythicalGroups.MYT
             tooltip.add(
                 Component.literal("Current chain length: ${component.getChainLength()}")
                     .withStyle { s -> s.withColor(ChatFormatting.GOLD) })
-            if(component.isActive()){
+            if (component.isActive()) {
                 tooltip.add(
                     Component.literal("Trail lost.").withStyle { s -> s.withColor(ChatFormatting.GOLD) })
             } else {

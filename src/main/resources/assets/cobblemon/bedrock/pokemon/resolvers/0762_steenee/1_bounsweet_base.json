@@ -182,6 +182,34 @@
         "mythical_easter"
       ],
       "texture": "cobblemon:textures/pokemon/0762_steenee/steenee_shiny_easter_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0762_steenee/steenee_holographic.png"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0762_steenee/steenee_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0762_steenee/steenee_easter_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny",
+        "mythical_easter"
+      ],
+      "texture": "cobblemon:textures/pokemon/0762_steenee/steenee_shiny_easter_holographic.png"
     }
   ]
 }

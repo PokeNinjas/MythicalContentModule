@@ -364,6 +364,62 @@
           "emissive": "true"
         }
       ]
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_emissive_holographic.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_emissive_holographic.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_emissive_blazing_holographic.png",
+          "emissive": "true"
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_blazing_holographic.png",
+      "layers": [
+        {
+          "name": "fire",
+          "texture": "cobblemon:textures/pokemon/0078_rapidash/rapidash_shiny_emissive_blazing_holographic.png",
+          "emissive": "true"
+        }
+      ]
     }
   ]
 }

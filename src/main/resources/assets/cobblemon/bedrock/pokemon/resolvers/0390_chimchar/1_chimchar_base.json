@@ -127,6 +127,27 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0390_chimchar/chimchar_shiny_holographic.png"
     }
   ]
 }

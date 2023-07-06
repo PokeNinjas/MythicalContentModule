@@ -169,6 +169,34 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_fireworks.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_shiny_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0044_gloom/gloom_valencian_shiny_holographic.png"
     }
   ]
 }
