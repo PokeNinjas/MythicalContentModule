@@ -1,5 +1,6 @@
 package com.mythicalnetwork.mythicalmod
 
+import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.entity.PokemonEntityGoalsEvent
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
@@ -412,6 +413,10 @@ class MythicalContent : ModInitializer {
                     player.fallDistance = 0f
                 }
             }
+            if(!player.level.isClientSide && player.level.gameTime % 20 == 0L){
+                Cobblemon.storage.getParty(player as ServerPlayer).filter { it.aspects.contains("radar_spawned") }.forEach { PokemonProperties.parse("radar_spawned=false").apply(it) }
+                Cobblemon.storage.getPC(player.uuid).filter { it.aspects.contains("radar_spawned") }.forEach { PokemonProperties.parse("radar_spawned=false").apply(it) }
+            }
         }
 
         EntityEvent.ADD.register { entity, level ->
@@ -527,13 +532,14 @@ class MythicalContent : ModInitializer {
                 }
             }
             if (event.pokemon.aspects.contains("radar_spawned")) {
-                PokemonProperties.parse("radar_spawned=false").apply(event.pokemon)
-                if (event.player.level !is ServerLevel) return@subscribe
-                val radar: ItemStack = event.player.getSpeciesRadar(event.pokemon.species)
-                if (radar == ItemStack.EMPTY) return@subscribe
-                val component: RadarItemComponent = RADAR_ITEM.get(radar)
-                if (!component.isActive()) return@subscribe
-                component.applyChainModifiers(event.player.level as ServerLevel, event.pokemon)
+                if (event.player.level is ServerLevel) {
+                    PokemonProperties.parse("radar_spawned=false").apply(event.pokemon)
+                    val radar: ItemStack = event.player.getSpeciesRadar(event.pokemon.species)
+                    if (radar == ItemStack.EMPTY) return@subscribe
+                    val component: RadarItemComponent = RADAR_ITEM.get(radar)
+                    if (!component.isActive()) return@subscribe
+                    component.applyChainModifiers(event.player.level as ServerLevel, event.pokemon)
+                }
             }
         }
 

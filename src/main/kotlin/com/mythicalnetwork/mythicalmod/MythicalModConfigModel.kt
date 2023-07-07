@@ -37,6 +37,10 @@ class MythicalModConfigModel {
     @JvmField
     var bucketsToCheck: List<String> = listOf("common", "uncommon", "rare", "ultra-rare")
     @JvmField
+    var blacklistedSpecies: List<String> = listOf("xerneas", "mewtwo")
+    @JvmField
+    var labelsToIgnore: List<String> = listOf("legendary", "mythical", "ultra-beast")
+    @JvmField
     var ivRangeValues: String = "0-49: 0, 50-99: 1, 100-149: 2, 150-200: 3"
     @JvmField
     var shinyChance: String = "0-49: 1/8192, 50-99: 1/4096, 100-149: 1/2048, 150-200: 1/1024"

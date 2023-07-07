@@ -82,10 +82,10 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
         }
         if (this.getString("species") == "random") {
             var species = PokemonSpecies.random()
-            var pokemon: Pokemon = species.create()
-            while (pokemon.hasLabels("legendary") || pokemon.hasLabels("mythical")) {
+            MythicalContent.sendDebugMessage("Random species: ${species.name}")
+            while (MythicalContent.CONFIG.blacklistedSpecies().contains(species.resourceIdentifier.path)) {
+                MythicalContent.sendDebugMessage("Random species: ${species.name} is blacklisted")
                 species = PokemonSpecies.random()
-                pokemon = species.create()
             }
             this.putString("species", species.name)
         }
@@ -329,4 +329,14 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
             }
         }
     }
+}
+
+private fun Pokemon.hasLabels(labels: List<String>): Boolean {
+    var hasLabels = false
+    for (label in labels) {
+        if (this.hasLabels(label)) {
+            hasLabels = true
+        }
+    }
+    return hasLabels
 }
