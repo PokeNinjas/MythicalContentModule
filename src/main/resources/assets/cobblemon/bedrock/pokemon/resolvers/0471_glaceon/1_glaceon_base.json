@@ -4,19 +4,6 @@
   "variations": [
     {
       "aspects": [
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing.png"
-    },
-    {
-      "aspects": [
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing.png"
-    },
-    {
-      "aspects": [
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_radiant.png"
@@ -27,6 +14,19 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_radiant.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing.png"
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing.png"
     },
     {
       "aspects": [
@@ -45,87 +45,31 @@
     },
     {
       "aspects": [
-        "mythical_matrix"
+        "mythical_rainbow"
       ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_matrix.png"
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
+        "mythical_rainbow",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_matrix.png"
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
-        "mythical_blazing"
+        "mythical_radiant",
+        "mythical_rainbow"
       ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_matrix.png"
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_radiant.png"
     },
     {
       "aspects": [
-        "mythical_matrix",
-        "mythical_blazing",
+        "mythical_radiant",
+        "mythical_rainbow",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_matrix.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_galaxy.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_glitch.png"
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_glitch.png"
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_radiant.png"
     },
     {
       "aspects": [
@@ -157,6 +101,150 @@
     },
     {
       "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_magma.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_glitch.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_galaxy.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_matrix.png"
+    },
+    {
+      "aspects": [
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_fireworks.png"
@@ -185,6 +273,21 @@
     },
     {
       "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_fireworks.png"
+    },
+    {
+      "aspects": [
         "radar_spawned"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_holographic.png"
@@ -210,6 +313,21 @@
         "shiny"
       ],
       "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_blazing_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_rainbow_holographic.png"
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0471_glaceon/glaceon_shiny_rainbow_holographic.png"
     }
   ]
 }

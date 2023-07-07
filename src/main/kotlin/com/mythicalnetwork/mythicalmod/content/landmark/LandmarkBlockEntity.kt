@@ -165,10 +165,14 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                             pokemon.getDimensions(Pose.STANDING).width.toInt() + 1
                         )
                         for (block in blocks!!) {
-                            if (level!!.random.nextFloat() < 0.5) {
+                            pokemon.setPos(block.x.toDouble(), block.y.toDouble(), block.z.toDouble())
+                            if (level.random.nextFloat() < 0.5) {
                                 continue
                             }
-                            if (!level!!.getBlockState(block).isAir) {
+                            if (!level.getBlockState(block).isAir && !canSwim) {
+                                continue
+                            }
+                            if(pokemon.isInWall){
                                 continue
                             }
                             if (block == worldPosition || block == worldPosition.north() || block == worldPosition.south() || block == worldPosition.east() || block == worldPosition.west() || block == worldPosition.north()
@@ -177,29 +181,39 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
                             ) {
                                 continue
                             }
-                            if (!canFly) {
-                                if (!level!!.getBlockState(block.above()).isAir || !level!!.getBlockState(block.north()).isAir || !level!!.getBlockState(
+                            if (!canFly && canWalk && !canSwim) {
+                                if (!level.getBlockState(block.above()).isAir || !level.getBlockState(block.north()).isAir || !level.getBlockState(
                                         block.south()
-                                    ).isAir || !level!!.getBlockState(block.east()).isAir || !level!!.getBlockState(
+                                    ).isAir || !level.getBlockState(block.east()).isAir || !level.getBlockState(
                                         block.west()
-                                    ).isAir || !level!!.getBlockState(
+                                    ).isAir || !level.getBlockState(
                                         block.north().east()
-                                    ).isAir || !level!!.getBlockState(
+                                    ).isAir || !level.getBlockState(
                                         block.north().west()
-                                    ).isAir || !level!!.getBlockState(
+                                    ).isAir || !level.getBlockState(
                                         block.south().east()
-                                    ).isAir || !level!!.getBlockState(block.south().west()).isAir
+                                    ).isAir || !level.getBlockState(block.south().west()).isAir
                                 ) {
                                     continue
                                 }
                             }
                             if (canWalk && !canSwim && !canFly) {
-                                if (!level!!.getBlockState(block.below()).isSolidRender(level!!, block)) {
+                                if (!level.getBlockState(block.below()).isSolidRender(level, block) && !level.getBlockState(block).`is`(Blocks.WATER)) {
                                     continue
                                 }
                             }
                             if (canSwim && !canWalk) {
-                                if (!level!!.getBlockState(block.below()).`is`(Blocks.WATER)) {
+                                if (!level.getBlockState(block.below()).`is`(Blocks.WATER) && !level.getBlockState(block).`is`(Blocks.WATER) && !level.getBlockState(block.above()).`is`(Blocks.WATER)
+                                    && !level.getBlockState(block.above(2)).`is`(Blocks.WATER)
+                                    && !level.getBlockState(block.above(3)).`is`(Blocks.WATER)) {
+                                    continue
+                                }
+                                if(!pokemon.isInWater){
+                                    continue
+                                }
+                            }
+                            if(!canFly) {
+                                if(!level.getBlockState(block.below()).isSolidRender(level, block.below()) && !(canSwim && level.getBlockState(block.below()).`is`(Blocks.WATER))){
                                     continue
                                 }
                             }
@@ -383,7 +397,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         val s = spawnData?.getRandomWithWeight(level!!) ?: return
         val speciesString: String = s.species
         val species: Species? = PokemonSpecies.getByName(speciesString)
-        if (species == null) MythicalContent.LOGGER.info("Species $speciesString does not exist")
+        if (species == null) MythicalContent.sendDebugMessage("Species $speciesString does not exist")
         else {
             val level: Int? = level?.random?.nextInt(s.levelRange.get().first, s.levelRange.get().last)
             val pokemon: Pokemon = level?.let { species.create(it) } ?: species.create()
@@ -531,7 +545,7 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
 
     fun spawn(pokemon: Pokemon, canSwim: Boolean, canFly: Boolean, canWalk: Boolean) {
         val pokemonEntity: PokemonEntity = PokemonEntity(level!!, pokemon)
-        val pos: BlockPos? = checkSpawnConditions(pokemonEntity, canSwim, canFly, canWalk)
+        val pos: BlockPos? = checkSpawnConditions(pokemonEntity, pokemon.form.behaviour.moving.swim.canBreatheUnderwater, pokemon.form.behaviour.moving.fly.canFly, !pokemon.form.behaviour.moving.walk.avoidsLand)
         val color: Color = Color(pokemonType.hue)
         if (pos != null) {
             pokemonEntity.setPos(pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble())
@@ -585,7 +599,6 @@ class LandmarkBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockS
         // check if the block below is solid, if the block is air, and if the blocks insied the pokemon's hitbox are air
         var blockPos: BlockPos? = null
         var blockList: MutableList<BlockPos> = mutableListOf()
-        println("Pokemon: ${pokemon.pokemon.species.name}, canSwim: $canSwim, canFly: $canFly, canWalk: $canWalk")
         for (j in 0..5) {
             for (i in 0..5) {
                 val blocksToCheck: MutableIterable<BlockPos>? = getRandomBlocks(worldPosition, range)

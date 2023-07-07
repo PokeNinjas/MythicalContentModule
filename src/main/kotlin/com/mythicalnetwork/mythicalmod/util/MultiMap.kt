@@ -29,6 +29,10 @@ class MultiMap<K, V> {
 
     fun get(key: K): MutableCollection<V>? = map[key]
 
+    fun interator(): MutableIterator<MutableMap.MutableEntry<K, MutableCollection<V>?>> {
+        return map.iterator()
+    }
+
     fun values(): MutableCollection<MutableCollection<V>?> {
         return map.values
     }

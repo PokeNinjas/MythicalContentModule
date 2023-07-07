@@ -4,35 +4,6 @@
   "variations": [
     {
       "aspects": [
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
         "mythical_radiant"
       ],
       "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_radiant.png",
@@ -56,6 +27,35 @@
           "name": "emissive",
           "emissive": true,
           "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing.png",
           "translucent": true
         }
       ]
@@ -93,180 +93,60 @@
     },
     {
       "aspects": [
-        "mythical_matrix"
+        "mythical_rainbow"
       ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_matrix.png",
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow.png",
       "layers": [
         {
           "name": "emissive",
           "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow.png",
           "translucent": true
         }
       ]
     },
     {
       "aspects": [
-        "mythical_matrix",
+        "mythical_rainbow",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_matrix.png",
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow.png",
       "layers": [
         {
           "name": "emissive",
           "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow.png",
           "translucent": true
         }
       ]
     },
     {
       "aspects": [
-        "mythical_matrix",
-        "mythical_blazing"
+        "mythical_radiant",
+        "mythical_rainbow"
       ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_matrix.png",
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_radiant.png",
       "layers": [
         {
           "name": "emissive",
           "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_matrix.png",
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_radiant.png",
           "translucent": true
         }
       ]
     },
     {
       "aspects": [
-        "mythical_matrix",
-        "mythical_blazing",
+        "mythical_radiant",
+        "mythical_rainbow",
         "shiny"
       ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_matrix.png",
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_radiant.png",
       "layers": [
         {
           "name": "emissive",
           "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_matrix.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_galaxy"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_galaxy.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_galaxy.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_galaxy.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_galaxy.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_galaxy",
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_galaxy.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_galaxy.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_glitch"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_glitch.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_glitch.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_blazing"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_glitch.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_glitch.png",
-          "translucent": true
-        }
-      ]
-    },
-    {
-      "aspects": [
-        "mythical_glitch",
-        "mythical_blazing",
-        "shiny"
-      ],
-      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_glitch.png",
-      "layers": [
-        {
-          "name": "emissive",
-          "emissive": true,
-          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_glitch.png",
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_radiant.png",
           "translucent": true
         }
       ]
@@ -333,6 +213,310 @@
     },
     {
       "aspects": [
+        "mythical_magma",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_magma",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_magma.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_magma.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_glitch.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_glitch.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_glitch.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_glitch",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_glitch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_glitch.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_galaxy.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_galaxy.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_galaxy.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_galaxy",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_galaxy.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_galaxy.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_blazing_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_blazing",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_blazing_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_matrix",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_matrix.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_matrix.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
         "mythical_fireworks"
       ],
       "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_fireworks.png",
@@ -393,6 +577,37 @@
     },
     {
       "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_fireworks.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mythical_fireworks",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_fireworks.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_fireworks.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
         "radar_spawned"
       ],
       "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_holographic.png",
@@ -447,6 +662,37 @@
           "name": "emissive",
           "emissive": true,
           "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_blazing_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_rainbow_holographic.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "radar_spawned",
+        "mythical_rainbow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_shiny_rainbow_holographic.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0196_espeon/espeon_emissive_shiny_rainbow_holographic.png",
           "translucent": true
         }
       ]
