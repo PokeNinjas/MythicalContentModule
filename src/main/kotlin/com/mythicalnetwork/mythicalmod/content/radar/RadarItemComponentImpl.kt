@@ -65,15 +65,15 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
         this.putBoolean("enabled", enabled)
     }
 
-    override fun getLastTickedTime(): Int {
-        if (!this.hasTag("lastTickedTime", CcaNbtType.INT)) {
+    override fun getLastTickedTime(): Long {
+        if (!this.hasTag("lastTickedTime", CcaNbtType.LONG)) {
             this.putInt("lastTickedTime", 0)
         }
-        return this.getInt("lastTickedTime")
+        return this.getLong("lastTickedTime")
     }
 
-    override fun setLastTickedTime(time: Int) {
-        this.putInt("lastTickedTime", time)
+    override fun setLastTickedTime(time: Long) {
+        this.putLong("lastTickedTime", time)
     }
 
     override fun getSpecies(): String {
@@ -232,12 +232,12 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
                 MythicalContent.sendDebugMessage("Disabled spawn anchor for player ${player.name.string}. ${canSpawn()}, ${isEnabled()}, $isSearchedSpeciesNear")
                 setEnabled(false)
             }
-            setLastTickedTime(player.level.gameTime.toInt())
+            setLastTickedTime(player.level.gameTime)
         }
         if ((player.level.gameTime % MythicalContent.CONFIG.spawnDelay()).toInt() == 0) {
             if ((isEnabled() || isSearchedSpeciesNear) && getSpecies() != "") {
                 player.displayClientMessage(
-                    Component.literal("Searching.." + ".".repeat((player.level.gameTime.toInt() - getLastTickedTime()) / 20)),
+                    Component.literal("Searching.." + ".".repeat(((player.level.gameTime - getLastTickedTime()) / 20).toInt())),
                     true
                 )
                 if (!isSearchedSpeciesNear) player.level.playSound(

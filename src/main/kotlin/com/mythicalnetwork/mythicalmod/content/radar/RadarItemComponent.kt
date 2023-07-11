@@ -11,8 +11,8 @@ interface RadarItemComponent : ComponentV3 {
     fun setActive(active: Boolean)
     fun isEnabled(): Boolean
     fun setEnabled(enabled: Boolean)
-    fun getLastTickedTime(): Int
-    fun setLastTickedTime(time: Int)
+    fun getLastTickedTime(): Long
+    fun setLastTickedTime(time: Long)
     fun getSpecies(): String
     fun setSpecies(species: String)
     fun getAspects(): List<AspectData>

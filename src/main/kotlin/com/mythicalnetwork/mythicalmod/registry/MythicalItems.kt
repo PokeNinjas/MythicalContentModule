@@ -8,6 +8,7 @@ import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItem
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlockEntity
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkItem
 import com.mythicalnetwork.mythicalmod.content.misc.rocketboots.RocketBootsItem
+import com.mythicalnetwork.mythicalmod.content.misc.tms.TMItem
 import com.mythicalnetwork.mythicalmod.content.radar.RadarItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
@@ -119,8 +120,17 @@ object MythicalItems {
     val GIFT_BOX_18: Item =
         Item(Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_ITEMS), "gift_box_18")
 
+    val TM: Item =
+        TMItem(QuiltItemSettings().stacksTo(1).tab(MythicalGroups.MYTHICAL_ITEMS) as QuiltItemSettings, "tm")
+
     private fun Item(tab: Item.Properties?, s: String): Item {
         val item = tab?.let { Item(it) }
+        ITEMS[ResourceLocation("mythicalmod", s)] = item!!
+        return item
+    }
+
+    private fun TMItem(tab: Item.Properties?, s: String): Item {
+        val item = tab?.let { TMItem() }
         ITEMS[ResourceLocation("mythicalmod", s)] = item!!
         return item
     }
