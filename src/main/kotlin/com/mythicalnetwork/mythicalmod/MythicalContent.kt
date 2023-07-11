@@ -1,8 +1,11 @@
 package com.mythicalnetwork.mythicalmod
 
+import ca.landonjw.gooeylibs2.api.UIManager
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.entity.PokemonEntityGoalsEvent
+import com.cobblemon.mod.common.api.moves.MoveSet
+import com.cobblemon.mod.common.api.moves.MoveTemplate
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.cobblemon.mod.common.api.spawning.CobblemonSpawnPools
@@ -10,6 +13,7 @@ import com.cobblemon.mod.common.api.spawning.detail.PokemonSpawnDetail
 import com.cobblemon.mod.common.api.text.red
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.registry.BiomeIdentifierCondition
 import com.cobblemon.mod.common.registry.BiomeTagCondition
 import com.cobblemon.mod.common.util.sendParticlesServer
@@ -19,6 +23,8 @@ import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticPlayerHandle
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRecipeJsonListener
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkSpawnDataJsonListener
 import com.mythicalnetwork.mythicalmod.content.misc.rocketboots.RocketBootsItem
+import com.mythicalnetwork.mythicalmod.content.misc.tms.TMItem
+import com.mythicalnetwork.mythicalmod.content.misc.tms.TMScreen
 import com.mythicalnetwork.mythicalmod.content.radar.RadarItem
 import com.mythicalnetwork.mythicalmod.content.radar.RadarItemComponent
 import com.mythicalnetwork.mythicalmod.registry.*
@@ -48,7 +54,9 @@ import net.minecraft.nbt.ListTag
 import net.minecraft.nbt.StringTag
 import net.minecraft.nbt.Tag
 import net.minecraft.network.FriendlyByteBuf
+import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.Component
+import net.minecraft.network.chat.HoverEvent
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.level.ServerLevel
@@ -293,6 +301,26 @@ class MythicalContent : ModInitializer {
             }
         }
 
+        InteractionEvent.INTERACT_ENTITY.register { player, entity, hand ->
+            if(player.level.isClientSide) return@register EventResult.pass()
+            if(entity is PokemonEntity && entity.pokemon.getOwnerPlayer() == player) {
+                val pokemon: Pokemon = entity.pokemon
+                val tmMove: String = if(player.getItemInHand(hand).item is TMItem) {
+                    if(player.getItemInHand(hand).tag != null) {
+                        player.getItemInHand(hand).tag!!.getString("move")
+                    } else {
+                        return@register EventResult.pass()
+                    }
+                } else {
+                    return@register EventResult.pass()
+                }
+                val move: MoveTemplate = pokemon.form.moves.tmMoves.first { it.name == tmMove } ?: return@register EventResult.pass()
+                if(pokemon.allAccessibleMoves.contains(move)) return@register EventResult.pass()
+                UIManager.openUIForcefully(player as ServerPlayer, TMScreen(pokemon, player.getItemInHand(hand), pokemon.moveSet.getMoves(), move))
+            }
+            return@register EventResult.pass()
+        }
+
         ServerTickEvents.END.register { server ->
             if (CRAMOMATIC_HANDLER == null) {
                 CRAMOMATIC_HANDLER = CramomaticPlayerHandler(server.getLevel(Level.OVERWORLD)!!)
@@ -339,6 +367,11 @@ class MythicalContent : ModInitializer {
             }.forEach { pokemon ->
                 pokemon.discard()
             }
+            handler.player.inventory.items.filter { it -> it.`is`(MythicalItems.RADAR) }.forEach { itemStack ->
+                val component: RadarItemComponent = RADAR_ITEM.get(itemStack)
+                component.setActive(false)
+                sendDebugMessage("Chain length for player ${handler.player.name} for species ${component.getSpecies()}: "+component.getChainLength().toString())
+            }
         }
         ServerPlayConnectionEvents.JOIN.register { handler, sender, server ->
             CRAMOMATIC_HANDLER?.resumePlayer(handler.player.uuid)
@@ -355,6 +388,11 @@ class MythicalContent : ModInitializer {
             val buf: FriendlyByteBuf = PacketByteBufs.create()
             buf.writeNbt(tag)
             sender.sendPacket(MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
+            handler.player.inventory.items.filter { it -> it.`is`(MythicalItems.RADAR) }.forEach { itemStack ->
+                val component: RadarItemComponent = RADAR_ITEM.get(itemStack)
+                component.setActive(false)
+                sendDebugMessage("Chain length for player ${handler.player.name} for species ${component.getSpecies()}: "+component.getChainLength().toString())
+            }
         }
         ReloadListenerRegistry.register(PackType.SERVER_DATA, CramomaticRecipeJsonListener.INSTANCE)
         ReloadListenerRegistry.register(PackType.SERVER_DATA, LandmarkSpawnDataJsonListener.INSTANCE)
@@ -368,23 +406,6 @@ class MythicalContent : ModInitializer {
                     }
                 }
             }
-        }
-
-        InteractionEvent.INTERACT_ENTITY.register { player, entity, hand ->
-            if(entity is PokemonEntity) {
-                val tag: CompoundTag = CompoundTag()
-                println(entity.saveWithoutId(tag).toString())
-                if (entity.pokemon.aspects.contains("radar_spawned")) {
-                    if (player != null) {
-                        if (!entity.tags.contains(player.uuid.toString())) {
-                            return@register EventResult.interruptFalse()
-                        }
-                    } else {
-                        return@register EventResult.interruptFalse()
-                    }
-                }
-            }
-            EventResult.pass()
         }
         TickEvent.PLAYER_POST.register { player ->
             if (player.tags.contains("rocketboots") && !player.level.isClientSide && player.getItemBySlot(EquipmentSlot.FEET).item is RocketBootsItem && kingdomsCheck(

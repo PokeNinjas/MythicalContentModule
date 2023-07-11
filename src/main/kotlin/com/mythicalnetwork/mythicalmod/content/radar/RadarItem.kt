@@ -9,6 +9,10 @@ import com.cobblemon.mod.common.api.spawning.spawner.PlayerSpawner
 import com.cobblemon.mod.common.api.spawning.spawner.SpawningArea
 import com.cobblemon.mod.common.api.text.red
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.google.gson.JsonElement
+import com.mojang.datafixers.util.Pair
+import com.mojang.serialization.DataResult
+import com.mojang.serialization.JsonOps
 import com.mythicalnetwork.mythicalmod.MythicalContent
 import com.mythicalnetwork.mythicalmod.registry.MythicalComponentRegistry.RADAR_ITEM
 import com.mythicalnetwork.mythicalmod.registry.MythicalGroups

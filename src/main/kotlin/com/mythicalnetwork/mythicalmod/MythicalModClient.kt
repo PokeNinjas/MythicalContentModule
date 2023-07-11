@@ -1,5 +1,7 @@
 package com.mythicalnetwork.mythicalmod
 
+import com.cobblemon.mod.common.api.moves.MoveTemplate
+import com.cobblemon.mod.common.api.moves.Moves
 import com.mythicalnetwork.mythicalmod.content.base.AbstractPacket
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticItemRenderer
 import com.mythicalnetwork.mythicalmod.content.cramomatic.CramomaticRenderer
@@ -10,6 +12,7 @@ import com.mythicalnetwork.mythicalmod.registry.MythicalBlockEntities
 import com.mythicalnetwork.mythicalmod.registry.MythicalItems
 import com.mythicalnetwork.mythicalmod.registry.MythicalPackets
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers
 import net.minecraft.client.renderer.item.ItemProperties
 import net.minecraft.world.entity.LivingEntity
@@ -74,5 +77,23 @@ object MythicalModClient : ClientModInitializer {
         GeoItemRenderer.registerItemRenderer(MythicalItems.STEEL_LANDMARK.asItem(), LandmarkItemRenderer())
         GeoItemRenderer.registerItemRenderer(MythicalItems.FAIRY_LANDMARK.asItem(), LandmarkItemRenderer())
 //        GeoArmorRenderer.registerArmorRenderer<LivingEntity>(RocketBootsRenderer(), MythicalItems.ROCKET_BOOTS)
+
+        ColorProviderRegistry.ITEM.register(
+            { itemStack, i ->
+                if(itemStack.`is`(MythicalItems.TM)){
+                    if(itemStack.hasTag()){
+                        val template: MoveTemplate? = Moves.getByName(itemStack.tag!!.getString("move"))
+                        if(template == null){
+                            return@register -1
+                        } else {
+                            return@register template.elementalType.hue
+                        }
+                    }
+                    return@register -1
+                }
+                return@register -1
+            },
+            MythicalItems.TM
+        )
     }
 }
