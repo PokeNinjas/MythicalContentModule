@@ -14,7 +14,6 @@ import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockItem
 import com.mythicalnetwork.mythicalmod.systems.multiblock.MultiblockStructure
 import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
@@ -2555,6 +2554,864 @@ var FLYING_LANDMARK: BlockItem = LandmarkItem(
         Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
         "progress_bar"
     )
+
+    //Furniture
+    var ACACIA_BENCH: BlockItem = BlockItem(
+        MythicalBlocks.ACACIA_BENCH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "acacia_bench")
+    var ANCHOR: BlockItem = BlockItem(
+        MythicalBlocks.ANCHOR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "anchor")
+    var ARROW_SIGN: BlockItem = BlockItem(
+        MythicalBlocks.ARROW_SIGN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "arrow_sign")
+    var ATM: BlockItem = BlockItem(
+        MythicalBlocks.ATM,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "atm")
+    var BALLOON: BlockItem = BlockItem(
+        MythicalBlocks.BALLOON,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "balloon")
+    var BALL_LAMP_1: BlockItem = BlockItem(
+        MythicalBlocks.BALL_LAMP_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "ball_lamp_1")
+    var BALL_LAMP_2: BlockItem = BlockItem(
+        MythicalBlocks.BALL_LAMP_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "ball_lamp_2")
+    var BAMBOO_BENCH: BlockItem = BlockItem(
+        MythicalBlocks.BAMBOO_BENCH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bamboo_bench")
+    var BAMBOO_DECORATION: BlockItem = BlockItem(
+        MythicalBlocks.BAMBOO_DECORATION,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bamboo_decoration")
+    var BANANA_1: BlockItem = BlockItem(
+        MythicalBlocks.BANANA_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "banana_1")
+    var BANANA_2: BlockItem = BlockItem(
+        MythicalBlocks.BANANA_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "banana_2")
+    var BANANA_3: BlockItem = BlockItem(
+        MythicalBlocks.BANANA_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "banana_3")
+    var BANNER: BlockItem = BlockItem(
+        MythicalBlocks.BANNER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "banner")
+    var BARRELS: BlockItem = BlockItem(
+        MythicalBlocks.BARRELS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "barrels")
+    var BARRIER: BlockItem = BlockItem(
+        MythicalBlocks.BARRIER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "barrier")
+    var BENCH: BlockItem = BlockItem(
+        MythicalBlocks.BENCH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bench")
+    var BENCH_2: BlockItem = BlockItem(
+        MythicalBlocks.BENCH_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bench_2")
+    var BENCH_3: BlockItem = BlockItem(
+        MythicalBlocks.BENCH_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bench_3")
+    var BIGGER_LOG: BlockItem = BlockItem(
+        MythicalBlocks.BIGGER_LOG,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bigger_log")
+    var BIG_BANNER: BlockItem = BlockItem(
+        MythicalBlocks.BIG_BANNER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "big_banner")
+    var BIG_LAMP: BlockItem = BlockItem(
+        MythicalBlocks.BIG_LAMP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "big_lamp")
+    var BIG_PLANT_POT: BlockItem = BlockItem(
+        MythicalBlocks.BIG_PLANT_POT,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "big_plant_pot")
+    var BLASTOISE_FOUNTAIN: BlockItem = BlockItem(
+        MythicalBlocks.BLASTOISE_FOUNTAIN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "blastoise_fountain")
+    var BONSAI_TREE: BlockItem = BlockItem(
+        MythicalBlocks.BONSAI_TREE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bonsai_tree")
+    var BOOK_1_1: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_1_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_1_1")
+    var BOOK_1_2: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_1_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_1_2")
+    var BOOK_1_3: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_1_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_1_3")
+    var BOOK_2_1: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_2_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_2_1")
+    var BOOK_2_2: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_2_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_2_2")
+    var BOOK_2_3: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_2_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_2_3")
+    var BOOK_3_1: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_3_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_3_1")
+    var BOOK_3_2: BlockItem = BlockItem(
+        MythicalBlocks.BOOK_3_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "book_3_2")
+    var BOUNTY_SIGN: BlockItem = BlockItem(
+        MythicalBlocks.BOUNTY_SIGN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "bounty_sign")
+    var BOXES_PILE: BlockItem = BlockItem(
+        MythicalBlocks.BOXES_PILE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "boxes_pile")
+    var BOX_KART: BlockItem = BlockItem(
+        MythicalBlocks.BOX_KART,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "box_kart")
+    var BROKEN_PILLAR: BlockItem = BlockItem(
+        MythicalBlocks.BROKEN_PILLAR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "broken_pillar")
+    var CHAIR_JUNGLE: BlockItem = BlockItem(
+        MythicalBlocks.CHAIR_JUNGLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "chair_jungle")
+    var CHAIR_OAK: BlockItem = BlockItem(
+        MythicalBlocks.CHAIR_OAK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "chair_oak")
+    var CHAIR_SPRUCE: BlockItem = BlockItem(
+        MythicalBlocks.CHAIR_SPRUCE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "chair_spruce")
+    var CHRISTMAS_TABLE: BlockItem = BlockItem(
+        MythicalBlocks.CHRISTMAS_TABLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "christmas_table")
+    var CHRISTMAS_TREE: BlockItem = BlockItem(
+        MythicalBlocks.CHRISTMAS_TREE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "christmas_tree")
+    var CHRISTMAS_WREATH: BlockItem = BlockItem(
+        MythicalBlocks.CHRISTMAS_WREATH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "christmas_wreath")
+    var CLOCK: BlockItem = BlockItem(
+        MythicalBlocks.CLOCK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "clock")
+    var COMMODE: BlockItem = BlockItem(
+        MythicalBlocks.COMMODE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "commode")
+    var CONSTRUCTION_SIGN: BlockItem = BlockItem(
+        MythicalBlocks.CONSTRUCTION_SIGN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "construction_sign")
+    var COOKIES: BlockItem = BlockItem(
+        MythicalBlocks.COOKIES,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "cookies")
+    var CORN_1: BlockItem = BlockItem(
+        MythicalBlocks.CORN_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "corn_1")
+    var CORN_2: BlockItem = BlockItem(
+        MythicalBlocks.CORN_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "corn_2")
+    var CORN_3: BlockItem = BlockItem(
+        MythicalBlocks.CORN_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "corn_3")
+    var COUCH: BlockItem = BlockItem(
+        MythicalBlocks.COUCH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "couch")
+    var CRATE: BlockItem = BlockItem(
+        MythicalBlocks.CRATE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "crate")
+    var CRATE_2: BlockItem = BlockItem(
+        MythicalBlocks.CRATE_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "crate_2")
+    var CRATE_LARGE: BlockItem = BlockItem(
+        MythicalBlocks.CRATE_LARGE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "crate_large")
+    var DITTO_BALLOON: BlockItem = BlockItem(
+        MythicalBlocks.DITTO_BALLOON,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "ditto_balloon")
+    var DOG_HOUSE: BlockItem = BlockItem(
+        MythicalBlocks.DOG_HOUSE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "dog_house")
+    var DRINKING_FOUNTAIN: BlockItem = BlockItem(
+        MythicalBlocks.DRINKING_FOUNTAIN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "drinking_fountain")
+    var DRINK_MACHINE: BlockItem = BlockItem(
+        MythicalBlocks.DRINK_MACHINE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "drink_machine")
+    var FIRE_BARREL: BlockItem = BlockItem(
+        MythicalBlocks.FIRE_BARREL,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "fire_barrel")
+    var FIRE_HYDRANT: BlockItem = BlockItem(
+        MythicalBlocks.FIRE_HYDRANT,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "fire_hydrant")
+    var FIRE_HYDRANT_2: BlockItem = BlockItem(
+        MythicalBlocks.FIRE_HYDRANT_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "fire_hydrant_2")
+    var FISHING_STAND: BlockItem = BlockItem(
+        MythicalBlocks.FISHING_STAND,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "fishing_stand")
+    var FISH_ICE: BlockItem = BlockItem(
+        MythicalBlocks.FISH_ICE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "fish_ice")
+    var FLAG_POST: BlockItem = BlockItem(
+        MythicalBlocks.FLAG_POST,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flag_post")
+    var FLOWER_BED_1: BlockItem = BlockItem(
+        MythicalBlocks.FLOWER_BED_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flower_bed_1")
+    var FLOWER_BED_2: BlockItem = BlockItem(
+        MythicalBlocks.FLOWER_BED_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flower_bed_2")
+    var FLOWER_BED_3: BlockItem = BlockItem(
+        MythicalBlocks.FLOWER_BED_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flower_bed_3")
+    var FLOWER_BED_4: BlockItem = BlockItem(
+        MythicalBlocks.FLOWER_BED_4,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flower_bed_4")
+    var FLOWER_BED_5: BlockItem = BlockItem(
+        MythicalBlocks.FLOWER_BED_5,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flower_bed_5")
+    var FLOWER_CART: BlockItem = BlockItem(
+        MythicalBlocks.FLOWER_CART,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "flower_cart")
+    var FOODS: BlockItem = BlockItem(
+        MythicalBlocks.FOODS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "foods")
+    var FOOD_CART: BlockItem = BlockItem(
+        MythicalBlocks.FOOD_CART,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "food_cart")
+    var FOOD_STAND: BlockItem = BlockItem(
+        MythicalBlocks.FOOD_STAND,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "food_stand")
+    var FOUNTAIN_WATER: BlockItem = BlockItem(
+        MythicalBlocks.FOUNTAIN_WATER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "fountain_water")
+    var FREEZER: BlockItem = BlockItem(
+        MythicalBlocks.FREEZER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "freezer")
+    var GEM_BAG: BlockItem = BlockItem(
+        MythicalBlocks.GEM_BAG,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "gem_bag")
+    var GEM_CHEST: BlockItem = BlockItem(
+        MythicalBlocks.GEM_CHEST,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "gem_chest")
+    var GENGAR_BALLOON: BlockItem = BlockItem(
+        MythicalBlocks.GENGAR_BALLOON,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "gengar_balloon")
+    var GLASS_GARDEN: BlockItem = BlockItem(
+        MythicalBlocks.GLASS_GARDEN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "glass_garden")
+    var GYARADOS_STATUE: BlockItem = BlockItem(
+        MythicalBlocks.GYARADOS_STATUE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "gyarados_statue")
+    var HANGING_BUSH: BlockItem = BlockItem(
+        MythicalBlocks.HANGING_BUSH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "hanging_bush")
+    var HANGING_FLOWER: BlockItem = BlockItem(
+        MythicalBlocks.HANGING_FLOWER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "hanging_flower")
+    var HANGING_LAMP: BlockItem = BlockItem(
+        MythicalBlocks.HANGING_LAMP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "hanging_lamp")
+    var HANGING_PLANT: BlockItem = BlockItem(
+        MythicalBlocks.HANGING_PLANT,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "hanging_plant")
+    var HAY_BALES: BlockItem = BlockItem(
+        MythicalBlocks.HAY_BALES,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "hay_bales")
+    var HAY_CART: BlockItem = BlockItem(
+        MythicalBlocks.HAY_CART,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "hay_cart")
+    var HORSEA: BlockItem = BlockItem(
+        MythicalBlocks.HORSEA,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "horsea")
+    var JAR_1: BlockItem = BlockItem(
+        MythicalBlocks.JAR_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "jar_1")
+    var JAR_2: BlockItem = BlockItem(
+        MythicalBlocks.JAR_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "jar_2")
+    var JAR_3: BlockItem = BlockItem(
+        MythicalBlocks.JAR_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "jar_3")
+    var JAR_4: BlockItem = BlockItem(
+        MythicalBlocks.JAR_4,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "jar_4")
+    var KINGDOMS_BANNER: BlockItem = BlockItem(
+        MythicalBlocks.KINGDOMS_BANNER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "kingdoms_banner")
+    var LADDER: BlockItem = BlockItem(
+        MythicalBlocks.LADDER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "ladder")
+    var LAMP: BlockItem = BlockItem(
+        MythicalBlocks.LAMP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "lamp")
+    var LAMPS: BlockItem = BlockItem(
+        MythicalBlocks.LAMPS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "lamps")
+    var LAPRAS_POOL: BlockItem = BlockItem(
+        MythicalBlocks.LAPRAS_POOL,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "lapras_pool")
+    var LAPTOP: BlockItem = BlockItem(
+        MythicalBlocks.LAPTOP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "laptop")
+    var LEAF_PILE_1: BlockItem = BlockItem(
+        MythicalBlocks.LEAF_PILE_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "leaf_pile_1")
+    var LEAF_PILE_2: BlockItem = BlockItem(
+        MythicalBlocks.LEAF_PILE_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "leaf_pile_2")
+    var LEAF_PILE_3: BlockItem = BlockItem(
+        MythicalBlocks.LEAF_PILE_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "leaf_pile_3")
+    var LEAF_PILE_4: BlockItem = BlockItem(
+        MythicalBlocks.LEAF_PILE_4,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "leaf_pile_4")
+    var LION_STATUE: BlockItem = BlockItem(
+        MythicalBlocks.LION_STATUE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "lion_statue")
+    var LOG: BlockItem = BlockItem(
+        MythicalBlocks.LOG,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "log")
+    var LOGS_1: BlockItem = BlockItem(
+        MythicalBlocks.LOGS_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "logs_1")
+    var LOG_2: BlockItem = BlockItem(
+        MythicalBlocks.LOG_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "log_2")
+    var LOW_CHAIR: BlockItem = BlockItem(
+        MythicalBlocks.LOW_CHAIR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "low_chair")
+    var LOW_TABLE: BlockItem = BlockItem(
+        MythicalBlocks.LOW_TABLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "low_table")
+    var LOW_TABLE_2: BlockItem = BlockItem(
+        MythicalBlocks.LOW_TABLE_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "low_table_2")
+    var LUXURY_SPACER: BlockItem = BlockItem(
+        MythicalBlocks.LUXURY_SPACER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "luxury_spacer")
+    var MAGAZINE_STAND: BlockItem = BlockItem(
+        MythicalBlocks.MAGAZINE_STAND,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "magazine_stand")
+    var MAILBOX: BlockItem = BlockItem(
+        MythicalBlocks.MAILBOX,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "mailbox")
+    var MANNEQUIN: BlockItem = BlockItem(
+        MythicalBlocks.MANNEQUIN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "mannequin")
+    var MEDIUM_BANNER: BlockItem = BlockItem(
+        MythicalBlocks.MEDIUM_BANNER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "medium_banner")
+    var MEOWTH_BALLOON: BlockItem = BlockItem(
+        MythicalBlocks.MEOWTH_BALLOON,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "meowth_balloon")
+    var METAL_BEAMS: BlockItem = BlockItem(
+        MythicalBlocks.METAL_BEAMS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "metal_beams")
+    var METAL_LAMP_1: BlockItem = BlockItem(
+        MythicalBlocks.METAL_LAMP_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "metal_lamp_1")
+    var METAL_LAMP_2: BlockItem = BlockItem(
+        MythicalBlocks.METAL_LAMP_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "metal_lamp_2")
+    var METAL_LAMP_3: BlockItem = BlockItem(
+        MythicalBlocks.METAL_LAMP_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "metal_lamp_3")
+    var MINECART: BlockItem = BlockItem(
+        MythicalBlocks.MINECART,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "minecart")
+    var MUSEUM_DISPLAY_CASE_1: BlockItem = BlockItem(
+        MythicalBlocks.MUSEUM_DISPLAY_CASE_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "museum_display_case_1")
+    var MUSEUM_DISPLAY_CASE_2: BlockItem = BlockItem(
+        MythicalBlocks.MUSEUM_DISPLAY_CASE_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "museum_display_case_2")
+    var ORANGE_SIGN_1: BlockItem = BlockItem(
+        MythicalBlocks.ORANGE_SIGN_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "orange_sign_1")
+    var ORANGE_SIGN_2: BlockItem = BlockItem(
+        MythicalBlocks.ORANGE_SIGN_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "orange_sign_2")
+    var PICNIC_TABLE: BlockItem = BlockItem(
+        MythicalBlocks.PICNIC_TABLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "picnic_table")
+    var PIKACHU_SURFBOARD: BlockItem = BlockItem(
+        MythicalBlocks.PIKACHU_SURFBOARD,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pikachu_surfboard")
+    var PILLAR: BlockItem = BlockItem(
+        MythicalBlocks.PILLAR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pillar")
+    var PILLAR_GREEN: BlockItem = BlockItem(
+        MythicalBlocks.PILLAR_GREEN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pillar_green")
+    var PILLAR_TOP: BlockItem = BlockItem(
+        MythicalBlocks.PILLAR_TOP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pillar_top")
+    var PLANKS_1: BlockItem = BlockItem(
+        MythicalBlocks.PLANKS_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "planks_1")
+    var PLANKS_2: BlockItem = BlockItem(
+        MythicalBlocks.PLANKS_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "planks_2")
+    var PLANKS_3: BlockItem = BlockItem(
+        MythicalBlocks.PLANKS_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "planks_3")
+    var PLUSHIE_MACHINE: BlockItem = BlockItem(
+        MythicalBlocks.PLUSHIE_MACHINE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "plushie_machine")
+    var POKEA_FURNITURE_SIGN: BlockItem = BlockItem(
+        MythicalBlocks.POKEA_FURNITURE_SIGN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokea_furniture_sign")
+    var POKEBALL_BLOCK: BlockItem = BlockItem(
+        MythicalBlocks.POKEBALL_BLOCK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokeball_block")
+    var POKEBALL_BLOCK_STONE: BlockItem = BlockItem(
+        MythicalBlocks.POKEBALL_BLOCK_STONE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokeball_block_stone")
+    var POKEBALL_MANHOLE: BlockItem = BlockItem(
+        MythicalBlocks.POKEBALL_MANHOLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokeball_manhole")
+    var POKEBALL_STATUE_1: BlockItem = BlockItem(
+        MythicalBlocks.POKEBALL_STATUE_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokeball_statue_1")
+    var POKEBALL_STATUE_2: BlockItem = BlockItem(
+        MythicalBlocks.POKEBALL_STATUE_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokeball_statue_2")
+    var POKEBALL_STATUE_3: BlockItem = BlockItem(
+        MythicalBlocks.POKEBALL_STATUE_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokeball_statue_3")
+    var POKEMAXX_STORE: BlockItem = BlockItem(
+        MythicalBlocks.POKEMAXX_STORE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pokemaxx_store")
+    var POSE_STATUE: BlockItem = BlockItem(
+        MythicalBlocks.POSE_STATUE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "pose_statue")
+    var POTTED_BUSH: BlockItem = BlockItem(
+        MythicalBlocks.POTTED_BUSH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "potted_bush")
+    var POTTED_PLANT: BlockItem = BlockItem(
+        MythicalBlocks.POTTED_PLANT,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "potted_plant")
+    var PUFFER_STATUE: BlockItem = BlockItem(
+        MythicalBlocks.PUFFER_STATUE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "puffer_statue")
+    var REED: BlockItem = BlockItem(
+        MythicalBlocks.REED,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "reed")
+    var ROCK_1: BlockItem = BlockItem(
+        MythicalBlocks.ROCK_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "rock_1")
+    var ROCK_2: BlockItem = BlockItem(
+        MythicalBlocks.ROCK_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "rock_2")
+    var ROCK_BIG: BlockItem = BlockItem(
+        MythicalBlocks.ROCK_BIG,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "rock_big")
+    var ROCK_SMALL: BlockItem = BlockItem(
+        MythicalBlocks.ROCK_SMALL,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "rock_small")
+    var ROOM_DIVIDER: BlockItem = BlockItem(
+        MythicalBlocks.ROOM_DIVIDER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "room_divider")
+    var SALAD_1: BlockItem = BlockItem(
+        MythicalBlocks.SALAD_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "salad_1")
+    var SALAD_2: BlockItem = BlockItem(
+        MythicalBlocks.SALAD_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "salad_2")
+    var SALAD_3: BlockItem = BlockItem(
+        MythicalBlocks.SALAD_3,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "salad_3")
+    var SCAFFOLDING: BlockItem = BlockItem(
+        MythicalBlocks.SCAFFOLDING,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "scaffolding")
+    var SEA_SHELL_1: BlockItem = BlockItem(
+        MythicalBlocks.SEA_SHELL_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sea_shell_1")
+    var SEA_SHELL_2: BlockItem = BlockItem(
+        MythicalBlocks.SEA_SHELL_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sea_shell_2")
+    var SEA_SHELL_2_CYAN: BlockItem = BlockItem(
+        MythicalBlocks.SEA_SHELL_2_CYAN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sea_shell_2_cyan")
+    var SEA_SHELL_2_MAGENTA: BlockItem = BlockItem(
+        MythicalBlocks.SEA_SHELL_2_MAGENTA,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sea_shell_2_magenta")
+    var SHRINE_LAMP: BlockItem = BlockItem(
+        MythicalBlocks.SHRINE_LAMP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "shrine_lamp")
+    var SMALL_BANNER_1: BlockItem = BlockItem(
+        MythicalBlocks.SMALL_BANNER_1,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "small_banner_1")
+    var SMALL_BANNER_2: BlockItem = BlockItem(
+        MythicalBlocks.SMALL_BANNER_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "small_banner_2")
+    var SMALL_LILYPADS: BlockItem = BlockItem(
+        MythicalBlocks.SMALL_LILYPADS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "small_lilypads")
+    var SNOWMAN: BlockItem = BlockItem(
+        MythicalBlocks.SNOWMAN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "snowman")
+    var SOFA_BLACK: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_BLACK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_black")
+    var SOFA_CHAIR_BLACK: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_CHAIR_BLACK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_chair_black")
+    var SOFA_CHAIR_GREEN: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_CHAIR_GREEN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_chair_green")
+    var SOFA_CHAIR_GREY: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_CHAIR_GREY,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_chair_grey")
+    var SOFA_CHAIR_RED: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_CHAIR_RED,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_chair_red")
+    var SOFA_CHAIR_WHITE: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_CHAIR_WHITE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_chair_white")
+    var SOFA_GREEN: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_GREEN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_green")
+    var SOFA_GREY: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_GREY,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_grey")
+    var SOFA_RED: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_RED,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_red")
+    var SOFA_WHITE: BlockItem = BlockItem(
+        MythicalBlocks.SOFA_WHITE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sofa_white")
+    var SQUIRTLE_FOUNTAIN: BlockItem = BlockItem(
+        MythicalBlocks.SQUIRTLE_FOUNTAIN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "squirtle_fountain")
+    var STANDING_FLOWER: BlockItem = BlockItem(
+        MythicalBlocks.STANDING_FLOWER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "standing_flower")
+    var STANDING_LAMP: BlockItem = BlockItem(
+        MythicalBlocks.STANDING_LAMP,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "standing_lamp")
+    var STONE_SHRINE: BlockItem = BlockItem(
+        MythicalBlocks.STONE_SHRINE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "stone_shrine")
+    var SUGAR_QUARRY: BlockItem = BlockItem(
+        MythicalBlocks.SUGAR_QUARRY,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sugar_quarry")
+    var SUMMER_CHAIR: BlockItem = BlockItem(
+        MythicalBlocks.SUMMER_CHAIR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "summer_chair")
+    var SUNLOUNGER: BlockItem = BlockItem(
+        MythicalBlocks.SUNLOUNGER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "sunlounger")
+    var SWING: BlockItem = BlockItem(
+        MythicalBlocks.SWING,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "swing")
+    var TABLE_JUNGLE: BlockItem = BlockItem(
+        MythicalBlocks.TABLE_JUNGLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "table_jungle")
+    var TABLE_OAK: BlockItem = BlockItem(
+        MythicalBlocks.TABLE_OAK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "table_oak")
+    var TABLE_SPRUCE: BlockItem = BlockItem(
+        MythicalBlocks.TABLE_SPRUCE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "table_spruce")
+    var TABLE_WITH_UMBRELLA: BlockItem = BlockItem(
+        MythicalBlocks.TABLE_WITH_UMBRELLA,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "table_with_umbrella")
+    var TELEPHONE_BOOTH: BlockItem = BlockItem(
+        MythicalBlocks.TELEPHONE_BOOTH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "telephone_booth")
+    var TELEPORT_PAD: BlockItem = BlockItem(
+        MythicalBlocks.TELEPORT_PAD,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "teleport_pad")
+    var TELEPORT_PAD_RINGS: BlockItem = BlockItem(
+        MythicalBlocks.TELEPORT_PAD_RINGS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "teleport_pad_rings")
+    var TENT: BlockItem = BlockItem(
+        MythicalBlocks.TENT,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "tent")
+    var TORII: BlockItem = BlockItem(
+        MythicalBlocks.TORII,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "torii")
+    var TRAFFIC_BARRIER: BlockItem = BlockItem(
+        MythicalBlocks.TRAFFIC_BARRIER,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "traffic_barrier")
+    var TRAFFIC_CONE: BlockItem = BlockItem(
+        MythicalBlocks.TRAFFIC_CONE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "traffic_cone")
+    var TRASH_CAN: BlockItem = BlockItem(
+        MythicalBlocks.TRASH_CAN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "trash_can")
+    var TRASH_CAN_2: BlockItem = BlockItem(
+        MythicalBlocks.TRASH_CAN_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "trash_can_2")
+    var TRASH_CAN_2_DIRTY: BlockItem = BlockItem(
+        MythicalBlocks.TRASH_CAN_2_DIRTY,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "trash_can_2_dirty")
+    var TROLLEY_WITH_BREAD: BlockItem = BlockItem(
+        MythicalBlocks.TROLLEY_WITH_BREAD,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "trolley_with_bread")
+    var TV_STAND_JUNGLE: BlockItem = BlockItem(
+        MythicalBlocks.TV_STAND_JUNGLE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "tv_stand_jungle")
+    var TV_STAND_OAK: BlockItem = BlockItem(
+        MythicalBlocks.TV_STAND_OAK,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "tv_stand_oak")
+    var TV_STAND_SPRUCE: BlockItem = BlockItem(
+        MythicalBlocks.TV_STAND_SPRUCE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "tv_stand_spruce")
+    var VENDING_MACHINE: BlockItem = BlockItem(
+        MythicalBlocks.VENDING_MACHINE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "vending_machine")
+    var WAGON: BlockItem = BlockItem(
+        MythicalBlocks.WAGON,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wagon")
+    var WALL_GREEN: BlockItem = BlockItem(
+        MythicalBlocks.WALL_GREEN,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wall_green")
+    var WALL_GREEN_LIPLESS: BlockItem = BlockItem(
+        MythicalBlocks.WALL_GREEN_LIPLESS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wall_green_lipless")
+    var WEATHERVANE: BlockItem = BlockItem(
+        MythicalBlocks.WEATHERVANE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "weathervane")
+    var WELL: BlockItem = BlockItem(
+        MythicalBlocks.WELL,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "well")
+    var WHEELBARROW: BlockItem = BlockItem(
+        MythicalBlocks.WHEELBARROW,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wheelbarrow")
+    var WOODEN_LOUNGE_CHAIR: BlockItem = BlockItem(
+        MythicalBlocks.WOODEN_LOUNGE_CHAIR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wooden_lounge_chair")
+    var WOOD_ARROWS: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_ARROWS,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_arrows")
+    var WOOD_BENCH: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_BENCH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_bench")
+    var WOOD_BOX: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_BOX,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_box")
+    var WOOD_BOX_2: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_BOX_2,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_box_2")
+    var WOOD_CHAIR: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_CHAIR,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_chair")
+    var WOOD_FENCE: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_FENCE,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_fence")
+    var WOOD_LOG_BENCH: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_LOG_BENCH,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_log_bench")
+    var WOOD_PLATFORM: BlockItem = BlockItem(
+        MythicalBlocks.WOOD_PLATFORM,
+        Item.Properties().stacksTo(64).tab(MythicalGroups.MYTHICAL_BLOCKS),
+         "wood_platform")
 
     fun registerItems() {
         for(item in ITEMS){
