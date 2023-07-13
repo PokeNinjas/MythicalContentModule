@@ -1,16 +1,21 @@
 package com.mythicalnetwork.mythicalmod.util
 
 import com.mythicalnetwork.mythicalmod.MythicalContent
+import com.pokeninjas.kingdoms.fabric.Kingdoms
 import com.pokeninjas.kingdoms.fabric.annotations.FabricEventHandler
 import com.pokeninjas.kingdoms.fabric.events.impl.player.PlayerJoinEvent
 
 object KingdomRegistry {
 
     fun init() {
-
+        Kingdoms.executeOnKingdomInstance(this::register)
     }
 
-    @FabricEventHandler(priority = 100)
+    fun register(kingdomsInstance: Kingdoms){
+        kingdomsInstance.listenerManager.register(this)
+    }
+
+    @FabricEventHandler(order = 100)
     fun onPlayerJoin(event: PlayerJoinEvent) {
         MythicalContent.onPlayerJoin(event.player, event.sender)
     }

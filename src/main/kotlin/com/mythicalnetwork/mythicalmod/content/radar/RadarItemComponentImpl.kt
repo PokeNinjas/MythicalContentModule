@@ -21,8 +21,10 @@ import com.cobblemon.mod.common.util.sendParticlesServer
 import com.mythicalnetwork.mythicalmod.MythicalContent
 import com.mythicalnetwork.mythicalmod.content.landmark.AspectData
 import com.mythicalnetwork.mythicalmod.content.landmark.LandmarkBlockEntity
+import dev.lightdream.logger.Debugger
 import dev.onyxstudios.cca.api.v3.item.CcaNbtType
 import dev.onyxstudios.cca.api.v3.item.ItemComponent
+import net.fabricmc.fabric.api.util.NbtType
 import net.minecraft.core.BlockPos
 import net.minecraft.core.particles.ParticleOptions
 import net.minecraft.core.particles.ParticleTypes
@@ -123,7 +125,17 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
     }
 
     override fun getChainLength(): Int {
-        if (!this.hasTag("chainLength", CcaNbtType.INT)) {
+
+        Debugger.log("====================================")
+        Debugger.log(this.hasTag("chainLength"));
+        Debugger.log(this.hasTag("chainLength"));
+        Debugger.log(this.hasTag("chainLength"));
+        Debugger.log(this.hasTag("chainLength"));
+        Debugger.log(this.hasTag("chainLength"));
+        Debugger.log(this.hasTag("chainLength"));
+        Debugger.log("====================================")
+
+        if (!this.hasTag("chainLength")) {
             this.putInt("chainLength", 0)
         }
         return this.getInt("chainLength")
@@ -134,7 +146,7 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
     }
 
     override fun getMaxLength(): Int {
-        if (!this.hasTag("maxLength", CcaNbtType.INT)) {
+        if (!this.hasTag("maxLength", NbtType.INT)) {
             this.putInt("maxLength", MythicalContent.CONFIG.defaultMaxChainLength())
         }
         return this.getInt("maxLength")

@@ -25,6 +25,7 @@ loom {
 
 repositories {
     mavenCentral()
+    maven("https://repo.lightdream.dev")
     for(repo in Repos.BASE){
         if(repo.contains("sonatype.org")){
             maven(url = repo){
@@ -40,6 +41,11 @@ repositories {
 
 dependencies {
     minecraft("com.mojang:minecraft:${Versions.MINECRAFT}")
+    implementation("dev.lightdream:logger:+")
+    implementation("dev.lightdream:file-manager:+")
+    implementation("dev.lightdream:command-manager-common:+")
+    implementation("dev.lightdream:command-manager-fabric-1-19:+")
+
     mappings(loom.layered {
         mappings(Dependencies.QUILT_MAPPINGS)
         officialMojangMappings()
