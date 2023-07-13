@@ -156,6 +156,9 @@ class RadarItemComponentImpl(stack: ItemStack) : RadarItemComponent, ItemCompone
     }
 
     override fun tick(player: ServerPlayer) {
+        val tag: CompoundTag = CompoundTag()
+        this.writeToNbt(tag)
+        MythicalContent.sendDebugMessage("Radar tag: $tag")
         if (!isActive()) return
         var isSearchedSpeciesNear: Boolean = false
         if (player.level.gameTime.toInt() % MythicalContent.CONFIG.spawnDelay() == 0) {

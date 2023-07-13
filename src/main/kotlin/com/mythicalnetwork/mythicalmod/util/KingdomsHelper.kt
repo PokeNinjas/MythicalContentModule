@@ -9,4 +9,8 @@ object KingdomsHelper {
     fun isInKingdom(player: Player): Boolean {
         return User.get((player as ServerPlayer).uuid).kingdomAtLocation != null
     }
+
+    fun handleKingdomsJoin() {
+        KingdomRegistry.init()
+    }
 }

@@ -90,6 +90,7 @@ import org.quiltmc.qsl.lifecycle.api.event.ServerLifecycleEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerTickEvents
 import org.quiltmc.qsl.lifecycle.api.event.ServerWorldLoadEvents
 import org.quiltmc.qsl.networking.api.PacketByteBufs
+import org.quiltmc.qsl.networking.api.PacketSender
 import org.quiltmc.qsl.networking.api.ServerPlayConnectionEvents
 import org.quiltmc.qsl.networking.api.ServerPlayNetworking
 import org.slf4j.Logger
@@ -115,6 +116,30 @@ class MythicalContent : ModInitializer {
         var CONFIG: MythicalModConfig = MythicalModConfig.createAndLoad()
         var entity: LivingEntity? = null
 
+        fun onPlayerJoin(player: Player, sender: PacketSender){
+            CRAMOMATIC_HANDLER?.resumePlayer(player.uuid)
+            val tag: CompoundTag = CompoundTag()
+            for((key, value) in SPECIES_BIOME_INFO.interator()){
+                val list = ListTag()
+                if (value != null) {
+                    for(biome in value){
+                        list.add(StringTag.valueOf(biome))
+                    }
+                }
+                tag.put(key, list)
+            }
+            val buf: FriendlyByteBuf = PacketByteBufs.create()
+            buf.writeNbt(tag)
+            sender.sendPacket(MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
+            player.inventory.items.filter { it -> it.`is`(MythicalItems.RADAR) }.forEach { itemStack ->
+                val component: RadarItemComponent = RADAR_ITEM.get(itemStack)
+                component.setActive(false)
+                sendDebugMessage("Chain length for player ${player.name} for species ${component.getSpecies()}: "+component.getChainLength().toString())
+                val tag: CompoundTag = CompoundTag()
+                component.writeToNbt(tag)
+                sendDebugMessage("Tag: "+tag.toString())
+            }
+        }
         fun asResource(str: String): ResourceLocation {
             return ResourceLocation(MODID, str)
         }
@@ -276,6 +301,9 @@ class MythicalContent : ModInitializer {
     }
 
     override fun onInitialize(mod: ModContainer?) {
+        if(QuiltLoader.isModLoaded("kingdoms")){
+            KingdomsHelper.handleKingdomsJoin()
+        }
         setupPlaceholders()
         MythicalBlocks.registerBlocks()
         MythicalItems.registerItems()
@@ -374,24 +402,8 @@ class MythicalContent : ModInitializer {
             }
         }
         ServerPlayConnectionEvents.JOIN.register { handler, sender, server ->
-            CRAMOMATIC_HANDLER?.resumePlayer(handler.player.uuid)
-            val tag: CompoundTag = CompoundTag()
-            for((key, value) in SPECIES_BIOME_INFO.interator()){
-                val list = ListTag()
-                if (value != null) {
-                    for(biome in value){
-                        list.add(StringTag.valueOf(biome))
-                    }
-                }
-                tag.put(key, list)
-            }
-            val buf: FriendlyByteBuf = PacketByteBufs.create()
-            buf.writeNbt(tag)
-            sender.sendPacket(MythicalPackets.RADAR_BIOME_DATA.identifier, buf)
-            handler.player.inventory.items.filter { it -> it.`is`(MythicalItems.RADAR) }.forEach { itemStack ->
-                val component: RadarItemComponent = RADAR_ITEM.get(itemStack)
-                component.setActive(false)
-                sendDebugMessage("Chain length for player ${handler.player.name} for species ${component.getSpecies()}: "+component.getChainLength().toString())
+            if(!QuiltLoader.isModLoaded("kingdoms")){
+                onPlayerJoin(handler.player, sender)
             }
         }
         ReloadListenerRegistry.register(PackType.SERVER_DATA, CramomaticRecipeJsonListener.INSTANCE)
