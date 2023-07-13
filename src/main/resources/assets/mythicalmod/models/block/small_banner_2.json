@@ -5,8 +5,8 @@
     64
   ],
   "textures": {
-    "0": "pokeninjas:block/furniture/small_banner_2",
-    "particle": "pokeninjas:block/furniture/small_banner_2"
+    "0": "mythicalmod:block/furniture/small_banner_2",
+    "particle": "mythicalmod:block/furniture/small_banner_2"
   },
   "ambientocclusion": false,
   "elements": [

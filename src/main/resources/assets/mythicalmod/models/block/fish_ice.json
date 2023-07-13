@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/fish_ice",
-		"particle": "pokeninjas:block/furniture/fish_ice"
+		"0": "mythicalmod:block/furniture/fish_ice",
+		"particle": "mythicalmod:block/furniture/fish_ice"
 	},
 	"ambientocclusion": false,
 	"elements": [

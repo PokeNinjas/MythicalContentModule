@@ -5,8 +5,8 @@
     64
   ],
   "textures": {
-    "0": "pokeninjas:block/furniture/ball_lamp_1",
-    "particle": "pokeninjas:block/furniture/ball_lamp_1"
+    "0": "mythicalmod:block/furniture/ball_lamp_1",
+    "particle": "mythicalmod:block/furniture/ball_lamp_1"
   },
   "ambientocclusion": false,
     "elements": [

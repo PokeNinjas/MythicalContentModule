@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/trash_can",
-		"particle": "pokeninjas:block/furniture/trash_can"
+		"0": "mythicalmod:block/furniture/trash_can",
+		"particle": "mythicalmod:block/furniture/trash_can"
 	},
 	"ambientocclusion": false,
     "elements": [

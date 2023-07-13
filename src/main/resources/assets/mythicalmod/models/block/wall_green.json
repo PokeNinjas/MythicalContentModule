@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/wall_green",
-		"particle": "pokeninjas:block/furniture/wall_green"
+		"0": "mythicalmod:block/furniture/wall_green",
+		"particle": "mythicalmod:block/furniture/wall_green"
 	},
 	"ambientocclusion": false,
     "elements": [

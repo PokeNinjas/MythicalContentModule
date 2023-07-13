@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/table_spruce",
-		"particle": "pokeninjas:block/furniture/table_spruce"
+		"0": "mythicalmod:block/furniture/table_spruce",
+		"particle": "mythicalmod:block/furniture/table_spruce"
 	},
 	"ambientocclusion": false,
     "elements": [

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/laptop",
-		"particle": "pokeninjas:block/furniture/laptop"
+		"0": "mythicalmod:block/furniture/laptop",
+		"particle": "mythicalmod:block/furniture/laptop"
 	},
 	"elements": [
 		{

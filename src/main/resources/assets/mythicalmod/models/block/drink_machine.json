@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/drink_machine",
-		"particle": "pokeninjas:block/furniture/drink_machine"
+		"0": "mythicalmod:block/furniture/drink_machine",
+		"particle": "mythicalmod:block/furniture/drink_machine"
 	},
     "elements": [
 		{

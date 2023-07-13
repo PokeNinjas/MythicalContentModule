@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/construction_sign",
-		"particle": "pokeninjas:block/furniture/construction_sign"
+		"0": "mythicalmod:block/furniture/construction_sign",
+		"particle": "mythicalmod:block/furniture/construction_sign"
 	},
 	"ambientocclusion": false,
 	"elements": [

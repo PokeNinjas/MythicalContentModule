@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/weathervane",
-		"particle": "pokeninjas:block/furniture/weathervane"
+		"0": "mythicalmod:block/furniture/weathervane",
+		"particle": "mythicalmod:block/furniture/weathervane"
 	},
 	"ambientocclusion": false,
 	"elements": [

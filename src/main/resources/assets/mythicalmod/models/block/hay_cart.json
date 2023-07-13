@@ -3,8 +3,8 @@
 
 	"texture_size": [128, 128],
 	"textures": {
-		"1": "pokeninjas:block/furniture/hay_cart",
-		"particle": "pokeninjas:block/furniture/hay_cart"
+		"1": "mythicalmod:block/furniture/hay_cart",
+		"particle": "mythicalmod:block/furniture/hay_cart"
 	},
 	"ambientocclusion": false,
 	"elements": [

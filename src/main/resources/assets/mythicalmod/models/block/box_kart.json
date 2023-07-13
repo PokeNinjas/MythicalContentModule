@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/box_kart",
-		"particle": "pokeninjas:block/furniture/box_kart"
+		"0": "mythicalmod:block/furniture/box_kart",
+		"particle": "mythicalmod:block/furniture/box_kart"
 	},
 	"ambientocclusion": false,
     "elements": [

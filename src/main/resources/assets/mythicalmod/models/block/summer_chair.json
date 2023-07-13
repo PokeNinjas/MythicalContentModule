@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"1": "pokeninjas:block/furniture/summer_chair",
-		"particle": "pokeninjas:block/furniture/summer_chair"
+		"1": "mythicalmod:block/furniture/summer_chair",
+		"particle": "mythicalmod:block/furniture/summer_chair"
 	},
     "elements": [
 		{

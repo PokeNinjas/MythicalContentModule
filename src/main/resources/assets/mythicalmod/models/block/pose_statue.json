@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/pose_statue",
-		"particle": "pokeninjas:block/furniture/pose_statue"
+		"0": "mythicalmod:block/furniture/pose_statue",
+		"particle": "mythicalmod:block/furniture/pose_statue"
 	},
 	"elements": [
 		{

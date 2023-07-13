@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "pokeninjas:block/furniture/corn_1",
-		"particle": "pokeninjas:block/furniture/corn_1"
+		"0": "mythicalmod:block/furniture/corn_1",
+		"particle": "mythicalmod:block/furniture/corn_1"
 	},
 	"ambientocclusion": false,
     "elements": [

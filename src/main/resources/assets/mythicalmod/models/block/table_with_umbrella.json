@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 256],
 	"textures": {
-		"0": "pokeninjas:block/furniture/table_with_umbrella",
-		"particle": "pokeninjas:block/furniture/table_with_umbrella"
+		"0": "mythicalmod:block/furniture/table_with_umbrella",
+		"particle": "mythicalmod:block/furniture/table_with_umbrella"
 	},
 	"ambientocclusion": false,
     "elements": [

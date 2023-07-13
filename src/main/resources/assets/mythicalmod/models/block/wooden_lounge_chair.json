@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/wooden_lounge_chair",
-		"particle": "pokeninjas:block/furniture/wooden_lounge_chair"
+		"0": "mythicalmod:block/furniture/wooden_lounge_chair",
+		"particle": "mythicalmod:block/furniture/wooden_lounge_chair"
 	},
 	"ambientocclusion": false,
     "elements": [

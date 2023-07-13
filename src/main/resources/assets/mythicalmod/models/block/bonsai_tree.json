@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/bonsai_tree",
-		"particle": "pokeninjas:block/furniture/bonsai_tree"
+		"0": "mythicalmod:block/furniture/bonsai_tree",
+		"particle": "mythicalmod:block/furniture/bonsai_tree"
 	},
 	"ambientocclusion": false,
     "elements": [

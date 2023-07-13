@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/log_2",
-		"particle": "pokeninjas:block/furniture/log_2"
+		"0": "mythicalmod:block/furniture/log_2",
+		"particle": "mythicalmod:block/furniture/log_2"
 	},
 	"ambientocclusion": false,
     "elements": [

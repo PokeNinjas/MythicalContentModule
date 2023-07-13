@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 256],
 	"textures": {
-		"0": "pokeninjas:block/furniture/pillar",
-		"particle": "pokeninjas:block/furniture/pillar"
+		"0": "mythicalmod:block/furniture/pillar",
+		"particle": "mythicalmod:block/furniture/pillar"
 	},
 	"ambientocclusion": false,
     "elements": [

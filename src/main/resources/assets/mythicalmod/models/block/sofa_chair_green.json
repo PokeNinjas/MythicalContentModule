@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/sofa_chair_green",
-		"particle": "pokeninjas:block/furniture/sofa_chair_green"
+		"0": "mythicalmod:block/furniture/sofa_chair_green",
+		"particle": "mythicalmod:block/furniture/sofa_chair_green"
 	},
 	"ambientocclusion": false,
     "elements": [

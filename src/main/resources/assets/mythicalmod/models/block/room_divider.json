@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/room_divider",
-		"particle": "pokeninjas:block/furniture/room_divider"
+		"0": "mythicalmod:block/furniture/room_divider",
+		"particle": "mythicalmod:block/furniture/room_divider"
 	},
 	"ambientocclusion": false,
     "elements": [

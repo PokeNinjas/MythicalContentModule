@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/lamp",
-		"particle": "pokeninjas:block/furniture/lamp"
+		"0": "mythicalmod:block/furniture/lamp",
+		"particle": "mythicalmod:block/furniture/lamp"
 	},
 	"ambientocclusion": false,
     "elements": [

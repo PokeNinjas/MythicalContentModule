@@ -3,8 +3,8 @@
 
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/horsea",
-		"particle": "pokeninjas:block/furniture/horsea"
+		"0": "mythicalmod:block/furniture/horsea",
+		"particle": "mythicalmod:block/furniture/horsea"
 	},
 	"ambientocclusion": false,
 	"elements": [

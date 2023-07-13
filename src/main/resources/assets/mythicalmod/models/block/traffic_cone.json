@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/traffic_cone",
-		"particle": "pokeninjas:block/furniture/traffic_cone"
+		"0": "mythicalmod:block/furniture/traffic_cone",
+		"particle": "mythicalmod:block/furniture/traffic_cone"
 	},
 	"ambientocclusion": false,
     "elements": [

@@ -4,8 +4,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/metal_beams",
-		"particle": "pokeninjas:block/furniture/metal_beams"
+		"0": "mythicalmod:block/furniture/metal_beams",
+		"particle": "mythicalmod:block/furniture/metal_beams"
 	},
 	"elements": [
 		{

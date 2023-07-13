@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/banana_3",
-		"particle": "pokeninjas:block/furniture/banana_3"
+		"0": "mythicalmod:block/furniture/banana_3",
+		"particle": "mythicalmod:block/furniture/banana_3"
 	},
 	"ambientocclusion": false,
     "elements": [

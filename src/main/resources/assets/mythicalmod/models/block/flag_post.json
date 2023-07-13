@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/flag_post",
-		"particle": "pokeninjas:block/furniture/flag_post"
+		"0": "mythicalmod:block/furniture/flag_post",
+		"particle": "mythicalmod:block/furniture/flag_post"
 	},
 	"ambientocclusion": false,
     "elements": [

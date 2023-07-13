@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/acacia_bench",
-		"particle": "pokeninjas:block/furniture/acacia_bench"
+		"0": "mythicalmod:block/furniture/acacia_bench",
+		"particle": "mythicalmod:block/furniture/acacia_bench"
 	},
 	"ambientocclusion": false,
     "elements": [

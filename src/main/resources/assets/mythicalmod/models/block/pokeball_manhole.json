@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/pokeball_manhole",
-		"particle": "pokeninjas:block/furniture/pokeball_manhole"
+		"0": "mythicalmod:block/furniture/pokeball_manhole",
+		"particle": "mythicalmod:block/furniture/pokeball_manhole"
 	},
 	"ambientocclusion": false,
 	"elements": [

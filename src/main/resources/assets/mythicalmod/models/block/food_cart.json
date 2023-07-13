@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/food_cart",
-		"particle": "pokeninjas:block/furniture/food_cart"
+		"0": "mythicalmod:block/furniture/food_cart",
+		"particle": "mythicalmod:block/furniture/food_cart"
 	},
 	"ambientocclusion": false,
     "elements": [

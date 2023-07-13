@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/tv_stand_oak",
-		"particle": "pokeninjas:block/furniture/tv_stand_oak"
+		"0": "mythicalmod:block/furniture/tv_stand_oak",
+		"particle": "mythicalmod:block/furniture/tv_stand_oak"
 	},
 	"ambientocclusion": false,
     "elements": [

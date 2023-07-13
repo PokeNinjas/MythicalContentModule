@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "pokeninjas:block/furniture/cookies",
-		"particle": "pokeninjas:block/furniture/cookies"
+		"0": "mythicalmod:block/furniture/cookies",
+		"particle": "mythicalmod:block/furniture/cookies"
 	},
 	"ambientocclusion": false,
     "elements": [

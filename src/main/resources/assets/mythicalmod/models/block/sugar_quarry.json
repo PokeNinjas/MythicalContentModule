@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 256],
 	"textures": {
-		"0": "pokeninjas:block/furniture/sugar_quarry",
-		"particle": "pokeninjas:block/furniture/sugar_quarry"
+		"0": "mythicalmod:block/furniture/sugar_quarry",
+		"particle": "mythicalmod:block/furniture/sugar_quarry"
 	},
 	"ambientocclusion": false,
     "elements": [

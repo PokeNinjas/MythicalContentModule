@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/mailbox",
-		"particle": "pokeninjas:block/furniture/mailbox"
+		"0": "mythicalmod:block/furniture/mailbox",
+		"particle": "mythicalmod:block/furniture/mailbox"
 	},
     "elements": [
 		{

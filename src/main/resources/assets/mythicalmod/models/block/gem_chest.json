@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/gem_chest",
-		"particle": "pokeninjas:block/furniture/gem_chest"
+		"0": "mythicalmod:block/furniture/gem_chest",
+		"particle": "mythicalmod:block/furniture/gem_chest"
 	},
 	"ambientocclusion": false,
     "elements": [

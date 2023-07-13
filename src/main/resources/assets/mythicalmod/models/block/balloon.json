@@ -5,8 +5,8 @@
     128
   ],
   "textures": {
-    "0": "pokeninjas:block/furniture/balloon",
-    "particle": "pokeninjas:block/furniture/balloon"
+    "0": "mythicalmod:block/furniture/balloon",
+    "particle": "mythicalmod:block/furniture/balloon"
   },
   "ambientocclusion": false,
     "elements": [

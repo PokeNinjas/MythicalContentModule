@@ -3,8 +3,8 @@
 
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/lamps",
-		"particle": "pokeninjas:block/furniture/lamps"
+		"0": "mythicalmod:block/furniture/lamps",
+		"particle": "mythicalmod:block/furniture/lamps"
 	},
 	"ambientocclusion": false,
 	"elements": [

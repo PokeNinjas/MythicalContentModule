@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/tent",
-		"particle": "pokeninjas:block/furniture/tent"
+		"0": "mythicalmod:block/furniture/tent",
+		"particle": "mythicalmod:block/furniture/tent"
 	},
 	"ambientocclusion": false,
 	"elements": [

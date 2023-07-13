@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/hay_bales",
-		"particle": "pokeninjas:block/furniture/hay_bales"
+		"0": "mythicalmod:block/furniture/hay_bales",
+		"particle": "mythicalmod:block/furniture/hay_bales"
 	},
 	"ambientocclusion": false,
 	"elements": [

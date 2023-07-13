@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/commode",
-		"particle": "pokeninjas:block/furniture/commode"
+		"0": "mythicalmod:block/furniture/commode",
+		"particle": "mythicalmod:block/furniture/commode"
 	},
 	"ambientocclusion": false,
     "elements": [

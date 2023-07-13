@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/drinking_fountain",
-		"particle": "pokeninjas:block/furniture/drinking_fountain"
+		"0": "mythicalmod:block/furniture/drinking_fountain",
+		"particle": "mythicalmod:block/furniture/drinking_fountain"
 	},
 	"ambientocclusion": false,
     "elements": [

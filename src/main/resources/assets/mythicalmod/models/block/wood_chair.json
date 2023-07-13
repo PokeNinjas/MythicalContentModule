@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/wood_chair",
-		"particle": "pokeninjas:block/furniture/wood_chair"
+		"0": "mythicalmod:block/furniture/wood_chair",
+		"particle": "mythicalmod:block/furniture/wood_chair"
 	},
     "elements": [
 		{

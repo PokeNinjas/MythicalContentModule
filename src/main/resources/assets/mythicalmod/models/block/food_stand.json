@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/food_stand",
-		"particle": "pokeninjas:block/furniture/food_stand"
+		"0": "mythicalmod:block/furniture/food_stand",
+		"particle": "mythicalmod:block/furniture/food_stand"
 	},
     "elements": [
 		{

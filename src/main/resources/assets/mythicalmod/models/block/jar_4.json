@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/jar_4",
-		"particle": "pokeninjas:block/furniture/jar_4"
+		"0": "mythicalmod:block/furniture/jar_4",
+		"particle": "mythicalmod:block/furniture/jar_4"
 	},
 	"elements": [
 		{

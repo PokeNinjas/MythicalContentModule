@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/scaffolding",
-		"particle": "pokeninjas:block/furniture/scaffolding"
+		"0": "mythicalmod:block/furniture/scaffolding",
+		"particle": "mythicalmod:block/furniture/scaffolding"
 	},
 	"ambientocclusion": false,
 	"elements": [

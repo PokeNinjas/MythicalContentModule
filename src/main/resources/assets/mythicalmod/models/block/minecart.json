@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/minecart",
-		"particle": "pokeninjas:block/furniture/minecart"
+		"0": "mythicalmod:block/furniture/minecart",
+		"particle": "mythicalmod:block/furniture/minecart"
 	},
 	"ambientocclusion": false,
     "elements": [

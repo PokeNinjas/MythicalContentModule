@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/magazine_stand",
-		"particle": "pokeninjas:block/furniture/magazine_stand"
+		"0": "mythicalmod:block/furniture/magazine_stand",
+		"particle": "mythicalmod:block/furniture/magazine_stand"
 	},
 	"ambientocclusion": false,
     "elements": [

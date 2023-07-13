@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/wood_box",
-		"particle": "pokeninjas:block/furniture/wood_box"
+		"0": "mythicalmod:block/furniture/wood_box",
+		"particle": "mythicalmod:block/furniture/wood_box"
 	},
 	"ambientocclusion": false,
 	"elements": [

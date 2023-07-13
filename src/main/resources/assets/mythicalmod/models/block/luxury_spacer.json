@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/luxury_spacer",
-		"particle": "pokeninjas:block/furniture/luxury_spacer"
+		"0": "mythicalmod:block/furniture/luxury_spacer",
+		"particle": "mythicalmod:block/furniture/luxury_spacer"
 	},
     "elements": [
 		{

@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/wall_green_lipless",
-		"particle": "pokeninjas:block/furniture/wall_green_lipless"
+		"0": "mythicalmod:block/furniture/wall_green_lipless",
+		"particle": "mythicalmod:block/furniture/wall_green_lipless"
 	},
 	"elements": [
 		{

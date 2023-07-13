@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/bigger_log",
-		"particle": "pokeninjas:block/furniture/bigger_log"
+		"0": "mythicalmod:block/furniture/bigger_log",
+		"particle": "mythicalmod:block/furniture/bigger_log"
 	},
 	"ambientocclusion": false,
 	"elements": [

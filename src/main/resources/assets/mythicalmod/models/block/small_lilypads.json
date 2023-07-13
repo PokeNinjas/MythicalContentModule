@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "pokeninjas:block/furniture/small_lilypads",
-		"particle": "pokeninjas:block/furniture/small_lilypads"
+		"0": "mythicalmod:block/furniture/small_lilypads",
+		"particle": "mythicalmod:block/furniture/small_lilypads"
 	},
 	"ambientocclusion": false,
 	"elements": [

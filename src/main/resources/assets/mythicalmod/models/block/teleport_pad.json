@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 256],
 	"textures": {
-		"0": "pokeninjas:block/furniture/teleport_pad",
-		"1": "pokeninjas:block/furniture/teleport_pad_rings",
-		"particle": "pokeninjas:block/furniture/teleport_pad"
+		"0": "mythicalmod:block/furniture/teleport_pad",
+		"1": "mythicalmod:block/furniture/teleport_pad_rings",
+		"particle": "mythicalmod:block/furniture/teleport_pad"
 	},
 	"ambientocclusion": false,
     "elements": [

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/pokea_furniture_sign",
-		"particle": "pokeninjas:block/furniture/pokea_furniture_sign"
+		"0": "mythicalmod:block/furniture/pokea_furniture_sign",
+		"particle": "mythicalmod:block/furniture/pokea_furniture_sign"
 	},
 	"ambientocclusion": false,
     "elements": [

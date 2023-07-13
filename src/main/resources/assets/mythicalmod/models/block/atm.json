@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/atm",
-		"particle": "pokeninjas:block/furniture/atm"
+		"0": "mythicalmod:block/furniture/atm",
+		"particle": "mythicalmod:block/furniture/atm"
 	},
 	"ambientocclusion": false,
     "elements": [

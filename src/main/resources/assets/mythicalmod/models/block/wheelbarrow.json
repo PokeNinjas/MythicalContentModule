@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/wheelbarrow",
-		"particle": "pokeninjas:block/furniture/wheelbarrow"
+		"0": "mythicalmod:block/furniture/wheelbarrow",
+		"particle": "mythicalmod:block/furniture/wheelbarrow"
 	},
 	"ambientocclusion": false,
 	"elements": [

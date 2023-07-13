@@ -5,8 +5,8 @@
     64
   ],
   "textures": {
-    "0": "pokeninjas:block/furniture/medium_banner",
-    "particle": "pokeninjas:block/furniture/medium_banner"
+    "0": "mythicalmod:block/furniture/medium_banner",
+    "particle": "mythicalmod:block/furniture/medium_banner"
   },
   "elements": [
     {

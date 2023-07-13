@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "pokeninjas:block/furniture/boxes_pile",
-		"particle": "pokeninjas:block/furniture/boxes_pile"
+		"0": "mythicalmod:block/furniture/boxes_pile",
+		"particle": "mythicalmod:block/furniture/boxes_pile"
 	},
 	"elements": [
 		{

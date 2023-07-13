@@ -3,8 +3,8 @@
 
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/leaf_pile_3",
-		"particle": "pokeninjas:block/furniture/leaf_pile_3"
+		"0": "mythicalmod:block/furniture/leaf_pile_3",
+		"particle": "mythicalmod:block/furniture/leaf_pile_3"
 	},
 	"ambientocclusion": false,
 	"elements": [

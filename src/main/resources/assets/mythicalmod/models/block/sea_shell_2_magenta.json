@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "pokeninjas:block/furniture/sea_shell_2_magenta",
-		"particle": "pokeninjas:block/furniture/sea_shell_2_magenta"
+		"0": "mythicalmod:block/furniture/sea_shell_2_magenta",
+		"particle": "mythicalmod:block/furniture/sea_shell_2_magenta"
 	},
 	"elements": [
 		{

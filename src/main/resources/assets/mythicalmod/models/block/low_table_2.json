@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/low_table_2",
-		"particle": "pokeninjas:block/furniture/low_table_2"
+		"0": "mythicalmod:block/furniture/low_table_2",
+		"particle": "mythicalmod:block/furniture/low_table_2"
 	},
     "elements": [
 		{

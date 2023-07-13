@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pokeninjas:block/furniture/banner",
-		"particle": "pokeninjas:block/furniture/banner"
+		"0": "mythicalmod:block/furniture/banner",
+		"particle": "mythicalmod:block/furniture/banner"
 	},
 	"ambientocclusion": false,
     "elements": [

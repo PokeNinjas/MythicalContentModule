@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "pokeninjas:block/furniture/pokeball_block_stone",
-		"particle": "pokeninjas:block/furniture/pokeball_block_stone"
+		"0": "mythicalmod:block/furniture/pokeball_block_stone",
+		"particle": "mythicalmod:block/furniture/pokeball_block_stone"
 	},
 	"elements": [
 		{
