@@ -17,6 +17,6 @@ object Repos {
         "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/",
         "https://maven.blamejared.com",
         "https://jitpack.io",
-        "https://ladysnake.jfrog.io/artifactory/mods"
+        "https://maven.ladysnake.org/releases"
     )
 }
